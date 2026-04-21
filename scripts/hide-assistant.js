@@ -1,6 +1,6 @@
 (function () {
   var PAGES_TO_HIDE = [
-    '/sop/account-kyc',  
+    '/sop/account-kyc',  // update to your actual path
   ];
 
   function shouldHidePage() {
@@ -10,22 +10,26 @@
     });
   }
 
-  function hideAskAI() {
-    if (!shouldHidePage()) return;
-
-    document.querySelectorAll('span').forEach(function (span) {
-      if (span.textContent.trim() === 'Ask AI') {
-        var button = span.closest('button') || span.parentElement;
-        if (button) {
-          button.style.setProperty('display', 'none', 'important');
-        }
+  function findAskAIButton() {
+    var spans = document.querySelectorAll('span');
+    for (var i = 0; i < spans.length; i++) {
+      if (spans[i].textContent.trim() === 'Ask AI') {
+        return spans[i].closest('button') || spans[i].parentElement;
       }
-    });
+    }
+    return null;
   }
 
-  // Keep watching for the button to appear in the DOM
+  function applyVisibility() {
+    var button = findAskAIButton();
+    if (button) {
+      button.style.setProperty('display', shouldHidePage() ? 'none' : '', 'important');
+    }
+  }
+
+  // Watch for DOM changes
   var observer = new MutationObserver(function () {
-    hideAskAI();
+    applyVisibility();
   });
 
   observer.observe(document.body, {
@@ -33,11 +37,10 @@
     subtree: true,
   });
 
-  // Also run immediately in case it's already there
-  hideAskAI();
+  applyVisibility();
 
-  // Handle SPA navigation
+  // Re-evaluate on SPA navigation
   window.addEventListener('popstate', function () {
-    hideAskAI();
+    applyVisibility();
   });
 })();
