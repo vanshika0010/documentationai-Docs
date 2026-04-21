@@ -1,0 +1,98 @@
+---
+title: "Return Orders"
+description: "How to create return orders manually or from delivered orders, and handle return pickup delays"
+---
+
+## System Check
+
+Copy link from SPARK / Click on Internal ICRM > Click on Seller Info.
+
+## Method 1 — From Delivered Orders
+
+1. Go to the **Orders** tab in the left menu.
+2. Click **All Orders**.
+3. For any shipment marked as **Delivered**, click **Create Return**.
+4. A new page opens with prefilled details.
+5. Buyer's address becomes the pickup address by default.
+6. Your pickup address becomes the destination by default.
+7. You can change the drop address or add a new address.
+
+## Method 2 — Manual Return Order
+
+1. Go to the **Returns** tab in the left panel.
+2. Click **Add Return**.
+3. Fill in the following details:
+   - **Pickup POC Details** — buyer's address and contact details.
+   - **Order Details** — return order ID or auto-generate, creation date, and channel name.
+   - **Product Details** — SKU, quantity, and price (mandatory); brand, color, HSN, discount, etc. (recommended).
+   - **Return Reason** — select reason, upload pictures, add comment if needed.
+   - **Delivery Address** — your warehouse / office / storehouse address.
+   - **Weight and Dimensions** — based on the return product.
+   - **Payment Details** — prepaid by default for return orders.
+
+## Pickup Cut-Off Times
+
+| Courier             | Cut-off Time    |
+| ------------------- | --------------- |
+| Ecom Reverse        | 6:00 AM         |
+| Shadowfax Reverse   | 10:00 AM        |
+| Delhivery Reverse   | Next day pickup |
+| Xpressbees Reverse  | 11:00 AM        |
+
+_Note: Manifest and label are not required to download from panel. Courier FE carries the label at the time of pickup._
+
+## Pickup Before 1 PM
+
+Orders created before 1:00 PM will be picked up the same day. Orders created after 1:00 PM will be picked up the next day.
+
+## If Return Pickup is Delayed
+
+Raise a ticket to FM LOPS.
+
+### Nugget Ticket (NFCR)
+
+| Field             | Value                  |
+| ----------------- | ---------------------- |
+| Channel           | Lops Shipment Pickup   |
+| Agent Assign      | As per courier         |
+| Status            | Open                   |
+| Subject           | Return Pickup Required |
+| FCR               | NFCR                   |
+| SR Issue Category | Shipment Pickup        |
+| Sub Category      | Pickup Requested       |
+
+---
+
+## Return Shipment Delivery — In TAT
+
+> Sir / Ma'am, I would like to inform you that return shipment delivery does take 20 working days, but we will try to deliver your shipment within 12–15 working days. I request you to please wait as per the timeline.
+
+### Nugget Ticket (FCR)
+
+| Field             | Value                               |
+| ----------------- | ----------------------------------- |
+| Channel           | Customer Support Call Center        |
+| Agent Assign      | Pratibha                            |
+| Status            | Resolved                            |
+| Subject           | Shipment Delivery Delay Reverse     |
+| FCR               | Yes                                 |
+| SR Issue Category | Shipment Delivery                   |
+| Sub Category      | Delay in Delivery RTO / Reverse     |
+
+---
+
+## Return Shipment Delivery — Out of TAT
+
+> Sir / Ma'am, I apologize for the inconvenience. I am raising a complaint and request you to please wait 1–2 working days for further updates.
+
+### Nugget Ticket (NFCR)
+
+| Field             | Value                               |
+| ----------------- | ----------------------------------- |
+| Channel           | LOPS Shipment Delivery Agent        |
+| Agent Assign      | As per courier                      |
+| Status            | Open                                |
+| Subject           | Shipment Delivery Delay Reverse     |
+| FCR               | NFCR                                |
+| SR Issue Category | Shipment Delivery                   |
+| Sub Category      | Delay in Delivery RTO / Reverse     |

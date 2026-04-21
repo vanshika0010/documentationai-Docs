@@ -1,0 +1,217 @@
+---
+title: "RTO and NDR"
+description: "Standard operating procedures for RTO initiation, RTO NDR, NDR reattempt, and escalation handling"
+---
+
+## NDR SOP
+
+### System Check
+
+1. Copy link from SPARK / Click on Internal ICRM.
+2. View Details > NDR tab > Check NDR raised date and undelivered reason.
+3. Check action taken by seller / buyer.
+4. Check NDR communication (check Delivery Boost if enabled).
+
+### Seller Action Path
+
+Seller Panel > Shipments > Process NDR > Search AWB > Reattempt / RTO
+
+TAT after BPR: 1–2 working days.
+
+_If BPR is pending — assign case to LOPS with the **BPR Pending** tag._
+
+### No Buyer Calls After 8:30 PM
+
+> I understand your concern Sir / Ma'am. However, as per TRAI guidelines and our policy, buyer calls cannot be arranged after 8:30 PM to ensure privacy. But don't worry — I've escalated your concern to the courier team. Let's wait for their response by _(mention TAT)_.
+
+### BPR Checklist
+
+When taking BPR on call:
+
+1. Verify buyer's name and product details.
+2. Validate non-delivery (NDR) reason from buyer.
+3. Confirm if FE contacted or reached for delivery attempt (share attempt date and time).
+4. Confirm if buyer is still ready to accept the **packed shipment** — deny if future delivery more than 2 days or open-box delivery requested.
+5. Confirm alternate mobile number and landmark.
+6. Inform buyer they will receive a call from the delivery reattempt team.
+7. BPR call control must stay with the advisor — limit seller interference.
+
+### NDR CB Team Actions
+
+1. Try BPR once. If no connectivity — raise NFCR to LOPS with **BPR Pending** tag.
+2. If both seller and buyer are unreachable — raise NFCR for delivery reattempt and inform seller via email about non-connectivity.
+
+### Nugget Ticket — NFCR (BPR Available)
+
+| Field             | Value                       |
+| ----------------- | --------------------------- |
+| Channel           | Lops NDR and RTO            |
+| Agent Assign      | Auto Assign                 |
+| Status            | Open                        |
+| Subject           | Reattempt Request RTO NDR   |
+| FCR               | NFCR                        |
+| SR Issue Category | Shipment NDR and RTO        |
+| Sub Category      | Re-attempt Requested–RTO NDR|
+
+---
+
+## RTO-NDR SOP
+
+If the RTO shipment is not delivered to the seller, the status changes to **RTO NDR**.
+
+### Seller Action Path
+
+Seller Panel > Orders > Orders > RTO tab > Filter: RTO NDR > Action column > Reattempt
+
+- Seller can also change phone number and address (only for Delhivery, Ecom Express, Xpressbees).
+- Seller can select reattempt date and upload call recordings.
+
+### Key Rules
+
+- Action must be taken within **10 days** of RTO NDR.
+- If no action in 10 days — shipment is **disposed off**.
+- Only **1 reattempt** is allowed. If second attempt fails — shipment is disposed off.
+
+### Email Notifications to Seller
+
+- When RTO NDR is raised — email sent within 4 hours (includes all AWBs).
+- Day 5 — reminder email.
+- Day 9 — final reminder email.
+
+### Nugget Ticket — FCR
+
+| Field             | Value                        |
+| ----------------- | ---------------------------- |
+| Channel           | Customer Support Call Center |
+| Agent Assign      | Own Name                     |
+| Status            | Resolved                     |
+| Subject           | Reattempt Request RTO NDR    |
+| FCR               | Yes                          |
+| SR Issue Category | Shipment NDR and RTO         |
+| Sub Category      | Re-attempt Requested–RTO NDR |
+
+### Nugget Ticket — NFCR (seller unable to take reattempt action)
+
+| Field             | Value                        |
+| ----------------- | ---------------------------- |
+| Channel           | Lops Delivery                |
+| Agent Assign      | As per courier               |
+| Status            | Open                         |
+| Subject           | Reattempt Request RTO NDR    |
+| FCR               | NFCR                         |
+| SR Issue Category | Shipment NDR and RTO         |
+| Sub Category      | Re-attempt Requested–RTO NDR |
+
+---
+
+## RTO Initiated — In TAT
+
+If seller wants to know why shipment got RTO — inform the NDR remarks and advise:
+
+> Shipment will be delivered to the seller within **15 working days** from date of RTO Initiated. No further delivery attempt is possible.
+
+### Nugget Ticket
+
+| Field             | Value               |
+| ----------------- | ------------------- |
+| Channel           | Customer Support Call Center |
+| Status            | Resolved            |
+| Subject           | RTO Query           |
+| FCR               | Yes                 |
+| SR Issue Category | Shipment NDR and RTO|
+| Sub Category      | Fake Attempt Done   |
+
+---
+
+## RTO Initiated — Out of TAT
+
+If the 15 working day TAT is breached:
+
+1. Assign to LOPS — TAT: 1–2 working days.
+2. Initiate **Soft Loss Refund** from ICRM: View Details > Shipment section > Soft Loss > Select reason > Submit.
+
+_Note: Soft loss is temporary. Amount is debited from wallet once shipment is delivered. Cannot be transferred to bank._
+
+### Nugget Ticket (NFCR)
+
+| Field             | Value                                  |
+| ----------------- | -------------------------------------- |
+| Channel           | Lops Shipment Delivery                 |
+| Agent Assign      | As per courier                         |
+| Status            | Open                                   |
+| Subject           | Delay in Shipment Delivery–RTO         |
+| FCR               | NFCR                                   |
+| SR Issue Category | Shipment Delivery Delay                |
+| Sub Category      | Delay in Shipment Delivery–RTO/Reverse |
+
+---
+
+## RTO Without NDR
+
+> Sir / Ma'am, I'm apologized for the inconvenience caused — your shipment has been RTO without any delivery attempt. I am forwarding your complaint to our team. They will provide resolution within 1–2 working days.
+
+### Nugget Ticket (NFCR)
+
+| Field             | Value               |
+| ----------------- | ------------------- |
+| Channel           | Lops NDR and RTO    |
+| Agent Assign      | Auto Assign         |
+| Status            | Open                |
+| Subject           | RTO Without NDR     |
+| FCR               | NFCR                |
+| SR Issue Category | Shipment NDR and RTO|
+| Sub Category      | RTO Without NDR     |
+
+---
+
+## RTO Acknowledge
+
+Indicates the shipment has been delivered to the seller and the seller has acknowledged receipt from the seller panel.
+
+---
+
+## RTO Escalation
+
+Seller can escalate from the panel when:
+- Shipment is in **RTO Initiated** or **RTO In Transit** status, AND
+- The RTO EDD has been breached.
+
+**Path:** Seller Panel > Orders > RTO tab > Escalate button (visible when EDD passed) > Add comment > Submit
+
+### RTO Zone TATs (excluding RTO Initiated date and Sundays)
+
+| Zone | Description                          |
+| ---- | ------------------------------------ |
+| A    | Within City                          |
+| B    | Within State                         |
+| C    | Metro to Metro                       |
+| D    | Rest of India (excluding NE and J&K) |
+| E    | North East and J&K                   |
+
+### Key Rules
+
+- Resolution TAT: **72 hours** from raised date.
+- Re-escalation allowed within **48 hours** of escalation closure.
+- Escalation auto-closes on: RTO NDR, RTO Delivered, Disposed, Destroyed, Lost, RTO Acknowledged, Put Away Done.
+
+---
+
+## NDR Verification for RTO Shipment
+
+1. Check shipment status in ICRM.
+2. Check if NDR was sent and action taken by seller.
+3. Inform seller: forwarding to team; verifying attempt from buyer. TAT: 1–2 days.
+
+_Do not raise a ticket if the issue is pending more than 10 days._
+
+### Nugget Ticket (NFCR)
+
+| Field             | Value                        |
+| ----------------- | ---------------------------- |
+| Channel           | NDR Verification             |
+| Agent Assign      | Lakshita / Shilpa            |
+| Status            | Open                         |
+| Subject           | Delivery Attempt Verification|
+| FCR               | NFCR                         |
+| SR Issue Category | Lops NDR and RTO             |
+| Sub Category      | Fake Attempts Done           |

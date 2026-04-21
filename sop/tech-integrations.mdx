@@ -1,0 +1,100 @@
+---
+title: "Tech and Integrations"
+description: "API integration, channel integration, Shopify sync issues, and common tech FAQs"
+---
+
+## API Integration
+
+**Path to generate API:** Settings > API > Configure > Create API User > Fill details > Generate
+
+**API Documentation:** https://apidocs.shiprocket.in
+
+**Token validity:** 10 days. Seller must regenerate every 10th day.
+
+_Registered email address cannot be used as API user. Use a separate email._
+
+---
+
+## Channel Integration
+
+**Path:** Seller Panel > Channels > Add New Channel > Click Integrate > Follow steps
+
+Auto-status update runs every **30 minutes** for all integrated channels. Seller can also manually sync using the "Sync Orders" button.
+
+_For tech callback TAT: 24 hours._
+
+---
+
+## Channel Integration FAQs
+
+**Why are real-time orders not syncing?**
+
+1. Amazon — only self-ship orders are synced.
+2. Shopify — only unfulfilled / unshipped status orders are synced.
+3. Other channels — check channel connection status, account suspension status, and order sync settings.
+4. Ask seller to reauthenticate from panel (available for Shopify and Amazon).
+5. For Shopify — check that "Pull Prepaid orders with Tags" and "Pull COD orders with Tags" are not set — these restrict which orders get synced.
+6. WooCommerce — Legacy API must be enabled; REST API must have read/write access.
+
+**Why is freight info not visible for all channels?**
+
+Only available after channel integration. WooCommerce supports internal API. Other channels can use the external serviceability API.
+
+**If buyer changes the order on seller's website, will it update on SR panel?**
+
+No. Once synced, changes on the website do not reflect on the SR panel automatically. Changes can be done manually if order status is "New."
+
+**API Token Expired**
+
+Token is valid for 10 days only. Seller must regenerate the token on every 10th day.
+
+**Access Forbidden in Unicommerce**
+
+Seller is using a registered email address instead of an API user. Ask seller to create an API user in the panel and use those credentials in Unicommerce.
+
+---
+
+## Shopify Sync Issue
+
+If seller sees "Authentication failed":
+
+1. Setup and Manage > Channels.
+2. Select the Shopify channel.
+3. Click **Re-authenticate**.
+4. Log in to Shopify if prompted.
+
+### Nugget Ticket
+
+| Field             | Value                        |
+| ----------------- | ---------------------------- |
+| Channel           | Customer Support Call Center |
+| Agent Assign      | Own Name                     |
+| Status            | Resolved                     |
+| Subject           | Shopify Sync Issue           |
+| FCR               | Resolved                     |
+| SR Issue Category | Integration and APIs         |
+| Sub Category      | Channel Integration Issue    |
+
+---
+
+## ZOP (for Shopify)
+
+Features: Automatic order sync, status sync, catalog and inventory sync, auto-refund, abandoned cart WhatsApp messages.
+
+| Contact Type | Handling                                  |
+| ------------ | ----------------------------------------- |
+| ZOP seller   | Handle at CC; deny product listing requests |
+| Buyer        | Route to support@zop.in or 9953253070    |
+| Shopify sync | Raise ticket to Tech Support with ZOP tag |
+
+---
+
+## SR Support (Portal)
+
+- Ticket creator name will reflect as "Abhinav Singh2".
+- Source will appear as "portal."
+- Tickets created via portal are floated to respective Group (not Agent).
+- Replies can be done from Nugget as normal workflow.
+- Seller can see Nugget responses on their seller panel.
+- Only ACR and NFCR cases appear on panel — FCR cases are not visible.
+- If seller is unsatisfied with FCR resolution — seller gets one option to call CC.

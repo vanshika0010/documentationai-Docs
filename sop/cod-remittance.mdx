@@ -1,0 +1,154 @@
+---
+title: "COD Remittance"
+description: "Handling COD remittance queries — in TAT, out of TAT, early COD, instant COD, and partial COD"
+---
+
+## COD Remittance — In TAT
+
+### System Check
+
+1. Copy link from SPARK / Click on Internal ICRM.
+2. View Details > Shipment > Check delivered date > Check Remittance tab.
+3. Check remittance plan and remitted date.
+4. Check bank account and KYC verification.
+
+### Remittance Plans
+
+| Plan         | Charge (incl. GST) | Remittance Day             |
+| ------------ | ------------------ | -------------------------- |
+| Standard     | No charge          | D+8 (Mon, Wed, Fri only)   |
+| Early COD D+2| 0.99%              | 3rd day after delivery     |
+| Early COD D+3| 0.69%              | 4th day after delivery     |
+| Early COD D+4| 0.49%              | 5th day after delivery     |
+
+_Remittance is processed on working days only (excluding Sunday and holidays)._
+
+---
+
+## COD Remittance — Out of TAT
+
+### Checks Before Raising Ticket
+
+1. Wallet balance is positive (all linked accounts).
+2. COD is not blocked for account or AWB.
+3. Remittance plan and expected remittance date calculated correctly.
+4. KYC / Bank details verified.
+5. Standard remittance is D+8 from delivery date (Mon, Wed, Fri). Early COD is as per plan.
+
+If TAT is crossed:
+
+> Sir / Ma'am, as I can check, the remittance has not been credited in your account and the timeline has been crossed. I sincerely apologize for the inconvenience. I am escalating this to the concerned department — please wait 1–2 working days for further updates.
+
+### Nugget Ticket (NFCR)
+
+| Field             | Value                           |
+| ----------------- | ------------------------------- |
+| Channel           | Customer Support Finance Desk   |
+| Agent Assign      | Priya / Manisha                 |
+| Status            | Open                            |
+| Subject           | Remittance Not Received         |
+| FCR               | NFCR                            |
+| SR Issue Category | COD Remittance                  |
+| Sub Category      | Remittance Not Received         |
+
+---
+
+## Early COD — Activation
+
+**Path:** Seller Panel > Billing > Remittance Logs > Early COD > Select Plan > Activate
+
+_Plan activates instantly on clicking "Activate."_
+
+### Nugget Ticket (Activation — FCR)
+
+| Field             | Value                        |
+| ----------------- | ---------------------------- |
+| Channel           | Customer Support Call Center |
+| Status            | Resolved                     |
+| Subject           | Early COD Process            |
+| FCR               | Yes                          |
+| SR Issue Category | COD Remittance               |
+| Sub Category      | Early COD Process            |
+
+---
+
+## Early COD — Downgrade
+
+- Seller must wait a **minimum of 30 days** from activation date before downgrading.
+- If contacted within 30 days — inform seller to wait.
+- If contacted after 30 days — guide seller to deactivate from panel.
+
+**Path:** Seller Panel > Billing > Shipping Charges > Early COD > Deactivate
+
+_If seller is unable to deactivate even after 30 days — ask for screenshot and assign to Tech Support._
+
+---
+
+## Instant COD
+
+Sellers receive up to **70%** of COD amount the next day (S+1) after shipping.
+
+| Component          | Detail                               |
+| ------------------ | ------------------------------------ |
+| Initial Remittance | Up to 70% on S+1                     |
+| Service Fee        | 2.99% of COD amount via Instant COD  |
+| Remaining Amount   | As per ongoing COD remittance plan   |
+
+**Enable path:** Settings > Seller Remittance > Instant COD > Enable
+
+_Instant COD is in Phase 1 rollout for selected Gold and Platinum tier sellers._
+
+---
+
+## Partial COD
+
+Allows buyers to pay part of the order online and the remainder on delivery.
+
+- Available for all COD types (standard and early).
+- Advisor can activate or deactivate from ICRM.
+
+**ICRM path:** Seller Info > Enter Company ID > Company Details > Enable / Disable Partial COD
+
+For order creation issues with Partial COD — assign to **Customer Support Tech Desk**.
+
+### Nugget Ticket
+
+| Field             | Value                        |
+| ----------------- | ---------------------------- |
+| Channel           | Customer Support Call Center |
+| Agent Assign      | Own Name                     |
+| Status            | Resolved                     |
+| Subject           | Partial COD Activation       |
+| FCR               | Yes                          |
+| SR Issue Category | COD Remittance               |
+| Sub Category      | COD Remittance Inquiry       |
+
+---
+
+## COD Handling Fee
+
+A flat fee per remittance cycle applies to all sellers **excluding** those with active ECOD / ICOD plans. Fee varies by plan — refer to the COD Handling Fee reference sheet.
+
+---
+
+## COD to Prepaid Mode Change
+
+- Change allowed for any status **except** "Out for Delivery" and "Undelivered."
+- One-time only; cannot be reversed.
+- Available couriers: Ecom, Delhivery, Xpressbees.
+
+**Enable in settings:** Settings > COD to Prepaid > Enable toggle
+
+**Change path:** Orders > All Orders > Search order > Payment tab > Edit > Change mode
+
+### Nugget Ticket (NFCR)
+
+| Field             | Value                    |
+| ----------------- | ------------------------ |
+| Channel           | FOPS                     |
+| Agent Assign      | NA                       |
+| Status            | Open                     |
+| Subject           | Change in Mode of Payment|
+| FCR               | NFCR                     |
+| SR Issue Category | Shipment Delivery Delay  |
+| Sub Category      | Change in Mode of Payment|

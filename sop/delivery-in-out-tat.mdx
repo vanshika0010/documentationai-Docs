@@ -1,0 +1,144 @@
+---
+title: "Delivery — In TAT and Out TAT"
+description: "How to handle delivery queries that are within or beyond the estimated delivery date"
+---
+
+## System Check
+
+1. Copy link from SPARK and paste in a new tab / Click on Internal ICRM.
+2. View Details > Shipment section.
+3. Check Suppress EDD.
+4. Check SR Tracking.
+5. Check First EDD and Updated EDD.
+6. Check Courier Remarks.
+
+---
+
+## Delivery In-TAT
+
+Inform the seller of the EDD (day end as per the EDD).
+
+If shipment is delayed, seller can escalate from the panel:
+
+**Path:** Seller Panel > Shipments > Track > Paste AWB > Escalate (under Expedite Delivery)
+
+### Nugget Ticket (FCR)
+
+| Field             | Value                        |
+| ----------------- | ---------------------------- |
+| Channel           | Customer Support Call Center |
+| Agent Assign      | Own Name                     |
+| Status            | Resolved                     |
+| Subject           | Delivery TAT Required        |
+| FCR               | Yes                          |
+| SR Issue Category | Shipment Delivery Delay      |
+| Sub Category      | Delivery TAT Required        |
+
+---
+
+## Delivery Out-TAT
+
+| Scenario                                          | Resolution                                                      |
+| ------------------------------------------------- | --------------------------------------------------------------- |
+| Updated EDD available and tracking updated        | Ask seller to wait till new EDD; create FCR ticket              |
+| Updated EDD available but tracking not updated   | Create NFCR ticket to LOPS; TAT 1–2 working days               |
+| Updated EDD not available but tracking updated   | Create NFCR ticket to LOPS; TAT 1–2 working days               |
+
+### Nugget Ticket (FCR)
+
+| Field             | Value                              |
+| ----------------- | ---------------------------------- |
+| Channel           | Customer Support Call Center       |
+| Agent Assign      | Own Name                           |
+| Status            | Resolved                           |
+| Subject           | Delay in Shipment Delivery         |
+| FCR               | Yes                                |
+| SR Issue Category | Shipment Delivery Delay            |
+| Sub Category      | Delay in Shipment Delivery–Forward |
+
+### Nugget Ticket (NFCR)
+
+| Field             | Value                              |
+| ----------------- | ---------------------------------- |
+| Channel           | LOPS Shipment Delay Delivery       |
+| Agent Assign      | Auto Assign                        |
+| Status            | Open                               |
+| Subject           | Delay in Shipment Delivery         |
+| FCR               | NFCR                               |
+| SR Issue Category | Shipment Delivery Delay            |
+| Sub Category      | Delay in Shipment Delivery–Forward |
+
+---
+
+## Tracking Status Mismatch
+
+If the delivery location differs from the tracking update:
+
+1. Confirm with seller — does he want a delivery attempt or RTO?
+2. Assign to LOPS per seller VOC.
+3. TAT: 1–2 working days.
+
+### Nugget Ticket (NFCR)
+
+| Field             | Value                        |
+| ----------------- | ---------------------------- |
+| Channel           | LOPS Shipment Delay Delivery |
+| Agent Assign      | As per courier               |
+| Status            | Open                         |
+| Subject           | Tracking Status Mismatch     |
+| FCR               | NFCR                         |
+| SR Issue Category | Shipment Delivery Delay      |
+| Sub Category      | Tracking Status Mismatch     |
+
+---
+
+## Shipment Status Untraceable
+
+| Shipment Type    | TAT              |
+| ---------------- | ---------------- |
+| Forward Delivery | 7 working days   |
+| RTO Delivery     | 1–2 working days |
+
+### Nugget Ticket — Forward Shipment (NFCR)
+
+| Field             | Value                              |
+| ----------------- | ---------------------------------- |
+| Channel           | LOPS Shipment Delay Delivery       |
+| Agent Assign      | Auto Assign                        |
+| Status            | Open                               |
+| Subject           | Delay in Shipment Delivery         |
+| FCR               | NFCR                               |
+| SR Issue Category | Shipment Delivery Delay            |
+| Sub Category      | Delay in Shipment Delivery–Forward |
+
+### Nugget Ticket — RTO Shipment (NFCR)
+
+| Field             | Value                                  |
+| ----------------- | -------------------------------------- |
+| Channel           | Lops Shipment Delivery                 |
+| Agent Assign      | Auto Assign                            |
+| Status            | Open                                   |
+| Subject           | Delay in Shipment Delivery–RTO         |
+| FCR               | NFCR                                   |
+| SR Issue Category | Shipment Delivery Delay                |
+| Sub Category      | Delay in Shipment Delivery–RTO/Reverse |
+
+---
+
+## Courier Under Stress
+
+If pickup or delivery is delayed due to courier stress on a pincode:
+
+> As we can see, the delivery pincode is under stress for this courier and deliveries would be impacted here. The same was mentioned in the courier name while placing the order. We show stressed pincodes by mentioning "Stressed" in the courier name — you can avoid such couriers for a smoother delivery experience.
+
+### Nugget Ticket (FCR)
+
+| Field             | Value                        |
+| ----------------- | ---------------------------- |
+| Channel           | Customer Support Call Center |
+| Agent Assign      | Own Name                     |
+| Status            | Resolved                     |
+| Subject           | Delivery TAT Required        |
+| FCR               | Yes                          |
+| SR Issue Category | Shipment Delivery Delay      |
+| Sub Category      | Delivery TAT Required        |
