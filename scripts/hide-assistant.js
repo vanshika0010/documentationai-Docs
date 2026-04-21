@@ -9,14 +9,23 @@
       return path === p || path.startsWith(p);
     });
 
-    // Target the Ask AI button/widget - adjust selector if needed
-    var askAI = document.querySelector('[data-ask-ai], .ask-ai-button, button[aria-label*="Ask AI"]');
-    if (askAI) {
-      askAI.style.display = shouldHide ? 'none' : '';
-    }
+    // Find the Ask AI button by looking for the span text
+    var spans = document.querySelectorAll('span');
+    spans.forEach(function (span) {
+      if (span.textContent.trim() === 'Ask AI') {
+        var button = span.closest('button') || span.parentElement;
+        if (button) {
+          button.style.display = shouldHide ? 'none' : '';
+        }
+      }
+    });
   }
 
-  // Run on load and on SPA navigation
-  checkAndHide();
+  // Wait for DOM to be ready
+  document.addEventListener('DOMContentLoaded', function () {
+    checkAndHide();
+  });
+
+  // Also run on SPA navigation
   window.addEventListener('popstate', checkAndHide);
 })();
