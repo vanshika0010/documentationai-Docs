@@ -9,7 +9,7 @@
     }
   },
   "ai": {
-    "ai-assistant:enabled": false
+    "ai-assistant:enabled": true
   },
   "navigation": {
     "tabs": [
