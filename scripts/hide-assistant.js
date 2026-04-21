@@ -1,31 +1,43 @@
 (function () {
   var PAGES_TO_HIDE = [
-    'sop/account-kyc',           
+    '/sop/account-kyc',  
   ];
 
-  function checkAndHide() {
+  function shouldHidePage() {
     var path = window.location.pathname;
-    var shouldHide = PAGES_TO_HIDE.some(function (p) {
+    return PAGES_TO_HIDE.some(function (p) {
       return path === p || path.startsWith(p);
     });
+  }
 
-    // Find the Ask AI button by looking for the span text
-    var spans = document.querySelectorAll('span');
-    spans.forEach(function (span) {
+  function hideAskAI() {
+    if (!shouldHidePage()) return;
+
+    document.querySelectorAll('span').forEach(function (span) {
       if (span.textContent.trim() === 'Ask AI') {
         var button = span.closest('button') || span.parentElement;
         if (button) {
-          button.style.display = shouldHide ? 'none' : '';
+          button.style.setProperty('display', 'none', 'important');
         }
       }
     });
   }
 
-  // Wait for DOM to be ready
-  document.addEventListener('DOMContentLoaded', function () {
-    checkAndHide();
+  // Keep watching for the button to appear in the DOM
+  var observer = new MutationObserver(function () {
+    hideAskAI();
   });
 
-  // Also run on SPA navigation
-  window.addEventListener('popstate', checkAndHide);
+  observer.observe(document.body, {
+    childList: true,
+    subtree: true,
+  });
+
+  // Also run immediately in case it's already there
+  hideAskAI();
+
+  // Handle SPA navigation
+  window.addEventListener('popstate', function () {
+    hideAskAI();
+  });
 })();
