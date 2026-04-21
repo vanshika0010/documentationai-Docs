@@ -139,6 +139,116 @@
         ]
       },
       {
+        "tab": "SOPs",
+        "icon": "clipboard-list",
+        "pages": [
+          {
+            "title": "Introduction",
+            "path": "sop/intro"
+          },
+          {
+            "title": "Account KYC",
+            "path": "sop/account-kyc"
+          },
+          {
+            "title": "Apology & Empathy Statements",
+            "path": "sop/apology-empathy-statements"
+          },
+          {
+            "title": "Buyer Handling",
+            "path": "sop/buyer-handling"
+          },
+          {
+            "title": "Call Script C2C",
+            "path": "sop/call-script-c2c"
+          },
+          {
+            "title": "Call Script Inbound",
+            "path": "sop/call-script-inbound"
+          },
+          {
+            "title": "Call Script Outbound",
+            "path": "sop/call-script-outbound"
+          },
+          {
+            "title": "COD Remittance",
+            "path": "sop/cod-remittance"
+          },
+          {
+            "title": "Courier & Shipping",
+            "path": "sop/courier-shipping"
+          },
+          {
+            "title": "CSAT Rating IVR",
+            "path": "sop/csat-rating-ivr"
+          },
+          {
+            "title": "Delivery In/Out TAT",
+            "path": "sop/delivery-in-out-tat"
+          },
+          {
+            "title": "Escalations & Transfers",
+            "path": "sop/escalations-transfers"
+          },
+          {
+            "title": "Finance, Tax & Invoicing",
+            "path": "sop/finance-tax-invoicing"
+          },
+          {
+            "title": "In-Transit Damage & Misroute",
+            "path": "sop/in-transit-damage-misroute"
+          },
+          {
+            "title": "International Shipping",
+            "path": "sop/international-shipping"
+          },
+          {
+            "title": "Miscellaneous",
+            "path": "sop/miscellaneous"
+          },
+          {
+            "title": "Order Cancellation",
+            "path": "sop/order-cancellation"
+          },
+          {
+            "title": "Order Creation",
+            "path": "sop/order-creation"
+          },
+          {
+            "title": "Pickup",
+            "path": "sop/pickup"
+          },
+          {
+            "title": "Plans & Billing",
+            "path": "sop/plans-billing"
+          },
+          {
+            "title": "Return Orders",
+            "path": "sop/return-orders"
+          },
+          {
+            "title": "RTO & NDR",
+            "path": "sop/rto-ndr"
+          },
+          {
+            "title": "Tech Integrations",
+            "path": "sop/tech-integrations"
+          },
+          {
+            "title": "VAS Services",
+            "path": "sop/vas-services"
+          },
+          {
+            "title": "Wallet Recharge",
+            "path": "sop/wallet-recharge"
+          },
+          {
+            "title": "Warehousing & Fulfillment",
+            "path": "sop/warehousing-fulfillment"
+          }
+        ]
+      },
+      {
         "tab": "Changelog",
         "icon": "clock",
         "pages": [
