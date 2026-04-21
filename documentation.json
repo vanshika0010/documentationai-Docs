@@ -143,7 +143,7 @@
         "icon": "clipboard-list",
         "pages": [
           {
-            "title": "Introduction",
+            "title": "Overview",
             "path": "sop/intro"
           },
           {
