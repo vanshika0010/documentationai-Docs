@@ -1,6 +1,6 @@
 (function () {
   var PAGES_TO_HIDE = [
-    '../sop/account-kyc',           
+    'sop/account-kyc',           
   ];
 
   function checkAndHide() {
