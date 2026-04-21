@@ -8,6 +8,9 @@
       "brand": "#FDBA74"
     }
   },
+  "ai": {
+    "ai-assistant:enabled": false
+  },
   "navigation": {
     "tabs": [
       {
