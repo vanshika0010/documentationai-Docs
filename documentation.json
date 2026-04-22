@@ -11,11 +11,6 @@
   "ai": {
     "ai-assistant:enabled": true
   },
-  "scripts": [
-    {
-      "src": "scripts/hide-assistant.js"
-    }
-  ],
   "navigation": {
     "tabs": [
       {
