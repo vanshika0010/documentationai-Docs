@@ -253,3 +253,112 @@ RADAR is available directly within the Shiprocket panel. Once activated, it star
 2. Swipe the order card left.
 3. Tap three-dots menu > **Reassign Courier**.
 4. Select a new courier and confirm.
+
+---
+
+## Additional Product Info
+
+### Shipping Zones
+
+Courier companies divide all serviceable pincodes into shipping zones that determine freight charges and delivery time:
+
+| Zone | Definition |
+|---|---|
+| Zone A (Within City) | Pickup and delivery pincodes are in the same city |
+| Zone B (Within State) | Pickup and delivery pincodes are in the same state/region |
+| Zone C (Metro to Metro) | Between major metro cities |
+| Zone D (Rest of India) | All other pincodes excluding NE and J&K |
+| Zone E (NE and J&K) | North East India and Jammu & Kashmir |
+
+### Courier Partners on Shiprocket
+
+Delhivery, Blue Dart, Shadowfax, Xpressbees, Ecom Express, DTDC, Ekart, India Post, Amazon Shipping, Pikndel, and many more.
+
+All couriers can be activated by the seller except Bluedart, which requires KYC verification.
+
+### Weight Classes
+
+Couriers are categorized by weight slabs: 0.5 kg, 1 kg, 2 kg, 5 kg, and 10 kg.
+
+### Courier Priority Options
+
+| Priority | What it does |
+|---|---|
+| Recommended by Shiprocket | SR decides the best courier based on your shipping needs |
+| Cheapest | Lists couriers by lowest freight cost |
+| Fastest | Lists couriers by earliest EDD |
+| Best Rated | Lists couriers by performance rating |
+| Custom | Seller-defined priority order |
+
+### Direct Ship Feature
+
+Automatically assigns courier based on courier priority without showing the selection screen. Pickup is scheduled automatically for the next day and labels are downloaded automatically.
+
+### Courier Rules — Conditions Available
+
+Courier rules can be created based on:
+1. Payment Mode
+2. Weight
+3. Zone Wise
+4. Order Value
+5. State
+6. Pincode
+7. City
+8. Dangerous Goods
+9. Product SKU
+10. AWB Assigned Time
+11. Order Tags
+12. TAT and TAT Compliance %
+13. NDR Conversion
+14. Product Category
+15. Pickup Location ID
+
+Up to **200 courier rules** can be created. Rules cannot be edited — archive and recreate if changes are needed.
+
+**If no rule applies:** Default courier priority setting is used (Recommended by Shiprocket).
+
+### SDD and NDD Couriers
+
+Same-Day Delivery (SDD) and Next-Day Delivery (NDD) couriers are available for selected sellers. To find them: Setup & Manage > Courier > Courier Selection > Search "SDD" or "NDD".
+
+### Courier Activity Logs
+
+Setup & Manage > Courier > Courier Activity Logs — view all courier-level actions.
+
+### LM (Last Mile) Labels
+
+**Individual LM Label:** Orders > All Orders tab > Search shipment > Action icon > Download LM Label.
+
+**Bulk LM Labels:** Tools > Bulk Actions > Select Tracking (AWB) Numbers > Enter AWBs > Submit > Tools > Activity Logs > Bulk LM Download > Download.
+
+### Amazon Courier Notes
+
+- Amazon courier cannot be used for orders from Amazon channels.
+- Amazon label format is thermal and cannot be edited.
+- OTP verification applies to Amazon prepaid orders over Rs. 500.
+
+### Template Pricing
+
+If template pricing is enabled, courier assignment is handled by Shiprocket — seller cannot manually select a courier.
+
+### API Courier Selection
+
+You can specify a courier by passing the courier ID in the AWB assignment API call. Courier is assigned only if serviceability is available.
+
+### Couriers Available in Lite Plan
+
+All prominent and best-performing courier partners are available. Bluedart requires a 30-second KYC (PAN details). For same-day/next-day delivery or document shipping, contact KAM or support.
+
+### Label for Document Shipping
+
+A smaller label is used for document shipments. Standard India label size: default 6×4 inch. Customize via Settings > Company Setup > Label Settings.
+
+### Order Barcode on Label
+
+Mandatory for all orders shipped within India using non-hyperlocal couriers. The barcode prevents handling issues at courier hubs.
+
+### Pincode Serviceability Check
+
+Tools > Rate Calculator > Enter pickup and delivery pincodes, weight, payment type > View serviceable couriers.
+
+**Download serviceable pincodes list:** Tools > Pincode Mapping Zone > Enter Pickup Pincode > Export (sent to registered email).
