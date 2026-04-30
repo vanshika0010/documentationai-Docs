@@ -22,7 +22,7 @@
             "path": "combined/Overview"
           },
           {
-            "title": "Account KYC",
+            "title": "Account & KYC",
             "path": "combined/account-kyc"
           },
           {
@@ -70,8 +70,20 @@
             "path": "combined/international-shipping"
           },
           {
+            "title": "Label Customization",
+            "path": "combined/label-customization"
+          },
+          {
             "title": "Miscellaneous",
             "path": "combined/miscellaneous"
+          },
+          {
+            "title": "NDR & Delivery Boost",
+            "path": "combined/ndr-delivery-boost"
+          },
+          {
+            "title": "Omuni (OMS)",
+            "path": "combined/omuni"
           },
           {
             "title": "Order Cancellation",
@@ -90,6 +102,10 @@
             "path": "combined/pickup"
           },
           {
+            "title": "Pickups by Shiprocket",
+            "path": "combined/shiprocket-pickups"
+          },
+          {
             "title": "Plans & Billing",
             "path": "combined/plans-billing"
           },
@@ -104,6 +120,22 @@
           {
             "title": "Settings & Panel",
             "path": "combined/settings-panel"
+          },
+          {
+            "title": "Shiprocket Cargo",
+            "path": "combined/shiprocket-cargo"
+          },
+          {
+            "title": "Shiprocket Checkout",
+            "path": "combined/shiprocket-checkout"
+          },
+          {
+            "title": "Shiprocket Sense",
+            "path": "combined/shiprocket-sense"
+          },
+          {
+            "title": "Shiprocket Trends & App Store",
+            "path": "combined/shiprocket-trends-appstore"
           },
           {
             "title": "Tech & Integrations",
@@ -124,6 +156,14 @@
           {
             "title": "Weight Discrepancy",
             "path": "combined/weight-discrepancy"
+          },
+          {
+            "title": "ZOP Marketplace",
+            "path": "combined/zop"
+          },
+          {
+            "title": "Credit Line & Business Loan",
+            "path": "combined/credit-line-business-loan"
           }
         ]
       }
