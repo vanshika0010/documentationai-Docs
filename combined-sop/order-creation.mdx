@@ -1,0 +1,270 @@
+---
+title: "Order Creation"
+description: "How to create orders manually or in bulk on the Shiprocket panel, resolve panel issues, and understand order features"
+---
+
+## Product Info
+
+### Order Statuses
+
+**Forward Journey:**
+Pickup Scheduled → Out For Pickup → Picked Up → Shipped → In-Transit → Reached at Destination Hub → Out For Delivery → Delivered → Undelivered
+
+**Reverse Journey:**
+RTO Initiated → RTO In-Transit → RTO Reached at Hub → RTO Out For Delivery → RTO Delivered → RTO Undelivered
+
+### Key Concepts
+
+- **Dead Weight:** The actual physical weight of the package in kilograms. Minimum chargeable weight is 0.5 kg.
+- **Volumetric Weight:** Calculated as L × B × H / 5000. The higher of dead weight and volumetric weight is used as Applicable Weight for freight charges.
+- **Order Tags:** Labels assigned to orders for identification and filtering. Multiple tags can be added per order.
+- **MPS (Multi-Packet Shipment):** Available for Delhivery only. Allows up to 20 packets (1 Master + 19 Child AWBs) with a combined max weight of 1,000 kg. Minimum chargeable weight is 10 kg. Works for manual orders only — not for channel integration orders.
+- **Self-Fulfilled Orders:** Shipments managed directly by the seller instead of using Shiprocket courier partners.
+- **Quick Shipment:** A shorter version of the single order creation process for domestic shipments only.
+
+### Order Creation Options
+
+Two modes available:
+- **Single Order:** Fill in all fields manually — pickup address, delivery details, product details, payment method, package details, and optional other details.
+- **Bulk Order:** Upload an Excel or CSV file using a downloaded template (Advance Excel, Basic Excel, or CSV format). Upload file → check errors → fix and re-upload if needed → ship from Processing tab.
+
+### Order Tabs on Panel
+
+| Tab | Description |
+|-----|-------------|
+| Unprocessable | Orders with inventory issues (out of stock, unmapped) from channel integrations |
+| Cancel Requests | Orders with cancellation requests from customers |
+| New | All new/pending orders, manually added or from channels |
+| Ready to Ship | Orders with courier assigned, pending pickup |
+| Pickups & Manifests | Pickup IDs and Manifests for scheduled pickups |
+| In Transit | Orders picked up and in transit |
+| Delivered | Successfully delivered orders |
+| RTO | Orders being returned to origin |
+| All | Master view of all orders in any stage |
+
+### Filters Available (New Tab)
+Status, Channels, Payments, Pickup Address, Delivery Country, Secured Shipments, Order Tag, Multiple Order IDs, SKU.
+
+### Pickup ID vs Manifest ID
+- **Pickup ID:** Used to escalate pickup delays. One Pickup ID groups shipments by pickup address, courier, and scheduled date.
+- **Manifest ID:** Used for post-pickup disputes. Still valid — manifest is required when handing shipments to pickup executive.
+
+### Courier Selection Parameters
+Rating (based on Pickup Performance, Delivery Performance, NDR Performance, SLA), Expected Pickup, Estimated Delivery, Chargeable Weight, Charges, RTO Charges, and additional services (Call Before Delivery, Instant POD, Real-Time Tracking).
+
+### E-Way Bill
+- Required for shipments with order value over ₹50,000.
+- Must include: E-Way Bill number, E-Way Bill PDF, and invoice.
+- Valid for 7 days.
+- Upload at pickup generation or from Ready to Ship screen.
+
+---
+
+## SOP — Order Creation
+
+### Scenario 1 — Seller wants to create an order from the panel
+
+**System Check:** Copy link from SPARK and paste in a new tab.
+
+**Path:** Seller Panel > Orders > Add Orders > New > Add Order > Domestic > Add details > Click on Add Order > Ship Now > Select Courier Partner
+
+### Scenario 2 — Seller is unable to create an order from the panel
+
+1. Ask the seller for a screenshot of the panel.
+2. Assign to **Customer Support Tech Desk**. TAT: 24 hours.
+
+### Nugget Ticket — Scenario 1 (FCR)
+
+| Field | Value |
+|-------|-------|
+| Channel | Customer Support Call Center |
+| Agent Assign | Own Name |
+| Status | Resolved |
+| Subject | Order Processing Method |
+| FCR | Yes |
+| SR Issue Category | Orders |
+| Sub Category | Order Processing Method |
+
+### Nugget Ticket — Scenario 2 (NFCR)
+
+| Field | Value |
+|-------|-------|
+| Channel | Customer Support Tech Desk |
+| Agent Assign | NA |
+| Status | Awaiting Customer Response |
+| Subject | Unable to process order |
+| FCR | NFCR |
+| SR Issue Category | Orders |
+| Sub Category | Unable to process order(s) |
+
+---
+
+## How to Do on Seller Panel
+
+### Create a Single Order
+
+1. Go to **Orders > Add Order** from the left menu (or use shortcut **A+O** or Quick Actions at the top navigation bar).
+2. Select **Single Order**.
+3. Fill in:
+   - **Pickup Address:** Select a saved address or add a new one.
+   - **Delivery Details:** Mobile number, full name, complete address of buyer.
+   - **Product Details:** Product name, unit price, quantity, tax rate, and optional fields (discount, shipping charges, gift wrap, transaction fee).
+   - **Payment Method:** Cash on Delivery or Prepaid.
+   - **Package Details:** Dead weight (kg) and dimensions (L×W×H in cm). Applicable weight = higher of dead or volumetric weight.
+   - **Other Details (optional):** Order Channel, Order Tag, custom Order ID, Notes.
+4. Click **Ship Now** to ship immediately, or **Add Order** to save and ship later.
+5. On Ship Now screen, select courier partner and schedule pickup.
+
+> **Note:** You can customize the Add Order form with additional fields from **Settings > Customize Order Form** (e.g., HSN Code, Product SKU, Additional Delivery Details).
+
+### Create a Bulk Order
+
+1. Go to **Orders > Add Order > Bulk**.
+2. Download the template (Advance Excel / Basic Excel / CSV).
+3. Replace sample data with your order data.
+4. Upload the file.
+5. Check for errors in Recent Uploads; download error file, fix, and re-upload if needed.
+6. Ship from the **Processing** tab.
+
+### Ship an Order
+
+1. Go to **Orders > New tab**.
+2. Find your order and click **Ship Now**.
+3. Review courier options (rating, EDD, chargeable weight, charges).
+4. Click **Ship Now** on preferred courier.
+5. Schedule pickup — choose today or a future date (up to 5 working days in advance).
+
+### Edit an Order
+
+- **Before courier assignment:** Edit buyer details, pickup details, weight, package details.
+- **After courier assignment:** Only complete address or landmark can be edited.
+
+**Path:** Orders > More (...) > Edit Order > Make changes > Update
+
+### Clone an Order
+
+Orders > Search AWB/Order ID > More (...) > Clone Order → redirected to Add Order page.
+
+### Change Payment Mode
+
+1. Orders > New tab > More (...) > Edit Order.
+2. Change mode (COD to Prepaid or Prepaid to COD before pickup; after courier assignment, only COD to Prepaid is possible via Payment Mode Settings).
+3. Click Update.
+
+> **Conditions:** Not applicable for Out for Delivery, RTO, or Delivered status. Only for Ecom Express, Delhivery, and Xpressbees. Change is one-time only and cannot be reversed.
+
+### Cancel an Order
+
+Orders > Search AWB/Order ID > More (...) > Cancel Order.
+
+> **Note:** Cannot cancel after "Out for Pickup" status.
+
+### Bulk Actions Available
+
+From New tab (select multiple orders):
+- Ship Now, Cancel Orders, Change Pickup Address, Verify Orders, Add Stock, Map Now.
+
+From Ready to Ship tab:
+- Download Label, Download Invoice, Download Picklist, Schedule Pickup, Download Manifest.
+
+### Download Labels, Invoices, Manifests
+
+- **Single order:** Orders > More (...) > Download Label / Download Invoice / Download Manifest.
+- **Bulk:** Select orders > Bulk Actions > Download Label / Invoice / Manifest.
+- **Manifest (Scan method):** Orders > Ready to Ship > Scan icon > Paste AWBs > Choose format > Download Manifest.
+
+### Add Pickup Address
+
+Settings > Pickup Address > Manage Pickup Addresses > Add Pickup Address > Fill address details > Save Address.
+
+> **Note:** You cannot change the city, state, or pincode of a saved pickup address.
+
+### Add Order Tags
+
+Orders > New or All tab > More (...) > Add Order Tag > Type tag > Enter > Save.
+
+### Verify Orders
+
+**Single:** Orders > New tab > More (...) > Mark as Verified.
+
+**Bulk:** Orders > Select multiple > Bulk Actions > Verify Orders.
+
+**Enable verification setting:** Settings > Shipment Features > Order Verification > Toggle ON.
+
+### Upload E-Way Bill
+
+**Single Order:** Orders > Ready to Ship tab > Schedule Pickup > Enter E-way bill number and upload PDF + invoice.
+
+**Bulk:** Orders > Ready to Ship > Upload Eway Bill icon > Download list > Fill CSV > Upload.
+
+**Change E-Way Bill:** Orders > Ready to Ship or All tab > More (...) > Change Eway Bill.
+
+### Multi-Packet Shipment (MPS)
+
+Contact support (9711941080) or your KAM to activate MPS. Once active:
+1. Go to Orders > Add Order.
+2. Fill all details; in Package Details, enter package count > 1.
+3. Enter weight and dimensions.
+4. Click Done to add order.
+
+> MPS is available for Delhivery only. Manual orders only. Max 20 packets, max combined weight 1,000 kg, minimum chargeable weight 10 kg.
+
+---
+
+## Mobile App — How to Do
+
+### Create a Domestic Order
+
+1. Tap **Add Orders** from the bottom menu.
+2. Select **Domestic Forward Order** > **Proceed**.
+3. Select a saved pickup address or tap **+ New Pickup Address**.
+4. Enter Delivery Details: first name, last name, email (optional), phone, alternate phone (optional), address, landmark (optional), pincode.
+5. Add Product Details: name, quantity, unit price, SKU; tap **Show More** for category, HSN code, tax rate, discount.
+6. Tap **+ Add Another Product** to add more items.
+7. Select payment mode: COD or Prepaid.
+8. Enter package weight, type, and dimensions (L × B × H in cm).
+9. Tap **Next**.
+10. Add Optional Details: Order ID, date, channel, tags, reseller name, buyer GST, notes.
+11. Tap **Add Order** to save, or ship immediately from the same screen.
+
+### Create a Return Order (Mobile)
+
+1. Tap **Add Order** from the bottom menu.
+2. Select **Return Orders**.
+3. Fill in: Return Address, Customer Details for Pickup, Order Details (ID, date, channel), Product Details (name, qty, price, SKU).
+4. Tap **Next**.
+5. Add Package Details: weight and dimensions.
+6. Add Return Details: reason, images (optional).
+7. Tap **Create Return Order**.
+8. Assign courier and schedule pickup using **Ship Now**.
+
+### Check Return Orders (Mobile)
+
+Three-dots menu at bottom > **Returns** > track or initiate return from here.
+
+### Check COD Remittance (Mobile)
+
+Three-dots menu at bottom > **COD Remittance** > apply date filter to view remittance details.
+
+### Connect Shopify Channel (Mobile)
+
+1. Three-dots menu at bottom > **Channel Integration**.
+2. Tap the **+** icon to add a new channel.
+3. Enter your store URL > **Connect to Shopify**.
+4. Log in to Shopify > authorize by clicking **Install App**.
+5. Edit channel settings on the Shiprocket channel page as needed.
+
+> For other channels (non-Shopify), you must use the web panel.
+
+### Set Courier Priority (Mobile)
+
+1. Three-dots menu at bottom > **Settings** > **Courier Priority**.
+2. Choose from: Recommended By Shiprocket, Cheapest, Fastest, Best Rated, Custom.
+
+> Custom priority can only be set from the web panel at https://app.shiprocket.in/courierPriority.
+
+### Reassign Courier (Mobile)
+
+1. Go to Orders > Ready to Ship tab.
+2. Swipe the order card left > three-dots menu > **Reassign Courier**.
+3. Select a new courier partner.

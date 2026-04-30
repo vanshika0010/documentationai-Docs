@@ -1,0 +1,302 @@
+---
+title: "Account and KYC"
+description: "KYC types and verification, account blocked and disabled scenarios, bank verification, email and company name changes, Bluedart activation, user management"
+---
+
+## Product Info
+
+### KYC Types
+
+#### Individual KYC
+Complete via automated Aadhaar OTP verification, or manually upload any **two** of:
+- Aadhaar Card
+- PAN Card
+- Passport
+- Voter ID Card
+- Driving License
+
+#### Company KYC — Sole Proprietorship
+Upload selfie and complete via Aadhaar or GSTIN OTP verification, or manually upload any **two** of:
+- Aadhaar Card, PAN Card, Driving License, Voter Card, Passport, GST Certificate, Company Incorporation Document
+
+#### Company KYC — Registered Company
+Upload selfie and complete via GSTIN OTP verification, or manually upload:
+- PAN Card (mandatory)
+- GST Certificate (all 3 pages) OR Company Incorporation Document
+
+**Panel path:** KYC > Individual / Company > Upload Documents
+
+### KYC TAT
+
+| Type | TAT |
+|---|---|
+| Auto verification (OTP) | 30 seconds |
+| Manual verification | 2–3 working days |
+
+> If wrong OTP is entered 3 times during auto verification, auto verification will no longer be available. If manual KYC is rejected, seller can re-upload within 2–3 working days from rejection date.
+
+### Bank Verification — Penny Drop
+
+- Used when updating bank account for the first time.
+- A ₹1 transaction is credited to verify the account.
+- Maximum **3 attempts** via Penny Drop.
+- Available on both web and mobile app.
+
+**Path:** Settings > Company > Accounting and Bank Details
+
+### Common Reasons for Penny Drop Failure
+
+- Account number and re-enter fields do not match.
+- Incorrect account type selected.
+- Incorrect IFSC code.
+- Account number or IFSC does not match the cancelled cheque.
+
+### Manual Bank Verification (After 3 Failed Penny Drop Attempts)
+
+Submit bank details manually: upload cancelled cheque or passbook with bank stamp and photograph.
+
+**Path:** Settings > Company > Accounting and Bank Details > Upload cancelled cheque
+
+TAT: 48 business hours for manual verification.
+
+If not verified within 48 hours → fill Bank and KYC Tracker. TAT after tracker: 24 hours.
+
+If still unverified → assign to Compliance Query. TAT: 1–2 working days.
+
+### User Management
+
+- Seller can create up to **14 additional users** (excluding main user).
+- Not available on Lite plan.
+
+**Add user:** Settings > User Role Management > Manage User > Add New User > Fill details > Select modules > Add User
+
+**Change tool access:** Settings > User Role Management > Manage User > Select user > Toggle to deactivate, or Edit > Select module > Update
+
+### Account Blocked Reasons
+
+| Reason | Assigned To |
+|---|---|
+| Standard block / suspicious / fraud activity | Compliance Queries — Ravi Jangra |
+| Weight Fraud / Address Mismatch / Multiple Accounts | Weight Fraud Control — Sonish Panchal |
+
+### Bluedart Activation — Documents Required
+
+- Company Name
+- PAN Number
+- Contact Person's Number
+- Pickup Address with PIN Code
+- Billing Address
+- Company URL / Website
+- Product Category
+
+**Panel path:** Settings > Courier > Courier Selection > Deactivated > Click Activate
+
+If Bluedart is not activated within **6 business days** after KYC upload — assign to Compliance Queries — Ravi Jangra.
+
+_Error screenshot is mandatory before assigning ticket to Compliance Queries._
+
+---
+
+## SOP — KYC
+
+### Nugget Ticket (FCR)
+
+| Field | Value |
+|-------|-------|
+| Channel | Customer Support Call Center |
+| Agent Assign | Own Name |
+| Status | Resolved |
+| Subject | KYC Related |
+| FCR | Yes |
+| SR Issue Category | KYC |
+| Sub Category | General Query |
+
+### Nugget Ticket (NFCR — Unable to Upload)
+
+| Field | Value |
+|-------|-------|
+| Channel | FOPS |
+| Agent Assign | NA |
+| Status | Awaiting Customer Response |
+| Subject | Unable to Upload KYC Documents |
+| FCR | NFCR |
+| SR Issue Category | KYC |
+| Sub Category | Unable to Upload KYC Documents |
+
+---
+
+## SOP — Account Blocked
+
+### Scenario 1 — Reason is visible in ICRM
+
+**Check reason:** ICRM > Seller Info > View Details > Company Details > Account Blocked Reason (top left corner)
+
+Inform seller about the reason and assign ticket accordingly.
+
+| Reason | Assign To |
+|---|---|
+| Standard block / suspicious / fraud activity | Compliance Queries — Ravi Jangra |
+| Weight Fraud / Address Mismatch / Multiple Accounts | Weight Fraud Control — Sonish Panchal |
+
+TAT: 1–2 working days.
+
+### Scenario 2 — Reason is not visible in ICRM
+
+Ask seller to share a screenshot of the error on email and create a ticket in your own bucket to check the image.
+
+- Error says "Account Blocked" or "Account Blocked due to Suspicious / Fraud Activity" → assign to Compliance Queries — Ravi Jangra.
+- Error shows any other message → assign to Customer Support Tech Desk. TAT: 24 working hours for callback.
+
+### Nugget Ticket
+
+| Field | Value |
+|-------|-------|
+| Channel | Compliance Query |
+| Agent Assign | Ravi Jangra |
+| Status | Open |
+| Subject | Account Blocked |
+| FCR | NFCR |
+| SR Issue Category | Issues with Shiprocket Panel |
+| Sub Category | Account Blocked |
+
+---
+
+## SOP — Account Disabled
+
+If seller is unable to log in or create an order as account is disabled — ask for screenshot and assign to FOPS. TAT: 1–2 working days.
+
+### Nugget Ticket
+
+| Field | Value |
+|-------|-------|
+| Channel | FOPS |
+| Agent Assign | NA |
+| Status | Open |
+| Subject | Account Disable |
+| FCR | NFCR |
+| SR Issue Category | Issues with Shiprocket Panel |
+| Sub Category | Account Blocked |
+
+---
+
+## SOP — Bank Unfreeze (Change Bank Details)
+
+If seller wants to change bank details:
+
+1. Ask the reason from the seller.
+2. Inform seller: name on KYC and bank details must be the same.
+3. Assign to Compliance Query — Ravi Jangra. TAT: 1–2 working days.
+4. Inform seller to wait for bank details to be unfrozen; then update from panel.
+
+### Nugget Ticket
+
+| Field | Value |
+|-------|-------|
+| Channel | Compliance Query |
+| Agent Assign | Ravi Jangra |
+| Status | Open |
+| Subject | Change Bank Details |
+| FCR | NFCR |
+| SR Issue Category | COD Remittance |
+| Sub Category | Change Bank Details |
+
+---
+
+## SOP — Email ID Change
+
+1. Check if the new email ID is already registered in SR.
+2. If already registered — soft denial.
+3. If not registered — raise request to Finance Desk. TAT: 1–2 working days.
+
+### Nugget Ticket (NFCR)
+
+| Field | Value |
+|-------|-------|
+| Channel | Customer Support Finance Desk |
+| Agent Assign | Priya / Manisha |
+| Status | Open |
+| Subject | Change Email ID |
+| FCR | NFCR |
+| SR Issue Category | Profile Related |
+| Sub Category | Update Company Name / Profile Details |
+
+---
+
+## SOP — Change Company Name
+
+Company name changes are generally **not allowed** as the company name is linked to KYC compliance.
+
+**L1 action:** Deny the request with a soft denial and create an FCR ticket in Customer Support Call Center channel.
+
+**If seller still disagrees (exception):**
+
+1. Request the seller to provide:
+   - Reason for the name change
+   - Updated company name
+   - GST document (all 3 pages)
+2. Create an ACR ticket requesting these GST details.
+3. Assign to **Compliance Queries — Ravi Jangra**.
+4. Once details are received — change ticket status to Open in Compliance Queries channel.
+
+---
+
+## How to Do on Seller Panel
+
+### Complete KYC
+
+1. Go to **Settings > KYC**.
+2. Select KYC type (Individual or Company).
+3. Choose OTP-based verification or manual upload.
+4. Upload required documents.
+5. Submit for verification.
+
+### Check KYC Status
+
+1. Go to **Settings > KYC**.
+2. View whether KYC is approved and active.
+3. If pending, raise a support ticket.
+
+### Add/Update Bank Account
+
+1. Go to **Settings > Company > Accounting and Bank Details**.
+2. Enter account number, account type, IFSC code.
+3. A Re. 1 Penny Drop will verify the account.
+4. If Penny Drop fails 3 times, upload cancelled cheque/passbook manually.
+
+### Add Users
+
+**Settings > User Role Management > Manage User > Add New User > Fill details > Select modules > Add User**
+
+### Enable Two-Factor Authentication (2FA)
+
+**Settings > Password & Login Security > Two-Factor Authentication (2FA) > Toggle ON/OFF**
+
+### Activate Bluedart
+
+**Settings > Courier > Courier Selection > Deactivated > Click Activate next to Bluedart**
+
+> Bluedart KYC must be completed first. Activation takes 6–7 business days after KYC approval.
+
+### Find Your Company ID / Seller ID
+
+**Settings > Company Setup > Company Details** — Company ID is listed here.
+
+---
+
+## Mobile App — How to Do
+
+### Check KYC Status (Mobile)
+
+1. Three-dots menu at bottom > **Settings**.
+2. Look for **KYC** section to check status and upload documents.
+
+### Change Primary Pickup Address (Mobile)
+
+1. Three-dots menu at bottom > **Settings > Pickup Address**.
+2. Find the address you want to set as primary.
+3. Swipe left > tap **Set Primary**.
+
+Or:
+- Tap **+** to add a new address.
+- Check **Set this address as Primary**.
+- Tap **Verify Address**.

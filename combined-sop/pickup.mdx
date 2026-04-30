@@ -1,0 +1,214 @@
+---
+title: "Pickup"
+description: "Same-day pickup cut-offs, ICRM actions, pickup freight refund policy, NPR flow, and Rocket Express services"
+---
+
+## Product Info
+
+### Same-Day Pickup Cut-Off
+
+- **Standard:** Orders manifested before **11:00 AM** are scheduled for same-day pickup.
+- **India Post:** Orders must be scheduled before **10:00 AM** for same-day pickup.
+- **Return Orders:** Orders created before **1:00 PM** are picked up same day. After 1:00 PM, pickup is on the next day.
+
+### Courier Pickup Attempts
+
+The courier makes **3 attempts** to pick up your order. If unsuccessful after three attempts, no further attempts are made.
+
+### Pickup ID
+
+- A unique alphanumeric ID that groups shipments by pickup address, courier, and scheduled date.
+- Used to escalate pickup delays.
+- When all shipments from a pickup ID are cancelled, that pickup ID is removed from the system.
+
+**Pickup ID Statuses:**
+| Status | Meaning |
+|---|---|
+| Pickup Scheduled | Pickup has been scheduled |
+| Pickup Completed | All shipments were picked up |
+| Pickup Cancelled | All associated shipments are cancelled |
+| Partially Completed | Only some shipments were picked up |
+| Pickup Exception | Courier attempted pickup but could not complete it |
+
+### NPR (Non-Pickup Reason)
+
+When shipment pickup fails, seller receives 3 options via WhatsApp / IVR / SMS / Email:
+1. **Re-attempt**
+2. **Escalation** (with reason)
+3. **Cancel Pickup Attempt** (order will not be cancelled)
+
+**Communication Flow:**
+1. Instant notification via WhatsApp and Email on NPR raise.
+2. No response → IVR call after 60 minutes.
+3. No IVR response → WhatsApp reminder after 30 minutes.
+4. No WhatsApp response → 2nd IVR call after 60 minutes.
+5. No response to 2nd IVR → data sent to Call Center after 30 minutes.
+
+**Verified vs Non-Verified Pickup Failure:**
+- **Verified Pickup Failure:** Seller refuses pickup after confirming through OTP.
+- **Non-Verified Pickup Failure:** Seller refuses pickup without OTP confirmation.
+
+### Instant Pickup — Shadowfax
+
+| Order Created | Pickup Slot |
+|---|---|
+| 4:00 PM – 9:00 AM | 9 AM – 12 PM |
+| 9:00 AM – 12:00 PM | 12 PM – 3 PM |
+| 12:00 PM – 4:00 PM | 3 PM – 6 PM |
+
+### Rocket Express Services
+
+Shiprocket's own pickup fleet (**Delhi only**) for SMB sellers.
+- FE scans shipment on spot — status changes to "Picked Up" immediately.
+- Shipments are handed over to the originally assigned courier at the pickup hub.
+- Seller can verify FE identity via the App (AWB number visible on FE app).
+- For sellers outside Delhi — service is not available.
+
+---
+
+## SOP — Pickup
+
+### ICRM Actions by Shipment Status
+
+**Click "Pickup Required" for these statuses:**
+- Out For Pickup
+- Pickup Exception
+- Pickup Generated
+- Pickup Rescheduled
+- QC Failed
+
+**Click "Pickup Miscellaneous" for these statuses:**
+- Pickup Queued
+- Pickup Error
+- Pickup Booked
+- AWB Assigned
+- Label Generated
+
+**Click "Cancellation" for these statuses:**
+- Cancelled
+- Cancellation Requested
+- Pickup Required
+- Pickup Miscellaneous
+- Pickup Connection Dispute
+
+### Instant Pickup — Pitching
+
+For urgent or irate sellers, suggest instant pickup with Shadowfax.
+
+_Tag all cases where instant pickup is pitched with the "Instant Pickup" tag (FCR tagging)._
+
+### Pickup Freight Refund Policy
+
+| Delay | Refund Type | ICRM Path |
+|---|---|---|
+| 3 days | 20% partial freight refund | Shipment Detail > Decision Tree > Partial Freight Refund |
+| 5 days | 100% full freight refund | Shipment Detail > Decision Tree > Full Freight Refund |
+
+Inform seller of pickup TAT after initiating refund: if assigned before 11 AM, wait till day end; if after 11 AM, wait till next day end.
+
+### Pickup Connection Dispute
+
+If the FE has picked up the shipment but the status has not updated on the panel:
+
+1. **Same day call:** Advise seller to wait till EOD.
+2. **Status not updated by next day:** Request the seller to share within 48–72 hours:
+   - Date of pickup
+   - Total shipments picked up that day
+   - All signed manifest copies for the courier
+   - FE phone number
+3. Inform seller: team will update within **7 working days**.
+4. Send ACR mail from Nugget using template: _"Pickup connection issue"_.
+
+**Nugget Tagging:**
+- SR Issue Category: Shipment Pickup
+- Sub Category: Pickup Miscellaneous
+- FCR: NFCR
+
+### Inbound Call Transfer — Pickup and Cancellation
+
+| Time Window | Action |
+|---|---|
+| 10:00 AM – 6:45 PM | Transfer to queue: **Domestic Pickup – Transfer IH CC** |
+| 8:00 AM – 10:00 AM | Handle on skill: **pick, Hindi Pickup** (no transfer) |
+| 7:00 PM – 10:00 PM | Handle on skill: **pick, Hindi Pickup** (no transfer) |
+
+**Transfer Script:**
+> I'm transferring your call to our concerned team for further assistance related to Pickup / order cancellation. Please stay on the call.
+
+_Do NOT assign the skill "Domestic Pickup – Transfer IH CC" to any BPOC / COG advisor._
+
+---
+
+## How to Do on Seller Panel
+
+### Schedule Pickup for a Single Order
+
+1. Go to **Orders > Ready to Ship tab**.
+2. Find the order and click **Request Pickup / Schedule Pickup**.
+3. In the pop-up, select today's date or a future date (up to 5 working days in advance).
+4. Click **Schedule Pickup**.
+
+### Schedule Pickup in Bulk
+
+1. Go to **Orders > Ready to Ship tab**.
+2. Select multiple orders.
+3. Click **Select Bulk Action > Schedule Pickup**.
+4. Manifest will be sent to your registered email.
+
+### View Upcoming Pickups
+
+1. Go to **Orders > Pickups & Manifests > Pickup IDs**.
+2. See the Scheduled Pickup date under the Pickup status column.
+
+### Escalate a Pickup Delay
+
+1. Go to **Orders > Pickups & Manifests**.
+2. Find the relevant Pickup ID.
+3. Click **Create Ticket** next to that Pickup ID.
+4. Select escalation reason from the dropdown.
+5. Add remarks and click **Create Ticket**.
+6. Update the mobile number where the support team will contact you.
+
+> **Note:** Escalation based on Pickup ID only — Manifest ID can no longer be used for pickup escalations.
+
+### Handle a Fake Pickup Attempt
+
+1. Go to **Orders > Pickups & Manifests**.
+2. Click **Create Ticket** next to the relevant Pickup ID.
+3. Click **Proceed** in the pop-up.
+4. Select escalation reason, upload pickup image, and click **Create Ticket**.
+5. Shiprocket will revert within 24 hours.
+
+### Reassign a Courier (to reschedule pickup)
+
+1. Find the order under **Orders > Ready to Ship tab**.
+2. Click **More (...) > Reassign Courier**.
+3. Select a new courier partner.
+4. Schedule pickup for the desired date.
+
+### Block ODA and RTO Pincodes
+
+**Settings > Courier Selection > Select Courier > Block Pincodes > Select option (Courier, Account, or Custom) > Submit**
+
+- **ODA (Out of Delivery Area):** Remote pincodes where couriers refuse delivery.
+- **RTO Pincodes:** Pincodes with high RTO rates.
+
+---
+
+## Mobile App — How to Do
+
+### Schedule Pickup (Mobile)
+
+1. From the bottom navigation, tap **Orders**.
+2. Go to **Ready to Ship** tab.
+3. Tap on your order and select **Schedule Pickup**.
+4. Choose pickup date and confirm.
+
+### Escalate Pickup Delay (Mobile)
+
+1. From **Orders > Pickups & Manifests** tab.
+2. Find the Pickup ID with the delay.
+3. Tap **Create Ticket**.
+4. Select escalation reason, add remarks, and submit.
+
+> From the mobile app, pickup escalation is now based on **Pickup ID** rather than Manifest ID.
