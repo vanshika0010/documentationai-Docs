@@ -129,11 +129,7 @@
         "pages": [
           {
             "title": "Overview",
-            "path": "sop/Overview"
-          },
-          {
-            "title": "Account & KYC",
-            "path": "combined/account-kyc"
+            "path": "combined/Overview"
           },
           {
             "title": "Buyer Experience",
