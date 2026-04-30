@@ -1,0 +1,157 @@
+---
+title: "Wallet and Recharge"
+description: "Wallet recharge queries, recharge errors, auto wallet transfer, convenience fee, and balance transfer to bank"
+---
+
+## Product Info
+
+### Wallet Basics
+
+- **Minimum recharge amount:** ₹500 (effective 14th July 2022; previously ₹200).
+- Payment options accepted: Credit/Debit card, Net Banking, UPI, 3rd party wallets, Smart Collect.
+- Coupon value in wallet is **not transferred** to bank — only wallet amount is transferred.
+
+### Convenience Fee on Credit Card Payments (Razorpay)
+
+- Applicable **only** on Razorpay credit card transactions.
+- **Not applicable** on UPI, Net Banking, Debit Cards, Wallets, or Smart Collect.
+- Fee: **2% + GST**.
+- Shown at Razorpay checkout after selecting payment method.
+- Reflected in Seller Panel > Passbook.
+- Monthly VAS invoice generated for the fee.
+
+**Key dates:**
+- Fee charging started: 7th July 2025.
+- Passbook entries automated: 14th August 2025.
+- RuPay credit card via UPI check live: 28th August 2025.
+
+**Example:** If a seller recharges ₹1,00,000 via credit card, wallet is credited ₹97,640. A VAS entry of ₹2,360 is raised in real-time.
+
+### Razorpay Transaction Status Actions
+
+| Status | Meaning / Action |
+|---|---|
+| Authorised | Recharge has been done |
+| Captured (over 1 hr) | Raise ticket to Tech Support to manually update payment |
+| Captured (under 1 hr) | Ask seller to wait for cron cycle to complete |
+| Failed | Inform seller: refund in 5–7 business days to source account |
+| Created / Pending | Ask seller to wait 1 hour |
+
+### Auto Wallet Transfer
+
+Sellers can initiate wallet refund requests directly from the panel. The system auto-performs preliminary checks and calculates eligible refund amount. A support ticket is generated only if validation fails.
+
+**Path:** Seller Panel > Help and Support > Create Ticket > Finance > Transfer Wallet Amount into My Bank Account
+
+### Pre-Checks Before Wallet Balance Transfer
+
+- No open shipments.
+- Account status: Active.
+- Bank / KYC details updated.
+- COD unblocked.
+- Wallet balance is positive (all linked accounts).
+
+---
+
+## SOP — Wallet Recharge
+
+### Scenario 1 — Seller wants to know how to recharge
+
+Guide seller to: **Seller Panel > Recharge Wallet**
+
+Create an FCR ticket.
+
+### Scenario 2 — Seller is unable to recharge
+
+1. Request a screenshot within 48 hours of ticket creation.
+2. Assign to **Customer Support Tech Desk**. TAT: 24 hours.
+
+---
+
+## SOP — Recharge Error / Issue
+
+### System Check
+
+1. Copy link from SPARK and paste in a new tab.
+2. Confirm when the seller recharged and the amount.
+3. Check the payment gateway (Razorpay / Paytm) for transaction details.
+
+### Scenario 1 — No payment status visible on Razorpay
+
+> I would like to request you to share the screenshot of the transaction ID on email. Once shared, please allow a maximum of two days for an update.
+
+### Scenario 2 — Seller has shared the transaction ID screenshot
+
+> I am escalating your issue. Please wait 1–2 working days.
+
+---
+
+## SOP — Wallet Balance Transfer to Bank
+
+### Pre-Checks
+
+Verify before raising to Finance Desk:
+- No open shipments.
+- Account status is Active.
+- Bank / KYC details are updated.
+- COD is unblocked.
+- Wallet balance is positive.
+
+If all checks pass → Raise to **Customer Support Finance Desk**. TAT: 1–2 working days.
+
+If seller has coupon value in wallet:
+> Sir / Ma'am, if you want to transfer your wallet amount to bank account, the coupon value will not be included in the transfer — only the wallet amount will be transferred.
+
+### Nugget Ticket (NFCR)
+
+| Field | Value |
+|-------|-------|
+| Channel | Customer Support Finance Desk |
+| Agent Assign | Priya / Manisha |
+| Status | Open |
+| Subject | Wallet Balance Transfer |
+| FCR | NFCR |
+| SR Issue Category | Wallet Balance |
+| Sub Category | Account to Account Wallet Transfer |
+
+---
+
+## FAQ to Share with Sellers
+
+**Why was the minimum recharge changed from ₹200 to ₹500?**
+
+> We have observed that most sellers do a minimum of 10–15 shipments a month and must recharge repeatedly. To avoid the hassle of recurring recharges, we have changed the recharge value from ₹200 to ₹500. Your amount is safe in our highly secured wallet, just like any other transactional wallet. You can use this amount for future shipments.
+
+---
+
+## How to Do on Seller Panel
+
+### Recharge Wallet
+
+1. Go to **Seller Panel > Recharge Wallet** from the left menu.
+2. Enter recharge amount (minimum ₹500).
+3. Select payment method.
+4. Complete payment.
+
+> For credit card payments via Razorpay, a convenience fee of 2% + GST applies.
+
+### Initiate Wallet Transfer to Bank
+
+1. Go to **Help and Support > Create Ticket > Finance > Transfer Wallet Amount into My Bank Account**.
+2. The system auto-checks eligibility and calculates the eligible transfer amount.
+3. A ticket is auto-created if validation fails.
+
+---
+
+## Mobile App — How to Do
+
+### Recharge Wallet (Mobile)
+
+1. Go to the **Finance / Billing section** from the three-dots menu.
+2. Tap **Recharge Wallet**.
+3. Enter amount (minimum ₹500) and select payment method.
+4. Complete payment.
+
+### Check Wallet Balance (Mobile)
+
+The wallet balance is visible on the **Home screen** of the Shiprocket app and in the Finance section.
