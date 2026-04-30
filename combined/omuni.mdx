@@ -1,0 +1,147 @@
+---
+title: "Omuni (OMS)"
+description: "Order Management System for SMB sellers to process marketplace and own-channel orders from a single location"
+---
+
+## Product Info
+
+### What is Omuni?
+
+Omuni is an OMS (Order Management System) with WMS (Warehouse Management System) capabilities for SMB sellers. It allows sellers to process orders from multiple sales channels from their own warehouse or location — fetching orders, generating labels/invoices, updating statuses, and managing inventory from a single panel.
+
+### Supported Channels
+
+Shopify, Amazon, Flipkart, Myntra, Nykaa, Nykaa Fashion, TataCliq. (Meesho support not yet available.)
+
+### Key Features
+
+- Multi-channel order syncing
+- Catalog and inventory management
+- Order routing rules
+- Quality Control (QC) for orders
+- Bulk and single order creation
+- Return order management
+- Packaging material management
+- Reporting (orders, inventory, returns)
+- Channel error logs and manual sync
+
+### Plans
+
+- **Basic Plan:** No limits on locations or users. Compatible with Engage and Shiprocket wallet.
+
+### Order Statuses and Actions
+
+Any non-MP order can be cancelled before handover from the panel. MP cancellations can also flow up to the same stage.
+
+**Bulk Actions available:**
+Verify, Accept, Generate Label & Invoice, Generate Manifest, Create Return, Generate Return AWB, Cancel.
+
+### Inventory Types
+
+- **Full Inventory:** Upload inventory for all SKUs at each location — reflects total stock on hand.
+- **Delta Inventory:** Upload only changes (debit, credit, or overwrite); system adjusts accordingly.
+- **Bad Grade vs Good Grade:** Only predefined grades (good/bad) are available. Grade impacts how inventory is categorized.
+
+**Inventory adjusted at:** Putaway inbound/outbound, inventory addition/overwrite, and soft allocation on order receipt.
+
+### Products and Catalogue
+
+- Adding product images is mandatory — used as thumbnail, for QC, and for inventory identification.
+- Categories are not predefined — sellers can define and customize.
+- Virtual combos (bundles) are supported.
+- Bulk product upload via CSV supported; bulk combo upload is not yet available.
+- HSN and tax mapping must be configured correctly before catalogue upload for invoicing.
+- Safety stock can be set at location level, channel level, or during product addition.
+
+### Return Orders
+
+MP channel returns are fetched and managed through the OMS. Labels and invoices are fetched from MP. RTO and return location can be set per warehouse in Advanced Settings.
+
+### Packaging Material
+
+- Set packaging material per SKU from Products > Packaging Material.
+- Customizable in bulk orders via order details.
+
+### Reports
+
+Available for orders, inventory, and returns.
+
+---
+
+## How to Do on Omuni Panel
+
+### Enable Order Verification
+
+Settings > Orders > Verification tab > Toggle ON > Select Before Allocation or After Allocation > Save.
+
+### Set Routing Rules
+
+Rules > Add Rules > Select: channel, payment mode, SKU, category, delivery state, order splitting, location priority > Save.
+
+### Integrate Shopify
+
+Channels > Add Channel > Shopify > Connect to Shopify > Log in to Shopify > Install App > Configure > Redirect back to Omuni.
+
+### Integrate Amazon
+
+Channels > Add Channels > Amazon > Enter Amazon Account ID > Login with Amazon > Confirm integration > Enter AWS key.
+
+### Integrate Flipkart
+
+Channels > Add Channels > Flipkart > Enter Flipkart Account ID > Enter App ID, App Secret, and Auth Code > Configure inventory > Map channel locations > Save.
+
+### Integrate Myntra
+
+Channels > Add Channels > Myntra > Enter Myntra Account ID > Enter Client Secret > Configure inventory > Map locations > Save.
+
+### Integrate Nykaa
+
+Channels > Add Channels > Nykaa > Enter Nykaa Account ID > Enter username and password > Configure inventory > Map locations > Save.
+
+### Integrate TataCliq
+
+Channels > Add Channels > TataCliq > Enter TataCliq Account ID > Enter username and password > Configure inventory > Map locations > Save.
+
+### Add a Single Order
+
+Orders > Add Order > Fill buyer details and shipping address > Next > Fill order and payment details > Add Order.
+
+### Add Bulk Orders
+
+Orders > Add Order > Bulk Order > Upload CSV/XLS/XLSX file (download sample to fill) > Upload.
+
+### Create Bulk Return Orders
+
+Orders > Select orders > Select Bulk Action > Create Return.
+
+### Generate Label and Invoice
+
+Orders > Select order(s) > Select Bulk Action > Generate Label & Invoice.
+
+### Check Inventory Adjustment History
+
+Inventory tab > History button (top right) > Check SKU history.
+
+### Set Packaging Material
+
+Products > Packaging Material > Add Packaging Material > Fill details > Save.
+
+### Check Channel Sync Errors
+
+Logs > Channel Errors (top header) > Manually retry sync from here.
+
+### Map HSN and Tax
+
+Settings > HSN Mapping > View, add, edit, and map tax % to HSN codes.
+
+### Set RTO / Return Location
+
+Settings > Add/Manage Locations > Edit location > Advanced Settings > Set RTO Location ID and Return Location ID > Save.
+
+### Add Products in Bulk
+
+Products > Add Product > Bulk Upload > Upload CSV > Proceed.
+
+### Upload Product Combos
+
+Products > Add Product > Check "Is Combo Master SKU" > Save > Combos > Map Combos > Configure mapping > Save.

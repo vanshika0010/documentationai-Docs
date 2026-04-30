@@ -1,0 +1,211 @@
+---
+title: "NDR and Delivery Boost"
+description: "Full NDR panel guide, Delivery Boost AI feature, reattempt actions, escalation, fake attempts, and buyer communication"
+---
+
+## Product Info
+
+### What is NDR?
+
+NDR (Non-Delivery Report) is a shipment status generated when the courier attempts delivery but cannot complete it. It appears in the NDR/Delivery Boost panel within the Shiprocket account.
+
+**Access:** NDR/Delivery Boost option from the left menu.
+
+With Delivery Boost enabled, Shiprocket automatically triggers reattempts for all eligible shipments. If seller input is required (incomplete address, unreachable buyer, courier needs clarification), those orders are flagged separately.
+
+### Total Delivery Attempts
+
+- Maximum **3 attempts** are made to deliver an order.
+- Exception: If NDR reason is **"Customer Refused — OTP Verified"**, no further attempts are made.
+- No extra charge for 3 delivery attempts.
+
+### NDR Reasons
+
+1. Consignee Uncontactable
+2. Wrong Address
+3. COD Not Ready
+4. Customer Asked For Future Delivery
+5. Office/Residence Closed
+6. Entry Restricted Area
+7. Customer Requested Open Delivery
+8. Customer Not Available
+9. Customer Asked For Self Collect
+10. Customer Refused — No Auto Reattempt
+11. Auto Reattempt
+12. Others
+13. Out of Delivery Area — No Auto Reattempt
+14. Payment/Qty/Bill/OTP Dispute
+15. Reattempt Next Day
+16. Customer did not show ID card
+17. COVID — Access Restricted
+18. Customer Refused OTP Verified (→ RTO, no further attempts)
+
+### New NDR Panel — Three Action Options
+
+When you click **Act on Shipment** on an order, three options appear:
+
+**1. Update Delivery Details** — Use when:
+- Address is incomplete
+- Phone number is wrong
+- Buyer requests a different date
+- Courier reports "incorrect address" or cannot reach buyer
+
+You can update: full address, alternate contact number, delivery date (next 3 working days), buyer remarks.
+
+**2. Provide Proof of Buyer Intent** — Use when:
+- Buyer wants a reattempt
+- Buyer confirmed correct details
+- Buyer denies courier's NDR reason
+- You have communication proof (screenshot, call recording, photo)
+
+**3. Report a Shipment Issue** — Use when:
+- Delivery was not attempted (fake attempt)
+- NDR reason appears incorrect
+- Buyer says no one came to deliver
+- You want to escalate to the courier
+
+You can escalate up to **6 times** depending on courier policies. Upload proof (call recordings, chat screenshots, images).
+
+### Seller Input Required
+
+Indicates that Shiprocket or the courier needs additional information before reattempt. This appears when:
+- Address is incomplete or inconsistent
+- Phone number appears unreachable
+- Buyer confirmation is missing
+- Courier requires validation for the NDR reason
+- Prior action was not accepted by courier
+- Delivery Boost auto-communication got no clear response
+- Address-pincode mismatch detected
+
+**Filter:** NDR panel > Unsuccessful Deliveries > Select Input Required → Yes
+
+### Critical Action Required
+
+Highlights shipments likely to fail unless immediate action is taken. Appears when:
+- Courier rejected previously submitted information
+- Address score is extremely low
+- Tracking history shows repeated failures at the same location
+- Buyer has denied availability multiple times
+- Courier has flagged delivery as high-risk
+- Reattempt cutoff for the day is near
+
+**Filter:** Select Critical Action Required → Yes
+
+Ignoring Critical Action Required shipments almost always results in RTO.
+
+### Reattempt Automation
+
+The Reattempt button has been removed from the new NDR panel. Reattempts are **fully automated** by Shiprocket for all eligible NDR shipments. Sellers only need to update or validate information through Act on Shipment.
+
+Reattempt is not auto-triggered when: Action Required, Critical Action Required, Buyer refused, Address is invalid, Courier needs additional info, previous reattempt rejected.
+
+### Buyer Communication via Delivery Boost
+
+Shiprocket contacts buyers via WhatsApp, IVR, SMS, and Email within a 12–24 hour window after NDR. Communication stops when buyer responds.
+
+**Buyer can update:** Address, contact details, request delivery on next 3 working days.
+
+**If buyer gives positive response:** Reattempt request sent to courier. If delivery succeeds → categorized as Delivery Boost shipment → seller charged 5% of order value.
+
+**If buyer gives negative response:** Displayed in Delivery Boost panel under Action Requested tab. Seller can escalate if shipment is not attempted within 24 hours.
+
+### What is Proof of Buyer Intent?
+
+A simplified proof submission process used for fake attempt reporting, buyer intent validation, courier escalations, and address verification. Upload:
+- Screenshots of buyer chats
+- Call recordings
+- Images provided by buyer (gate closed, security issues)
+- Photos validating correct address
+
+---
+
+## What is Delivery Boost?
+
+Delivery Boost is an AI-backed feature that automatically initiates delivery failure messages to buyers when delivery fails, and seeks confirmation for reattempt.
+
+**Free for:** Sellers who joined after 22nd February 2023.
+
+**Trial activates after:** 20 BPR (Buyer Positive Responses). Before 20 BPR = endless trial, no communication sent.
+
+**After free trial ends:** Charges apply. Service does not auto-enable post-trial.
+
+### Delivery Boost Features
+
+- AI-backed buyer communication via WhatsApp
+- On-panel Call Buyer option
+- Visibility of extra revenue earned (order value of shipments delivered after reattempt)
+- Multiple channels for buyer validation: WhatsApp, SMS, IVR, Email
+
+### Delivery Boost Charges
+
+- Charged **only on shipments where buyer gave positive response AND shipment was delivered**.
+- Charge: **5% of order value**.
+- No charge if shipment was not delivered after buyer response, or if buyer responded with return request.
+- Invoice cycle: Once a month, generated in the first week of the month.
+
+### Check If a Shipment is a Delivery Boost Shipment
+
+NDR > Delivery Boost option > Delivered tab > Look for "Delivery Boost" flag below AWB number.
+
+### Check Revenue Earned / RTO Cost Saved
+
+NDR > Delivery Boost > Delivered tab > More Filters option.
+
+### Activate Delivery Boost
+
+Value Added Services > Delivery Boost > Enable Delivery Boost.
+
+Or: For Enterprise tier sellers — click "I'm interested" from NDR panel or Settings > Delivery Boost.
+
+---
+
+## How to Do on Seller Panel
+
+### Process an NDR
+
+1. Go to **NDR/Delivery Boost** from the left menu.
+2. Under **Unsuccessful Deliveries** tab, find the order.
+3. Use **Select Input Required → Yes** filter for orders needing action.
+4. Click **Act on Shipment**.
+5. Choose: Update Delivery Details, Provide Proof of Buyer Intent, or Report a Shipment Issue.
+
+### Raise a Fake Attempt
+
+1. NDR section > Unsuccessful Deliveries.
+2. Find the order > three-dots menu > **Act on Shipment**.
+3. Click **Report a Shipment Issue**.
+4. Select the issue type.
+5. Upload proof (call recording or chat screenshot) with remarks.
+6. Click **Create Ticket**.
+
+### Report a Shipment Issue / Escalate
+
+1. NDR panel > Unsuccessful Deliveries.
+2. Use **Select Critical Action Required → Yes** filter for high-priority shipments.
+3. Open shipment > Act on Shipment > Report a Shipment Issue.
+4. Choose issue type, add remarks, upload proof.
+5. Submit (can escalate up to 6 times).
+
+### Schedule Future Delivery Date
+
+When acting on a shipment, select a delivery date from the **next 3 working days** — specific time cannot be chosen.
+
+### Call Buyer from Panel
+
+NDR panel > Find order > Click **Call Buyer** (or within Act on Shipment) > Enter buyer contact > Initiate Call to Buyer.
+
+---
+
+## Mobile App — How to Do
+
+### Process NDR on Mobile
+
+1. Three-dots menu at bottom > **NDR section**.
+2. Find the undelivered shipment.
+3. Tap **Act on Shipment**.
+4. Choose Reattempt or Mark RTO.
+5. For reattempt: update alternate number, landmark, or preferred date.
+
+### Check NDR Orders (Mobile)
+
+Three-dots menu at bottom > **NDR** > View all undelivered orders and NDR reasons. Tap **Track Order** for real-time status.

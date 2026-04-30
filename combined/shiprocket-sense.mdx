@@ -1,0 +1,116 @@
+---
+title: "Shiprocket Sense"
+description: "AI-powered API suite for RTO risk prediction, pincode serviceability, address quality, order risk, and product categorization"
+---
+
+## Product Info
+
+### What is Shiprocket Sense?
+
+Shiprocket Sense is an advanced analytics and business intelligence API platform offering data-driven insights to e-commerce businesses. It helps sellers make smarter decisions using predictive analytics built on Shiprocket's logistics data.
+
+**Website:** https://www.shiprocket.in/sense/
+
+**Sign up:** https://console.shiprocket.in/login/
+
+### Available APIs
+
+| API | What it does |
+|---|---|
+| **RTO Risk** | Analyzes COD orders and predicts RTO risk along with RTO reason insights. Powered by Risk AI on 4.8 billion data points. |
+| **Pincode Lookup** | Instantly converts pincodes to detailed location data — free to use. |
+| **Pincode Serviceability** | Verifies delivery serviceability and provides EDD based on package specifics — free to use. |
+| **Address Quality** | Analyzes address completeness, provides a quality score and risk assessment to reduce failed deliveries. |
+| **Address Confirm** | Validates addresses by matching them against past delivery records. |
+| **Order Risk** | Uses machine learning to analyze transaction history, customer behavior, and fraud patterns. |
+| **Product Category** | Automatically categorizes products based on names, features, or descriptions. |
+
+### Pricing (Per API Call)
+
+| API | 1K–10K calls | 10K–50K calls | 50K+ calls |
+|---|---|---|---|
+| RTO Risk | Rs. 3/call | Rs. 2.75/call | Rs. 2.60/call |
+| Pincode Lookup | Free | Free | Free |
+| Pincode Serviceability | Free | Free | Free |
+| Address Quality | Rs. 1.5/call | Rs. 1.40/call | Rs. 1.30/call |
+| Address Confirm | Rs. 5/call | Rs. 4.90/call | Rs. 4.80/call |
+| Order Risk | Rs. 4/call | Rs. 3.80/call | Rs. 3.60/call |
+| Product Category | Rs. 0.5/call | Rs. 0.40/call | Rs. 0.30/call |
+
+### Free Credits
+
+- **1,000 free credits** are provided on the 1st day of every month for testing.
+- Free credits expire at end of month.
+- After exhausting free credits, purchase additional credits from the billing section.
+
+### Credit System
+
+- **Pay-as-you-use** model. No hidden charges.
+- Recharge wallet from the Billing Dashboard on the Sense platform.
+- Track usage per product and date range on the Usage Dashboard.
+
+### Error Codes
+
+| Code | Meaning |
+|---|---|
+| 200 | Successful. Check `"success"` field — if `true`, data is in the `"data"` field. |
+| 401 | Invalid credentials or token. Check Authorization header. |
+| 404 | URL not found. Check the requested URL. |
+| 405 | Invalid data or method. Check credentials and syntax. |
+| 422 | Missing or invalid data. Check `"invalid_attributes"` in response. |
+| 500 | Internal server error. Verify correct syntax. |
+
+### Required Headers
+
+```
+Content-Type: application/json
+Authorization: Basic {{token}}
+```
+
+### API Required Parameters (Key Ones)
+
+| API | Key Required Parameters |
+|---|---|
+| RTO Risk | customer mobile, address, pincode, city, state, order total, COD flag (1/0), sales channel |
+| Address Quality | address, pincode, city, state |
+| Address Confirm | mobile number, address line 1, address line 2, pincode, city |
+| Product Category | product name |
+| Order Risk | customer mobile number |
+
+### Dashboards Available
+
+- **Usage Dashboard:** Track API requests made, products used, total cost, product-wise usage metrics. Filter by app and date range.
+- **Billing Dashboard:** View wallet balance, expenses product-wise, total API hits, filter by date range.
+
+### Support
+
+Contact Sense customer support via email or call — details available on the Sense platform help section.
+
+---
+
+## How to Do on Seller Panel
+
+### Sign Up for Shiprocket Sense
+
+1. Visit https://console.shiprocket.in/login/
+2. Fill in: Name, Email, Mobile Number, Company Name, Password.
+3. Enter OTP sent to registered mobile number.
+4. Start using Sense APIs with 1,000 free credits.
+
+### Get API Key
+
+1. Log into Sense account.
+2. Go to the specific product page.
+3. Click **View Credentials** button — API key and other credentials are displayed here.
+
+### Purchase API Credits
+
+Go to the **Billing section** on https://www.shiprocket.in/sense/ to recharge.
+
+### Access API Documentation
+
+Click **Documentation** tab on the respective API page for detailed endpoint, integration steps, and usage guidelines.
+
+### Request a Demo
+
+Fill the interest form on https://www.shiprocket.in/sense/ — the team will reach out within 24 hours.
