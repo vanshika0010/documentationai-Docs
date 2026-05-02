@@ -19,151 +19,151 @@
         "pages": [
           {
             "title": "Overview",
-            "path": "combined/Overview"
+            "path": "sop/intro"
           },
           {
             "title": "Account & KYC",
-            "path": "combined/account-kyc"
+            "path": "sop/account-kyc"
           },
           {
             "title": "Buyer Experience",
-            "path": "combined/buyer-experience"
+            "path": "sop/buyer-experience"
           },
           {
             "title": "Buyer Handling",
-            "path": "combined/buyer-handling"
+            "path": "sop/buyer-handling"
           },
           {
             "title": "Call Scripts",
-            "path": "combined/call-scripts"
+            "path": "sop/call-scripts"
           },
           {
             "title": "COD Remittance",
-            "path": "combined/cod-remittance"
+            "path": "sop/cod-remittance"
           },
           {
             "title": "Courier & Shipping",
-            "path": "combined/courier-shipping"
+            "path": "sop/courier-shipping"
           },
           {
             "title": "Delivery In/Out TAT",
-            "path": "combined/delivery-in-out-tat"
+            "path": "sop/delivery-in-out-tat"
           },
           {
             "title": "Escalations & Transfers",
-            "path": "combined/escalations-transfers"
+            "path": "sop/escalations-transfers"
           },
           {
             "title": "Finance, Tax & Invoicing",
-            "path": "combined/finance-tax-invoicing"
+            "path": "sop/finance-tax-invoicing"
           },
           {
             "title": "Financial Products",
-            "path": "combined/financial-products"
+            "path": "sop/financial-products"
           },
           {
             "title": "In-Transit Damage & Misroute",
-            "path": "combined/in-transit-damage-misroute"
+            "path": "sop/in-transit-damage-misroute"
           },
           {
             "title": "International Shipping",
-            "path": "combined/international-shipping"
+            "path": "sop/international-shipping"
           },
           {
             "title": "Label Customization",
-            "path": "combined/label-customization"
+            "path": "sop/label-customization"
           },
           {
             "title": "Miscellaneous",
-            "path": "combined/miscellaneous"
+            "path": "sop/miscellaneous"
           },
           {
             "title": "NDR & Delivery Boost",
-            "path": "combined/ndr-delivery-boost"
+            "path": "sop/ndr-delivery-boost"
           },
           {
             "title": "Omuni (OMS)",
-            "path": "combined/omuni"
+            "path": "sop/omuni"
           },
           {
             "title": "Order Cancellation",
-            "path": "combined/order-cancellation"
+            "path": "sop/order-cancellation"
           },
           {
             "title": "Order Creation",
-            "path": "combined/order-creation"
+            "path": "sop/order-creation"
           },
           {
             "title": "Panel Setup & Manage",
-            "path": "combined/panel-setup-manage"
+            "path": "sop/panel-setup-manage"
           },
           {
             "title": "Pickup",
-            "path": "combined/pickup"
+            "path": "sop/pickup"
           },
           {
             "title": "Pickups by Shiprocket",
-            "path": "combined/shiprocket-pickups"
+            "path": "sop/shiprocket-pickups"
           },
           {
             "title": "Plans & Billing",
-            "path": "combined/plans-billing"
+            "path": "sop/plans-billing"
           },
           {
             "title": "Return Orders",
-            "path": "combined/return-orders"
+            "path": "sop/return-orders"
           },
           {
             "title": "RTO & NDR",
-            "path": "combined/rto-ndr"
+            "path": "sop/rto-ndr"
           },
           {
             "title": "Settings & Panel",
-            "path": "combined/settings-panel"
+            "path": "sop/settings-panel"
           },
           {
             "title": "Shiprocket Cargo",
-            "path": "combined/shiprocket-cargo"
+            "path": "sop/shiprocket-cargo"
           },
           {
             "title": "Shiprocket Checkout",
-            "path": "combined/shiprocket-checkout"
+            "path": "sop/shiprocket-checkout"
           },
           {
             "title": "Shiprocket Sense",
-            "path": "combined/shiprocket-sense"
+            "path": "sop/shiprocket-sense"
           },
           {
             "title": "Shiprocket Trends & App Store",
-            "path": "combined/shiprocket-trends-appstore"
+            "path": "sop/shiprocket-trends-appstore"
           },
           {
             "title": "Tech & Integrations",
-            "path": "combined/tech-integrations"
+            "path": "sop/tech-integrations"
           },
           {
             "title": "Value Added Services",
-            "path": "combined/vas-services"
+            "path": "sop/vas-services"
           },
           {
             "title": "Wallet & Recharge",
-            "path": "combined/wallet-recharge"
+            "path": "sop/wallet-recharge"
           },
           {
             "title": "Warehousing & Fulfillment",
-            "path": "combined/warehousing-fulfillment"
+            "path": "sop/warehousing-fulfillment"
           },
           {
             "title": "Weight Discrepancy",
-            "path": "combined/weight-discrepancy"
+            "path": "sop/weight-discrepancy"
           },
           {
             "title": "ZOP Marketplace",
-            "path": "combined/zop"
+            "path": "sop/zop"
           },
           {
             "title": "Credit Line & Business Loan",
-            "path": "combined/credit-line-business-loan"
+            "path": "sop/credit-line-business-loan"
           }
         ]
       }
