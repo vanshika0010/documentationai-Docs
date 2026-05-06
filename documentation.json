@@ -1,169 +1,121 @@
 {
-  "name": "Shiprocket SOP Docs",
-  "colors": {
-    "light": {
-      "brand": "#F97316"
-    },
-    "dark": {
-      "brand": "#FDBA74"
-    }
-  },
-  "ai": {
-    "ai-assistant:enabled": true
-  },
+  "name": "Documentation",
   "navigation": {
     "tabs": [
       {
-        "tab": "Combined Docs",
+        "tab": "General",
         "icon": "book-open",
         "pages": [
           {
-            "title": "Overview",
-            "path": "sop/intro"
+            "title": "Home",
+            "path": "index"
           },
           {
-            "title": "Account & KYC",
-            "path": "sop/account-kyc"
+            "title": "Changelog",
+            "path": "changelog"
           },
           {
-            "title": "Buyer Experience",
-            "path": "sop/buyer-experience"
+            "title": "Integrations",
+            "path": "integrations"
+          }
+        ]
+      },
+      {
+        "tab": "Getting Started",
+        "icon": "rocket",
+        "pages": [
+          {
+            "title": "Introduction",
+            "path": "introduction"
           },
           {
-            "title": "Buyer Handling",
-            "path": "sop/buyer-handling"
+            "title": "Authentication",
+            "path": "authentication"
           },
           {
-            "title": "Call Scripts",
-            "path": "sop/call-scripts"
+            "title": "Quick Start",
+            "path": "quickstart"
           },
           {
-            "title": "COD Remittance",
-            "path": "sop/cod-remittance"
+            "title": "Rate Limits & Errors",
+            "path": "features"
+          }
+        ]
+      },
+      {
+        "tab": "API Reference (Phase 1)",
+        "icon": "code",
+        "groups": [
+          {
+            "group": "Calls",
+            "pages": [
+              {
+                "title": "Initiate a Call",
+                "openapi": "api-reference/twenty2-api.yaml POST /calls"
+              }
+            ]
           },
           {
-            "title": "Courier & Shipping",
-            "path": "sop/courier-shipping"
+            "group": "Call History",
+            "pages": [
+              {
+                "title": "List Calls",
+                "openapi": "api-reference/twenty2-api.yaml GET /history/calls"
+              },
+              {
+                "title": "Get Call Detail",
+                "openapi": "api-reference/twenty2-api.yaml GET /history/calls/{call_id}"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Help Center",
+        "icon": "question-circle",
+        "pages": [
+          {
+            "title": "Help Center",
+            "path": "help-center"
           },
           {
-            "title": "Delivery In/Out TAT",
-            "path": "sop/delivery-in-out-tat"
+            "group": "FAQ",
+            "pages": [
+              {
+                "title": "FAQ",
+                "path": "help-center/faq"
+              },
+              {
+                "title": "How to Integrate TwentyTwo",
+                "path": "help-center/faq/how-to-integrate-twentytwo"
+              }
+            ]
           },
           {
-            "title": "Escalations & Transfers",
-            "path": "sop/escalations-transfers"
+            "group": "Guides",
+            "pages": [
+              {
+                "title": "Guides",
+                "path": "help-center/guides"
+              },
+              {
+                "title": "Connect Shipment Status",
+                "path": "help-center/guides/connect-shipment-status"
+              }
+            ]
           },
           {
-            "title": "Finance, Tax & Invoicing",
-            "path": "sop/finance-tax-invoicing"
-          },
-          {
-            "title": "Financial Products",
-            "path": "sop/financial-products"
-          },
-          {
-            "title": "In-Transit Damage & Misroute",
-            "path": "sop/in-transit-damage-misroute"
-          },
-          {
-            "title": "International Shipping",
-            "path": "sop/international-shipping"
-          },
-          {
-            "title": "Label Customization",
-            "path": "sop/label-customization"
-          },
-          {
-            "title": "Miscellaneous",
-            "path": "sop/miscellaneous"
-          },
-          {
-            "title": "NDR & Delivery Boost",
-            "path": "sop/ndr-delivery-boost"
-          },
-          {
-            "title": "Omuni (OMS)",
-            "path": "sop/omuni"
-          },
-          {
-            "title": "Order Cancellation",
-            "path": "sop/order-cancellation"
-          },
-          {
-            "title": "Order Creation",
-            "path": "sop/order-creation"
-          },
-          {
-            "title": "Panel Setup & Manage",
-            "path": "sop/panel-setup-manage"
-          },
-          {
-            "title": "Pickup",
-            "path": "sop/pickup"
-          },
-          {
-            "title": "Pickups by Shiprocket",
-            "path": "sop/shiprocket-pickups"
-          },
-          {
-            "title": "Plans & Billing",
-            "path": "sop/plans-billing"
-          },
-          {
-            "title": "Return Orders",
-            "path": "sop/return-orders"
-          },
-          {
-            "title": "RTO & NDR",
-            "path": "sop/rto-ndr"
-          },
-          {
-            "title": "Settings & Panel",
-            "path": "sop/settings-panel"
-          },
-          {
-            "title": "Shiprocket Cargo",
-            "path": "sop/shiprocket-cargo"
-          },
-          {
-            "title": "Shiprocket Checkout",
-            "path": "sop/shiprocket-checkout"
-          },
-          {
-            "title": "Shiprocket Sense",
-            "path": "sop/shiprocket-sense"
-          },
-          {
-            "title": "Shiprocket Trends & App Store",
-            "path": "sop/shiprocket-trends-appstore"
-          },
-          {
-            "title": "Tech & Integrations",
-            "path": "sop/tech-integrations"
-          },
-          {
-            "title": "Value Added Services",
-            "path": "sop/vas-services"
-          },
-          {
-            "title": "Wallet & Recharge",
-            "path": "sop/wallet-recharge"
-          },
-          {
-            "title": "Warehousing & Fulfillment",
-            "path": "sop/warehousing-fulfillment"
-          },
-          {
-            "title": "Weight Discrepancy",
-            "path": "sop/weight-discrepancy"
-          },
-          {
-            "title": "ZOP Marketplace",
-            "path": "sop/zop"
-          },
-          {
-            "title": "Credit Line & Business Loan",
-            "path": "sop/credit-line-business-loan"
+            "group": "Troubleshooting",
+            "pages": [
+              {
+                "title": "Troubleshooting",
+                "path": "help-center/troubleshooting"
+              },
+              {
+                "title": "Webhook Not Triggering",
+                "path": "help-center/troubleshooting/webhook-not-triggering"
+              }
+            ]
           }
         ]
       }
