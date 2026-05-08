@@ -1,47 +1,63 @@
 ---
-title: "Courier and Shipping Features"
-description: "OTP delivery, Amazon Shipping, Multi-Packet Shipment, Split Shipment, Hyperlocal, India Post, Drone Delivery, RADAR, E-Way Bill, and logistics transporter IDs"
+title: Courier and Shipping Features
+description: >-
+  OTP delivery, Amazon Shipping, Multi-Packet Shipment, Split Shipment,
+  Hyperlocal, India Post, Drone Delivery, RADAR, E-Way Bill, and logistics
+  transporter IDs
 ---
-
 ## Product Info
 
 ### OTP Based Delivery
 
-| Courier | Shipment Type |
-|---|---|
-| Ecom | FWD and RTO shipments |
+| Courier    | Shipment Type                       |
+| ---------- | ----------------------------------- |
+| Ecom       | FWD and RTO shipments               |
 | Xpressbees | Prepaid FWD (order value over ₹500) |
-| Delhivery | Prepaid FWD (order value over ₹500) |
-| Bluedart | Prepaid FWD (order value over ₹500) |
-| Amazon | Prepaid FWD (order value over ₹500) |
+| Delhivery  | Prepaid FWD (order value over ₹500) |
+| Bluedart   | Prepaid FWD (order value over ₹500) |
+| Amazon     | Prepaid FWD (order value over ₹500) |
 
 ### Amazon Shipping (1 kg, 2 kg, 5 kg)
 
 **Eligibility:**
+
 - GSTIN invoicing enabled in Shiprocket settings.
+
 - Prepaid orders only (COD coming soon).
+
 - Order value below ₹50,000.
+
 - Dimensions: max 70×70×45 cm.
+
 - Weight: min 0.5 kg, max 18 kg.
+
 - Non-hazmat items only.
+
 - Surface mode; thermal printing labels required.
+
 - Cannot make changes to Amazon label (including hiding SKU name).
 
 **Pickup Slots:**
-| Shipment Created | Pickup Window |
-|---|---|
-| Before 9:45 AM | 10:00 AM – 1:00 PM |
-| Before 12:45 PM | 1:00 PM – 4:00 PM |
+
+| Shipment Created | Pickup Window      |
+| ---------------- | ------------------ |
+| Before 9:45 AM   | 10:00 AM – 1:00 PM |
+| Before 12:45 PM  | 1:00 PM – 4:00 PM  |
 
 Pickups are **auto-scheduled** — seller does not need to generate pickup manually.
 
 ### Multi-Packet Shipment (MPS)
 
 - Available for **Delhivery only**.
+
 - Manual orders only — does not work for channel integration orders.
+
 - Max: 20 packets (1 Master + 19 Child AWBs).
+
 - Max combined weight: 1,000 kg.
+
 - Minimum chargeable weight: 10 kg.
+
 - Pickup: Next day only.
 
 **Activation:** Contact support (9711941080) or KAM. After activation, seller can enter package count > 1 during order creation.
@@ -57,24 +73,38 @@ Allows partial fulfillment based on available stock.
 Works for **manual orders only**.
 
 **Steps:**
+
 1. Create order manually via Add Order.
+
 2. Go to Processing tab > Select order > Ship Now.
+
 3. Select products to ship in the popup.
+
 4. Update package weight.
+
 5. Click **Split and Ship Now**.
+
 6. Choose courier partner.
+
 7. Redirected to Processing tab for remaining partial shipment.
 
 ### Hyperlocal Shipping (Shiprocket Quick)
 
 - Same-day pickup and delivery within **40–50 km** range.
+
 - Simply create a shipment manually — hyperlocal couriers appear automatically based on address and PIN code.
+
 - Live cities: Delhi-NCR, Bangalore, Hyderabad, Pune, Mumbai, Kerala, Chennai, Kolkata, Ahmedabad, Dehradun, Gujarat, Rajasthan, Tamil Nadu.
+
 - Weight limit: Up to 15 kg.
+
 - Rates: Starting from ₹10–11 per km.
+
 - Couriers: Porter, Borzo, Flash, Zypp, Loadshare Hyperlocal.
 
 For queries on Shiprocket Quick — arrange callback from sales team. SPOC: Dipu Kumar Mandal. Callback TAT: 30 minutes.
+
+<Iframe uid="dcb97c94-02a0-4745-ac44-2fc1f6ac4b78" src="https://docs.google.com/spreadsheets/d/1PPy9GnNDk7-KpUdMZRFBwNKDEpubD98gHwzT9SvficI/edit?gid=0#gid=0" title="Embedded content" width="664" height="711" allow-full-screen="true" frame-border="0" loading="lazy" style="width: 664px; height: auto; cursor: pointer;" display-mode="fixed" />
 
 ### Same-Day Delivery (SDD) and Next-Day Delivery (NDD)
 
@@ -82,43 +112,45 @@ Available for selected sellers with minimum daily shipment volume in serviceable
 
 ### India Post
 
-| Feature | Detail |
-|---|---|
-| Modes | Speed Post (Air) up to 2 kg; Business Parcel (Surface) 2 kg and above |
-| PIN code coverage | 19,000+ |
-| RTO charges | Not applicable |
-| COD | Available (cash mode only) |
-| Pickup cut-off | 10:00 AM |
-| Pickup window | 11:00 AM – 7:00 PM |
+| Feature           | Detail                                                                |
+| ----------------- | --------------------------------------------------------------------- |
+| Modes             | Speed Post (Air) up to 2 kg; Business Parcel (Surface) 2 kg and above |
+| PIN code coverage | 19,000+                                                               |
+| RTO charges       | Not applicable                                                        |
+| COD               | Available (cash mode only)                                            |
+| Pickup cut-off    | 10:00 AM                                                              |
+| Pickup window     | 11:00 AM – 7:00 PM                                                    |
 
 **Claim Liability:**
-| Mode | Liability |
-|---|---|
-| Speed Post | Double the freight charges or ₹1,000 (whichever less) |
+
+| Mode            | Liability                                                     |
+| --------------- | ------------------------------------------------------------- |
+| Speed Post      | Double the freight charges or ₹1,000 (whichever less)         |
 | Business Parcel | ₹500 or actual value of lost/damaged content (whichever less) |
 
 **SLA (excluding Sundays and National Holidays):**
-| Mode | Zone A | Zone B | Zone C | Zone D | Zone E |
-|---|---|---|---|---|---|
-| Speed Post | 2 days | 4 days | 3 days | 5 days | 5 days |
+
+| Mode            | Zone A | Zone B | Zone C | Zone D | Zone E |
+| --------------- | ------ | ------ | ------ | ------ | ------ |
+| Speed Post      | 2 days | 4 days | 3 days | 5 days | 5 days |
 | Business Parcel | 3 days | 6 days | 5 days | 7 days | 7 days |
 
 **India Post Activation:** Activation is done from the team end only. To request activation, raise a ticket with Company ID, pickup address, and pickup PIN code. Assign to Ravi Kumar. TAT: 24 hours.
 
 ### Drone Delivery (SKYEAIR)
 
-| Spec | Detail |
-|---|---|
-| Max weight | 2 kg |
-| Max value | ₹10,000 |
-| COD | Not live yet |
-| Pickup cut-off | 8:00 AM – 9:00 AM |
-| Delivery | 2:00 PM – 7:00 PM (same day) |
-| Tracking | Available |
+| Spec           | Detail                       |
+| -------------- | ---------------------------- |
+| Max weight     | 2 kg                         |
+| Max value      | ₹10,000                      |
+| COD            | Not live yet                 |
+| Pickup cut-off | 8:00 AM – 9:00 AM            |
+| Delivery       | 2:00 PM – 7:00 PM (same day) |
+| Tracking       | Available                    |
 
 **Serviceable PINs (Gurugram):** 122001, 122002, 122003, 122004, 122005, 122006, 122009, 122011, 122012, 122017, 122018, 122022
 
-**SPOC:** manohar.paraliya@shiprocket.com, dinesh.kumar1@shiprocket.com
+**SPOC:** [manohar.paraliya@shiprocket.com](mailto:manohar.paraliya@shiprocket.com), [dinesh.kumar1@shiprocket.com](mailto:dinesh.kumar1@shiprocket.com)
 
 ### Rocket Express Services
 
@@ -126,40 +158,54 @@ Shiprocket's own pickup fleet for SMB sellers (**Delhi only**). FE scans shipmen
 
 ### Logistics Transporter IDs (for E-Way Bill)
 
-| Courier | Transporter ID |
-|---|---|
-| XpressBees | 27AAGCB3904P2ZC |
-| Gati | 36AADCG2096A1ZY |
-| Bluedart | 27AAACB0446L1ZS |
-| Dotzot | 27AAACB0446L1ZS |
-| Delhivery | 06AAPCS9575E1ZR |
+| Courier      | Transporter ID  |
+| ------------ | --------------- |
+| XpressBees   | 27AAGCB3904P2ZC |
+| Gati         | 36AADCG2096A1ZY |
+| Bluedart     | 27AAACB0446L1ZS |
+| Dotzot       | 27AAACB0446L1ZS |
+| Delhivery    | 06AAPCS9575E1ZR |
 | Ecom Express | 07AADCE1344F1Z2 |
-| FedEx | 27AABCF6516A1Z3 |
-| DTDC | 88AAACD8017H1ZX |
-| DTDC (GST) | 07AAACD8017H1ZU |
+| FedEx        | 27AABCF6516A1Z3 |
+| DTDC         | 88AAACD8017H1ZX |
+| DTDC (GST)   | 07AAACD8017H1ZU |
 
 ### RADAR — AI Courier Intelligence Tool
 
 RADAR gives sellers real-time visibility into courier performance and last-mile network health at a pincode level.
 
 **What RADAR tracks:**
+
 - Courier performance ratings (scale: –2 to 5)
+
 - SLA adherence
+
 - First-attempt delivery success
+
 - NDR behaviour and reattempt rates
+
 - RTO without attempt
+
 - Timeliness of attempts after reaching hubs
 
 **How to use RADAR:**
+
 - View RADAR scores while assigning couriers on the Ship Now screen.
+
 - Open the RADAR Dashboard for deeper pincode-level insights.
+
 - Enable **Auto-Block for Stressed Couriers** to automatically avoid stressed couriers during assignment.
 
 **Best Practices:**
+
 1. Enable Auto-Block for Stressed Couriers from Ship Now or RADAR Dashboard.
+
 2. Check stress indicators before bulk assignments.
+
 3. Monitor shipments tagged with stress indicators and reassign high-risk AWBs.
+
 4. Prioritize higher-rated couriers for COD, high-value, and priority deliveries.
+
 5. Use RADAR heavily during peak sales/festive spikes.
 
 RADAR does not automatically choose couriers — seller retains full control.
@@ -169,8 +215,11 @@ RADAR does not automatically choose couriers — seller retains full control.
 ## SOP — OTP Based Delivery (Activation / Deactivation)
 
 Raise FCR Ticket:
+
 - Group: Client Support
+
 - Agent: Ankit Singh
+
 - Subject: OTP Activation or OTP Deactivation
 
 Maximum wait time for successful OTP activation / deactivation: **10 minutes**.
@@ -184,11 +233,12 @@ If seller asks why Delhivery price is high:
 > Sir / Ma'am, this is a sudden development at the courier's end. Bearing in mind current trends in fuel prices and other systemic factors in the logistics market, this price hike is being done by the courier across its entire client base.
 
 **Hindi:**
+
 > Sir / Ma'am, fuel price mein increase ke kaaran logistic market mein changes hue hain aur isi kaaran Courier partner ne shipping prices change kiye hain. Yeh poore customer base par lagu hai.
 
 Advisors can suggest alternate couriers: Bluedart, Ekart, DTDC, Kerry Logistics, Amazon Shipping, Smart R, Loadshare.
 
-_Do not suggest plan upgrades. Do not say you are raising a complaint — say you have captured feedback._
+*Do not suggest plan upgrades. Do not say you are raising a complaint — say you have captured feedback.*
 
 ---
 
@@ -201,11 +251,17 @@ _Do not suggest plan upgrades. Do not say you are raising a complaint — say yo
 ### Create a Split Shipment Order
 
 1. Create order manually via Add Order.
+
 2. Go to **Processing tab** > Select order > **Ship Now**.
+
 3. Select specific products to ship in the popup.
+
 4. Update package weight.
+
 5. Click **Split and Ship Now**.
+
 6. Choose courier partner.
+
 7. Return to Processing tab for remaining partial shipment.
 
 ### Use the Rate Calculator
@@ -215,9 +271,13 @@ _Do not suggest plan upgrades. Do not say you are raising a complaint — say yo
 ### Block/Unblock ODA or RTO Pincodes
 
 1. Go to **Settings > Courier Selection**.
+
 2. Click on the courier for which you want to manage pincodes.
+
 3. Click **Block Pincodes**.
+
 4. Select option: Courier (all ODA/RTO pincodes), Account (account-specific), or Custom (manual entry).
+
 5. Click **Submit**.
 
 Follow the same steps to **unblock** pincodes.
@@ -243,6 +303,7 @@ RADAR is available directly within the Shiprocket panel. Once activated, it star
 ### Set Courier Priority (Mobile)
 
 1. Three-dots menu at bottom > **Settings > Courier Priority**.
+
 2. Choose from: Recommended By Shiprocket, Cheapest, Fastest, Best Rated, Custom.
 
 > Custom priority can only be set from the web panel.
@@ -250,8 +311,11 @@ RADAR is available directly within the Shiprocket panel. Once activated, it star
 ### Reassign a Courier (Mobile)
 
 1. Go to **Orders > Ready to Ship tab**.
+
 2. Swipe the order card left.
+
 3. Tap three-dots menu > **Reassign Courier**.
+
 4. Select a new courier and confirm.
 
 ---
@@ -262,13 +326,13 @@ RADAR is available directly within the Shiprocket panel. Once activated, it star
 
 Courier companies divide all serviceable pincodes into shipping zones that determine freight charges and delivery time:
 
-| Zone | Definition |
-|---|---|
-| Zone A (Within City) | Pickup and delivery pincodes are in the same city |
-| Zone B (Within State) | Pickup and delivery pincodes are in the same state/region |
-| Zone C (Metro to Metro) | Between major metro cities |
-| Zone D (Rest of India) | All other pincodes excluding NE and J&K |
-| Zone E (NE and J&K) | North East India and Jammu & Kashmir |
+| Zone                    | Definition                                                |
+| ----------------------- | --------------------------------------------------------- |
+| Zone A (Within City)    | Pickup and delivery pincodes are in the same city         |
+| Zone B (Within State)   | Pickup and delivery pincodes are in the same state/region |
+| Zone C (Metro to Metro) | Between major metro cities                                |
+| Zone D (Rest of India)  | All other pincodes excluding NE and J\&K                  |
+| Zone E (NE and J\&K)    | North East India and Jammu & Kashmir                      |
 
 ### Courier Partners on Shiprocket
 
@@ -282,13 +346,13 @@ Couriers are categorized by weight slabs: 0.5 kg, 1 kg, 2 kg, 5 kg, and 10 kg.
 
 ### Courier Priority Options
 
-| Priority | What it does |
-|---|---|
+| Priority                  | What it does                                             |
+| ------------------------- | -------------------------------------------------------- |
 | Recommended by Shiprocket | SR decides the best courier based on your shipping needs |
-| Cheapest | Lists couriers by lowest freight cost |
-| Fastest | Lists couriers by earliest EDD |
-| Best Rated | Lists couriers by performance rating |
-| Custom | Seller-defined priority order |
+| Cheapest                  | Lists couriers by lowest freight cost                    |
+| Fastest                   | Lists couriers by earliest EDD                           |
+| Best Rated                | Lists couriers by performance rating                     |
+| Custom                    | Seller-defined priority order                            |
 
 ### Direct Ship Feature
 
@@ -297,20 +361,35 @@ Automatically assigns courier based on courier priority without showing the sele
 ### Courier Rules — Conditions Available
 
 Courier rules can be created based on:
+
 1. Payment Mode
+
 2. Weight
+
 3. Zone Wise
+
 4. Order Value
+
 5. State
+
 6. Pincode
+
 7. City
+
 8. Dangerous Goods
+
 9. Product SKU
+
 10. AWB Assigned Time
+
 11. Order Tags
+
 12. TAT and TAT Compliance %
+
 13. NDR Conversion
+
 14. Product Category
+
 15. Pickup Location ID
 
 Up to **200 courier rules** can be created. Rules cannot be edited — archive and recreate if changes are needed.
@@ -334,7 +413,9 @@ Setup & Manage > Courier > Courier Activity Logs — view all courier-level acti
 ### Amazon Courier Notes
 
 - Amazon courier cannot be used for orders from Amazon channels.
+
 - Amazon label format is thermal and cannot be edited.
+
 - OTP verification applies to Amazon prepaid orders over Rs. 500.
 
 ### Template Pricing
