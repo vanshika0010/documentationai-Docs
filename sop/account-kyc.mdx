@@ -1,18 +1,25 @@
 ---
-title: "Account and KYC"
-description: "KYC types and verification, account blocked and disabled scenarios, bank verification, email and company name changes"
+title: Account and KYC
+description: >-
+  KYC types and verification, account blocked and disabled scenarios, bank
+  verification, email and company name changes
 ---
-
 ## KYC
+
+hi
 
 ### Individual KYC
 
 Complete via automated Aadhaar OTP verification, or manually upload any two of the following:
 
 - Aadhaar Card
+
 - PAN Card
+
 - Passport
+
 - Voter ID Card
+
 - Driving License
 
 ### Company KYC — Sole Proprietorship
@@ -20,11 +27,17 @@ Complete via automated Aadhaar OTP verification, or manually upload any two of t
 Upload selfie and complete KYC via Aadhaar or GSTIN OTP verification, or manually upload any two of:
 
 - Aadhaar Card
+
 - PAN Card
+
 - Driving License
+
 - Voter Card
+
 - Passport
+
 - GST Certificate
+
 - Company Incorporation Document
 
 ### Company KYC — Registered Company
@@ -32,6 +45,7 @@ Upload selfie and complete KYC via Aadhaar or GSTIN OTP verification, or manuall
 Upload selfie and complete via GSTIN OTP verification, or manually upload:
 
 - PAN Card (mandatory)
+
 - GST Certificate (all 3 pages), OR Company Incorporation Document
 
 **Path:** KYC > Individual / Company > Upload Documents
@@ -39,9 +53,10 @@ Upload selfie and complete via GSTIN OTP verification, or manually upload:
 ### TAT
 
 - Auto verification: 30 seconds
+
 - Manual verification: 2–3 working days
 
-_Note: If wrong OTP is entered 3 times in auto verification, auto verification will no longer be available. If manual KYC is rejected, seller can re-upload within 2–3 working days from rejection date._
+*Note: If wrong OTP is entered 3 times in auto verification, auto verification will no longer be available. If manual KYC is rejected, seller can re-upload within 2–3 working days from rejection date.*
 
 ### Nugget Ticket (FCR)
 
@@ -57,15 +72,15 @@ _Note: If wrong OTP is entered 3 times in auto verification, auto verification w
 
 ### Nugget Ticket (NFCR)
 
-| Field             | Value                           |
-| ----------------- | ------------------------------- |
-| Channel           | FOPS                            |
-| Agent Assign      | NA                              |
-| Status            | Awaiting Customer Response      |
-| Subject           | Unable to Upload KYC Documents  |
-| FCR               | NFCR                            |
-| SR Issue Category | KYC                             |
-| Sub Category      | Unable to Upload KYC Documents  |
+| Field             | Value                          |
+| ----------------- | ------------------------------ |
+| Channel           | FOPS                           |
+| Agent Assign      | NA                             |
+| Status            | Awaiting Customer Response     |
+| Subject           | Unable to Upload KYC Documents |
+| FCR               | NFCR                           |
+| SR Issue Category | KYC                            |
+| Sub Category      | Unable to Upload KYC Documents |
 
 ---
 
@@ -77,10 +92,10 @@ _Note: If wrong OTP is entered 3 times in auto verification, auto verification w
 
 Inform seller about the reason and assign ticket accordingly.
 
-| Reason                                             | Assign To                                |
-| -------------------------------------------------- | ---------------------------------------- |
-| Standard block / suspicious / fraud activity       | Compliance Queries — Ravi Jangra         |
-| Weight Fraud / Address Mismatch / Multiple Accounts| Weight Fraud Control — Sonish Panchal    |
+| Reason                                              | Assign To                             |
+| --------------------------------------------------- | ------------------------------------- |
+| Standard block / suspicious / fraud activity        | Compliance Queries — Ravi Jangra      |
+| Weight Fraud / Address Mismatch / Multiple Accounts | Weight Fraud Control — Sonish Panchal |
 
 TAT: 1–2 working days.
 
@@ -89,19 +104,20 @@ TAT: 1–2 working days.
 Ask seller to share a screenshot of the error on email and create ticket in your own bucket to check the image.
 
 - Error says "Account Blocked" or "Account Blocked due to Suspicious / Fraud Activity" — assign to Compliance Queries — Ravi Jangra.
+
 - Error shows any other message — assign to Customer Support Tech Desk. TAT: 24 working hours for callback.
 
 ### Nugget Ticket
 
-| Field             | Value                           |
-| ----------------- | ------------------------------- |
-| Channel           | Compliance Query                |
-| Agent Assign      | Ravi Jangra                     |
-| Status            | Open                            |
-| Subject           | Account Blocked                 |
-| FCR               | NFCR                            |
-| SR Issue Category | Issues with Shiprocket Panel    |
-| Sub Category      | Account Blocked                 |
+| Field             | Value                        |
+| ----------------- | ---------------------------- |
+| Channel           | Compliance Query             |
+| Agent Assign      | Ravi Jangra                  |
+| Status            | Open                         |
+| Subject           | Account Blocked              |
+| FCR               | NFCR                         |
+| SR Issue Category | Issues with Shiprocket Panel |
+| Sub Category      | Account Blocked              |
 
 ---
 
@@ -111,15 +127,15 @@ If seller is unable to log in or create an order as account is disabled — ask 
 
 ### Nugget Ticket
 
-| Field             | Value                           |
-| ----------------- | ------------------------------- |
-| Channel           | FOPS                            |
-| Agent Assign      | NA                              |
-| Status            | Open                            |
-| Subject           | Account Disable                 |
-| FCR               | NFCR                            |
-| SR Issue Category | Issues with Shiprocket Panel    |
-| Sub Category      | Account Blocked                 |
+| Field             | Value                        |
+| ----------------- | ---------------------------- |
+| Channel           | FOPS                         |
+| Agent Assign      | NA                           |
+| Status            | Open                         |
+| Subject           | Account Disable              |
+| FCR               | NFCR                         |
+| SR Issue Category | Issues with Shiprocket Panel |
+| Sub Category      | Account Blocked              |
 
 ---
 
@@ -128,7 +144,9 @@ If seller is unable to log in or create an order as account is disabled — ask 
 ### Scenario 1 — Updating Bank Account for the First Time
 
 1. Verify via **Penny Drop** — enter account number, account type, IFSC code. A Re. 1 transaction is credited to verify.
+
 2. Available on both web and mobile app.
+
 3. Maximum 3 attempts via Penny Drop.
 
 **Path:** Settings > Company > Accounting and Bank Details
@@ -136,9 +154,13 @@ If seller is unable to log in or create an order as account is disabled — ask 
 ### Scenario 2 — Penny Drop Fails 3 Times
 
 Common reasons for failure:
+
 - Account number and re-enter fields do not match.
+
 - Incorrect account type selected.
+
 - Incorrect IFSC code.
+
 - Account number or IFSC does not match the cancelled cheque.
 
 Submit bank details manually: Settings > Company > Accounting and Bank Details > Upload cancelled cheque or passbook with bank stamp and photograph.
@@ -156,40 +178,45 @@ If still unverified — assign to Compliance Query. TAT: 1–2 working days.
 If seller wants to change bank details:
 
 1. Ask the reason from the seller.
+
 2. Inform seller: name on KYC and bank details must be the same.
+
 3. Assign to Compliance Query — Ravi Jangra. TAT: 1–2 working days.
+
 4. Inform seller to wait for bank details to be unfrozen, after which they can update from the panel.
 
 ### Nugget Ticket
 
-| Field             | Value                  |
-| ----------------- | ---------------------- |
-| Channel           | Compliance Query       |
-| Agent Assign      | Ravi Jangra            |
-| Status            | Open                   |
-| Subject           | Change Bank Details    |
-| FCR               | NFCR                   |
-| SR Issue Category | COD Remittance         |
-| Sub Category      | Change Bank Details    |
+| Field             | Value               |
+| ----------------- | ------------------- |
+| Channel           | Compliance Query    |
+| Agent Assign      | Ravi Jangra         |
+| Status            | Open                |
+| Subject           | Change Bank Details |
+| FCR               | NFCR                |
+| SR Issue Category | COD Remittance      |
+| Sub Category      | Change Bank Details |
 
 ---
 
 ## Email ID Change
 
 1. Check if the new email ID is already registered in SR.
+
 2. If already registered — soft denial.
+
 3. If not registered — raise request to Finance Desk. TAT: 1–2 working days.
 
 ### Nugget Ticket (NFCR)
 
-| Field             | Value                              |
-| ----------------- | ---------------------------------- |
-| Channel           | Customer Support Finance Desk      |
-| Agent Assign      | Priya / Manisha                    |
-| Status            | Open                               |
-| Subject           | Change Email ID                    |
-| FCR               | NFCR                               |
-| SR Issue Category | Profile Related                    |
+| Field             | Value                                 |
+| ----------------- | ------------------------------------- |
+| Channel           | Customer Support Finance Desk         |
+| Agent Assign      | Priya / Manisha                       |
+| Status            | Open                                  |
+| Subject           | Change Email ID                       |
+| FCR               | NFCR                                  |
+| SR Issue Category | Profile Related                       |
 | Sub Category      | Update Company Name / Profile Details |
 
 ---
@@ -203,11 +230,17 @@ Company name changes are generally **not allowed** as the company name is linked
 **If seller still disagrees (exception):**
 
 1. Request the seller to provide:
+
    - Reason for the name change
+
    - Updated company name
+
    - GST document (all 3 pages)
+
 2. Create an Awaiting Customer Response (ACR) ticket requesting these GST details.
+
 3. Assign to **Compliance Queries — Ravi Jangra**.
+
 4. Once details are received — change ticket status to Open in Compliance Queries channel.
 
 ---
@@ -221,19 +254,26 @@ If BD KYC is completed — confirm with seller that KYC has been uploaded and as
 If BD KYC is not completed — inform seller they need to complete KYC to activate.
 
 **Documents required:**
+
 - Company Name
+
 - PAN Number
+
 - Contact Person's Number
+
 - Pickup Address with PIN Code
+
 - Billing Address
+
 - Company URL / Website
+
 - Product Category
 
 **Panel path:** Settings > Courier > Courier Selection > Deactivated > Click Activate
 
 If Bluedart is not activated within **6 business days** after KYC upload — assign to Compliance Queries — Ravi Jangra.
 
-_Error screenshot is mandatory before assigning ticket to Compliance Queries._
+*Error screenshot is mandatory before assigning ticket to Compliance Queries.*
 
 ---
 
