@@ -166,6 +166,15 @@
             "path": "sop/credit-line-business-loan"
           }
         ]
+      },
+      {
+        "tab": "Technical Issues",
+        "pages": [
+          {
+            "title": "Finance",
+            "path": "tech-support/finance"
+          }
+        ]
       }
     ]
   }
