@@ -1,0 +1,402 @@
+---
+title: Tech Support — Channels & API
+description: This document covers resolution steps and seller-facing replies for channel integration issues (Shopify, WooCommerce, Amazon), Shiprocket API errors, webhook configuration problems, and order sync failures
+---
+
+## Issue Summary
+
+| Issue | Sub-category | Status |
+|---|---|---|
+| Back-dated Order Sync | Order Not Synced | ✅ Documented |
+| Order Processing Method | — | 🔲 Pending |
+| WooCommerce Order Sync | — | ✅ Documented |
+| Orders Not Getting Synced | — | ✅ Documented |
+| Shopify Orders Not Syncing | — | ✅ Documented |
+| Amazon Orders Not Syncing | — | 🔲 Pending |
+| Unable to Integrate | — | ✅ Documented |
+| Webhook Issues | — | ✅ Documented |
+| 403 Forbidden — Wrong Credentials | API Issues | ✅ Documented |
+| 403 Forbidden — Stale Password | API Issues | ✅ Documented |
+| Unprocessable Entity / Incorrect JSON | API Issues | ✅ Documented |
+| Wrong Pickup Location in API Request | API Issues | ✅ Documented |
+| Courier Not Serviceable Between Pincodes (API) | API Issues | ✅ Documented |
+| WooCommerce Plugin — Pincode Not Serviceable | — | ✅ Documented |
+| Access Forbidden — Non-API Email Used | — | ✅ Documented |
+| Real-time Shipping Rates on Shopify | — | ✅ Documented |
+| "Inventory Sync is Turned Off" Error | — | ✅ Documented |
+| CORS Policy Errors | — | ✅ Documented |
+| Using External API to Log In to Panel | — | ✅ Documented |
+| Weight and Dimensions Blank (Shopify / WooCommerce / Amazon) | — | ✅ Documented |
+
+---
+
+## Back-dated Order Sync
+
+**Sub-category:** Order Not Synced
+
+### What to Check
+
+Verify whether the seller created the order *before* connecting the channel. Ask the seller to share a screenshot from the marketplace confirming the original order creation date.
+
+If the order predates the channel connection, it **cannot be synced through the normal flow** — it must be synced from the backend.
+
+### Seller Reply
+> The order in question was created before your channel was connected to Shiprocket. The necessary backend changes have been made and the order has been successfully synced.
+
+---
+
+## Order Processing Method
+
+*Resolution steps and seller reply to be added.*
+
+---
+
+## WooCommerce Order Sync
+
+### What to Check
+
+Call the WooCommerce Orders and Products API. The order status should appear as either **Processing** or **Pending** regardless of the response.
+
+If the WooCommerce default Orders API is returning an error, the channel cannot be connected — Shiprocket needs a successful response from the WooCommerce API to fetch orders and products.
+
+### Seller Reply
+> We are encountering an error with the WooCommerce default Orders API. To connect the channel successfully, we need access to your orders and products via the WooCommerce API. Please check with your developer team and resolve the API error from your end.
+
+---
+
+## Orders Not Getting Synced
+
+### What to Check
+
+1. Confirm whether the channel is currently connected.
+2. If connected, verify that the channel's Orders and Products API is responding correctly.
+
+### Seller Reply
+> We are not receiving a response from the marketplace API, which is preventing your orders from syncing to Shiprocket.
+
+---
+
+## Shopify Orders Not Syncing
+
+### What to Check
+
+Check whether the Shiprocket webhook has been added in the Shopify admin panel. Orders will not sync if the webhook is missing or misconfigured.
+
+---
+
+## Amazon Orders Not Syncing
+
+*Resolution steps and seller reply to be added.*
+
+---
+
+## Unable to Integrate
+
+### What to Check
+
+First determine whether the seller cannot integrate a **channel** or the **Shiprocket API** — the information needed differs.
+
+- For **channel integration issues:** request screenshots of the error from the seller.
+- For **API integration issues:** request the cURL request, JSON response, authentication token, and the API URL being called.
+
+### Seller Reply
+> Please share relevant screenshots of the error you are encountering so we can investigate.
+>
+> For API integration issues, please provide your API cURL request and the response in JSON format, along with the token and API URL, so we can debug the exact error.
+
+---
+
+## Webhook Issues
+
+### What to Check
+
+Check the webhook URL the seller is trying to save. The following keywords are **blocked** and will prevent the URL from being saved:
+
+`shiprocket` · `kartrocket` · `sr` · `kr`
+
+The seller must use a webhook URL that does not contain any of these terms.
+
+### Seller Reply
+> Please ensure your webhook URL does not contain any of the following reserved keywords: `shiprocket`, `kartrocket`, `sr`, or `kr`. Rename your endpoint URL to avoid these terms and try saving again.
+
+---
+
+## 403 Forbidden — Wrong Credentials
+
+**Sub-category:** API Issues
+
+### What to Check
+
+Verify whether the seller generated their bearer token using their **Shiprocket API user email and password**. A common mistake is using the account login credentials instead of the API user credentials.
+
+### Seller Reply
+> Please generate your bearer token using your Shiprocket **API user email and password** — not your regular account login credentials.
+
+---
+
+## 403 Forbidden — Stale Password
+
+**Sub-category:** API Issues
+
+### What to Check
+
+Verify that the seller is using the correct and current combination of API user email and password. The password may have been reset or expired since the token was last generated.
+
+### Seller Reply
+> Please reset your API user password from your Shiprocket account and retry generating the token with the new password.
+
+---
+
+## Unprocessable Entity or Incorrect JSON
+
+**Sub-category:** API Issues
+
+### What to Check
+
+Review the seller's API request payload and confirm it is valid JSON. Look for missing required parameters, incorrect data types, or malformed JSON structure.
+
+### Seller Reply
+> Please correct your API request payload — there is either invalid data or a missing required parameter in your request body.
+
+---
+
+## Wrong Pickup Location in API Request
+
+**Sub-category:** API Issues
+
+### What to Check
+
+Check the `pickup_location` parameter in the seller's request payload. In most cases, the seller is passing a name that does not exactly match what is configured in their Shiprocket account. The value must be an exact match (case-sensitive).
+
+### Seller Reply
+> Please pass the exact pickup location name as it appears in your Shiprocket account. Even a small difference in formatting or spelling will cause this error.
+
+---
+
+## Courier Not Serviceable Between Pincodes (API Error)
+
+**Sub-category:** API Issues
+
+### What to Check
+
+This error appears when serviceable couriers exist for the route but are **not activated** in the seller's account. Check the seller's active couriers and compare against serviceable ones.
+
+### Seller Reply
+> This error occurs because the serviceable couriers for this route are not currently active in your account. Please check the Rate Calculator to see which couriers are serviceable, then enable them under Settings.
+
+---
+
+## WooCommerce Plugin — Pincode Not Serviceable
+
+### What to Check
+
+The seller is encountering a "Pincode not serviceable" error in the Shiprocket WooCommerce plugin. Before escalating, verify the following checklist:
+
+- Products on WooCommerce have weight and dimensions filled in **kg/cm** units
+- At least one pickup address is added to the seller's Shiprocket account
+- Plugin settings (name, company name, email, phone number) match the Shiprocket account exactly
+- Shiprocket app configuration is complete within the WooCommerce store (plugin)
+
+### Seller Reply
+> To resolve the pincode serviceability error in our WooCommerce plugin, please confirm the following:
+>
+> 1. Your products have weight and dimensions filled in **kg/cm** units on WooCommerce.
+> 2. At least one pickup address is added to your Shiprocket account.
+> 3. The details in your plugin settings (name, company name, email, phone) match your Shiprocket account exactly.
+> 4. The Shiprocket app configuration is complete in your WooCommerce store.
+>
+> If the issue persists after verifying all of the above, please share your WooCommerce store URL and login credentials so we can investigate further.
+
+---
+
+## Access Forbidden — Non-API Email Used
+
+### What to Check
+
+Check the email address being used in the cURL request. If it is a standard registered login email rather than an API user email, that is the cause — registered emails are not permitted for API token generation.
+
+### Seller Reply
+> The email address you are using is a registered account email, not an API user email. API access requires a token generated using your API user email and password. Please switch to your API user credentials and try again.
+
+---
+
+## Real-time Shipping Rates on Shopify
+
+### What to Check
+
+Shiprocket does not natively support real-time rate serviceability through the Shopify app. Direct the seller to the external serviceability API if they need to implement this on their own end.
+
+### Seller Reply
+> Real-time rate serviceability is not available through the Shiprocket Shopify app. To achieve this, you would need to use our external serviceability API and build a custom integration on your backend.
+>
+> **Endpoint:** `https://apiv2.shiprocket.in/v1/external/courier/serviceability/`
+>
+> **API Documentation:** https://apidocs.shiprocket.in/#intro
+
+---
+
+## "Inventory Sync is Turned Off. Please Add a Manual Order!"
+
+### What to Check
+
+This error typically indicates the seller is calling an incorrect API endpoint. Verify which endpoint they are using and correct it.
+
+### Seller Reply
+> The endpoint you are using is incorrect. To create orders via API, please use the following endpoint:
+>
+> `https://apiv2.shiprocket.in/v1/external/orders/create/adhoc`
+
+---
+
+## CORS Policy Errors
+
+### What to Check
+
+CORS errors occur when the seller calls Shiprocket APIs directly from the browser (client side). Check the endpoint and screenshots provided. This is a security limitation and will be enforced more strictly in the future.
+
+### Seller Reply
+> Please test your API request using the same inputs in Postman to check for errors.
+>
+> **Important:** We do not support calling Shiprocket APIs directly from the browser due to security and CORS restrictions — this capability will be fully disabled in a future update. We recommend setting up a backend service on your server that calls our API internally and passes the response back to your frontend.
+
+---
+
+## Using External API to Log In to Panel
+
+### What to Check
+
+Check which email address the seller is using to access the web panel. If it is an API user email, that is the problem — API user emails cannot be used for web panel login.
+
+### Seller Reply
+> The email address you are using is an API user email and cannot be used to log in to the Shiprocket web panel. Please log in using your registered account email address.
+
+---
+
+## Weight and Dimensions Blank for Shopify / WooCommerce / Amazon Orders
+
+### What to Check
+
+Check whether the seller has mapped weight and dimensions in their channel catalog. This is a required one-time setup — Shiprocket does not automatically sync weight or dimensions from Shopify or WooCommerce.
+
+### Seller Reply
+> Shiprocket does not automatically sync weight and dimensions from Shopify or WooCommerce. You need to map weight and dimensions under your **channel catalog** as a one-time activity. Once mapped, they will sync automatically for all future orders.
+
+---
+
+## API Authentication & Rate Limiting
+
+> **Debugging note:** For all API issues, always request the full **request and response payload** from the seller along with the token. Screenshots are not sufficient for debugging API errors — the raw request/response is required in every case.
+
+---
+
+### Invalid Email and Password Combination (Auth API)
+
+**Error:** `Invalid email and password combination`
+
+**Description:** Seller is hitting the auth API but receiving an invalid credentials error.
+
+#### What to Check
+
+Ask the seller to share the full API request and response (not a screenshot). Verify whether they are using the correct API user email and password. This error almost always means the credentials being passed do not match what is registered as the API user.
+
+#### Escalation Matrix
+
+Collect and review the request/response payload before escalating.
+
+---
+
+### Token Expired
+
+**Error:** Token expired response from API
+
+**Description:** Seller's bearer token has expired and API calls are failing.
+
+#### What to Check
+
+Ask the seller to share the full API request and response with the expired token. Confirm they are regenerating a fresh token before retrying. Tokens have a limited validity window and must be refreshed periodically.
+
+#### Escalation Matrix
+
+Collect and review the request/response payload before escalating.
+
+---
+
+### Password Not Received for API User
+
+**Description:** API user did not receive a password reset or welcome email.
+
+#### What to Check
+
+API users **do not receive password emails** — this is by design. Only registered (non-API) users receive password emails. The seller needs to set or reset the API user password manually through their account.
+
+**Path:** Settings → Additional Settings → API Users
+
+#### Seller Reply
+> API users do not receive password emails. Please set or update the API user password directly from your Shiprocket account under **Settings → Additional Settings → API Users**.
+
+---
+
+### 403 Unauthorized — Missing Permissions
+
+**Error:** `Unauthorized, you do not have the required permission. status_code: 403`
+
+**Description:** API call returns a 403 with a permissions error rather than a credentials error.
+
+#### What to Check
+
+Ask the seller to share the full API request and response with the token used. A `status_code: 403` with a permissions message typically means the token was generated with an account that does not have the required access level for that endpoint.
+
+#### Escalation Matrix
+
+Collect and review the request/response payload before escalating.
+
+---
+
+### Unable to Update API User
+
+**Description:** Seller cannot find where to update or manage their API user credentials.
+
+#### What to Check
+
+Direct the seller to the correct settings path:
+
+**Settings → Additional Settings → API Users**
+
+#### Seller Reply
+> To update your API user details, go to **Settings → Additional Settings → API Users**.
+
+---
+
+### API Failure in Order Allocation
+
+**Description:** API call for order allocation is failing.
+
+#### What to Check
+
+Ask the seller to share the full API request and response payload with the token. Order allocation failures can stem from a range of causes (invalid fields, missing parameters, courier errors) and cannot be diagnosed from a screenshot alone.
+
+#### Escalation Matrix
+
+Collect and review the request/response payload before escalating.
+
+---
+
+### Too Many Attempts — Rate Limit Exceeded
+
+**Error:** `{"message": "Too Many Attempts.", "status_code": 429}`
+
+**Description:** Seller is hitting the API rate limit and orders cannot be pushed.
+
+#### What to Check
+
+The rate limit needs to be increased for this seller. This requires **prior approval** before any change is made — the appropriate limit depends on the seller's order volume.
+
+Collect the following before raising for approval:
+
+- Seller's company ID
+- Approximate number of orders being pushed per minute / hour
+- Business justification for the increased limit
+
+#### Escalation Matrix
+
+Raise for approval with order volume data. Rate limit changes are not self-serve.

@@ -1,26 +1,196 @@
 ---
-title: Tech Support — Wallet & Finance
-description: >-
-  Resolution guides for wallet balance, COD remittance, invoicing, and financial
-  reconciliation issues
----
-# Tech Support — Wallet & Finance
-
-This document covers resolution steps and seller-facing replies for all wallet, COD, invoicing, and finance-related support issues.
-
+title: Wallet & Finance
+description: This document covers resolution steps and seller-facing replies for all wallet, COD, invoice, and financial reconciliation issues.
 ---
 
-| Issue / Error                            | Resolution Steps                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | Seller Reply                                                                                                                                                                                                                                                                                    | Category                | Sub-Category            |
-| ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------- | ----------------------- |
-| Passbook and Wallet Balance Not Matching | **Step 1 — Verify unbilled VAS charges (Wallet DB):**`SELECT * FROM company_wallet WHERE wallet_company_id = 406573`**Step 2 — Check VAS DB (common):**`SELECT sum(amount) FROM vas_transactions WHERE company_id = 406573 AND is_billable = 1`If a difference exists, the issue is on the VAS side. If not, check Metabase to identify when the mismatch started and escalate to the Dev Team to reconcile the balance.                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | The wallet balance mismatch has been fixed.                                                                                                                                                                                                                                                     | Tech — Wallet & Finance | Wallet Balance Mismatch |
-| Wallet Balance is Negative               | Check the Passbook tab to identify the reason for the negative balance.Reference: [Passbook History](https://app.shiprocket.in/sellers/wallet-transactions/passbook?from=2026-Feb-13\&to=2026-Mar-14\&current_page=1)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | Please refer to your Passbook History to identify what caused the negative wallet balance.[View Passbook](https://app.shiprocket.in/sellers/wallet-transactions/passbook?from=2026-Feb-13\&to=2026-Mar-14\&current_page=1)                                                                      | Tech — Wallet & Finance | Wallet is Negative      |
-| COD Not Received                         | Check whether a pending reversal exists, as it will block COD release. Run the following query:`SELECT * FROM awbs WHERE company_id = 2608868 AND rcrf_id IS NULL AND status = 11`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | Your COD remittance will be released in the next cycle.                                                                                                                                                                                                                                         | —                       | —                       |
-| Account Wallet Transfer Issue            | Check the Passbook for any coupons or cashback credits. If cashback or coupons are present, the wallet amount cannot be transferred.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | The wallet transfer could not be completed because your account has cashback credits applied.                                                                                                                                                                                                   | —                       | —                       |
-| COD Remittance Inquiry                   | To check what will be released in the next remittance cycle, run the following query (replace company ID as needed):`SELECT awbs.awb_code, awbs.status, shipments.delivered_date, shipments.total FROM awbs INNER JOIN shipments ON shipments.awb = awbs.awb_code INNER JOIN plan_metadata ON plan_metadata.company_id = shipments.company_id INNER JOIN remittance_setting ON remittance_setting.company_id = shipments.company_id AND remittance_setting.status = 1 WHERE awbs.status IN (0, 1) AND plan_metadata.plan_id != 18 AND shipments.sr_courier_id NOT IN (49, 28, 71, 74) AND awbs.assigned_date_time > CURRENT_DATE - INTERVAL 3 MONTH AND shipments.delivered_date IS NOT NULL AND awbs.cod = 1 AND (awbs.api_delivery_status = 1 OR awbs.mis_delivered = 1) AND shipments.delivered_date >= '2022-04-01 00:00:00' AND shipments.status = 7 AND awbs.company_id = 2942770;` | The COD remittance amount will be released in the next cycle.                                                                                                                                                                                                                                   | —                       | —                       |
-| COD Remittance Not Received              | If an RTO initiated date is present in the shipments table, it may be blocking remittance. Remove the date using:`UPDATE shipments SET rto_initiated_date = NULL, rto_delivered_date = NULL WHERE shipments.id = 1002273991 LIMIT 1;`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | Your COD remittance will be released in the next cycle.                                                                                                                                                                                                                                         | Tech — Wallet & Finance | Tech — Wallet & Finance |
-| Credit Note Adjustment                   | *(Resolution steps to be added)*                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | *(Reply template to be added)*                                                                                                                                                                                                                                                                  | —                       | —                       |
-| Incorrect Invoice Generated              | Verify the invoice number against the company ID. If the Finance Operations (FOPS) team has approved the incorrect invoice, update the status in the database accordingly.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | The invoice issue has been fixed.                                                                                                                                                                                                                                                               | Tech — Wallet & Finance | Tech — Wallet & Finance |
-| Need to Claim TDS                        | Check which shipments are still open by running:`SELECT * FROM shipments WHERE company_id = 698916 AND status IN (19, 42, 6, 18, 22, 39, 38, 17, 21, 9)`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | These shipments are currently still open.                                                                                                                                                                                                                                                       | —                       | —                       |
-| No GSTIN in Invoice                      | Verify that the GSTIN is updated in the seller account.Navigate to: **Settings → Company Setup → Billing, Invoice & GSTIN** and confirm the GSTIN details. If not updated, add the GSTIN number — it will appear on all future invoices.[Update GSTIN Settings](https://app.shiprocket.in/sellers/settings/company-setup/billing-invoice-gst)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | Please update your GSTIN in your account to have it reflected on invoices.Go to **Settings → Company Setup → Billing, Invoice & GSTIN**, add your GSTIN, and it will appear on all future invoices.[Update GSTIN](https://app.shiprocket.in/sellers/settings/company-setup/billing-invoice-gst) | Tech — Pre Assignment   | Invoice Issue           |
-| Wallet Reconciliation                    | Access has been granted to the FOPS team in Metabase.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | —                                                                                                                                                                                                                                                                                               | —                       | —                       |
+## Passbook and Wallet Balance Not Matching
 
+**Sub-category:** Wallet Balance Mismatch
+
+### What to Check
+
+This issue typically stems from unbilled VAS charges creating a discrepancy between the wallet database and VAS database. Run both queries and compare the results.
+
+**Step 1 — Check the wallet DB:**
+```sql
+SELECT * FROM company_wallet
+WHERE wallet_company_id = 406573
+```
+
+**Step 2 — Check VAS DB (common):**
+```sql
+SELECT sum(amount) FROM vas_transactions
+WHERE company_id = 406573
+AND is_billable = 1
+```
+
+If a difference exists between the two values, the issue is on the VAS side. If the values match, check Metabase to identify when the mismatch started and escalate to the Dev Team to reconcile the balance.
+
+### Seller Reply
+> The wallet balance mismatch has been fixed.
+
+---
+
+## Wallet Balance is Negative
+
+**Sub-category:** Wallet is Negative
+
+### What to Check
+
+Open the seller's Passbook tab to identify the transaction that caused the balance to go negative. The reason will be visible in the passbook history.
+
+[View Passbook](https://app.shiprocket.in/sellers/wallet-transactions/passbook?from=2026-Feb-13&to=2026-Mar-14&current_page=1)
+
+### Seller Reply
+> Please refer to your Passbook History to identify the reason for the negative wallet balance.
+>
+> [View Passbook](https://app.shiprocket.in/sellers/wallet-transactions/passbook?from=2026-Feb-13&to=2026-Mar-14&current_page=1)
+
+---
+
+## COD Not Received
+
+### What to Check
+
+A pending reversal on the account will block COD release. Run the query below to check if a reversal is pending (i.e., `rcrf_id` is NULL and `status = 11`):
+
+```sql
+SELECT * FROM awbs
+WHERE company_id = 2608868
+AND rcrf_id IS NULL
+AND status = 11
+```
+
+### Seller Reply
+> Your COD remittance will be released in the next cycle.
+
+---
+
+## Account Wallet Transfer Issue
+
+### What to Check
+
+Check the seller's Passbook for any cashback or coupon credits. If cashback or coupons are present on the account, the wallet balance cannot be transferred — this is expected system behaviour.
+
+### Seller Reply
+> The wallet transfer could not be completed because your account has cashback or coupon credits applied. These amounts are non-transferable.
+
+---
+
+## COD Remittance Inquiry
+
+### What to Check
+
+To show the seller exactly what will be released in their next remittance cycle, run the query below, replacing the `company_id` at the end with the seller's ID:
+
+```sql
+SELECT
+  awbs.awb_code,
+  awbs.status,
+  shipments.delivered_date,
+  shipments.total
+FROM awbs
+INNER JOIN shipments ON shipments.awb = awbs.awb_code
+INNER JOIN plan_metadata ON plan_metadata.company_id = shipments.company_id
+INNER JOIN remittance_setting
+  ON remittance_setting.company_id = shipments.company_id
+  AND remittance_setting.status = 1
+WHERE awbs.status IN (0, 1)
+  AND plan_metadata.plan_id != 18
+  AND shipments.sr_courier_id NOT IN (49, 28, 71, 74)
+  AND awbs.assigned_date_time > CURRENT_DATE - INTERVAL 3 MONTH
+  AND shipments.delivered_date IS NOT NULL
+  AND awbs.cod = 1
+  AND (awbs.api_delivery_status = 1 OR awbs.mis_delivered = 1)
+  AND shipments.delivered_date >= '2022-04-01 00:00:00'
+  AND shipments.status = 7
+  AND awbs.company_id = 2942770;
+```
+
+### Seller Reply
+> The COD remittance amount shown will be released in your next cycle.
+
+---
+
+## COD Remittance Not Received
+
+### What to Check
+
+If an `rto_initiated_date` is present in the shipments table, it may be blocking the remittance release. Remove the date using the query below, then confirm the remittance processes in the next cycle:
+
+```sql
+UPDATE shipments
+SET rto_initiated_date = NULL,
+    rto_delivered_date = NULL
+WHERE shipments.id = 1002273991
+LIMIT 1;
+```
+
+### Seller Reply
+> Your COD remittance will be released in the next cycle.
+
+---
+
+## Credit Note Adjustment
+
+*Resolution steps and seller reply to be added.*
+
+---
+
+## Incorrect Invoice Generated
+
+### What to Check
+
+Verify the invoice number against the seller's company ID. If the Finance Operations (FOPS) team has already approved the incorrect invoice, update the invoice status in the database to reflect the correction.
+
+### Seller Reply
+> The invoice issue has been fixed.
+
+---
+
+## Need to Claim TDS
+
+### What to Check
+
+Run the query below to identify which shipments are still open for the seller (replace `company_id` as needed). Open shipments affect TDS claim eligibility.
+
+```sql
+SELECT * FROM shipments
+WHERE company_id = 698916
+AND status IN (19, 42, 6, 18, 22, 39, 38, 17, 21, 9)
+```
+
+### Seller Reply
+> These shipments are currently still open and will need to be resolved before TDS can be claimed.
+
+---
+
+## No GSTIN in Invoice
+
+**Category:** Tech — Pre Assignment
+**Sub-category:** Invoice Issue
+
+### What to Check
+
+Verify that the seller's GSTIN is updated in their account. Navigate to:
+
+**Settings → Company Setup → Billing, Invoice & GSTIN**
+
+If the GSTIN is missing, the seller needs to add it. Once added, it will automatically appear on all future invoices. It will not be applied retroactively to past invoices.
+
+[Update GSTIN Settings](https://app.shiprocket.in/sellers/settings/company-setup/billing-invoice-gst)
+
+### Seller Reply
+> Please update your GSTIN in your Shiprocket account for it to appear on invoices.
+>
+> Go to **Settings → Company Setup → Billing, Invoice & GSTIN**, enter your GSTIN, and it will be reflected on all future invoices.
+>
+> [Update GSTIN](https://app.shiprocket.in/sellers/settings/company-setup/billing-invoice-gst)
+
+---
+
+## Wallet Reconciliation
+
+### What to Check
+
+Access for reconciliation review has been granted to the FOPS team in Metabase.

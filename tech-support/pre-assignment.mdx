@@ -1,0 +1,57 @@
+---
+title: Tech Support — Pre Assignment
+description: This document covers resolution steps and seller-facing replies for issues that arise *before* a courier is assigned — including courier serviceability failures, AWB assignment errors, and bulk order upload problems
+---
+
+## Courier Not Serviceable
+
+**Sub-category:** Courier Not Serviceable
+
+### What to Check
+
+Work through the following steps in order:
+
+1. **Check serviceability** using the Rate Calculator. Enter the order details (weight, pickup and delivery pincodes) to see which couriers are available.
+
+   [Rate Calculator](https://app.shiprocket.in/seller/tools/ratecalculator/domestic)
+
+2. If a courier shows as **serviceable but inactive**, activate it from the Rate Calculator and reattempt shipping.
+
+3. If a courier is **serviceable, active, but not appearing at the time of shipping**, investigate using the Serviceability API verbose response to identify the root cause.
+
+### Seller Reply
+> Please use the Rate Calculator to check courier serviceability for your order details. If a courier shows as serviceable but is not active, you can activate it directly from the Rate Calculator page.
+>
+> If the courier is serviceable and active but still not appearing during the shipping step, please share the order number and a screenshot showing the serviceable courier so we can investigate further.
+>
+> [Rate Calculator](https://app.shiprocket.in/seller/tools/ratecalculator/domestic)
+
+---
+
+## Internal Server Error While Assigning a Courier
+
+### What to Check
+
+Ask the seller for their **Order ID**, then check the failure logs in ICRM to identify what error was returned by the courier:
+
+**ICRM → Shipment Details → Failure Logs**
+
+### Seller Reply
+> We are receiving an error from the courier's end which is preventing AWB assignment. Please try assigning a different serviceable courier in the meantime. If the issue persists with multiple couriers, please share the order number and we will investigate further.
+
+---
+
+## Unable to Upload Orders Using Bulk Order Create CSV
+
+### What to Check
+
+Request the CSV file from the seller and compare it against the default sample file. Verify all of the following:
+
+- All required columns are present
+- No extra columns have been added
+- Column names and order match the sample file exactly
+- No special characters are present in any field
+
+### Seller Reply
+
+*Seller reply to be added.*

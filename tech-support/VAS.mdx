@@ -1,0 +1,112 @@
+---
+title: Tech Support — Value Added Services (VAS)
+description: This document covers resolution steps and seller-facing replies for VAS-related issues including trial activation, refund processing, dynamic pricing configuration, cache management, and RTO score refunds
+---
+
+## Enable Free Trial Period
+
+### What to Do
+
+To enable free VAS services for a seller, run both queries in sequence. Replace `company_id`, `user_id`, and the `vas_optins.id` values as appropriate for the seller.
+
+**Step 1 — Insert the trial opt-in record:**
+```sql
+INSERT INTO vas_optins (
+  charge_type, value, is_active, vas_id, company_id, user_id,
+  created_at, updated_at, org_id, deactivate_reason,
+  trial_p_expired_on, utm_params, source
+)
+VALUES (
+  1, 0.00, 1, 2, 3391815, 1,
+  NOW(), NOW(), NULL, NULL,
+  '2027-01-01', JSON_OBJECT('activate_post_trial', true), NULL
+);
+```
+
+**Step 2 — Update the trial expiry date:**
+```sql
+UPDATE vas_optins
+SET trial_p_expired_on = '2027-01-01'
+WHERE vas_optins.id = 1644694
+LIMIT 1;
+```
+
+---
+
+## VAS RevProtect Refund
+
+### What to Check
+
+Before processing a refund, review the findings for the shipments in question:
+
+- **AWBs in example case:** SRSP4508645219 and SRSP6047748386
+- OFD (Out for Delivery) was not raised for these shipments, so RevProtect GMV refunds were not credited.
+- **Root cause — ETD vs OFD Date Mismatch:** The ETD was October 31, 2025, but the OFD date was October 24, 2025 — earlier than the ETD. Refunds are not credited when the OFD date precedes the ETD.
+
+Verify this mismatch pattern for any RevProtect refund request before escalating or processing.
+
+### Seller Reply
+> The RevProtect refund has been processed.
+
+---
+
+## VAS Dynamic Pricing Setup
+
+### What to Do
+
+To configure dynamic pricing for a seller, insert a record using the query below. Update `company_id` and `charge_value` as required for the specific seller:
+
+```sql
+INSERT INTO vas_dynamic_pricings (
+  company_id, tier_id, ndr_reason, charge_type, charge_value,
+  is_active, min_gmv, max_gmv, vas_id, org_id, user_id,
+  created_at, updated_at, min_cap, max_cap, discount
+)
+VALUES (
+  '853333', NULL, NULL, '1', '1.5',
+  '1', NULL, NULL, '1', NULL, '1',
+  NOW(), NOW(), '0', '0', '0.00'
+);
+```
+
+### Seller Reply
+> Dynamic pricing has been updated for your account.
+
+---
+
+## How to Clear VAS Cache
+
+### What to Do
+
+Send the cURL request below to clear the VAS cache. Update the `cache_keys` value with the relevant VAS ID and company ID (format: `vas_{vas_id}_{company_id}`). Replace the bearer token with a valid admin token.
+
+```bash
+curl --location 'https://apiv2.shiprocket.in/v1/vas/clearCache' \
+  --header 'Authorization: Bearer <your_admin_token>' \
+  --header 'Content-Type: application/json' \
+  --data '{"cache_keys": "vas_1_4629688", "host": "vas"}'
+```
+
+### Seller Reply
+> The VAS cache has been cleared.
+
+---
+
+## RTO Score Refund
+
+### What to Check
+
+Run the query below to verify the refundable amount for the seller before processing. Replace `company_id` with the seller's ID:
+
+```sql
+SELECT sum(amount)
+FROM vas_transactions
+WHERE company_id = 2673493
+  AND is_billable IN (1, 4, 5)
+  AND vas_id = 1
+  AND vas_bill_id IS NULL
+ORDER BY vas_id DESC
+```
+
+### Seller Reply
+> The RTO score refund has been processed.

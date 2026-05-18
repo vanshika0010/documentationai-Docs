@@ -14,7 +14,7 @@
   "navigation": {
     "tabs": [
       {
-        "tab": "Combined Docs",
+        "tab": "SOP",
         "icon": "book-open",
         "pages": [
           {
@@ -173,6 +173,26 @@
           {
             "title": "Finance",
             "path": "tech-support/finance"
+          },
+          {
+            "title": "Channel",
+            "path": "tech-support/channel"
+          },
+          {
+            "title": "VAS",
+            "path": "tech-support/VAS"
+          },
+          {
+            "title": "Pre Assignment",
+            "path": "tech-support/pre-assignment"
+          },
+          {
+            "title": "Post Assignment",
+            "path": "tech-support/post-assignment"
+          },
+          {
+            "title": "Marketing onboarding",
+            "path": "tech-support/marketing onboarding"
           }
         ]
       }
