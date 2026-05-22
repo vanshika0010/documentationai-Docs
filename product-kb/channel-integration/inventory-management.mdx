@@ -1,0 +1,54 @@
+---
+title: "Inventory Management"
+description: "Sales channel integrations — Shopify, WooCommerce, Amazon, Magento, catalogue, inventory"
+---
+
+<AccordionGroup>
+  <Accordion title="What is ISBN?">
+
+ISBN stands for International Standard Book Number. It is a unique identifier for books, recognized worldwide. Each ISBN is a 13-digit number that serves as a unique identifier for a specific edition of a book.
+
+  </Accordion>
+</AccordionGroup>
+
+<AccordionGroup>
+  <Accordion title="How to integrate Omuni with Shiprocket?">
+
+To integrate Omuni: Go to 'Setup & Manage' >> 'Channels' from the left menu. Click 'Connect New Channel,' search 'Omuni,' click 'Add.' Enter your Omuni Username, Password, API Token, Brand Name, and enable Order Status Tracking and Inventory Sync toggles. Click 'Save Channel & Test Connection.'
+
+  </Accordion>
+</AccordionGroup>
+
+<AccordionGroup>
+  <Accordion title="How do I integrate Magento (version 1) with Shiprocket?">
+
+Part A (Magento): Login to Magento admin panel, go to System > Web Services > SOAP/XML-RPC Users, add a new user with required info, save. Then go to SOAP/XML-RPC Roles, add a new role with 'All' resource access, save. Assign the role to the user.
+
+Part B (Shiprocket): Go to Setup & Manage >> Channels, click 'Add New Channel', select Magento, enter your Store URL, API Key & API Username, then click 'Save Channel & Test Connection.'
+
+  </Accordion>
+</AccordionGroup>
+
+<AccordionGroup>
+  <Accordion title="What is a custom channel and how do I use it?">
+
+A custom channel can be created to manage offline orders or orders from channels not authenticated with Shiprocket. Go to Setup & Manage >> Channels, click 'Add New Channel,' select Manual >> Add, enter Channel Name and Brand Logo, then click 'Save Channel & Test Connection.' Note: orders must be imported manually via Bulk Import Order Sheet.
+
+  </Accordion>
+</AccordionGroup>
+
+<AccordionGroup>
+  <Accordion title="Can I delete a channel?">
+
+No, once a channel is integrated, you cannot delete it. You can only enable or disable the channel.
+
+  </Accordion>
+</AccordionGroup>
+
+<AccordionGroup>
+  <Accordion title="How do I bulk import orders from sales channels?">
+
+Shiprocket automatically syncs all pending orders from integrated channels every 30 minutes. To manually trigger sync, go to the Orders tab and click the 'Sync orders' button at the top-right corner. Ensure Order Sync is turned on for your channel.
+
+  </Accordion>
+</AccordionGroup>

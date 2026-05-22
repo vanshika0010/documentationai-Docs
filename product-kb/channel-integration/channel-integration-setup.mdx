@@ -1,0 +1,52 @@
+---
+title: "Channel Integration Setup"
+description: "Sales channel integrations — Shopify, WooCommerce, Amazon, Magento, catalogue, inventory"
+---
+
+<AccordionGroup>
+  <Accordion title="Why is my channel disconnected? How to fix the issue?">
+
+Your channel might be disconnected due to an authentication error — your API keys may have changed or your password was updated. To fix the issue, try to reconnect or reauthorize your channel from the troubleshooting option.
+
+  </Accordion>
+</AccordionGroup>
+
+<AccordionGroup>
+  <Accordion title="Channel connected but orders are not getting synced.">
+
+Ensure that Order Sync is turned on for your integrated channel. Check the 'Status to fetch' field — it should match your sales channel status. Try manually triggering sync by clicking the 'Sync Order' button at the top right corner of the orders page.
+
+  </Accordion>
+</AccordionGroup>
+
+<AccordionGroup>
+  <Accordion title="How to integrate Razorpay with Shiprocket?">
+
+Go to Setup & Manage >> Channels, click 'Connect New Channel,' search 'Razorpay,' click 'Add.' Click 'Connect to Razorpay,' log in to your Razorpay account, authorize Shiprocket, then edit your channel preferences as needed.
+
+  </Accordion>
+</AccordionGroup>
+
+<AccordionGroup>
+  <Accordion title="What is a Map Payment Statuses feature?">
+
+The map payment statuses feature helps you map payment gateway statuses of your channel against Shiprocket's COD and Prepaid payment statuses. Go to Setup & Manage >> Channels, click Edit for the channel, locate 'Map Payment Statuses,' turn the toggle on, enter statuses (comma-separated), then click 'Update Channel & Test Connection.'
+
+  </Accordion>
+</AccordionGroup>
+
+<AccordionGroup>
+  <Accordion title="Channel Integration: Importance of adding brand name.">
+
+Adding your brand name is important because Shiprocket uses it in all buyer-facing communications (Email, SMS, Post Ship page, and Label). It helps buyers recognize your brand and reduces RTO. Go to Setup & Manage >> Channels, click Edit for your channel, add your brand name and logo, then click 'Update Channel and Test Connection.'
+
+  </Accordion>
+</AccordionGroup>
+
+<AccordionGroup>
+  <Accordion title="What is a Push Order Status Mapper?">
+
+A Push Order Status Mapper lets you match your channel statuses with Shiprocket's default statuses. Go to Setup & Manage >> Channels, click Edit, locate 'Push Order Status for Shipment Tracking,' turn on the toggle, map the statuses from the dropdowns, then click 'Update Channel & Test Connection.'
+
+  </Accordion>
+</AccordionGroup>
