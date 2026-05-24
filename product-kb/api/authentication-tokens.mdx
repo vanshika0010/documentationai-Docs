@@ -3,97 +3,54 @@ title: "Authentication & Tokens"
 description: "Developer API — authentication, rate limits, webhooks, sandbox, API users, token management"
 ---
 
-<AccordionGroup>
-  <Accordion title="I'm getting 'unauthorized, you do not have the required permissions via running API.">
+## I'm getting "unauthorized, you do not have the required permissions" via API
 
-This type of error usually arises because the token you are using belongs to a different account. There are two sets of credentials for your Shiprocket account: login credentials and API credentials. If you generate the token using login credentials, you will encounter this error. Please use the API credentials to generate the token.
+This error usually arises because the token you are using belongs to a different account. There are two sets of credentials for your Shiprocket account: login credentials and API credentials. If you generate the token using login credentials, you will encounter this error. Please use the API credentials to generate the token.
 
-  </Accordion>
-</AccordionGroup>
+---
 
-<AccordionGroup>
-  <Accordion title="what is the validity of the api token?">
+## What is the validity of the API token
 
 The validity of the API token is 10 days.
 
-  </Accordion>
-</AccordionGroup>
+---
 
-<AccordionGroup>
-  <Accordion title="I'm getting 'Wrong number of segments' in api">
+## I'm getting "Wrong number of segments" in API
 
 This error occurs when an incorrect token or no token has been passed in the authorization header. Ensure that you are correctly generating and including the token in your API requests.
 
-  </Accordion>
-</AccordionGroup>
+---
 
-<AccordionGroup>
-  <Accordion title="I'm getting 'invalid token' when I'm running API calls.">
+## I'm getting "invalid token" when running API calls
 
-The token is invalid you need to regenerate the token with correct credentials and use the same. If the token is wrong system throws an error as an invalid token.
+The token is invalid — you need to regenerate the token with correct credentials. If the token is wrong, the system throws an "invalid token" error.
 
-  </Accordion>
-</AccordionGroup>
+---
 
-<AccordionGroup>
-  <Accordion title="How can I integrate Shiprocket with my Odoo website?">
+## How can I integrate Shiprocket with my Odoo website
 
-To integrate your website with Shiprocket, you can follow these general steps:
+1. Visit the Shiprocket website and sign up for an account if you haven't already.
+2. Access the API documentation provided by Shiprocket at https://apidocs.shiprocket.in for integration details.
+3. Use the API keys provided in your Shiprocket account to authenticate your requests.
+4. Implement the necessary API calls in your website's backend to manage orders, shipments, and tracking.
+5. Test the integration thoroughly to ensure everything is working as expected.
 
- 1. Visit the Shiprocket website and sign up for an account if you haven't already.
- 2. Access the API documentation provided by Shiprocket for integration details.
- 3. Use the API keys provided in your Shiprocket account to authenticate your requests.
- 4. Implement the necessary API calls in your website's backend to manage orders, shipments, and tracking.
- 5. Test the integration thoroughly to ensure everything is working as expected.
+---
 
-If you need more specific guidance or have any questions about the integration process, feel free to ask!
+## How to setup a webhook with Shiprocket to get tracking updates
 
-  </Accordion>
-</AccordionGroup>
+You can set up a webhook with Shiprocket to get tracking updates proactively whenever there is a new tracking event.
 
-<AccordionGroup>
-  <Accordion title="Shiprocket's APIs (NDR, Order Creation, Authentication, Update, Wrapper, Labels, Manifest, Invoice, Tracking, Channels, Listings, Products, Pickup Addresses, Return Orders, Couriers)">
-
-Follow the API doc link: https://apidocs.shiprocket.in
-
-  </Accordion>
-</AccordionGroup>
-
-<AccordionGroup>
-  <Accordion title="How to setup webhook with shiprocket to get tracking updates?">
-
-You can set up a webhook with Shiprocket to get tracking updates. We will proactively notify your system whenever there is a new tracking event for an order.
-
-Setup:
+**Setup:**
 * Go to Settings > API > Webhooks from the left menu
-* Add the webhook URL
-* Enable the toggle
-* Add the security token (not mandatory)
-* When we get a new tracking event, a POST request is made to the callback URL you added to your Shiprocket account.
+* Add the webhook URL and enable the toggle
+* Add the security token (optional)
 
-Webhook Specifications:
-
+**Webhook Specifications:**
 * Method: POST
-* The Content-Type header should be set to application/json
-* Please refrain from using keywords like shiprocket, kartrocket, sr, or kr in your webhook URL
-* Security token should be anx-api-key
-* The URL should be set to send only code 200 in response.
-For more details, visit this link: https://apidocs.shiprocket.in/#webhooks
+* Content-Type header should be set to application/json
+* Do not use keywords like shiprocket, kartrocket, sr, or kr in your webhook URL
+* Security token should be an x-api-key
+* The URL should return only code 200 in response
 
-  </Accordion>
-</AccordionGroup>
-
-<AccordionGroup>
-  <Accordion title="How integrate Webhook into my Shiprocket account?">
-
-To integrate the Webhook into the shiprocket account, follow these steps:
-1. Go to 'Settings' from the left menu.
-2. Under the settings page click on 'API' >> 'Webhooks'.
-3. Then, you will navigate to the Shipment Webhook Settings page.
-4. ON toggle button to Enable the Webhook.
-5. Once you enable the Webhook you need to enter the URL and Token (optional).
-6. Then, click on the 'Test Webhook' button to test.
-7. Finally, click on 'Save Webhook' button.
-
-  </Accordion>
-</AccordionGroup>
+For more details, visit https://apidocs.shiprocket.in/#webhooks
