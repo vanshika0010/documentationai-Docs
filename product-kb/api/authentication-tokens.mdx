@@ -3,31 +3,31 @@ title: "Authentication & Tokens"
 description: "Developer API — authentication, rate limits, webhooks, sandbox, API users, token management"
 ---
 
-## I'm getting "unauthorized, you do not have the required permissions" via API
+## I'm getting "unauthorized, you do not have the required permissions via running API.
 
-This error usually arises because the token you are using belongs to a different account. There are two sets of credentials for your Shiprocket account: login credentials and API credentials. If you generate the token using login credentials, you will encounter this error. Please use the API credentials to generate the token.
+This type of error usually arises because the token you are using belongs to a different account. There are two sets of credentials for your shiprocket account; one is your Login Credentials (your email id & password) and the other is your API Credentials (email id & password). Since you have generated the token using login credentials, you are getting this error. Please use the API Credentials to generate the token.
 
 ---
 
-## What is the validity of the API token
+## What is the validity of the API token?
 
 The validity of the API token is 10 days.
 
 ---
 
-## I'm getting "Wrong number of segments" in API
+## I'm getting "Wrong number of segments" in API.
 
 This error occurs when an incorrect token or no token has been passed in the authorization header. Ensure that you are correctly generating and including the token in your API requests.
 
 ---
 
-## I'm getting "invalid token" when running API calls
+## I'm getting "invalid token" when running API calls.
 
-The token is invalid — you need to regenerate the token with correct credentials. If the token is wrong, the system throws an "invalid token" error.
+The token is invalid & you need to regenerate the token with correct credentials. If the token is wrong, the system throws an "invalid token" error.
 
 ---
 
-## How can I integrate Shiprocket with my Odoo website
+## How can I integrate Shiprocket with my Odoo website?
 
 1. Visit the Shiprocket website and sign up for an account if you haven't already.
 2. Access the API documentation provided by Shiprocket at https://apidocs.shiprocket.in for integration details.
@@ -37,20 +37,32 @@ The token is invalid — you need to regenerate the token with correct credentia
 
 ---
 
-## How to setup a webhook with Shiprocket to get tracking updates
+## How to setup a webhook with Shiprocket to get tracking updates?
 
 You can set up a webhook with Shiprocket to get tracking updates proactively whenever there is a new tracking event.
 
-**Setup:**
+Please follow the below steps to set up the webhook:
 * Go to Settings > API > Webhooks from the left menu
 * Add the webhook URL and enable the toggle
 * Add the security token (optional)
 
-**Webhook Specifications:**
+Here are the webhook Specifications:
 * Method: POST
 * Content-Type header should be set to application/json
-* Do not use keywords like shiprocket, kartrocket, sr, or kr in your webhook URL
+* Do not use keywords like shiprocket, kartrocket, sr, kr in your webhook URL
 * Security token should be an x-api-key
 * The URL should return only code 200 in response
 
-For more details, visit https://apidocs.shiprocket.in/#webhooks
+For more details, refer https://apidocs.shiprocket.in/#webhooks
+
+---
+
+## I create orders via API. How can I add ewaybill?
+
+You can add a waybill number while creating the order in the API payload via the parameter "ewaybill_no".
+
+---
+
+## What are Shiprocket's APIs?
+
+For detailed information about Shiprocket's APIs, please refer to the documentation at https://apidocs.shiprocket.in/
