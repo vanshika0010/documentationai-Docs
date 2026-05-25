@@ -5,101 +5,113 @@ description: "Shiprocket dashboard, reports, rate calculator, serviceability too
 
 ## How to view the tracking dashboard?
 
-Go to the Orders section from the left menu. Use the status tabs (In Transit, Out for Delivery, etc.) to view shipments in different stages. Click on any shipment to see its real-time tracking details.
+You can view shipment tracking information by:
+1. Going to Orders from the left menu.
+2. Clicking on any order to see its tracking details.
+3. Alternatively, use the Search feature to find a specific order by AWB number.
+4. The tracking page shows the complete journey of the shipment from pickup to delivery with timestamps.
 
 ---
 
 ## Can I Request Real-Time Data on the Dashboard?
 
-The Shiprocket dashboard updates in near real-time for most data points. For order statuses and tracking, updates come from courier tracking APIs and may have a slight delay (typically 30-60 minutes). You can click the refresh button to get the latest data.
+The Shiprocket dashboard shows near real-time data. Tracking updates come from courier APIs and may have a slight delay. Click the refresh button on the dashboard to get the latest data. For critical shipment statuses, you can also check directly on the courier's tracking website using the AWB number.
 
 ---
 
 ## Can we send seller notifications to multiple emails or mobile numbers?
 
-Yes, you can configure multiple email addresses for notifications in Shiprocket. Go to Settings >> Notifications and add multiple email recipients for different notification types.
+Yes. Go to Settings >> Notifications in your Shiprocket account. You can configure multiple email addresses to receive different types of notifications (order updates, wallet alerts, etc.).
 
 ---
 
-## How to customize which widgets appear on the Shiprocket Dashboard?
+## How to download billing reports?
 
-Go to the Dashboard home page and click on the customize/settings option to select and arrange widgets according to your preference. You can add, remove, or rearrange widgets to focus on the metrics most important to your business.
+Go to Finances from the left menu. You can download:
+* Wallet Transaction Report (from Passbook)
+* COD Remittance Report
+* Invoice/Freight Invoice
+* Weight Discrepancy Report
 
----
-
-## How to check my daily shipping limit on Postpaid?
-
-If you are on the Postpaid plan, your daily shipping limit is based on your COD delivered shipments. Go to Finances >> Wallet/Postpaid to see your current shipping limit and usage.
-
----
-
-## How to view the pickup scheduled orders?
-
-Go to Orders >> Pickup Scheduled tab from the left menu. This shows all orders for which pickup has been scheduled along with the pickup date and courier details.
+Select the report type, choose the date range, and click Download.
 
 ---
 
-## What is the purpose of the Activity Log?
+## How to view the Passbook on Shiprocket?
 
-The Activity Log in Shiprocket tracks all changes and actions on your account such as order updates, courier assignments, settings changes, and user activity. It helps with auditing and troubleshooting.
-
----
-
-## How to filter reports by specific criteria?
-
-In the Reports section, use the filter options available:
-* Date range filter
-* Status filter
-* Courier filter
-* Channel filter
-* Zone filter
-
-Apply filters and click Generate/Download to get filtered report data.
+Go to Finances >> Passbook from the left menu. The Passbook shows all financial transactions including wallet recharges, shipping deductions, COD credits, refunds, and adjustments with timestamps.
 
 ---
 
-## Can I schedule automated daily reports in Shiprocket?
+## How to check the order-level charges?
 
-Yes, you can schedule automated reports to be emailed daily/weekly. Check the Reports section for scheduling options. Some report types support automatic scheduling to a designated email address.
-
----
-
-## How to check the passbook/wallet transaction history?
-
-Go to Finances >> Passbook from the left menu. The Passbook shows all wallet transactions including recharges, deductions for shipping, COD credits, refunds, and adjustments with timestamps.
+Go to the specific order in Orders section and click on it to open order details. The order details page shows the shipping charges applied, including base freight, fuel surcharge, COD charges (if applicable), and any other fees.
 
 ---
 
-## What is the Orders tab on Dashboard?
+## How to view the channel-wise order distribution?
 
-The Orders tab on the Shiprocket dashboard provides an overview of your orders organized by their current status. It shows counts for New Orders, Ready to Ship, In Transit, Delivered, NDR, and RTO orders. Click any status to drill into that specific order list.
-
----
-
-## Can I view courier-wise performance data?
-
-Yes. Go to Reports >> Analytics >> Courier Performance. This shows delivery rates, RTO rates, and NDR rates for each courier partner so you can make informed decisions about courier selection.
+Go to Reports >> Analytics from the left menu. The analytics section shows channel-wise breakdown of your orders (Shopify, WooCommerce, Amazon, etc.) to help you understand which channels generate the most orders.
 
 ---
 
-## How to download the Returns report?
+## What are the reports available on Shiprocket?
 
-Go to Reports from the left menu, select 'Returns Report', choose the date range, and click Download. The report includes all reverse pickup orders, their status, and related details.
+Shiprocket offers the following reports:
+* Shipment/Tracking Report
+* NDR Report
+* COD Remittance Report
+* Weight Discrepancy/Reconciliation Report
+* Wallet Transaction Report
+* Returns Report
+* Order Report
+* Analytics (Delivery Performance, Courier Performance, Zone Analysis)
 
 ---
 
-## How to see my Top Performing Products or Orders by Value?
+## How to check the RTO analysis on Shiprocket?
 
-Go to Reports >> Analytics section where you can view order analytics including top products by order count and order value insights for your business.
+Go to Reports >> Analytics >> RTO Analysis. This shows RTO rates by courier, zone, and time period to help identify patterns and reduce return-to-origin rates.
 
 ---
 
-## What data is included in the RTO Analysis report?
+## How to search for a specific order in the Orders tab?
 
-The RTO Analysis report provides insights on Return to Origin shipments including:
-* RTO count by courier
-* RTO reasons distribution
-* Zone-wise RTO rates
-* Trend over time
+In the Orders section, use the search bar at the top to search by:
+* Order ID
+* AWB (tracking) number
+* Customer name
+* Customer phone number
+* Customer email
 
-This helps identify patterns and take corrective actions to reduce RTO.
+You can also use the filter options to narrow results by date range, status, courier, or channel.
+
+---
+
+## How to export orders data from Shiprocket?
+
+Go to Orders from the left menu, apply the required filters (date range, status, etc.), and click 'Export' or 'Download' to get your orders data in CSV format.
+
+---
+
+## What is the Freight Invoice?
+
+The Freight Invoice is the monthly billing document from Shiprocket that shows all shipping charges for the billing period. It includes base freight charges, fuel surcharges, COD charges, and any other applicable fees. Download it from Finances >> Invoices.
+
+---
+
+## How to check payment status for COD orders?
+
+Go to Finances >> COD Remittance from the left menu. This section shows the payment status for all COD orders - which amounts have been remitted to your bank account and which are pending.
+
+---
+
+## How to find delayed or non-moving shipments?
+
+Go to Reports or use the NDR Management section to find delayed shipments. You can also check the 'Delayed Shipments' report if available in your Reports section, which lists shipments with no tracking updates beyond the expected transit time.
+
+---
+
+## What does the Quick Insights section on Dashboard show?
+
+Quick Insights on the Dashboard provides a summary of key performance indicators including delivery percentage, RTO percentage, NDR percentage, and other metrics to give you an at-a-glance view of your shipping performance.
