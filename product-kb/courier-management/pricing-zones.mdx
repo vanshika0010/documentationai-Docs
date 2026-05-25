@@ -3,88 +3,140 @@ title: "Pricing & Zones"
 description: "Courier activation, rules, priority, serviceability, ODA/RTO pincode management"
 ---
 
-## What are the shipping zones in Shiprocket?
+## What factors determine courier charges?
 
-Shiprocket categorizes shipments into the following zones based on origin and destination:
-* Within City (Local): Same city deliveries
-* Within State (Zonal A): Same state deliveries
-* Metro to Metro (Zonal B): Between metro cities
-* Rest of India (National): All other inter-state deliveries
-* Special Zones: J&K, North East, Andaman & Nicobar, Lakshadweep
+Courier charges depend on serviceable weight, chargeable weight, zone, and dead weight.
 
 ---
 
-## How to check the shipping rate for a specific courier?
+## How can I check the serviceability of a courier in a specific pincode?
 
-You can check shipping rates by using the Rate Calculator available on the Shiprocket dashboard. Go to Dashboard >> Rate Calculator, enter the origin pincode, destination pincode, weight, and dimensions to see rates across all active couriers.
-
----
-
-## What is COD charge and how is it calculated?
-
-COD (Cash on Delivery) charge is an additional fee charged for COD shipments. It is calculated as a percentage of the order value or a flat fee, depending on the courier partner. The COD charge is added to the shipping rate.
+You can check serviceability from the pincode zone serviceability settings here: Pincode Zone Mapping(https://app.shiprocket.in/rate-calculator?id=pincode-zone-mapping#pincode-zone-mapping)
 
 ---
 
-## How to add additional charges for COD orders?
+## How to set courier priority?
 
-You cannot add additional charges for COD orders directly on Shiprocket. The COD charges are determined by the courier partner. However, you can configure COD charges on your checkout page using Shiprocket Checkout.
-
----
-
-## What is the minimum weight for a shipment on Shiprocket?
-
-The minimum chargeable weight for most courier partners on Shiprocket is 0.5 kg (500 grams). Even if your shipment weighs less, you will be charged for the minimum weight.
-
----
-
-## How to get a better shipping rate on Shiprocket?
-
-You can get better shipping rates on Shiprocket by:
-1. Shipping higher volumes - higher volume leads to better negotiated rates.
-2. Using the right packaging to minimize volumetric weight.
-3. Choosing the right courier for each route based on performance and cost.
-4. Upgrading to higher Shiprocket plans which offer better rates.
-5. Reaching out to your Shiprocket account manager for custom rate negotiations.
+Follow the listed below steps to set courier priority on Shiprocket website:
+* Click on the 'Settings' option from the left menu.
+* Navigate to the courier category and click on the 'Courier Priority' option.
+* In the Courier Priority page, you can see the list of active couriers along with their delivery time and estimated cost.
+* To enable a courier, toggle the 'Enabled' button to activate it or disable as needed.
+* To set the priority, drag the couriers by clicking and holding the 'drag icon' to arrange them in the order of priority you want.
+* Once you're done, click on the 'Save' button to save your courier priority setting.
 
 ---
 
-## What is an ODA (Out of Delivery Area) pincode?
+## How to set Courier Rules?
 
-ODA (Out of Delivery Area) pincodes are locations that are considered difficult to service by courier partners. Shipments to ODA pincodes may attract additional surcharges or may have limited courier options. You can check ODA pincodes for each courier in the courier settings.
+Courier Rules is a great feature for those who want to split their courier assignment based on specific conditions. This saves you from a lot of hassles. Give it a try!
 
----
-
-## How does the fuel surcharge affect my shipping cost?
-
-Fuel surcharge is an additional charge levied by courier partners to offset the cost of fuel. It is typically calculated as a percentage of the base shipping rate. The fuel surcharge may vary by courier and is subject to change.
-
----
-
-## What are the extra charges I should be aware of in Shiprocket?
-
-Extra charges in Shiprocket include:
-* COD charges - for cash on delivery shipments
-* Fuel surcharge - additional fuel cost charge
-* ODA charges - for out of delivery area pincodes
-* Weight discrepancy charges - if courier measures higher weight
-* Re-attempt charges - for additional delivery attempts
-* RTO charges - for return to origin shipments
+Follow the steps below to set the Courier Rules on Shiprocket website:
+* Click on the 'Settings' option from the left menu.
+* Navigate to the courier category and click on the 'Courier Rules' option.
+* In the Courier Rules page, click on the 'Create Rule' button.
+* First, name your rule, e.g., 'Assign BlueDart to Delhi COD Orders'.
+* Next, define the conditions for applying this rule by clicking 'Add Condition'.
+* Choose the order attributes to set as the condition. These attributes can be related to Payment Mode, Weight, Zone, Order Value, State, Pincode, City, Dangerous Goods, Product SKU, or AWB Assigned Time.
+* Set the value for the selected condition and click 'Apply'.
+* After setting the conditions, choose the courier to be assigned when these conditions are met.
+* Optionally, you can set an Alternate Courier in case the primary courier is unavailable.
+* Finally, click 'Save' to activate your new courier rule.
 
 ---
 
-## How to check if a pincode is serviceable on Shiprocket?
+## What is Courier Priority?
 
-You can check pincode serviceability by using the Serviceability Checker available on the Shiprocket dashboard. Go to Dashboard >> Serviceability Checker, enter the origin pincode, destination pincode, and weight to see which couriers service that route.
-
----
-
-## What is special zone surcharge?
-
-Special zone surcharge is an additional charge for shipments to special zones like J&K, North East states, Andaman & Nicobar Islands, and Lakshadweep. These zones are considered difficult to service and attract higher shipping rates.
+Courier priority enables you to set a priority list of courier partners based on cost, courier rating, and delivery speed or the custom courier priority of your choice. If you want us to decide, then you can choose the 'Shiprocket Recommended' option. This setting helps you to ship orders through your preferred courier partners every time.
 
 ---
 
-## How to check the estimated delivery time for a shipment?
+## I can find the courier serviceable in the rate calculator but it is not showing up when I ship the order.
 
-You can check the estimated delivery time using the Rate Calculator on the Shiprocket dashboard. The ETA (Estimated Time of Arrival) is shown along with the shipping rate for each courier.
+There could be multiple reasons why a courier service is not showing up as serviceable when you are shipping the order compared to when you check in the rate calculator. Some of these reasons include:
+* The courier may not be active. Please check if the courier is active in your courier settings.
+* Insufficient wallet balance to assign the courier.
+* The order may have a COD payment mode while the courier may not support COD.
+* The courier may not be supporting the weight of the order.
+* The courier may have specific product restrictions.
+* There may be operational constraints or the courier may have stopped operations in that region.
+
+---
+
+## On which conditions based can I create the courier rules.
+
+You can create the courier rules under the following conditions:
+1. Payment Mode
+2. Weight
+3. Zone Wise
+4. Order Value
+5. State
+6. Pincode
+7. City
+8. Dangerous Goods
+9. Product SKU
+10. AWB Assigned Time
+
+---
+
+## How to Download Bulk LM Labels?
+
+To download Bulk LM lables, follow these steps on your Shiprocket website:
+1. Go to the Bulk Action section under Tools.
+2. Select the Tracking (AWB) Number option.
+3. Enter or paste the list of tracking numbers for the shipments you want to download the LM labels for.
+4. Click on the Download LM Labels button to initiate the download.
+5. The LM labels for the selected tracking numbers will be downloaded in bulk.
+
+---
+
+## Explaining shipping zones: How shipment zones affect order fulfillment and rates?
+
+Courier companies have divided all serviceable pin codes into multiple shipping zones. Each shipping zone has multiple sets of pin codes and a definite definition. Your shipping metrics like Freight (weight x rate), Fuel Surcharge, COD Charges, and more are affected based on the zones.
+
+Shipping Zone Categories:
+* Local: Shipments delivered within the same city
+* Zonal A: Shipments delivered within the same state
+* Zonal B: Shipments delivered across states but within the same geographical zone
+* National A: Shipments delivered anywhere across India
+* National B: Shipments delivered to specific distant locations
+* Special: Shipments to J&K, North East states, Andaman & Nicobar, Lakshadweep
+
+---
+
+## What can I customise on my labels?
+
+You can manage up to 40+ parameters across:
+
+Branding & Logo: Show/Hide Shiprocket branding, brand/channel logos.
+
+Support Details: Show/Hide or edit customer support contact details.
+
+Delivery & Pickup Details: Show/Hide delivery and pickup location details.
+
+Order Details: Show/Hide or rearrange product descriptions, quantity, price, SKU, HSN code, dimensions, etc.
+
+Custom Fields: Add up to 5 custom text fields with configurable labels and values sourced from order metadata.
+
+Barcode/QR Options: Toggle label barcode on/off, add QR code linked to order tracking.
+
+Font & Layout: Choose font size, label orientation, and layout style.
+
+---
+
+## Can Shiprocket pick shipments for multiple courier partners in one go?
+
+Yes. One Shiprocket rider can collect shipments assigned to different courier partners in a single pickup.
+You do not need to coordinate separately with each courier.
+
+---
+
+## How do I enable Pickups by Shiprocket?
+
+If your pincode is eligible:
+You will see the option in your Shiprocket panel.
+You may be auto-enabled based on operational rollout.
+Your warehouse address must have accurate location details (including correct pincode and GPS coordinates).
+
+If you’re not yet enabled and want to check eligibility:
+Contact Shiprocket support or your account manager.
