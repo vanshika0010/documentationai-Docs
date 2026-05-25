@@ -3,12 +3,159 @@ title: "Cart & Checkout Abandonment"
 description: "Engage360 — WhatsApp/SMS/Email automation, RTO Suite, campaigns, Self WABA, chatbot"
 ---
 
-## How does Engage help recover abandoned carts
+## Can the seller decide the time intervals for Abandoned Cart recovery messages on Engage?
 
-Engage sends automated WhatsApp/SMS/Email messages to customers who added items to their cart but didn't complete the purchase. You can set up timed sequences (e.g., 30 minutes, 2 hours, 24 hours after abandonment) with personalized messages and discount codes.
+Yes. In Engage 360, you can set custom time intervals for abandoned cart recovery messages. When building the Journey, you can add delay nodes to control when each follow-up message is sent (e.g., 30 minutes after abandonment, 2 hours later, 24 hours later).
 
 ---
 
-## How to set up abandoned cart recovery automation in Engage
+## How does Engage detect cart abandonment?
 
-Go to Engage >> Automation >> Create Workflow. Select 'Cart Abandonment' as the trigger, configure the delay time, and set up the message content. Connect your store to ensure cart data flows into Engage.
+Engage 360 detects cart abandonment through integration with your checkout platform (Shopify, WooCommerce, Shiprocket Checkout, GoKwik, Shopflo). When a customer adds items to cart but doesn't complete purchase within a configured time window, Engage triggers the abandoned cart recovery flow.
+
+---
+
+## What is the typical recovery rate for abandoned carts using Engage?
+
+Cart recovery rates vary by industry and message quality, but automated WhatsApp messages typically achieve higher open rates (94%) compared to email, leading to better recovery. The actual recovery rate depends on your message content, timing, and whether you offer incentives.
+
+---
+
+## Can I include a discount code in the abandoned cart recovery message on Engage?
+
+Yes. You can include a discount code in your abandoned cart WhatsApp template. Create the discount on your store platform, add the code to the message template, and approve it with Meta. This incentive can significantly improve recovery rates.
+
+---
+
+## How many follow-up messages can I send for cart abandonment on Engage?
+
+You can set up multiple follow-up messages in the abandoned cart journey. A typical sequence is 3 messages: immediate, 2-hour follow-up, and 24-hour follow-up. Beyond 24 hours, Meta-approved marketing templates are required.
+
+---
+
+## Does Engage support abandoned checkout recovery for Shopify?
+
+Yes. Connect your Shopify store to Engage 360 and enable the Shopify integration in Engage settings. Abandoned checkout events from Shopify will automatically trigger the recovery journey in Engage.
+
+---
+
+## How to set up abandoned cart recovery on Engage?
+
+To set up abandoned cart recovery in Engage 360:
+1. Connect your store (Shopify/WooCommerce/checkout platform) to Engage 360
+2. Enable the integration toggle in Engage settings
+3. Create an approved WhatsApp template for cart recovery
+4. Go to Journeys >> Create Journey
+5. Select "Cart Abandoned" as the trigger
+6. Add your message node with the approved template
+7. Set delay nodes for follow-up messages
+8. Activate the journey
+
+---
+
+## Can I personalize abandoned cart messages with product details on Engage?
+
+Yes. Abandoned cart WhatsApp templates can include dynamic variables for:
+- Customer name
+- Product name(s)
+- Cart value
+- Cart recovery link
+- Discount code
+
+These are populated automatically from your store's cart data.
+
+---
+
+## What happens if a customer completes purchase after receiving abandoned cart message on Engage?
+
+Engaze 360 tracks conversion events. When a customer completes a purchase, they are automatically removed from the abandoned cart journey (no further follow-up messages are sent). The conversion is attributed to the Engage campaign in analytics.
+
+---
+
+## Does Engage support multi-product abandoned cart messages?
+
+Yes. Using Carousel WhatsApp templates (available with Self WABA), you can show multiple abandoned products in a single swipeable message format. Standard templates support listing product details in text format.
+
+---
+
+## What is the maximum delay I can set between abandoned cart messages on Engage?
+
+Within the first 24 hours of customer inactivity, you can send free-form messages. After 24 hours, Meta-approved marketing templates are required. There is no hard limit on delay duration, but longer delays typically result in lower recovery rates.
+
+---
+
+## Can I test the abandoned cart flow before going live on Engage?
+
+Yes. Use Engage 360's Journey preview/test feature to simulate the abandoned cart flow with a test phone number before activating it for all customers.
+
+---
+
+## How does Engage handle a customer who abandons cart multiple times?
+
+Engage 360 tracks unique sessions. If a customer abandons cart again after previously completing a purchase, they will re-enter the journey. For repeat abandoners without purchase, the journey runs as configured without duplication.
+
+---
+
+## Does Engage support abandoned cart recovery for WooCommerce?
+
+Yes. Connect your WooCommerce store to Engage 360 via webhook. Configure the webhook to send cart abandonment events to Engage, which will then trigger the recovery journey automatically.
+
+---
+
+## What is the cost of sending abandoned cart recovery WhatsApp messages on Engage?
+
+Abandoned cart messages are Marketing category messages on WhatsApp. The current rate is Rs. 0.99 per message as per Engage 360 pricing. Each customer message counts as one conversation (24-hour window).
+
+---
+
+## Can I pause the abandoned cart journey during sale events on Engage?
+
+Yes. Go to Journeys in Engage 360, find the abandoned cart journey, and click Pause. This will stop new customers from entering the journey. Resume it after the sale event.
+
+---
+
+## How is cart abandonment defined in Engage (what is the time threshold)?
+
+The abandonment threshold is configurable in Engage 360. The default is typically 30-60 minutes after cart activity without purchase completion. You can adjust this based on your customer behavior data.
+
+---
+
+## Can I use Engage for browse abandonment (product page visits without adding to cart)?
+
+Engage 360 primarily supports cart abandonment (when items are added to cart). Browse abandonment (product page visits without cart action) requires custom event integration via webhook from your analytics platform.
+
+---
+
+## Does Engage support GoKwik checkout abandonment recovery?
+
+Yes. Engage 360 supports GoKwik checkout abandonment. Configure the webhook in your GoKwik settings to send checkout abandonment events to Engage, enabling automated recovery flows.
+
+---
+
+## Does Engage support Shopflo checkout abandonment recovery?
+
+Yes. Engage 360 supports Shopflo checkout abandonment. Enable the Shopflo integration in Engage 360 settings to start receiving checkout events and trigger recovery journeys.
+
+---
+
+## Can I see which products were in the abandoned cart in Engage reports?
+
+Engaze 360 shows conversion and recovery metrics in the Journey analytics. Product-level abandoned cart details depend on what data your store platform sends to Engage via the integration.
+
+---
+
+## What is the minimum cart value required to trigger abandoned cart recovery on Engage?
+
+You can configure minimum cart value thresholds in the Journey conditions. For example, only trigger recovery messages for carts above Rs. 500. This helps avoid sending messages for low-value carts where recovery ROI is minimal.
+
+---
+
+## How to stop abandoned cart messages for a specific customer on Engage?
+
+You can manually opt out a specific customer from the abandoned cart journey by going to Contacts in Engage 360 and updating their communication preferences, or by adding them to an exclusion segment used in the journey conditions.
+
+---
+
+## Does Engage 360 support checkout abandonment for custom-built stores?
+
+Yes. For custom stores, you can integrate Engage 360 via webhook or API. Send cart abandonment events to Engage's API endpoint, and the platform will trigger the configured recovery journey automatically.
