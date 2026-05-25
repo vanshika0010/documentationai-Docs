@@ -6,11 +6,10 @@ description: "Sales channel integrations — Shopify, WooCommerce, Amazon, Magen
 ## How to integrate the channel?
 
 To integrate the channels, follow these steps on Shiprocket website:
-
 1. Go to 'Setup & Manage' >> 'Channels' from the left menu bar.
 2. You will be directed to the Sales Channel page where you can view your currently integrated channels.
 3. To add the new channel click on 'Connect New Channel' button located at top-right corner of the page.
-4. You will be taken to a page where you can add new channels.
+4. You will be taken to a page where you can add new channels. You can also search for the specific channel you want to add using the search bar.
 
 ---
 
@@ -23,8 +22,8 @@ Once you connect any sales channel (such as Amazon, Shopify, Magento, WooCommerc
 ## How do I integrate Shopify store with Shiprocket?
 
 To connect your Shopify store to Shiprocket, follow these steps on the Shiprocket website:
-* Go to ‘Setup & Manage’ >> ‘Channels’ from the left menu.
-* Click on the ‘Connect New Channel’ in the top corner and then click on ‘Add’ for the Shopify channel. OR directly click ‘Connect’ CTA for Shopify.
+* Go to 'Setup & Manage' >> 'Channels' from the left menu.
+* Click on the 'Connect New Channel' in the top corner and then click on 'Add' for the Shopify channel. OR directly click 'Connect' CTA for Shopify.
 * You will be redirected to Shopify. If not already logged in, log in to your Shopify account.
 * Install the Shiprocket app in Shopify.
 * After installation, you will be redirected back to Shiprocket with a success pop-up confirming the integration.
@@ -53,24 +52,12 @@ Yes, you can connect your Shopify store to multiple Shiprocket accounts.
 
 Upon integration, the following default settings are applied:
 * Store URL and Store Name are fetched from Shopify.
-* Orders with ‘Unfulfilled’ and ‘Unshipped’ status in Shopify are fetched to Shiprocket. (This can be changed later.)
+* Orders with 'Unfulfilled' and 'Unshipped' status in Shopify are fetched to Shiprocket. (This can be changed later.)
 * Any changes in order details on Shopify are automatically reflected in Shiprocket. (This cannot be changed.)
 * If an order is cancelled in the Shopify store, it will be marked as cancelled in Shiprocket. (This cannot be changed.)
 * Self-fulfilled orders in Shopify will be marked as "Self-Fulfilled" in Shiprocket. (This cannot be changed.)
 * Order payments: If the remaining amount is less than 1, the order will be classified as Prepaid; otherwise, it will be marked as COD. (This cannot be changed.)
 * Shiprocket statuses are mapped to Shopify Delivery Status (This can be customized later).
-
----
-
-## Can I edit how orders are fetched from Shopify to Shiprocket?
-
-Yes, you can modify order fetching preferences in the Edit Channel settings by navigating to ‘Setup & Manage’ >> ‘Channels’ from the left menu. Click on the Edit option for the channel you want to edit. You can choose from:
-
-1. Fetch all orders – All orders marked as ‘Unfulfilled’ in Shopify will be fetched.
-2. Fetch no orders – No orders will be fetched from Shopify.
-3. Custom preferences – Fetch orders based on specific conditions (payment status, Shopify tags, etc.).
-
-If an order matches both Fetch Orders and Don’t Fetch Orders conditions, the Don’t Fetch condition will take priority.
 
 ---
 
@@ -86,6 +73,6 @@ If an order is self-fulfilled in Shopify, it will be tagged as “Self-Fulfilled
 
 ---
 
-## What happens to the ‘Return’ and ‘RTO Delivered’ statuses in Shopify?
+## What happens to the 'Return' and 'RTO Delivered' statuses in Shopify?
 
-If a return is created in Shiprocket, a ‘Return’ tag will appear in Shopify. If an order status is RTO Delivered in Shiprocket, the ‘RTO Delivered’ tag will appear in Shopify.
+If a return is created in Shiprocket, a 'Return' tag will appear in Shopify. If an order status is RTO Delivered in Shiprocket, the 'RTO Delivered' tag will appear in Shopify.

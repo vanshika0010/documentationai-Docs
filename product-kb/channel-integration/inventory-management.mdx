@@ -12,102 +12,16 @@ ISBN stands for International Standard Book Number. It is a unique identifier fo
 ## How to integrate the Omuni with Shiprocket?
 
 To integrate the Omuni, follow these steps on Shiprocket website:
-
 1. Go to 'Setup & Manage' >> 'Channels' from the left menu bar.
-2. You will be directed to the Sales Channel page where you can view your currently integrated channels. (if already integreated).
+2. You will be directed to the Sales Channel page where you can view your currently integrated channels.
 3. To add the new channel click on 'Connect New Channel' button located at top-right corner of the page.
 4. Search 'Omuni' in the search bar at top-right corner of the page.
-5. Click on 'Add' button.Then you will navigate to the Omuni setup page. 
+5. Click on 'Add' button. Then you will navigate to the Omuni setup page.
 6. You need to enter the following details:
-     i. Omuni Username
-     ii. Omuni Password
-     iii. Omuni API Token
-     iv. Brand Name
-     v. Enable the toggle button for Order Status Tracking
-     vi. Enable the toggle button for Inventory Sync
+   i. Omuni Username
+   ii. Omuni Password
+   iii. Omuni API Token
+   iv. Brand Name
+   v. Enable the toggle button for Order Status Tracking
+   vi. Enable the toggle button for Inventory Sync
 7. Finally, click on 'Save Channel & Test Connection' button
-
----
-
-## How Do I integrate Opencart with Shiprocket?
-
-* Follow the below steps to integrate your Opencart with Shiprocket:
-* First download the Opencart extension using the below link.
-* https://www.opencart.com/index.php?route=marketplace/extension/info&extension_id=29734&filter_member=shiprocket_v2
-* Step I – Configuration at Opencart Extension:
-   * Login to your Opencart admin panel.
-   * Go to Extensions Tab -> Extension Installer. Upload the extension file downloaded from the link given above.
-   * Once the file is successfully uploaded. Go to Extensions Tab -> Modules.
-   * Add ‘OpenCart Rest API’.
-   * Once the APIs are installed, click on the ‘Add New’ button, enter the title as Shiprocket and click on ‘Save’ button.
-   * Now you will get Public Key & Private Key for Opencart. Copy and save them.
-* Step II – Configuration at Shiprocket panel
-   * Go to ‘Setup & Manage’ >> ‘Channels’ from the left menu on Shiprocket website.
-   * Click on the ‘Add New Channel’ Button.
-   * Click on ‘Opencart’ >> ‘Add’ button.
-   * Switch ‘On’ the Order and Inventory Sync as per your requirement.
-   * Fill in the Parameters i.e Store Url,  public Hash, Private hash (as saved from the OpenCart panel), and Opencart version 
-   * Click ‘Save Channel & Test Connection’.
-   * The green icon indicates that the channel has been successfully configured.
-   * Shiprocket by default pulls Pending order status from Opencart. If you want to pull “Processing” order status please write the same in Status to fetch section. We only pull “Pending” and “Processing” Opencart order status in Shiprocket.
-
----
-
-## How Do I integrate Magento(version 1) with Shiprocket?
-
-* Follow the below steps to integrate the Magento with Shiprocket:
-* Step A:
-   * Login to Magento admin panel. Enter username and password
-   * Go to System > Web Services located at top of the page.
-   * Under Web Services, locate SOAP/XML -RPC – Users.
-   * Click on ‘Add New User’.
-   * Under the User Info tab, fill in all required info user name, first name, etc.
-   * Click on ‘Save User’ shown at the top right corner.
-   * Go to System > Web Services located at top of the page.
-   * Under Web Services locate SOAP/XML -RPC – Roles
-   * Click on Add new roles button.
-   * Click on Role Info tab type role name i.e. superadmin
-   * Click on the Role Resources tab, select Resource Access – ‘All’ from drop-down menu, and click ‘Save Role’.
-   * Once again Go to System -> Web Services -> SOAP/XML-RPC – Users.
-   * Click on the user name which has been entered.
-   * Under the User Role tab, click on the assigned role name i.e. superadmin, which has been entered.
-   *  Click on ‘Save User’.
-* Step B:
-   * Go to ‘Setup & Manage’ >> ‘Channels’ from the left menu on Shiprocket website.
-   * Click on the ‘Add New Channel’ button.
-   * Click on ‘Magento’ >> ‘Add’ button
-   * Enter the Magento order status that you want to fetch in your Shiprocket panel and switch “On” the Order Sync icon. Switch on Inventory Sync, if required.
-   * Fill in the Parameters as saved from the Magento Panel
-   * Store URL: The URL of your store.
-   * API Key & API Username: API details your Magento Panel
-   * Click ‘Save Channel & Test Connection’ button.
-   * Green icon indicates that the channel has been successfully configured.
-
----
-
-## What is a custom channel and how do I use it?
-
-* A custom channel can be created to manage offline/Store orders or to manage orders from channels that are not authenticated with Shiprocket.
-* Follow the steps below to integrate the custom channel on Shiprocket website:
-   * Go to ‘Setup & Manage’ >> ‘Channels’ from the left menu.
-   * Click on the ‘Add New Channel’ button from the top-right corner of the page.
-   * Select the ‘Manual’ >> ‘Add’.
-   * Enter the General Information such as Channel Name, Communication Brand Name and Upload the Brand logo.
-   * Then, click on ‘Save Channel & Test Connection’ button.
-   * The toggle button indicates that the channel has been successfully authenticated.
-* Note: Orders do not come into the system automatically via any channel and no inventory is updated to the Custom channel. User has to import orders manually for Custom Channel via ‘Bulk import Order Sheet’.
-
----
-
-## Can i delete a channel?
-
-No, once a channel is integrated, you cannot delete it. You can only enable or disable the channel.
-
----
-
-## How do I bulk import orders from sales channels?
-
-Shiprocket automatically syncs/imports all your pending orders from the channels those are integrated into the panel.
-For all the channels integrated, Order Sync Automatically runs every 30 minutes.
-But still in case you want to run order sync manually , you can Go to Orders Tab in the left menu and click the ‘Sync orders’ button present in the top-right corner of the orders page.
-Just make sure that for your integrated channel , the Order Sync is On
