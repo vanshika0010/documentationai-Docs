@@ -3,26 +3,35 @@ title: "WooCommerce Integration"
 description: "Sales channel integrations — Shopify, WooCommerce, Amazon, Magento, catalogue, inventory"
 ---
 
-## My WooCommerce orders are not synced with Shiprocket. What should I do
+## My WooCommerce orders are not synced with Shiprocket. What should I do?
 
-1. Ensure Order Sync is turned On for your integrated channel.
-2. Check the 'Status to fetch' field — it should match your WooCommerce order status.
-3. If the issue persists, create a support ticket.
+There could be a few reasons for this issue. Firstly, ensure that the Order Sync is turned On for your integrated channel. Make sure the 'Status to fetch' field under the 'Pull Order Statuses' section should be same as WooCommerce. If issue still persist, then create a support ticket.
 
 ---
 
-## How do I integrate WooCommerce with Shiprocket
+## How Do I integrate Woocommerce with Shiprocket?
 
-1. Go to Setup & Manage >> Channels >> Add New Channel.
-2. Find WooCommerce and click 'Add.'
-3. Enter your WooCommerce store URL and click 'Connect to WooCommerce.'
-4. You'll be redirected to WooCommerce — click 'Approve' to grant Shiprocket permissions.
-5. After approval, click 'Update Channel & Test Credentials.'
-
-Note: Ensure REST API is enabled in your WooCommerce plugin (WooCommerce >> Settings >> API tab).
+Please follow the steps below to integrate your Woocommerce website with Shiprocket:
+   * Go to Setup & Manage >> Channels from the left menu.
+   * Click on the 'Add New Channel' button to add your Woocommerce channel
+   * Locate the Woocommerce channel and click on the 'Add' button
+   * Here, enter your Woocommerce store URL and click on 'Connect to Woocommerce'
+   * On clicking, you will be redirected to a page within WooCommerce. Please click on ‘Approve’ to give Shiprocket the required permission to operate
+   * Once you approve the connection, it will redirect you to the previous ‘Channel’ page with a consumer key and consumer secret
+   * Click on the ‘Update Channel & Test Credentials’ to connect your channel with Shiprocket.
+* Please Note: Please be ensured that your REST API is enabled in your WooCommerce plugin. To do this,
+   * Within your WordPress admin, go to the WooCommerce section. 
+   * Click on "Settings" and go to the API tab. 
+   * Check if your REST API is enabled or not. If you don't have an API tab, you need to upgrade your WooCommerce plugin to the latest version.
 
 ---
 
-## How to delete old WooCommerce connection
+## Is Shiprocket have a plugin for WooCommerce?
 
-You cannot delete a channel once it's connected. You can deactivate it by toggling the channel status in Setup & Manage >> Channels.
+Shiprocket have a plugin for WooCommerce, allows to check the serviceability of pincodes for courier services.
+
+---
+
+## How to delete old woocommerce connection?
+
+You cannot delete a channel once it's connected to Shiprocket. However, you can deactivate it if needed. Go to Setup & Manage > Channels from the left menu and toggle the channel status option against your channel to deactivate the channel.

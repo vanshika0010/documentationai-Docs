@@ -3,51 +3,189 @@ title: "Channel Integration Setup"
 description: "Sales channel integrations — Shopify, WooCommerce, Amazon, Magento, catalogue, inventory"
 ---
 
-## Why is my channel disconnected? How to fix the issue
+## why is my channel disconnected? how to fix the issue?
 
-Your channel might be disconnected due to an authentication error — API keys may have changed or the password was updated. To fix the issue, try to reconnect or reauthorize your channel from the troubleshooting option.
-
----
-
-## Channel connected but orders are not getting synced
-
-There could be a few reasons:
-
-1. Ensure Order Sync is turned On for your integrated channel.
-2. Check the 'Status to fetch' field — it should match your sales channel's order status.
-3. Manually trigger order sync by clicking the 'Sync Order' button at the top-right corner of the orders page.
+Your channel might be disconnected because of authentication error. It might be possible that your API keys have changed or password has been updated due to which you are getting this issue. To fix the issue, try to reconnect or reauthorize your channel from the troubleshooting option.
 
 ---
 
-## What is a Map Payment Statuses feature
+## Channel connected but orders are not getting synced.
 
-The Map Payment Statuses feature helps you match your channel's payment gateway statuses with Shiprocket's COD and Prepaid payment statuses.
-
-1. Go to Setup & Manage >> Channels.
-2. Click 'Edit' for the channel you wish to configure.
-3. Locate the 'Map Payment Statuses' header and turn the toggle On.
-4. Enter statuses separated by commas.
-5. Click 'Update Channel & Test Connection.'
+There could be a few reasons for this issue. Firstly, ensure that the Order Sync is turned On for your integrated channel. If it's already On, also check the 'Status to fetch' field this should be same as your sales channel status. try manually triggering the order synchronization process by clicking on the 'Sync Order' button located at the top right corner of the orders page. This will prompt Shiprocket to fetch the latest orders from your integrated sales channels.
 
 ---
 
-## Channel Integration: Importance of adding brand name
+## How to integrate the Razorpay with Shiprocket?
 
-Adding your brand name is important because Shiprocket uses it in all buyer-facing communications (Email, SMS, Post-Ship page, and Label). It helps buyers recognize your brand, which reduces RTO.
-
-1. Go to Setup & Manage >> Channels.
-2. Click the Edit button for your channel.
-3. Add your brand name in the 'Communication Brand Name' field and upload your brand logo.
-4. Click 'Update Channel and Test Connection.'
+To integrate the Razorpay, follow these steps on Shiprocket website:
+1. Go to 'Setup & Manage' >> 'Channels' from the left menu bar.
+2. You will be directed to the Sales Channel page where you can view your currently integrated channels. (if already integreated).
+3. To add the new channel click on 'Connect New Channel' button located at top-right corner of the page.
+4. Search 'Razorpay' in the search bar at top-right corner of the page.
+5. Next, click on the 'Add' button. Follow the below steps to proceed further:
+    1. To proceed, please click on the "Connect to Razorpay” button on your screen.
+    2. You'll be diverted to the Razorpay seller login page. Log in to your Razorpay account by entering your email address/username and password.
+    3. Once logged in, a page ‘Authorize Shiprocket’ will open where you can verify your account integration with Shiprocket by clicking “Authorize”.
+    4. Now, you will be redirected to the Shiprocket channel page. Here you can edit your Razorpay channel to modify it as per your preferences.
+    5. To pull orders in Shiprocket, you need to activate Shiprocket for your pages created in Razorpay panel
 
 ---
 
-## What is a Push Order Status Mapper
+## How to integrate the Indiamart with Shiprocket?
 
-A Push Order Status Mapper helps you match your channel or website statuses with Shiprocket's default statuses. When disabled, default push status mapping applies.
+To integrate the Indiamart, follow these steps on Shiprocket website:
+1. Go to 'Setup & Manage' >> 'Channels' from the left menu bar.
+2. Click on 'Connect New Channel' button located at top-right corner of the page.
+3. Search 'Indiamart' in the search bar.
+4. Click on 'Register' button.
 
-1. Go to Setup & Manage >> Channels.
-2. Click 'Edit' for the channel you wish to configure.
-3. Locate 'Push Order Status for Shipment Tracking' and turn the toggle On.
-4. Map the statuses from the dropdowns.
-5. Click 'Update Channel & Test Connection.'
+---
+
+## How do I integrate Ecwid as a channel with Shiprocket?
+
+* Follow the steps below to integrate the Shiprocket account with Ecwid:
+   * Go to ‘Setup & Manage’ >> ‘Channels’ from the left menu. 
+   * Click on the ‘Add New Channel’ button located at the top-right corner of the page.
+   * Find the Ecwid channel and click on ‘Add’ button.
+   * Click on ‘Connect To Ecwid’ button.
+   * You'll be redirected to the Ecwid seller login page. Log in to your Ecwid account by entering your email address/username and password.
+   * Once logged in, a page ‘Authorize Shiprocket’ will open where you can verify your account integration with Shiprocket by clicking ‘Authorize’.
+   * Now, you will be redirected to the Shiprocket channel page. Here you can edit your Ecwid channel to modify it as per your preferences.
+* Note: Shiprocket will begin importing your Ecwid orders into Shiprocket after 30-minutes of successful integration.
+
+---
+
+## How to Integrate Prestashop with Shiprocket?
+
+* Follow the below steps to integrate your Prestashop with Shiprocket:
+* Part A: Setting has to be made at Prestashop end.
+   * Login to your Prestashop Admin Panel. 
+   * Go to ‘Advanced Parameters’ >> ‘Webservice’ from left menu.
+   * Make sure the option ‘Enable PrestaShop’s Web Service’ should be marked ‘Yes’.
+   * Click on Sign (+) to add new API.
+   * Enter Key value and click to Generate. 
+   * Enter Key Description i.e. (API key, API name, other information) 
+   * Enable Status to Yes. 
+   * Check all Permissions. 
+   * Click on Save.
+* Part B: Setting has to be made at Shiprocket end.
+   * Go to ‘Setup & Manage’ >> ‘Channels’ from the left menu on Shiprocket website.
+   * Click on the ‘Add New Channel’ button.
+   * Click on ‘Prestashop’ >> ‘Add’.
+   * Switch ‘On’ the Order Sync icon.
+   * Enter Prestashop Store URL & Prestashop API Key (which has been already generated in Step A)
+   * Click ‘Save Channel & Test Connection’.
+
+---
+
+## What's a Map Payment Statuses Feature?
+
+* The map payment statuses feature helps you map new and existing payment gateway/statuses of your channel against Shiprocket's COD and Prepaid payment statuses. 
+* To enable this follow the below steps on Shiprocket website:
+   * Go to ‘Setup & Manage’ >> ‘Channels’ from the left menu.
+   * Now, click on the 'Edit' button for the channel you wish to map payment statuses. It will redirect you to a new page.
+   * In this page, locate the 'Map Payment Statuses' header. Turn the toggle on to turn on this feature.
+   * You can enter multiple statuses separated by ",". 
+   * Click on 'Update Channel & Test Connection'.
+
+---
+
+## How do I integrate my Zoho website with Shiprocket?
+
+* Follow the below steps to integrate Zoho with Shiprocket:
+   * Go to ‘Setup & Manage’ >> ‘Channels’ from the left menu on your Shiprocket website.
+   * Click on the ‘Add New Channel’ button from the top-right corner of the page.
+   * Select the ‘Zoho’ >> ‘Add’.
+   * Enter the ‘Organization Id’ and click on ‘Connect To ZOHO’ button.
+   * You'll be redirected to the Zoho login page. Log in to your Zoho account by entering your username and password.
+   * Once logged in, a pop up will open where you can verify your account integration with Shiprocket by clicking "Approve".
+   * Now, you will be redirected to the Shiprocket channel page. Here you can edit your Zoho channel to modify it as per your preferences.
+
+---
+
+## How do I integrate my Store Hippo account with Shiprocket?
+
+* Follow the below steps to integrate the Store Hippo with Shiprocket:
+   * Log in to your Store Hippo account.
+   * Go to "Advanced Settings" to create an access key.
+   * Save the generated access key
+   * Go to ‘Setup & Manage’ >> ‘Channels’ from the left menu.
+   * Click on the ‘Add New Channel’ button from the top-right corner of the page.
+   * Select the ‘Store Hippo’ >> ‘Add’.
+   * Here, turn the toggle on to pull your order statuses in Shiprocket.
+   * Next, enter your ‘Store URL’ and ‘Access Key’.
+   * Finally, click on ‘Save Channel and Test Connection’.
+
+---
+
+## How do I integrate Instamojo with Shiprocket?
+
+* Follow the below steps to integrate Instamojo with Shiprocket:
+   * Go to ‘Setup & Manage’ >> ‘Channels’ from the left menu on the Shiprocket website.
+   * Click on the ‘Add New Channel’ button from the top-right corner of the page.
+   * Select the ‘Instamojo’ >> ‘Add’.
+   * Click on ‘Connect To Instamojo’ button.
+   * You'll be redirected to the Instamojo seller login page. Log in to your Instamojo account.
+   * Once logged in, a page ‘Authorize Shiprocket’ will open where you can verify your account integration with Shiprocket by clicking “Authorize”.
+   * Now, you will be redirected to the Shiprocket channel page.
+   * Finally, click on ‘Save Channel and Test Connection’.
+
+---
+
+## What Is a Push Order Status Mapper?
+
+* A Push Order Status Mapper helps you match your channel or website statuses with the default statuses of Shiprocket. By turning it on, you can select or create an order status which you want to push on your channel. When the Push Order Status Mapper is disabled, default push status mapping will work on your channel. 
+* Follow the below steps on Shiprocket website:
+   * Go to ‘Setup & Manage’>>’Channels’ from the left menu.
+   * Now, click on ‘Edit’ button for the channel you wish to push order statuses. It will redirect you to a new page.
+   * On this page locate the ‘Push Order Status for Shipment Tracking’ header.
+   * Turn on the toggle button. Now you can see the multiple statuses.
+   * Now, mapped the statuses from the drop-down.
+   * Click on 'Update Channel & Test Connection'.
+* Note: Make sure you only mention the statuses you have on your channel.
+
+---
+
+## How do I integrate my Wix website with Shiprocket?
+
+* Follow the below steps to integrate the WIX with Shiprocket:
+   * Go to ‘Setup & Manage’ >> ‘Channels’ from the left menu on the Shiprocket website.
+   * Click on the ‘Add New Channel’ button from the top-right corner of the page.
+   * Select the ‘Wix’ >> ‘Add’.
+   * Click on ‘Connect To Wix Store’ button.
+   * You'll be redirected to the Wix login page. Log in to your Wix account.
+   * Once logged in, a pop up will open where you can verify your account integration with Shiprocket by clicking "Approve".
+   * Now, you will be redirected to the Shiprocket channel page.
+   * Enter the WIX order status that you want to fetch in your Shiprocket panel and turn the toggle on for order sync. (Status to fetch: NOT_FULFILLED)
+   * Finally, click on ‘Save Channel & Test Connection’ button.
+
+---
+
+## How do I integrate Unicommerce with Shiprocket?
+
+* Steps to be performed in Shiprocket Account:
+   * Go to Settings -> API from the left menu.
+   * Next, select Configure and click on the ‘Create an API user’ button. 
+   * A pop-up will appear To create an external API, enter an email id (different from your registered email id), and password. Click on ‘Generate API Credentials’ button to proceed.
+   * Note: Only 25 API users are allowed to create an external API.
+* Steps to be taken in your Unicommerce Account:
+   * Login to your Unicommerce account and Go to settings > Shipping Provider.
+   * Next, click on Add Shipping Provider from the top right corner.
+   * Now search Shiprocket from the search bar and select Shiprocket. 
+   * Go to ‘Settings’ tab, Enter the shipping provider name, select your desirable serviceability & shipping methods. Click on ‘Save & Next’.
+   * Then, click on ‘Connectors’ tab, Add API user credentials as Email id & Password of your Shiprocket account. 
+   * Click on ‘Connect’
+   * Now go to ‘Tools’ > select ‘Import’
+   * Select Import Type and Import Options from the drop-down given, then upload the pincode that you have downloaded from Shiprocket Panel. Finally, Click on ‘upload file’ button.
+
+---
+
+## What Is a Pull Order Status Mapper?
+
+* A Pull Order Status Mapper allows you to match your eCommerce channel or website statuses with the Shiprocket's order processing status. Follow the below steps on Shiprocket website:
+   * Go to ‘Setup & Manage’ >> ‘Channels’ from the left menu.
+   * Now, click on 'Edit' button for the channel you wish to pull order statuses. It will redirect you to a new page.
+   * On this page locate the 'Pull Order Statuses' header.
+   * You can enter the multiple statuses separated by “,”. For example Status to fetch, PULL Prepaid orders, PULL COD orders, etc.
+   * Click on 'Update Channel & Test Connection'.
+* Note: By default, we import unfulfilled orders for Amazon. If you are connecting any other channel, please mention all your order statuses which you want to map with Shiprocket's order processing status.

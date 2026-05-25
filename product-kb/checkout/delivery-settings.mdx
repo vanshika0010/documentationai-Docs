@@ -3,22 +3,47 @@ title: "Delivery Settings"
 description: "Shiprocket Checkout (Fastrr) — integrations, discounts, COD controls, analytics"
 ---
 
-## How does Shiprocket Checkout calculate and show Delivery Date
+## How does Shiprocket Checkout show Delivery Date on Checkout?
 
-The delivery date is calculated based on pickup pincode, destination pincode, order dispatch time, and the courier partners configured on the seller dashboard.
-
----
-
-## Can I show EDD in days instead of a specific date
-
-Yes, EDD can be shown in either days or a specific date format based on your requirement.
+The delivery date is calculated based on pickup pincode and destination pincode. It takes into account the dispatch time for the order as well. Also, it takes into account the courier's configured on the seller dashboard and based on it, delivery date is shown to the customers.
 
 ---
 
-## How to set shipping charges for different delivery types in checkout
+## Does Shiprocket Checkout support multi warehouse EDD based on multiple pickup locations?
 
-Go to Settings > Shipping Settings. Scroll to shipping charges and fill in fixed amounts for Rush, Express, and Standard delivery:
+Yes, Shiprocket Checkout support multi warehosue EDD with unicommerce OMS on our platform.
 
-* Rush: EDD ≤ 3 days
-* Express: EDD ≤ 6 days
-* Standard: EDD > 6 days
+---
+
+## Can I disable delivery date from Shiprocket Checkout and show this in days instead?
+
+Yes, EDD can be shown in both Days or Date based on the requirement.
+
+---
+
+## How to show express delivery in Shiprocket Checkout?
+
+Different delivery methods can be shown on the checkout using the “Custom rules” settings from the checkout.
+Checkout Dashboard >> Settings >> Shipping settings >> Custom rule >> Create rule >> Shipping visibility >> Parameters (Invoice value, destination pincodes, etc.)
+
+---
+
+## How to set shipping charges for different deliveries in checkout?
+
+You can set shipping charges for rush express and standard deliveries of order on Shiprocket Checkout.
+* Go to Settings > Shipping Settings from the left menu.
+* Scroll down to shipping charges and fill the fixed amount you want to charge for rush, express and standard delivery.
+The tentative TAT for these methods are as follows:
+* Rush: EDD not more than 3 days
+* Express: EDD not more than 6 Days
+* Standard: EDD greater than 6 Days
+
+---
+
+## how can I remove estimated delivery date(EDD) from my checkout page?
+
+EDD can be removed from the checkout page by the checkout team and you can email at checkoutsupport@shiprocket.com for the same. Rest, if you want to show specific delivery methods like standard, express, and rush on the checkout, you can create custom rules by following these steps on your Checkout dashboard:
+
+1. Click on settings >> Shipping settings >> custom rules >> create rule.
+2. Select "Shipping visibility" and choose the criteria like invoice value, destination pincodes, etc basis on which you want to show delivery method.
+3. Click on "Next" and you will get an option to choose from different delivery methods.
