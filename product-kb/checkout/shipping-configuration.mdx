@@ -3,12 +3,28 @@ title: "Shipping Configuration"
 description: "Shiprocket Checkout (Fastrr) — integrations, discounts, COD controls, analytics"
 ---
 
-## How to configure custom shipping rules on Checkout
+## How can I block high risk RTO customers from placing a COD order on Checkout?
 
-Go to Settings >> Shipping Settings >> Custom Rules >> Create Rule. You can create rules for shipping visibility, prepaid discount, COD charges, and COD to prepaid based on parameters like invoice value, destination pincodes, product SKU, and UTM parameters.
+Shiprocket checkout provides a feature to block high risk RTO customers from placing a COD order. Follow the below steps on your Checkout dashboard:
+1. Go to Settings >> Shipping settings >> Custom rules >> Create rule.
+2. Select "Disable COD" as the rule type.
+3. Choose criteria from a list of parameters like invoice value, product sku, destination pincodes, customer RTO history, UTM parameters etc.
+4. After selecting the criteria, click on "Next".
+5. Click on "Save" to save the rule.
 
 ---
 
-## How to set free shipping on Checkout
+## Can I set free shipping on Checkout based on certain conditions?
 
-Set the shipping charges to 0 for all delivery methods (Rush, Express, Standard) in Settings > Shipping Settings.
+Yes, you can set free shipping on Checkout based on conditions. Follow the below steps on your Checkout dashboard:
+1. Click on Settings >> Shipping settings >> Custom rules >> Create rule.
+2. Select "Shipping charges" as the rule type.
+3. Choose criteria from a list of parameters like invoice value, product sku, destination pincodes, UTM sources, customer type, etc.
+4. After selecting the criteria, click on "Next" and set the shipping charges as 0 (free shipping).
+5. Click on "Save" to save the rule.
+
+---
+
+## Can shiprocket checkout show EDD (Estimated Delivery Date) on the checkout page?
+
+Yes, Shiprocket checkout shows Estimated delivery date on the checkout to provide the customers with the estimated delivery date. The delivery date is calculated based on pickup pincode and destination pincode. It takes into account the dispatch time for the order as well.

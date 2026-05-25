@@ -3,18 +3,89 @@ title: "Checkout General"
 description: "Shiprocket Checkout (Fastrr) — integrations, discounts, COD controls, analytics"
 ---
 
-## How does Shiprocket Checkout help reduce RTO
+## Can I use Shiprocket Checkout on my woocommerce store?
 
-Shiprocket Checkout reduces RTO through address pre-fill (reducing wrong address deliveries), OTP verification, COD controls (charges or blocking high-risk buyers), and RTO risk scoring.
-
----
-
-## Can I block COD for specific pincodes or customers using Checkout
-
-Yes. Go to Settings > Shipping Settings > Custom Rules > Create Rule to block COD for specific pincodes, invoice values, or based on customer RTO history.
+Yes, you can use Shiprocket checkout on woocommerce store. Shiprocket checkout provides seamless integration with woocommerce.
 
 ---
 
-## How does the checkout conversion funnel work
+## How to create a tiered discount on Checkout?
 
-The checkout funnel tracks customer drop-off at each stage: visit > OTP verification > address confirmation > payment selection > order placement. The Checkout Dashboard shows where customers abandon the process so you can optimize accordingly.
+Facing an issue with tiered discount. Don't woory. Follow these detailed steps on your Checkout dashboard to create a tiered discount:
+1. Go to Settings: Navigate to the settings section from the left menu.
+2. Select Discounts: Click on the Discounts option.
+3. Create Discount: Click on Create and choose your discount type - Tiered Discount.
+4. Select Discount Method: Choose from "Automatic discount" or "Coupon Code" as per your requirement.
+5. Set Configuration: Under "Discount Configuration", choose the type of discount you want to configure: "Flat" or "Percentage".
+   - Type of Tiered: Select from 2 types of tiered options: "Cart value" or "Quantity" and add tiered by clicking on "Add tier".
+6. Set Criteria: Fill in the necessary details for configuration.
+7. Functionality: Fill in the necessary details like Payment Modes, Combination, Capping.
+8. Save and Enable: Once created, your discount will appear in the All Discounts section.
+
+---
+
+## How to create a discount on checkout for prepaid orders?
+
+To add a prepaid discount value on Shiprocket Checkout:
+* Go to Settings > Shipping Settings from the left menu.
+* Write a fixed or percentage discount you want to apply to your order.
+* You can choose to apply the maximum of fixed or percentage discount on the order.
+
+---
+
+## how can I create rules for checkout based on pincode?
+
+You can create rules based on pincodes on the checkout by following the below steps on your Checkout dashboard:
+1. Go to Settings >> Shipping settings >> Custom rules >> Create rule.
+2. Select the rule type from the list of rules like Shipping visibility, Prepaid discount, COD charges, etc.
+3. Choose "Destination pincodes" as criteria under the rule type selected.
+4. Enter the pincodes for which you want to apply the rule.
+5. After selecting the criteria, click on "Next" and enter the discount value or shipping visibility settings.
+6. Click on "Next" and the rule is created on your checkout.
+
+---
+
+## How can I use buy X get Y feature on Checkout?
+
+You can use the Buy X Get Y feature on Shiprocket Checkout by following these steps on your Checkout dashboard:
+1. Go to Settings: Navigate to the settings section from the left menu.
+2. Select Discounts: Click on the Discounts option.
+3. Create Discount: Click on Create and choose "Buy X get Y" as the discount type.
+4. Select Discount Method: Choose from "Automatic discount" or "Coupon Code" as per your requirement.
+5. Configure Details: Fill in the necessary details for X (quantity or amount) and Y (free or discounted product).
+6. Set Criteria and Functionality details.
+7. Save and Enable.
+
+---
+
+## Can I restrict checkout to certain locations?
+
+Yes, you can restrict checkout to certain locations using custom rules on the Shiprocket Checkout dashboard. Follow the below steps on your Checkout dashboard:
+1. Click on Settings >> Shipping settings >> Custom rules >> Create rule.
+2. Select "Shipping visibility" as the rule type.
+3. Choose "Destination pincodes" as criteria.
+4. Enter the pincodes that you want to allow or restrict for checkout.
+5. Click on "Next" and select the delivery methods you want to show or hide for those pincodes.
+6. Click on "Save" to save the rule.
+
+---
+
+## How to create custom rules on Checkout?
+
+Custom rules can be created on the checkout dashboard by following the below steps on your Checkout dashboard:
+1. Click on Settings >> Shipping settings >> Custom rules >> Create rule.
+2. Select the rule type from the list of rules like Shipping visibility, Prepaid discount, COD charges, etc.
+3. Choose criteria from a list of parameters like invoice value, product sku, destination pincodes, UTM sources, etc.
+4. After selecting the criteria, click on "Next" and enter the respective values for the selected rule type.
+5. Click on "Save" to save the rule.
+
+---
+
+## How can I block high risk RTO customers from placing orders on checkout?
+
+Shiprocket checkout provides a feature to block high risk RTO customers from placing orders by following the below steps on your Checkout dashboard:
+1. Go to Settings >> Shipping settings >> Custom rules >> Create rule.
+2. Select "Disable COD" as the rule type.
+3. Choose criteria from a list of parameters like invoice value, product sku, destination pincodes, customer RTO history etc.
+4. After selecting the criteria, click on "Next" and enter the respective values for the selected rule type.
+5. Click on "Save" to save the rule.
