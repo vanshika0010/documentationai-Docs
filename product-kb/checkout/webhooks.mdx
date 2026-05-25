@@ -3,10 +3,23 @@ title: "Webhooks"
 description: "Shiprocket Checkout (Fastrr) — integrations, discounts, COD controls, analytics"
 ---
 
-## How to integrate webhooks with Checkout
+## Where can I manage and configure my webhooks on Shiprocket Checkout?
 
-Go to Checkout Dashboard >> Settings >> Webhooks >> Add Webhook. Configure:
+You can manage and configure your webhooks on Shiprocket Checkout by following the below steps on your Checkout dashboard:
+* Go to Settings >> Webhooks from the left menu.
+* You can view all the configured webhooks and their status here.
+* To add a new webhook, click on "Add webhook" button.
+* Configure the webhook by entering the Service Provider, Webhook Type, and Time (for abandoned cart webhooks).
+* Click on "Save" to save the webhook configuration.
 
-* **Service Provider** — the external service that sends or receives the webhook.
-* **Webhook Type** — Real Time or Abandoned Cart.
-* **Time (seconds)** — available for Abandoned Cart webhook type only.
+---
+
+## My abandoned cart webhooks are not triggering. What could be the reason?
+
+If your abandoned cart webhooks are not triggering, here are some possible reasons:
+1. The webhook URL is not correct or accessible.
+2. The webhook is disabled. Check the webhook status in the Webhooks section.
+3. The webhook time configuration is not set correctly.
+4. The checkout session is not being abandoned correctly.
+
+Please reach out to the checkout support team at checkoutsupport@shiprocket.com for further assistance.
