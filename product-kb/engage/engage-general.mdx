@@ -5,18 +5,43 @@ description: "Engage360 — WhatsApp/SMS/Email automation, RTO Suite, campaigns,
 
 ## Will I be able to send messages manually to my buyers on Engage?
 
-Yes, you can send messages manually to your buyers in Engage 360 using the broadcasting feature. Here's a simplified step-by-step guide:
-
-1. Create and upload a Contact list. 
-   - Create a contact list by selecting New Contact List from the Contact section in Engage 360. 
-   - Provide a list name and upload a CSV file with your buyer's contact information. Ensure the CSV file has the correct columns, including the phone number in the first column (column A).
-2. Create a template. Go to the templates section and create a broadcast template. 
-3. Create a Broadcasting Template. Navigate to campaigns and create a broadcast template. Please note that only templates approved by WhatsApp can be used for broadcasting.
-4. Schedule or Send the Broadcast
+Yes, you can write manual messages to your buyers within 24 hours from any response received from the buyer's end.
 
 ---
 
-## What is the scope of Engage 360 on Shiprocket beyond NDR & Order messages?
+## Will a buyer be able to pay on the link after shipping the order on Engage?
+
+No, once the order gets shipped, the payment link gets inactive.
+
+---
+
+## Can I use the service only for COD orders on Engage?
+
+Yes. You can use the service only on COD orders. But the configuration needs to be made from the backend. Please reach out to us at srengage@shiprocket.com for the same.
+
+---
+
+## Can I create multiple discount coupons using engage?
+
+Yes. For the COD to Prepaid conversion, you can create different coupons (flat INR / % of GMV) depending on the order value.
+
+---
+
+## Can I change the payment gateway in engage?
+
+Yes. We offer integration with Shiprocket Fastrr right now. You can delete & add a different Payment Gateway whenever you need.
+
+---
+
+## Will buyer data be shared for the Engage campaigns?
+
+No, we will not share buyer data with a third party for marketing/campaign purposes.
+
+---
+
+## What is the scope of engage 360 on shiprocket, beyond NDR and order messages?
+
+Scope of Engage 360 on Shiprocket goes beyond NDR and order messages.
 
 Engage 360 on Shiprocket goes beyond NDR and order messages to offer a comprehensive set of features:
 
@@ -29,7 +54,7 @@ Engage 360 on Shiprocket goes beyond NDR and order messages to offer a comprehen
 
 ---
 
-## how can you bulk import contacts in Engage?
+## how can you bulk import contacts in engage?
 
 To bulk import contacts in Engage 360, you'll need to prepare a CSV file with specific columns. Here's the list of columns:
 1. Phone (Mandatory): The contact's phone number.
@@ -55,298 +80,263 @@ To get the monthly invoice for Engage:
 
 ---
 
-## What is the limit on WhatsApp template creations on Engage?
+## What is the limit on template creations?
 
 On Meta's WhatsApp Business Platform, there is a limit on the number of message templates you can create. The limit is 6000 templates per WhatsApp Business Account (WABA). However, the specific limit might vary based on your account's status and Meta's policies.
 
 ---
 
-## Can I reach out to your buyers who have not received their orders on Engage?
+## My seller is not willing to opt for Engage services. What can I tell my seller about the WABA number used to send messages?
 
-Yes. With Engage 360, you can set up automated NDR (Non-Delivery Report) flows that proactively message buyers whose orders haven't been delivered, allowing you to resolve issues or re-attempt delivery.
-
----
-
-## I'm not seeing orders from all channels on Engage, but I can see orders from 2 channels?
-
-This typically happens when not all your sales channels are properly connected to Engage 360. Go to Engage 360 Settings >> Integrations and ensure all your channels (Shopify, WooCommerce, Amazon, etc.) are connected and syncing.
+For the default (non-WABA) Engage setup, the messages are sent using Shiprocket's verified WhatsApp number (6366058044). Sellers can view this number in the message preview. For Self-WABA, the seller's own business number is used.
 
 ---
 
-## Can I change my WABA number after Self WABA is set up in Engage?
+## I'm not seeing orders from all channels on Engage, but I can see orders from 2 channels.
 
-Changing the WhatsApp Business Account (WABA) number after it's been set up is generally not straightforward and involves several steps including Meta verification. Contact the Engage support team for guidance on number migration.
-
----
-
-## Can I set different messages for different courier partners on Engage?
-
-Currently, Engage 360 sends the same message templates for all orders regardless of the courier. Courier-specific messaging customization is not available as a standard feature.
+This could be due to a few reasons:
+1. Certain channels may not be integrated or synced with Engage.
+2. There might be a configuration issue with those channels.
+3. Some order statuses might not be triggering the Engage flows.
+Please check your channel integrations in Engage 360 settings and ensure all channels are properly connected.
 
 ---
 
-## What integrations does Engage 360 support?
+## My seller says the buyer confirmed the order verbally, but the order confirmation is not showing as done on Engage.
 
-Engage 360 supports integrations with:
-- E-commerce platforms: Shopify, WooCommerce, Magento, and custom websites via API
-- Checkout platforms: Shiprocket Checkout, GoKwik, Shopflo
-- Analytics: Google Analytics, Facebook Pixel
-- CRM tools via webhooks
-- Payment gateways for COD-to-Prepaid conversion
-
----
-
-## Does Engage 360 support automated email flows?
-
-Yes, Engage 360 supports automated email flows. You can set up email journeys triggered by order events, cart abandonment, or customer segments. Email domain verification is required for sending.
+If the buyer confirmed the order verbally but the confirmation isn't reflected in Engage, it could be due to:
+1. The buyer's response might not have been captured by the system.
+2. There might be a delay in updating the status.
+3. The confirmation might have been given outside the Engage messaging flow.
+Please check the Engage logs for that specific order and raise a support ticket if the issue persists.
 
 ---
 
-## Can I use Engage for B2B communication?
+## What is the difference between a call done on engage and a normal outbound call on Engage?
 
-Yes. While Engage 360 is primarily designed for B2C e-commerce communication, it can be configured for B2B use cases including order updates, invoice notifications, and marketing campaigns for business customers.
-
----
-
-## What is the RTO Suite in Engage?
-
-The RTO Suite in Engage 360 is a set of automated communication tools designed to reduce Return-to-Origin rates:
-1. Order Confirmation: IVR calls and WhatsApp messages to confirm COD orders
-2. Address Verification: Automated flow to verify and correct delivery addresses
-3. COD to Prepaid: Convert COD orders to prepaid via WhatsApp payment links
-4. NDR Management: Automated buyer communication for failed delivery attempts
-5. Pre-delivery Check: Confirm buyer availability before delivery
+On Engage 360:
+- A call done through Engage: This is an IVR (Interactive Voice Response) automated call triggered by specific order events (e.g., COD order confirmation). These calls are tracked and logged in Engage.
+- A normal outbound call: This refers to manually placing a call to the buyer from the Engage panel, which is possible within the 24-hour window after a buyer responds to a message.
 
 ---
 
-## How does Engage 360 help recover abandoned carts?
+## Can the whatsapp template be customised on Engage?
 
-Engage 360 detects cart abandonment events from connected platforms and automatically triggers WhatsApp/SMS/email messages to the customer with cart details and a recovery link. You can configure:
-- Time delay before sending (e.g., 30 minutes, 2 hours, 24 hours)
-- Number of follow-up messages
-- Discount incentives in the message
+Yes. With Self-WABA, you can create and customize your own WhatsApp templates in Engage 360. Templates need to be submitted and approved by Meta before use. Standard templates provided by Shiprocket are fixed and cannot be customized.
 
 ---
 
-## Can I segment customers in Engage for targeted messaging?
+## Can I customise the COD to prepaid and Address Verification Messages on Engage?
 
-Yes. Engage 360 supports customer segmentation based on:
-- Order history (first-time, repeat buyers)
-- Delivery performance (high RTO customers)
-- Purchase value
-- Geographic location
-- Custom attributes
-- Engagement behavior (opened messages, clicked links)
+Customization of the COD to Prepaid and Address Verification messages is possible with Self-WABA setup in Engage 360. These templates need to be submitted for Meta approval. Contact the Engage team for assistance with custom template creation.
 
 ---
 
-## How to create an automated WhatsApp campaign on Engage?
+## Will the messages be sent in English only or can the sellers choose a different language on Engage?
 
-To create an automated WhatsApp campaign in Engage 360:
-1. Go to Campaigns >> Create Campaign
-2. Select WhatsApp as the channel
-3. Choose your customer segment
-4. Select an approved WhatsApp template
-5. Set the schedule (immediate or scheduled)
-6. Review and launch
-Monitor performance from the Campaign Analytics dashboard.
+The default templates are in English. For other languages, custom templates need to be created and approved by Meta through Self-WABA setup in Engage 360.
 
 ---
 
-## What is the difference between a Journey and a Campaign in Engage?
+## Can engage be used for B2B communication?
 
-Journey: Triggered by specific customer events (order placed, cart abandoned, order delivered). Automated, event-driven communication flow.
-
-Campaign: Proactive broadcast messages sent to a selected segment at a scheduled time. Marketing-oriented, not event-triggered.
+Yes. While Engage 360 is primarily designed for B2C e-commerce communication, the platform supports WhatsApp, SMS, and Email communication that can be adapted for B2B use cases including order updates and marketing campaigns.
 
 ---
 
-## Can I A/B test my WhatsApp messages on Engage?
+## My flow for order confirmation is OFF. Can the seller re-enable it on Engage?
 
-A/B testing for WhatsApp messages is available in Engage 360 for campaigns. You can test different message templates and measure which performs better in terms of open rate and conversions.
-
----
-
-## How to track the ROI of Engage campaigns?
-
-Engage 360 provides campaign analytics including:
-- Messages sent/delivered/read
-- Click-through rates (for messages with links)
-- Conversion attribution (orders placed after campaign)
-- Revenue attributed to campaigns
-- ROAS (Return on Ad Spend) calculation
+Yes. The seller can re-enable the order confirmation flow from the RTO Suite settings in Engage 360. Go to Engage 360 >> RTO Suite and toggle the Order Confirmation flow back ON.
 
 ---
 
-## Does Engage support WhatsApp Business API?
+## How many messages can the buyer exchange on Engage?
 
-Yes. Engage 360 is built on the official WhatsApp Business API (Cloud API). All messaging through Engage complies with Meta's WhatsApp Business Platform policies.
-
----
-
-## Can I use Engage without WhatsApp? (SMS/Email only)
-
-Yes. Engage 360 supports SMS and Email channels independently. You can use Engage for SMS campaigns, email automation, and SMS-based NDR flows without activating WhatsApp.
+Within the 24-hour window after a buyer's last message, unlimited messages can be exchanged. After 24 hours, only Meta-approved templates can be used to initiate communication.
 
 ---
 
-## What is the character limit for SMS messages on Engage?
+## What is Shiprocket Engage's NDR feature?
 
-Standard SMS messages have a 160-character limit per message. Messages longer than 160 characters are split into multiple SMS units and charged accordingly. Unicode characters (non-English) reduce the limit to 70 characters per unit.
-
----
-
-## How to opt out customers from Engage communications?
-
-Customers can opt out by:
-- Replying with standard opt-out keywords (STOP, UNSUB, etc.) on WhatsApp
-- Clicking the unsubscribe link in email campaigns
-
-You can also manually opt out specific customers from the Contacts section in Engage 360.
+Shiprocket Engage's NDR (Non-Delivery Report) feature, also called Delivery Boost, automatically sends WhatsApp messages to buyers when a delivery fails. It helps:
+1. Communicate delivery failure to the buyer
+2. Verify/update the delivery address
+3. Schedule re-delivery at a convenient time
+4. Reduce RTO by proactively resolving delivery issues
 
 ---
 
-## Does Engage 360 have a mobile app?
+## How does the RTO suite on Engage work?
 
-Engage 360 is primarily a web-based platform accessible from your Shiprocket panel. Check with the Engage team for any mobile app availability.
-
----
-
-## How to get Engage 360 support?
-
-For Engage 360 support:
-- Raise a support ticket in Shiprocket under the Engage category
-- Contact your Shiprocket account manager
-- Email the Engage support team
-- Use the Help section within the Engage 360 dashboard
+The RTO Suite on Engage 360 works through automated WhatsApp communication flows:
+1. Order Confirmation (COD): Sends IVR + WhatsApp to confirm genuine intent for COD orders
+2. Address Verification: Sends WhatsApp to verify delivery address accuracy before shipping
+3. COD to Prepaid: Sends payment link to convert COD orders to prepaid
+4. Pre-delivery Check: Confirms buyer availability on the day of delivery
+5. NDR Management: Automated recovery flows for failed deliveries
 
 ---
 
-## What is the data retention period for Engage analytics?
+## How does Engage decide which orders to send confirmation messages to?
 
-Engage 360 analytics data is retained for a specific period (typically 90 days for message logs). Contact the Engage team for specific data retention policies.
+Engage sends order confirmation messages based on your configured settings. You can set rules to send to:
+- All COD orders
+- COD orders above a specific value
+- Orders from specific channels
+- Orders to specific zones/pincodes
 
----
-
-## Can I integrate Engage with my CRM system?
-
-Yes. Engage 360 supports webhook-based integration with CRM systems. You can push customer engagement data (message interactions, campaign responses) to your CRM and trigger Engage flows from CRM events.
-
----
-
-## Does Engage 360 support GDPR compliance?
-
-Engage 360 follows data privacy best practices. For specific GDPR compliance requirements, contact the Engage team.
+Configure these rules in the RTO Suite settings in Engage 360.
 
 ---
 
-## How to pause an active journey in Engage?
+## Will the buyer get a notification on WhatsApp if his order is cancelled on Engage?
 
-Go to Journeys in Engage 360, find the active journey, and click Pause. This will stop new customers from entering the journey while allowing those already in the flow to complete it.
-
----
-
-## Can I clone a campaign or journey in Engage?
-
-Yes. You can duplicate existing campaigns and journeys in Engage 360 by using the Clone/Duplicate option, making it easy to create similar flows without starting from scratch.
+Yes. If order cancellation notification is enabled in your Engage settings, buyers will receive a WhatsApp notification when their order is cancelled.
 
 ---
 
-## What are the available message template categories in Engage?
+## Can I use Engage for feedback collection after delivery?
 
-WhatsApp message templates in Engage are categorized as:
-- Utility: Transactional messages (order updates, delivery notifications, NDR)
-- Marketing: Promotional messages (campaigns, offers, abandoned cart)
-- Authentication: OTP messages
-
-Each category has different pricing per conversation.
+Yes. You can create a Journey in Engage 360 triggered by "Order Delivered" status to send WhatsApp messages asking for feedback or review after a delay of 1-2 days post delivery.
 
 ---
 
-## How to check if my WhatsApp template is approved on Engage?
+## My COD order is confirmed on Engage, but the order is still showing as COD (not prepaid) in Shiprocket. Why?
 
-Go to the Templates section in Engage 360. The status of each template (Approved, Pending, Rejected) is shown. Only Approved templates can be used for campaigns and automations.
-
----
-
-## Does Engage support multi-language templates?
-
-Yes. WhatsApp templates in Engage can be created in multiple languages. Each language version needs separate Meta approval. You can create templates in Hindi, Tamil, Bengali, and other regional languages.
+Confirmation of intent via Engage does not automatically change the payment mode from COD to Prepaid in Shiprocket. The actual payment mode change only happens if the buyer clicks the payment link and completes the prepaid payment. If they only confirm the order, it remains COD.
 
 ---
 
-## How to add team members to Engage 360?
+## Does Engage support automated email flows?
 
-Go to Settings >> User Management in Engage 360. Click Add User, enter the email address and assign a role (Admin, Manager, etc.). The user will receive an invitation to access the Engage 360 dashboard.
-
----
-
-## Can I use the same Engage account for multiple brands/stores?
-
-Engage 360 is linked to your Shiprocket account. If you have multiple stores/channels integrated with Shiprocket, they can all be managed through the same Engage 360 account with proper segmentation.
+Yes. Engage 360 supports automated email flows triggered by order events. Email domain verification is required. Configure email automation from the Email section in Engage 360.
 
 ---
 
-## What is the minimum messaging volume requirement for Engage 360?
+## How to handle double opt-in for WhatsApp on Engage?
 
-There is no minimum messaging volume requirement to use Engage 360. You pay only for the conversations and messages you send.
-
----
-
-## How does Engage handle WhatsApp's 24-hour session window?
-
-WhatsApp allows free-form messaging within 24 hours of a customer's last message (customer service window). For messages outside this window, you must use Meta-approved message templates. Engage 360 automatically handles this by using appropriate templates for out-of-window messages.
+Meta requires that businesses only send messages to users who have opted in. Engage 360 handles this through:
+1. Pre-filled popup widgets on your website for WhatsApp opt-in
+2. Opt-in consent during checkout
+3. Keyword-triggered opt-in flows
+Ensure your opt-in mechanism is compliant with Meta's policies.
 
 ---
 
-## Can I use Engage for post-delivery feedback collection?
+## Can I segment customers based on RTO history in Engage?
 
-Yes. Set up a Journey triggered by the "Delivered" order status with a delay of 1-2 days. Send a WhatsApp message with a review/feedback link. You can also use interactive WhatsApp templates with quick-reply buttons for easy feedback collection.
-
----
-
-## What is the difference between Utility and Marketing messages on WhatsApp Engage?
-
-Utility Messages: Transactional in nature. Related to specific agreed-upon requests or transactions. Examples: order updates, delivery confirmations, NDR notifications. Lower cost per conversation.
-
-Marketing Messages: Promotional content. Campaigns, offers, abandoned cart recovery, new product announcements. Higher cost per conversation but no restriction on content.
+Yes. Engage 360 supports customer segmentation based on RTO history. You can create segments of high-RTO customers and apply different communication strategies (e.g., require order confirmation, disable COD messaging).
 
 ---
 
-## How to use Engage 360 for loyalty program communication?
+## What is the data privacy policy for customer data used in Engage?
 
-Engage 360 can be used for loyalty program communication by:
-1. Creating customer segments based on purchase history or loyalty tier
-2. Sending personalized WhatsApp messages with points balance, rewards, or exclusive offers
-3. Setting up automated journeys triggered by loyalty events (points earned, tier upgrade)
-4. Using campaign broadcasts for loyalty program announcements
+Engage 360 follows Shiprocket's data privacy policy. Customer data is used only for communication purposes within the platform and is not shared with third parties for marketing. For specific data privacy queries, contact the Engage team.
 
 ---
 
-## Can I schedule campaigns in advance on Engage?
+## Can I integrate Engage with third-party analytics tools?
 
-Yes. When creating a campaign in Engage 360, you can choose to schedule it for a specific date and time instead of sending immediately. The campaign will be sent automatically at the scheduled time.
-
----
-
-## How does Engage 360 handle message deliverability issues?
-
-Engage 360 monitors message delivery and provides error codes for failed messages. Common issues include invalid phone numbers, numbers not on WhatsApp, and messaging limit exceeded. The Reports section shows detailed delivery status for all messages.
+Engage 360 supports webhook-based integration for sending event data to external analytics tools. For specific integrations, contact the Engage support team.
 
 ---
 
-## Is there a free trial available for Engage 360?
+## What is the maximum number of contacts I can import in Engage?
 
-Contact the Engage team or your Shiprocket account manager to inquire about any free trial or demo period available for Engage 360.
-
----
-
-## How to delete a contact list in Engage?
-
-Go to the Contacts section in Engage 360, select the contact list you want to delete, and click the Delete option. Note that this is irreversible, so ensure you have a backup if needed.
+Engage 360 supports large contact lists for campaigns. The exact maximum limit may vary by plan. Contact the Engage team for current limits.
 
 ---
 
-## Can Engage 360 trigger messages based on weather or location events?
+## What is the recommended opt-in message for WhatsApp on Engage?
 
-Currently, Engage 360 triggers are based on e-commerce events (order status changes, cart abandonment, customer segments). Weather or location-based triggers are not a standard feature.
+For WhatsApp opt-in, the message should clearly state:
+1. Your business name
+2. What type of messages the customer will receive
+3. How to opt out
+Example: "[Brand Name]: Reply YES to receive order updates and exclusive offers on WhatsApp. Reply STOP to unsubscribe."
+
+---
+
+## Can I see the chat history with a buyer on Engage?
+
+Yes. The Engage 360 inbox shows the full conversation history with each buyer within the platform. You can view all messages sent and received.
+
+---
+
+## How to create a survey or poll using Engage WhatsApp?
+
+Using interactive WhatsApp templates (Quick Reply buttons), you can create simple surveys on Engage 360. For more complex surveys, use a combination of chatflow nodes that ask questions and capture responses.
+
+---
+
+## What is the difference between a campaign and an automation on Engage?
+
+Campaign: Proactive broadcast message sent to a selected segment at a scheduled time. One-time send.
+
+Automation/Journey: Triggered by specific customer events. Runs automatically whenever the trigger condition is met. Ongoing.
+
+---
+
+## Can I A/B test WhatsApp messages on Engage?
+
+A/B testing is available in Engage 360 for campaigns. You can create two versions of a message template and test which performs better before running the full campaign.
+
+---
+
+## How does Engage handle undelivered messages?
+
+Engage 360 tracks message delivery status. Undelivered messages are logged with error codes. You can view failed messages in the Reports section and retry if appropriate.
+
+---
+
+## Can Engage send messages in regional scripts (e.g., Devanagari for Hindi)?
+
+Yes, WhatsApp supports Unicode characters including regional scripts. Templates in Hindi (Devanagari), Tamil, Bengali, and other scripts can be created and approved in Engage 360 via Self-WABA.
+
+---
+
+## What is the billing cycle for Engage 360?
+
+Engage 360 charges are based on actual usage (conversations/messages). Invoices are generated monthly. Charges are deducted from your Shiprocket wallet. Monthly billing summaries are available in the Engage 360 billing section.
+
+---
+
+## How to add my logo to Engage messages?
+
+WhatsApp text messages don't support inline logos. However, you can use header images in WhatsApp templates (with your brand logo) that appear at the top of the message. Create template headers with your logo image in the Engage 360 template builder.
+
+---
+
+## Can Engage send WhatsApp messages for RTO orders?
+
+Yes. Engage 360 supports WhatsApp notifications for RTO (Return to Origin) events. Enable RTO status notifications from the Notify settings to automatically send buyers WhatsApp updates when their order is being returned.
+
+---
+
+## How to create a WhatsApp template on Engage?
+
+To create a WhatsApp template in Engage 360:
+1. Go to Templates section
+2. Click Create Template
+3. Select the category (Utility/Marketing/Authentication)
+4. Choose the language
+5. Design your message with text, header, footer, and buttons
+6. Add variable placeholders for personalization
+7. Submit for Meta approval
+Approval typically takes 24-48 hours.
+
+---
+
+## Can I use Engage for post-purchase upselling?
+
+Yes. Create a Journey triggered by "Order Delivered" with a delay, then send a product recommendation WhatsApp message. You can also use AfterSell flows in Engage 360 to offer complementary products.
+
+---
+
+## What is the maximum file size for media attachments in Engage WhatsApp messages?
+
+WhatsApp media size limits:
+- Images: Up to 5 MB
+- Videos: Up to 16 MB
+- Documents: Up to 100 MB
+Ensure your media files are within these limits for successful delivery.
