@@ -3,18 +3,67 @@ title: "Courier Rules & Assignment"
 description: "Courier activation, rules, priority, serviceability, ODA/RTO pincode management"
 ---
 
-## How to set courier priority rules in Shiprocket
+## How do I set a courier partner for a warehouse, pickup address, or channel?
 
-Go to Settings >> Courier >> Courier Rules. Click 'Add New Rule' to create rules based on parameters like channel, order amount, pincode, weight, payment type (COD/Prepaid), or product category. Set priority order for couriers matching each rule.
+To use a specific courier partner for a warehouse, pickup address, or channel, you can create a Courier Rule:
+1. Go to Settings >> Courier >> Courier Rules.
+2. Click on 'Create Rule'.
+3. Name your rule.
+4. Add a condition - select the relevant attribute (Channel, State, Pincode, etc.).
+5. Set the value for the condition.
+6. Choose the courier to be assigned.
+7. Click Save to activate the rule.
 
 ---
 
-## How does auto courier assignment work
+## How does auto courier assignment work?
 
-When you process an order, Shiprocket automatically recommends the best courier based on your configured rules, delivery performance data, and cost. If no rule matches, it falls back to the default recommendation engine.
+When you process an order, Shiprocket automatically recommends the best courier based on:
+* Your configured Courier Rules (applied first)
+* Your Courier Priority settings
+* Shiprocket's recommendation engine (cost, performance, serviceability)
+
+If no rule matches, it falls back to the default recommendation.
 
 ---
 
-## Can I restrict specific couriers for specific channels
+## Can I restrict specific couriers for specific channels?
 
-Yes. In Courier Rules, you can set rules that restrict or prioritize specific couriers for specific sales channels.
+Yes. In Courier Rules, create a rule with Channel as the condition and specify which courier should be assigned for orders from that channel.
+
+---
+
+## How to set the priority of courier rules?
+
+Courier Rules are applied in the order they are listed. You can drag and reorder the rules to change their priority. Rules higher in the list have higher priority.
+
+---
+
+## Can I set a backup courier in courier rules?
+
+Yes. When creating a Courier Rule, you can set an Alternate Courier. If the primary courier is unavailable (not serviceable, rate not available), the alternate courier will be assigned.
+
+---
+
+## How to assign a courier to a specific order manually?
+
+Go to New Orders, click on the order, and click 'Ship Now'. In the courier selection screen, you can manually select the courier instead of using the auto-recommended one.
+
+---
+
+## What is the difference between Courier Rules and Courier Priority?
+
+Courier Rules: Conditional rules that assign specific couriers based on order attributes (payment mode, weight, pincode, channel, etc.). Applied first.
+Courier Priority: A ranked list of preferred couriers applied when no Courier Rule matches. Shiprocket recommends from your priority list.
+
+---
+
+## How many courier rules can I create?
+
+You can create multiple courier rules on Shiprocket. There is no hard limit on the number of rules you can create.
+
+---
+
+## Can I create courier rules based on product categories?
+
+Yes. You can create courier rules based on product SKU. If you have products in specific categories with different SKUs, you can use SKU-based rules to assign couriers accordingly.
