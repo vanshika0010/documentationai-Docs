@@ -3,6 +3,213 @@ title: "Bulk Orders"
 description: "End-to-end order lifecycle — creation, pickup, labels, statuses, tracking, RTO, disputes"
 ---
 
-## How to upload orders in bulk on Shiprocket
+## What bulk options are available in the Ready To Ship tab?
 
-Go to Orders >> New Orders and click 'Import.' Download the sample template, fill in order details (customer info, product details, weight, dimensions), and upload the CSV. Orders appear in the New Orders section. Maximum 5,000 orders per file.
+In the Ready to Ship tab, the following bulk options are available:
+1. Bulk Print Labels: Print labels for multiple orders at once
+2. Bulk Print Invoices: Print invoices for multiple orders
+3. Bulk Cancel: Cancel multiple orders
+4. Bulk Request Pickup: Request pickup for multiple orders simultaneously
+5. Bulk Download Manifest: Download the pickup manifest for multiple orders
+
+---
+
+## How to bulk ship orders on Shiprocket?
+
+To bulk process/ship orders:
+1. Go to Orders >> New tab
+2. Select the orders you want to process (use checkboxes)
+3. Click on 'Process' or 'Ship' from the bulk action options
+4. Review the order details
+5. Confirm processing
+Labels will be generated for all selected orders.
+
+---
+
+## How to select all orders for bulk processing on Shiprocket?
+
+1. Go to the desired Orders tab (New, Ready to Ship, etc.)
+2. Check the checkbox at the top of the list to select all orders on the current page
+3. If there are multiple pages, you may need to process page by page
+4. Use bulk actions at the top
+
+---
+
+## How to bulk print labels on Shiprocket?
+
+To bulk print shipping labels:
+1. Go to Orders >> Ready to Ship tab
+2. Select the orders using checkboxes
+3. Click on 'Print Labels' from the bulk action menu
+4. A PDF with all selected labels will be generated for printing
+
+---
+
+## How to bulk cancel orders on Shiprocket?
+
+To bulk cancel orders:
+1. Go to Orders and select the appropriate tab
+2. Check the boxes for orders to cancel
+3. Click 'Bulk Cancel' from the action menu
+4. Select the cancellation reason
+5. Confirm cancellation
+
+---
+
+## How to bulk update orders on Shiprocket?
+
+For bulk updates (e.g., updating product weight, adding tags), use the bulk upload CSV feature:
+1. Go to Orders >> Import/Upload
+2. Download the update template
+3. Make changes in the CSV
+4. Upload the updated CSV
+
+---
+
+## How to process orders in bulk via CSV on Shiprocket?
+
+For bulk order processing via CSV:
+1. Go to Orders >> Bulk Actions
+2. Download the processing template
+3. Fill in required details (courier selection, etc.)
+4. Upload the CSV
+5. Orders will be processed in bulk
+
+---
+
+## What is bulk manifest on Shiprocket?
+
+A manifest is a document that lists all orders scheduled for pickup by the courier. The bulk manifest option allows you to download a single manifest PDF containing all orders for a specific pickup date/courier.
+
+---
+
+## How to print bulk invoices on Shiprocket?
+
+To bulk print invoices:
+1. Go to Orders >> any tab
+2. Select the orders
+3. Click 'Print Invoices' from the bulk action menu
+4. A combined PDF with all invoices will be generated
+
+---
+
+## How many orders can I select for bulk processing at once on Shiprocket?
+
+Shiprocket allows bulk processing of up to 100 orders per batch. For larger batches, you can use the CSV upload option or process in multiple batches.
+
+---
+
+## What is the difference between bulk ship and individual ship on Shiprocket?
+
+Bulk Ship: Process multiple orders simultaneously in one action. Faster for high-volume sellers.
+
+Individual Ship: Process each order one at a time. Allows more control over courier selection and order-specific settings.
+
+---
+
+## Can I bulk assign a specific courier to multiple orders on Shiprocket?
+
+Yes. Using bulk processing, you can assign a specific courier to multiple orders at once if the courier is available for all the selected orders' pincodes and weight.
+
+---
+
+## How to use the bulk upload CSV for orders on Shiprocket?
+
+To bulk create/update orders via CSV:
+1. Go to Orders >> Import Orders or Bulk Upload
+2. Download the CSV template
+3. Fill in order details (buyer info, product, weight, address)
+4. Upload the CSV
+5. Review the import summary
+6. Confirm
+
+---
+
+## How to bulk assign orders to a warehouse on Shiprocket?
+
+For bulk warehouse assignment:
+1. Select orders using checkboxes
+2. Use the Bulk Action option
+3. Select 'Assign Pickup Address'
+4. Choose the warehouse
+5. Apply
+
+---
+
+## What happens to orders that fail bulk processing on Shiprocket?
+
+Orders that fail bulk processing will be shown in the error report. You can:
+1. Review the error reasons
+2. Fix the specific issues
+3. Retry processing for failed orders individually
+
+---
+
+## How to download a report of all bulk processed orders?
+
+To download bulk processing reports:
+1. Go to Orders
+2. Apply date range and status filters
+3. Click Download/Export
+4. The CSV report will show all orders with their AWBs, couriers, and statuses
+
+---
+
+## Can I bulk update the courier for already-processed orders on Shiprocket?
+
+Courier reassignment after processing is possible under certain conditions:
+1. Order must not have been picked up yet
+2. Use the reassignment option in order actions
+3. Bulk reassignment may be limited; check the panel for this feature
+
+---
+
+## How to bulk request pickup on Shiprocket?
+
+To bulk request pickup:
+1. Go to Orders >> Ready to Ship tab
+2. Select the orders ready for pickup
+3. Click 'Request Pickup' from the bulk action menu
+4. Confirm the pickup request
+The courier will be scheduled for pickup.
+
+---
+
+## What is the maximum order count per bulk upload CSV on Shiprocket?
+
+The maximum orders per CSV upload is typically 500 per batch. For larger imports, split the CSV into smaller batches.
+
+---
+
+## How to track bulk shipped orders on Shiprocket?
+
+All bulk shipped orders appear in the Shipped tab with their AWB numbers. You can filter by date or courier to track specific batches. Use the Download report for a comprehensive tracking view.
+
+---
+
+## What columns are required in the bulk order upload CSV?
+
+Required columns in bulk order upload CSV:
+1. Buyer Name
+2. Buyer Email
+3. Buyer Phone
+4. Delivery Address (Line 1, Line 2, City, State, Pincode)
+5. Product Name
+6. SKU
+7. Weight (kg)
+8. Length, Width, Height (cm)
+9. Order Value
+10. Payment Mode (COD/Prepaid)
+
+Download the template from Orders >> Import Orders for the exact format.
+
+---
+
+## How to handle errors in bulk order upload on Shiprocket?
+
+When bulk upload has errors:
+1. Download the error report from the upload summary
+2. Review the specific errors per row
+3. Fix the data in your CSV
+4. Re-upload the corrected CSV
+Common errors: missing required fields, invalid pincode, duplicate order IDs.

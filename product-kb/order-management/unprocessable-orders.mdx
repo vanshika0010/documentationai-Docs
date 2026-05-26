@@ -3,12 +3,43 @@ title: "Unprocessable Orders"
 description: "End-to-end order lifecycle — creation, pickup, labels, statuses, tracking, RTO, disputes"
 ---
 
-## What are unprocessable orders in Shiprocket
+## What are orders in the unprocessable tab in the orders tab?
 
-Unprocessable orders are orders that cannot be processed due to missing or incorrect information such as incomplete address, invalid pincode, missing product weight/dimensions, or zero order value. They appear in the Unprocessable Orders section and require correction before they can be shipped.
+* The Unprocessable tab contains orders that cannot proceed due to inventory-related, technical, or channel-integration issues.
+* These orders require manual review and resolution before they can be processed and shipped.
 
 ---
 
-## How to fix unprocessable orders
+## What are the reasons for orders appearing in the unprocessable tab?
 
-Go to New Orders >> Unprocessable Orders. Click on the order to see the error reason. Edit the required fields (address, weight, dimensions, etc.) and save. The order will move to the processable queue.
+Common reasons for unprocessable orders:
+1. Missing or incomplete delivery address
+2. Invalid/unserviceable pincode
+3. Missing product details (weight, dimensions)
+4. Missing buyer phone number
+5. Channel sync errors
+6. Missing or invalid HSN code
+7. Insufficient wallet balance
+
+---
+
+## How to fix unprocessable orders on Shiprocket?
+
+To fix unprocessable orders:
+1. Go to Orders >> Unprocessable tab
+2. Click on the specific order
+3. Review the error message shown
+4. Update the required information (address, phone number, product details, etc.)
+5. Save and retry processing
+
+---
+
+## Can unprocessable orders be bulk resolved on Shiprocket?
+
+Some types of unprocessable orders can be bulk resolved. For example, if multiple orders have the same issue (like missing pincode), you can fix them in bulk. Check the bulk action options available in the Unprocessable Orders tab.
+
+---
+
+## Will unprocessable orders be automatically cancelled?
+
+No, unprocessable orders are not automatically cancelled. They remain in the Unprocessable tab until you take action to fix the issue and reprocess them.
