@@ -3,12 +3,128 @@ title: "Address & Buyer Details"
 description: "End-to-end order lifecycle — creation, pickup, labels, statuses, tracking, RTO, disputes"
 ---
 
-## How to update the delivery address for an order
+## What is the maximum character length of the address line 1?
 
-For orders that haven't been assigned a courier yet, click 'Edit Order' in the order details to update the delivery address. For orders with an AWB already generated, contact Shiprocket support — courier coordination is required.
+The maximum overall length of the address, including both Address Line 1 and Address Line 2 is 100 characters.
 
 ---
 
-## How to update the buyer's phone number on an order
+## Can I update buyer address after order creation on Shiprocket?
 
-Go to the order details page, click 'Edit Order,' update the phone number, and save. This is only possible before the order is assigned to a courier.
+Yes, you can update the buyer's delivery address before the order is shipped:
+1. Go to the specific order
+2. Click 'Edit Order'
+3. Update the delivery address
+4. Save the changes
+
+Address updates after shipment need to be done through the NDR process if delivery fails.
+
+---
+
+## What buyer details are mandatory for creating an order?
+
+Mandatory buyer details:
+1. Full name
+2. Phone number
+3. Complete delivery address including:
+   * Address Line 1
+   * City
+   * State
+   * Pincode
+
+Email is recommended but may not be mandatory in all cases.
+
+---
+
+## How to add alternate phone number for buyer on Shiprocket?
+
+The order creation form has a primary phone number field. Some templates support adding alternate contact. Check the advanced order creation options for this field.
+
+---
+
+## Can I save customer details for future orders on Shiprocket?
+
+Shiprocket stores buyer details in your order history. When creating a new order for the same buyer, you may be able to select from recent buyers to auto-fill their details.
+
+---
+
+## What is the pincode validation on Shiprocket?
+
+Shiprocket validates the delivery pincode to:
+1. Check serviceability (which couriers serve that pincode)
+2. Calculate the delivery zone
+3. Estimate shipping charges and delivery timeline
+
+Enter a valid 6-digit pincode to ensure correct courier availability.
+
+---
+
+## How to check if a pincode is serviceable on Shiprocket?
+
+To check pincode serviceability:
+1. Go to Tools >> Rate Calculator in Shiprocket panel
+2. Enter source pincode (your pickup address)
+3. Enter destination pincode (buyer's address)
+4. Enter the weight
+5. View available couriers for that route
+
+---
+
+## Why is the buyer's address important for NDR resolution?
+
+An accurate buyer address is critical because:
+1. Wrong address is a leading cause of NDR and RTO
+2. During NDR, the address needs to be corrected for reattempt
+3. Address verification via Engage 360 helps catch errors before dispatch
+
+---
+
+## Can I add landmark or building name in the address on Shiprocket?
+
+Yes. Include landmarks, building names, floor numbers, and other location identifiers in Address Line 1 and Address Line 2. This helps the delivery agent find the location easily.
+
+---
+
+## What format should the buyer's name be in on Shiprocket?
+
+The buyer's name should be the recipient's full name. Avoid special characters. The name appears on the shipping label and is used by the delivery agent to identify the recipient.
+
+---
+
+## Can I ship to a PO Box address on Shiprocket?
+
+PO Box delivery depends on the courier partner. Most standard couriers require a physical delivery address. Check with the specific courier if PO Box delivery is supported.
+
+---
+
+## How to handle incomplete buyer addresses on Shiprocket?
+
+For incomplete addresses:
+1. Contact the buyer to get the complete address before creating the order
+2. If order is already created, edit the address before shipping
+3. If the courier reports NDR due to incomplete address, update via the NDR panel
+4. Use Engage 360 Address Verification to proactively verify addresses
+
+---
+
+## What happens if I enter a wrong pincode for an order on Shiprocket?
+
+Wrong pincode can cause:
+1. Wrong courier selection (courier may not serve actual delivery area)
+2. Failed delivery and NDR
+3. Wrong zone calculation and incorrect billing
+
+Always verify the pincode with the buyer before creating the order.
+
+---
+
+## What is address line 2 used for on Shiprocket orders?
+
+Address Line 2 is used for additional address details:
+* Apartment/flat number
+* Floor number
+* Building name
+* Area/locality
+* Landmark
+
+Use it to make the delivery address as specific as possible.

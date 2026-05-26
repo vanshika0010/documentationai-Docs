@@ -3,19 +3,161 @@ title: "Order Creation"
 description: "End-to-end order lifecycle — creation, pickup, labels, statuses, tracking, RTO, disputes"
 ---
 
-## How to create an order manually on Shiprocket
+## How to Create an Order in Shiprocket?
 
-Go to Orders >> New Orders and click 'Create Order.' Fill in:
+You can easily create an order in Shiprocket by following these simple steps on the Shiprocket panel:
 
-* Customer details (name, phone, address, pincode)
-* Product details (name, SKU, quantity, price)
-* Package details (weight, dimensions)
-* Payment mode (COD or Prepaid)
+1. Go to the "New Order" option from the left menu or click "Ship Now".
+2. Enter the pickup address details: Select your warehouse/pickup address from the dropdown.
+3. Enter the delivery address: Fill in the buyer's name, phone number, email, and complete delivery address with pincode.
+4. Enter product details: Add the product name, SKU (optional), quantity, weight, dimensions, and order value.
+5. Select the payment mode: Choose between COD (Cash on Delivery) or Prepaid.
+6. Select the courier: Choose from the available courier options based on your requirements (rate, speed, etc.).
+7. Click "Ship Now" or "Create Order" to finalize.
 
-Click 'Create Order' to save.
+The order will be created and you can download the shipping label.
 
 ---
 
-## What is the minimum information required to create an order
+## What details are required to create an order on Shiprocket?
 
-Minimum required: customer name, phone number, delivery address, pincode, city, state, at least one product (name and price), package weight, and payment type (COD or Prepaid).
+Required details for order creation:
+1. Pickup Address (from your configured warehouses)
+2. Buyer Details:
+   * Full name
+   * Phone number
+   * Complete delivery address with pincode
+3. Product Details:
+   * Product name
+   * Weight (kg)
+   * Dimensions (L x W x H in cm)
+   * Order value (MRP)
+4. Payment Mode (COD or Prepaid)
+5. Channel (if applicable)
+
+---
+
+## Can I create an order without product dimensions on Shiprocket?
+
+Yes, but it's strongly recommended to add dimensions for accurate rate calculation and to avoid weight discrepancy charges. If dimensions are not provided, the system may use default values.
+
+---
+
+## How to add multiple products in a single order on Shiprocket?
+
+To add multiple products in one order:
+1. While creating an order, click 'Add Product' to add additional items
+2. Enter details for each product
+3. All products will be packaged together in a single shipment
+Ensure the combined weight and dimensions are entered accurately.
+
+---
+
+## How to set the order value for COD orders on Shiprocket?
+
+For COD orders:
+1. Enter the actual order value (MRP) of the products
+2. This is the amount the buyer will pay to the courier agent
+3. Shiprocket will use this for billing and COD remittance
+
+---
+
+## What is the maximum order value allowed for COD on Shiprocket?
+
+COD order value limits vary by courier partner. Some couriers have maximum COD limits (e.g., Rs. 50,000). Check the rate calculator or courier terms for specific limits.
+
+---
+
+## Can I create an order without a channel on Shiprocket?
+
+Yes. You can create direct/manual orders on Shiprocket without linking to a specific sales channel. These are useful for off-channel sales (social media, WhatsApp orders, etc.).
+
+---
+
+## How to save an order as draft on Shiprocket?
+
+Orders can be saved as drafts before finalizing. Look for the 'Save as Draft' option during order creation. Draft orders can be completed and processed later.
+
+---
+
+## How to add special instructions for an order on Shiprocket?
+
+Special instructions can be added in the 'Notes' or 'Remarks' field during order creation. These may be visible on the shipping label or to the courier, depending on the courier partner.
+
+---
+
+## How to create a COD order on Shiprocket?
+
+To create a COD order:
+1. Follow the standard order creation process
+2. In the Payment Mode selection, choose 'COD'
+3. Enter the collectable amount (order value the buyer will pay)
+4. Complete the order creation
+
+---
+
+## How to create a prepaid order on Shiprocket?
+
+To create a prepaid order:
+1. Follow the standard order creation process
+2. In the Payment Mode selection, choose 'Prepaid'
+3. Complete the order creation
+Prepaid orders don't require COD collection.
+
+---
+
+## What is the difference between creating order from panel vs channel import?
+
+Panel Order: Manually created through the Shiprocket interface. Use for off-channel orders or testing.
+
+Channel Import: Orders automatically synced from connected sales channels (Shopify, Amazon, etc.). No manual entry needed.
+
+---
+
+## How to add gift message to an order on Shiprocket?
+
+Gift messages can be added in the 'Notes' or 'Special Instructions' field during order creation. The message will be included as per the supported fields on the shipping label.
+
+---
+
+## Can I create an international order on Shiprocket?
+
+Yes. For international orders:
+1. Use the Shiprocket panel and go to International Shipments
+2. Enter the buyer's international address
+3. Select an international courier
+4. Complete the required customs documentation
+
+---
+
+## How to add HSN code when creating an order on Shiprocket?
+
+HSN code can be added in the product details section during order creation. It is required for GST compliance, especially for orders above the GST threshold.
+
+---
+
+## What is the product weight limit for orders on Shiprocket?
+
+Weight limits vary by courier partner:
+* Most domestic couriers: Up to 10-50 kg per shipment
+* Heavy/cargo couriers: Higher weight limits
+
+Check the Rate Calculator for specific courier weight limits.
+
+---
+
+## Can I create an order for a customer outside India on Shiprocket?
+
+Yes. Use the International Shipments section in Shiprocket for cross-border orders. Select the destination country, provide buyer's international address, and choose an international courier.
+
+---
+
+## What happens after I create an order on Shiprocket?
+
+After creating an order:
+1. Order appears in the 'New Orders' tab
+2. AWB number is assigned (or assigned when you click Ship Now)
+3. Shipping label is generated
+4. Order moves to 'Ready to Ship' after label generation
+5. Courier picks up the order from your address
+6. Tracking begins once courier scans the shipment

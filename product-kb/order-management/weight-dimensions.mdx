@@ -3,16 +3,60 @@ title: "Weight & Dimensions"
 description: "End-to-end order lifecycle — creation, pickup, labels, statuses, tracking, RTO, disputes"
 ---
 
-## Why are correct weight and dimensions important
+## What are the conditions for Multi Packet Shipment (MPS)?
 
-Shipping charges use whichever is higher — actual weight or volumetric weight.
-
-**Volumetric weight** = (Length cm × Breadth cm × Height cm) ÷ 5000
-
-Incorrect values lead to weight discrepancy charges from couriers. Always enter accurate measurements.
+The conditions for MPS are as follows:
+1. If MPS is enabled in your account, you can ship multiple packets/boxes under a single order with separate labels for each box.
+2. Each packet is assigned a unique AWB linked to the parent order.
+3. All packets must be picked up together.
+4. Total weight is the sum of all individual packet weights.
 
 ---
 
-## What happens if I enter wrong weight or dimensions
+## How to enable Multi Packet Shipment (MPS) on Shiprocket?
 
-If the courier measures a different weight or volumetric weight than what you declared, you will be charged the difference as a weight discrepancy. You can dispute this from the Weight Reconciliation section.
+To enable MPS:
+1. Contact your Shiprocket account manager or raise a support ticket
+2. MPS needs to be enabled for your account
+3. Once enabled, you can add multiple packets when creating an order
+
+---
+
+## How is chargeable weight calculated on Shiprocket?
+
+Chargeable weight = Maximum of (Dead Weight, Volumetric Weight)
+
+Volumetric Weight = (Length cm x Width cm x Height cm) / 5000
+
+If volumetric weight > dead weight, volumetric weight is charged. Otherwise, dead weight is charged.
+
+---
+
+## What is volumetric weight on Shiprocket?
+
+Volumetric weight is calculated based on the package dimensions:
+Volumetric Weight = (L x W x H) / 5000 (in kg)
+
+This is used when the package is large but light, to charge based on the space it occupies.
+
+---
+
+## How to avoid weight discrepancy charges on Shiprocket?
+
+To minimize weight discrepancy charges:
+1. Enter accurate weight and dimensions when creating orders
+2. Use a calibrated weighing scale
+3. Measure dimensions precisely (L x W x H)
+4. Include packaging weight in your measurement
+5. If you consistently face discrepancies, review your measurement methodology
+
+---
+
+## What is the weight discrepancy process on Shiprocket?
+
+When a courier reports a different weight than what was entered:
+1. Shiprocket receives the courier's weight update
+2. Weight discrepancy charge is applied (difference in freight)
+3. You receive a notification about the discrepancy
+4. You can accept or dispute the discrepancy with proof
+5. Upload proof (photo of package on weighing scale with AWB) to dispute

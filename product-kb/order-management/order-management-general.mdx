@@ -3,19 +3,32 @@ title: "Order Management General"
 description: "End-to-end order lifecycle — creation, pickup, labels, statuses, tracking, RTO, disputes"
 ---
 
-## What are the different order statuses in Shiprocket
+## What is the maximum number of items allowed in an order?
 
-Key order statuses:
+Shiprocket doesn't have a strict limit on the number of items in a single order. However, all items in an order are shipped as a single package. Ensure the combined weight and dimensions are within the courier's limits.
 
-* New
-* Ready to Ship (AWB assigned)
-* Pickup Scheduled
-* Pickup Pending
-* In Transit
-* Out for Delivery
-* Delivered
-* RTO Initiated
-* RTO In Transit
-* RTO Delivered
-* Cancelled
-* Lost
+---
+
+## How to view order details on Shiprocket?
+
+To view complete order details:
+1. Go to Orders from the left menu
+2. Find the order
+3. Click on the Order ID or the order row
+4. The order detail page shows all information: buyer details, product, AWB, courier, tracking history, charges, etc.
+
+---
+
+## What is the order lifecycle on Shiprocket?
+
+Order lifecycle on Shiprocket:
+1. New: Order received, awaiting processing
+2. Ready to Ship: AWB assigned, label generated
+3. Pickup Awaited: Waiting for courier pickup
+4. Picked: Courier has collected the shipment
+5. In Transit: Shipment moving through courier network
+6. Out for Delivery: Courier delivering to buyer
+7. Delivered: Successfully delivered
+8. NDR: Delivery failed, action required
+9. RTO Initiated: Return in process
+10. RTO Delivered: Returned to seller's address
