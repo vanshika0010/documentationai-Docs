@@ -5,105 +5,88 @@ description: "Engage360 — WhatsApp/SMS/Email automation, RTO Suite, campaigns,
 
 ## Can Engage be integrated with Interakt, Business on BOT etc?
 
-Engage 360 is Shiprocket's own platform and does not directly integrate with other WhatsApp BSPs like Interakt or Business on Bot. Engage 360 provides the full suite of WhatsApp marketing and automation features natively.
+No.
 
 ---
 
-## Does Engage integrate with Shopify?
+## Is Engage a part of Shiprocket?
 
-Yes. Engage 360 integrates natively with Shopify for:
-- Order event triggers (placed, shipped, delivered)
-- Cart abandonment events
-- Customer data sync
-- Abandoned checkout recovery
-
-Connect from Engage 360 >> Settings >> Integrations >> Shopify.
+Yes, Engage 360 is integrated with Shiprocket, providing seamless order management and communication tools.
 
 ---
 
-## Does Engage integrate with WooCommerce?
+## Does Engage 360 integrate with my website?
 
-Yes. Engage 360 integrates with WooCommerce via webhook:
-1. Go to Engage 360 >> Settings >> Integrations >> WooCommerce
-2. Copy the webhook URL
-3. Add it in your WooCommerce settings
-4. Configure the events to send (order placed, cart abandoned, etc.)
+Yes, it works with Shopify, WooCommerce, and custom websites.
 
 ---
 
-## Does Engage integrate with GoKwik?
+## Can I integrate Engage 360 with my CRM?
 
-Yes. Engage 360 supports GoKwik checkout integration for abandoned checkout recovery:
-1. Go to Engage 360 >> Settings >> Integrations >> Checkout Partners >> GoKwik
-2. Enable the integration and copy the webhook URL
-3. Paste in GoKwik: Kwik Checkout >> Settings >> Integrations >> Re-Marketing Tools >> Abandoned Cart Configure Webhooks
+It supports integrations with various CRM and marketing platforms.
 
 ---
 
-## Does Engage integrate with Shopflo?
+## Can I use Engage 360 with multiple stores?
 
-Yes. Engage 360 supports Shopflo integration for checkout abandonment:
-1. Go to Engage 360 >> Settings >> Integrations >> Checkout Partners >> Shopflo
-2. Enable integration and copy API credentials (URL, Header Name, Header Value)
-3. Configure in Shopflo settings with the provided credentials
+Yes, if you operate multiple stores, you can integrate them within Engage 360.
 
 ---
 
-## Does Engage integrate with Shiprocket Checkout?
+## Do I need to code to integrate Shiprocket Checkout with Engage?
 
-Yes. Shiprocket Checkout is natively integrated with Engage 360. Enable it from:
-Engage 360 >> Settings >> Integrations >> Checkout Partners >> Shiprocket Checkout >> Toggle ON
-
----
-
-## Does Engage integrate with Razorpay for COD to Prepaid?
-
-Yes. Engage 360 supports Razorpay as a payment gateway for the COD to Prepaid conversion flow. When buyers receive the payment link, they can pay via Razorpay. Contact srengage@shiprocket.com or your KAM to configure the Razorpay integration.
+No, the integration process is 100% no-code. Engage360 was designed with user-friendliness in mind, so you won't need to write or deploy any custom scripts. Simply navigate to the Integrations section in your Engage360 settings, find Checkout Partners, and toggle Shiprocket Checkout to ON.
 
 ---
 
-## Does Engage integrate with Cashfree?
+## Where can I find the integration settings in Engage?
 
-Yes. Cashfree is supported as a payment gateway for COD to Prepaid conversion on Engage 360. Contact srengage@shiprocket.com or your KAM to set it up.
-
----
-
-## Can Engage be integrated with Google Analytics?
-
-Yes. You can track Engage campaign performance in Google Analytics by adding UTM parameters to your campaign CTA links. Engage 360 also provides native analytics for campaign performance.
+To access integration settings, log into Engage360 and click on the Settings icon on the top right. From there, navigate to the Integrations tab in the left sidebar. You'll find all platform connections—including Shiprocket Checkout, GoKwik, Shopflo, and others—listed under Checkout Partners.
 
 ---
 
-## Does Engage support Magento integration?
+## What info do I need to copy from Engage for Shiprocket Checkout?
 
-Engage 360 can be integrated with Magento via webhook/API. Contact srengage@shiprocket.com for Magento integration setup and documentation.
-
----
-
-## Does Engage support custom platform integration via API?
-
-Yes. Engage 360 provides webhook and API endpoints for custom platform integration. You can send order events, customer data, and cart events to Engage from any platform. Contact srengage@shiprocket.com for API documentation.
+For Shiprocket Checkout, Engage360 handles most of the heavy lifting for you. Simply enabling the toggle in the Checkout Partners section is enough—there are no credentials to copy or configure manually. Once enabled, Shiprocket Checkout automatically starts sending checkout events to Engage360.
 
 ---
 
-## Can Engage be used with Unicommerce?
+## How do I know if Shiprocket Checkout integration is working on Engage?
 
-Engage 360 can receive order events from Shiprocket's connected channels. If Unicommerce is connected to Shiprocket, order events flow into Engage automatically. For direct Unicommerce integration, contact the Engage team.
-
----
-
-## Does Engage integrate with Meesho, Amazon, Flipkart for order events?
-
-Engage 360 receives order events from channels integrated with Shiprocket. If you have Amazon, Flipkart, or Meesho connected to your Shiprocket account, order events from those channels can trigger Engage flows.
+After enabling the Shiprocket Checkout integration, return to the Integrations dashboard and check for the "Last Event Recorded" line beneath the Shiprocket Checkout toggle. If a recent timestamp appears here, it confirms that checkout data is flowing successfully into Engage360.
 
 ---
 
-## Does Engage support Klaviyo integration?
+## Do I need to set headers for GoKwik integration on Engage?
 
-For Klaviyo integration with Engage 360, contact srengage@shiprocket.com. The Engage team can advise on the best approach for syncing data between platforms.
+No, GoKwik's integration process is simple and doesn't require any additional authentication headers. All you need is the Webhook URL, which makes it quick to configure on the GoKwik side.
 
 ---
 
-## Does Engage support Clevertap or MoEngage integration?
+## How do I connect Shopflo to Engage?
 
-Engage 360 supports webhook-based integration for sending event data to third-party analytics and engagement platforms like Clevertap and MoEngage. Contact srengage@shiprocket.com for integration setup.
+Shopflo requires a few extra steps for a secure integration. In Engage360, enable Shopflo from the Checkout Partners section. You'll be provided with a URL, Header Name, and Header Value. In your Shopflo account, go to Settings > Webhook Configuration and enter these credentials exactly as shown.
+
+---
+
+## Where do I paste the credentials for Shopflo on Engage?
+
+In Shopflo, go to Settings > Webhook Configuration, and enter the URL, Header Name, and Header Value exactly as given by Engage360. These are required for Shopflo to securely send events to Engage360.
+
+---
+
+## Why are headers needed for Shopflo but not GoKwik on Engage?
+
+Shopflo follows a more secure webhook protocol that requires each request to be authenticated using headers. This adds a layer of protection to ensure only Engage360 can receive data from Shopflo.
+
+---
+
+## What does the "Webhook Configuration" toggle do in Shopflo for integration with Engage?
+
+The Webhook Configuration toggle in Shopflo enables the system to start sending event data to Engage360. Until this toggle is turned ON, no checkout data—such as abandoned checkouts—will be transmitted to Engage360.
+
+---
+
+## Can I track last event data from Shopflo in Engage?
+
+Yes. Just like with Shiprocket Checkout and GoKwik, Engage360 shows a "Last Event Recorded" timestamp for Shopflo. This helps verify that the webhook is correctly configured and data is flowing into Engage360.

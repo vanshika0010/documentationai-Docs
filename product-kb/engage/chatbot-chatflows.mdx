@@ -5,150 +5,114 @@ description: "Engage360 — WhatsApp/SMS/Email automation, RTO Suite, campaigns,
 
 ## What are the onboarding steps on Engage?
 
-Onboarding steps for Engage 360:
-1. Account activation: Enable Engage 360 from your Shiprocket panel
-2. WABA setup: Connect WhatsApp Business Account (default virtual number or Self WABA)
-3. Channel integration: Connect your store (Shopify/WooCommerce/etc.)
-4. RTO Suite configuration: Enable Order Confirmation, Address Verification, COD to Prepaid as needed
-5. Journey/Chatflow setup: Configure automated flows for abandoned cart, campaigns, etc.
-6. Template creation: Create and get approval for custom WhatsApp templates (if using Self WABA)
-7. Testing: Test flows with your own number before going live
+Prerequisites:-
+Engage360 enable cases:-
+User requests KAM/Business SPOC to enable Engage360
+Once is Engage360 enabled - User clicks on All Products (from the left menu) and selects Engage 360.
 
 ---
 
-## What is the Chatbot Builder on Engage?
+## How to Create a Custom Chatflow in Engage?
 
-The Chatbot Builder in Engage 360 is a no-code, visual interface for creating automated WhatsApp chat flows. Features:
-- Drag-and-drop flow builder
-- Multiple node types: Message, Condition, Delay, Action
-- Dynamic variables ({{customer_name}}, {{order_id}}, etc.)
-- Multi-step conversation flows
-- Integration with order and customer data
-- Available for Self WABA users
-
----
-
-## How to create a chatbot on Engage?
-
-To create a chatbot on Engage 360:
-1. Go to Chatbot section in Engage 360
-2. Click Create New Chatflow
-3. Set the trigger (keyword, campaign click, event)
-4. Add message nodes with your content
-5. Add condition branches for different customer responses
-6. Add delay nodes for timed follow-ups
-7. Test the flow with your own number
-8. Activate the chatflow
+These are the steps that you can follow to create custom chatbot:
+1. Click on Custom Chatbot Builder from the side panel.
+2. Click on Create Flow
+3. Enter name of flow
+4. Select trigger for the flow
+5. Create your flow using the node options available
+6. Save and activate the flow
 
 ---
 
-## What triggers can I use for chatbots on Engage?
+## How can I manage, view, activate, or deactivate my chatflow in Engage?
 
-Chatbot trigger options in Engage 360:
-1. Keyword trigger: Customer sends a specific word (e.g., "TRACK", "ORDER")
-2. Campaign click: Customer clicks a button in a campaign message
-3. Segment entry: Customer matches a segment criteria
-4. Event-based: Order status change (delivered, NDR, etc.)
-5. Manual trigger: Activated by agent from inbox
+Once your template is saved, you can manage your chat flows by accessing the My Chatflows home page, where you can view, activate, or de-activate all the created chatflows.
 
 ---
 
-## Can the chatbot handle customer queries automatically on Engage?
+## How to check if my chatflow template is active or not on Engage?
 
-Yes. The Engage 360 chatbot can:
-1. Answer FAQs automatically based on keyword matching
-2. Provide order tracking information
-3. Collect customer information via conversational forms
-4. Route to human agents when needed (handoff feature)
-5. Handle multiple conversation flows simultaneously
+When you have created the chat flow, you can click on it to find if your templates have been "Rejected" or "Active"
+* If Rejected - This template is not active and will not trigger for any user.
+* If Active - This template is active and will trigger for users based on the configured conditions.
 
 ---
 
-## What is a Chatflow vs a Journey on Engage?
+## How can I edit or modify my chatflow template on Engage?
 
-Chatflow: An interactive, conversational flow where the customer's responses determine the next step. Two-way conversation. Best for customer support, order tracking queries, feedback collection.
-
-Journey: A one-directional automated message sequence triggered by events. Messages are sent based on a predefined timeline, not customer responses. Best for abandoned cart recovery, order updates, campaigns.
-
----
-
-## How to add human handoff in chatbot on Engage?
-
-To enable human handoff in Engage 360 chatbot:
-1. Add a "Handoff to Agent" node in your chatflow
-2. Set conditions for when to handoff (e.g., customer says "help" or "agent")
-3. When triggered, the conversation moves to the Engage 360 inbox for agent response
-4. Agent responds within the 24-hour WhatsApp conversation window
+1. To modify a template, just click on the chat flow and you'll be re-directed to the Chat flow edit page.
+2. You can click on the template you want to modify, make your changes, and save.
+3. Note: Some modifications may require re-approval.
 
 ---
 
-## Can I build a product catalog chatbot on Engage?
+## Does the chatbot in Engage work only on WhatsApp?
 
-Yes. You can build a product discovery chatbot on Engage 360 that:
-1. Shows product categories when triggered
-2. Lets customers browse products via quick reply buttons
-3. Provides product details and images
-4. Redirects to product pages with CTA buttons
+Currently, the chatbot is optimized for WhatsApp Business API, which is the most widely used channel among customers. Multi-platform support is on the roadmap.
 
 ---
 
-## How to test chatbot flows on Engage?
+## What are the key components of a chatflow in the Custom Chatbot Builder on Engage?
 
-To test chatbot flows on Engage 360:
-1. Use your own phone number as a test contact
-2. Send the trigger keyword to your business WhatsApp number
-3. Walk through the full conversation flow
-4. Check all branches and conditions work correctly
-5. Fix any issues in the chatflow builder before activating
-
----
-
-## Does the chatbot work 24/7 on Engage?
-
-Yes. Engage 360 chatbots work 24/7 without any downtime. Automated responses are sent instantly when triggered, regardless of the time of day.
+A chatflow is made up of nodes or blocks, each representing a message, user input, action, or logic. Core components include:
+1. Message blocks (text, image, video, document, audio)
+2. Input/Response blocks (for capturing user replies)
+3. Condition blocks (branching logic based on user input)
+4. Delay blocks (for timed follow-ups)
+5. Action blocks (API calls, tagging, segment updates)
+6. Handoff blocks (transfer to human agent)
 
 ---
 
-## Can I add images and videos in chatbot messages on Engage?
+## Can I use the chatflow to collect multiple inputs over multiple steps on Engage?
 
-Yes. Chatflow messages can include media:
-- Images (JPG/PNG up to 5MB)
-- Videos (MP4 up to 16MB)
-- Documents (PDF up to 100MB)
-- Audio messages
-
-Add media nodes in the chatflow builder.
+Absolutely. You can build a multi-step form-style flow that collects fields one by one (like name, email, address, preferred product, etc.), validates responses, and stores the data for follow-up use.
 
 ---
 
-## How many chatflows can I create on Engage?
+## Can I create multilingual chatbot flows on Engage?
 
-There is no hard limit on the number of chatflows you can create in Engage 360. Create as many flows as needed for different use cases.
-
----
-
-## Can I use chatflows for order tracking on Engage?
-
-Yes. Build an order tracking chatflow triggered by keywords like "TRACK" or "ORDER STATUS". The chatflow can:
-1. Ask for order ID or registered phone number
-2. Fetch real-time order status from Shiprocket
-3. Share the tracking link and current status with the customer
+Yes. You can duplicate flows in Hindi and English, or dynamically set the language based on user input or location, e.g.:
+1. "Choose your language: English / Hindi"
+2. Based on the response, route to the appropriate language flow
 
 ---
 
-## What is the difference between a pre-built and custom chatflow on Engage?
+## How do I manage chatbot changes without affecting live users on Engage?
 
-Pre-built chatflows: Ready-to-use templates provided by Engage 360 for common use cases (order confirmation, NDR recovery, abandoned cart). Can be activated in one click.
-
-Custom chatflows: Built from scratch using the visual chatflow builder. Fully customizable for your specific business requirements.
+You can:
+1. Create and edit a draft version of the bot
+2. Test it internally
+3. Publish only after approval
+Changes do not affect users already in the flow until they re-enter.
 
 ---
 
-## How to pause or stop a chatflow on Engage?
+## Do I need coding knowledge to use the Custom Chat flow Builder on Engage?
 
-To pause a chatflow in Engage 360:
-1. Go to the Chatbot section
-2. Find the active chatflow
-3. Toggle it OFF to pause
-4. The flow will stop triggering for new conversations
-5. Ongoing conversations will complete their current step
+No, the Engage360 Custom Chatbot Builder is completely no-code. It is built for marketers, CX managers, and business owners who want to build chat journeys without technical expertise.
+
+---
+
+## What are the use cases or uses for custom chatbot on Engage?
+
+Engage 360's Custom Chatbot automates order-related communication seamlessly. For COD orders, the bot confirms the order by asking users to verify before shipping, reducing fraudulent orders. It also handles address verification by prompting users to confirm or update their delivery address, minimizing failed deliveries. Post-shipment, the bot facilitates COD-to-Prepaid conversion by sending personalized payment links to encourage prepaid transactions.
+
+---
+
+## What is the Instagram Chatbot in Engage360?
+
+The Instagram Chatbot helps you automate conversations with customers through Instagram Direct Messages (DMs). It instantly replies to DMs, comments, and story mentions with personalized responses, promotions, or support—keeping your brand active and responsive 24/7.
+
+---
+
+## How do I set up automated chat replies?
+
+Once connected, click Create Flow to build your chatbot.
+You can choose when to reply (DM, comment, or story), add keywords, create auto-responses, and even add buttons or menus for interactive conversations.
+
+---
+
+## How can I test or edit my existing chat flows?
+
+After creating a chat flow, you'll see options to Enable/Disable, Export data, or Modify flow on the chat flow screen. You can use these controls to test the flow with your own number, make edits, and re-activate when ready.
