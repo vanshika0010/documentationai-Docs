@@ -3,12 +3,152 @@ title: "Chatbot & Chatflows"
 description: "Engage360 — WhatsApp/SMS/Email automation, RTO Suite, campaigns, Self WABA, chatbot"
 ---
 
-## What is the chatbot feature in Engage
+## What are the onboarding steps on Engage?
 
-Engage's chatbot allows you to create automated conversation flows on WhatsApp that respond to customer inquiries without manual intervention. Set up keyword triggers, interactive menus, and multi-step flows for order tracking, FAQs, and support.
+Onboarding steps for Engage 360:
+1. Account activation: Enable Engage 360 from your Shiprocket panel
+2. WABA setup: Connect WhatsApp Business Account (default virtual number or Self WABA)
+3. Channel integration: Connect your store (Shopify/WooCommerce/etc.)
+4. RTO Suite configuration: Enable Order Confirmation, Address Verification, COD to Prepaid as needed
+5. Journey/Chatflow setup: Configure automated flows for abandoned cart, campaigns, etc.
+6. Template creation: Create and get approval for custom WhatsApp templates (if using Self WABA)
+7. Testing: Test flows with your own number before going live
 
 ---
 
-## How to create a chatflow in Engage
+## What is the Chatbot Builder on Engage?
 
-Go to Engage >> Chatbot >> Create Chatflow. Define the trigger (keyword or entry point), design the conversation flow using the visual builder, add response nodes, and activate. Test before going live.
+The Chatbot Builder in Engage 360 is a no-code, visual interface for creating automated WhatsApp chat flows. Features:
+- Drag-and-drop flow builder
+- Multiple node types: Message, Condition, Delay, Action
+- Dynamic variables ({{customer_name}}, {{order_id}}, etc.)
+- Multi-step conversation flows
+- Integration with order and customer data
+- Available for Self WABA users
+
+---
+
+## How to create a chatbot on Engage?
+
+To create a chatbot on Engage 360:
+1. Go to Chatbot section in Engage 360
+2. Click Create New Chatflow
+3. Set the trigger (keyword, campaign click, event)
+4. Add message nodes with your content
+5. Add condition branches for different customer responses
+6. Add delay nodes for timed follow-ups
+7. Test the flow with your own number
+8. Activate the chatflow
+
+---
+
+## What triggers can I use for chatbots on Engage?
+
+Chatbot trigger options in Engage 360:
+1. Keyword trigger: Customer sends a specific word (e.g., "TRACK", "ORDER")
+2. Campaign click: Customer clicks a button in a campaign message
+3. Segment entry: Customer matches a segment criteria
+4. Event-based: Order status change (delivered, NDR, etc.)
+5. Manual trigger: Activated by agent from inbox
+
+---
+
+## Can the chatbot handle customer queries automatically on Engage?
+
+Yes. The Engage 360 chatbot can:
+1. Answer FAQs automatically based on keyword matching
+2. Provide order tracking information
+3. Collect customer information via conversational forms
+4. Route to human agents when needed (handoff feature)
+5. Handle multiple conversation flows simultaneously
+
+---
+
+## What is a Chatflow vs a Journey on Engage?
+
+Chatflow: An interactive, conversational flow where the customer's responses determine the next step. Two-way conversation. Best for customer support, order tracking queries, feedback collection.
+
+Journey: A one-directional automated message sequence triggered by events. Messages are sent based on a predefined timeline, not customer responses. Best for abandoned cart recovery, order updates, campaigns.
+
+---
+
+## How to add human handoff in chatbot on Engage?
+
+To enable human handoff in Engage 360 chatbot:
+1. Add a "Handoff to Agent" node in your chatflow
+2. Set conditions for when to handoff (e.g., customer says "help" or "agent")
+3. When triggered, the conversation moves to the Engage 360 inbox for agent response
+4. Agent responds within the 24-hour WhatsApp conversation window
+
+---
+
+## Can I build a product catalog chatbot on Engage?
+
+Yes. You can build a product discovery chatbot on Engage 360 that:
+1. Shows product categories when triggered
+2. Lets customers browse products via quick reply buttons
+3. Provides product details and images
+4. Redirects to product pages with CTA buttons
+
+---
+
+## How to test chatbot flows on Engage?
+
+To test chatbot flows on Engage 360:
+1. Use your own phone number as a test contact
+2. Send the trigger keyword to your business WhatsApp number
+3. Walk through the full conversation flow
+4. Check all branches and conditions work correctly
+5. Fix any issues in the chatflow builder before activating
+
+---
+
+## Does the chatbot work 24/7 on Engage?
+
+Yes. Engage 360 chatbots work 24/7 without any downtime. Automated responses are sent instantly when triggered, regardless of the time of day.
+
+---
+
+## Can I add images and videos in chatbot messages on Engage?
+
+Yes. Chatflow messages can include media:
+- Images (JPG/PNG up to 5MB)
+- Videos (MP4 up to 16MB)
+- Documents (PDF up to 100MB)
+- Audio messages
+
+Add media nodes in the chatflow builder.
+
+---
+
+## How many chatflows can I create on Engage?
+
+There is no hard limit on the number of chatflows you can create in Engage 360. Create as many flows as needed for different use cases.
+
+---
+
+## Can I use chatflows for order tracking on Engage?
+
+Yes. Build an order tracking chatflow triggered by keywords like "TRACK" or "ORDER STATUS". The chatflow can:
+1. Ask for order ID or registered phone number
+2. Fetch real-time order status from Shiprocket
+3. Share the tracking link and current status with the customer
+
+---
+
+## What is the difference between a pre-built and custom chatflow on Engage?
+
+Pre-built chatflows: Ready-to-use templates provided by Engage 360 for common use cases (order confirmation, NDR recovery, abandoned cart). Can be activated in one click.
+
+Custom chatflows: Built from scratch using the visual chatflow builder. Fully customizable for your specific business requirements.
+
+---
+
+## How to pause or stop a chatflow on Engage?
+
+To pause a chatflow in Engage 360:
+1. Go to the Chatbot section
+2. Find the active chatflow
+3. Toggle it OFF to pause
+4. The flow will stop triggering for new conversations
+5. Ongoing conversations will complete their current step
