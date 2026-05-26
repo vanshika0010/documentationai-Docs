@@ -3,12 +3,166 @@ title: "Channel Integration"
 description: "Omuni OMS/WMS — multi-channel order management, inventory, returns, marketplace integrations"
 ---
 
-## What is Omuni OMS
+## Which sales channels can I integrate with Omuni?
 
-Omuni OMS (Order Management System) is a multi-channel order management platform that helps brands manage orders from multiple sales channels (Shopify, Amazon, Flipkart, etc.) from a single interface along with inventory management across warehouses.
+Easily connect with Shopify, Amazon, Flipkart, Myntra, Nykaa, Nykaa Fashion, TataCliq, and Meesho will be added to the list of marketplaces shortly.
 
 ---
 
-## Which channels can be integrated with Omuni
+## Can I add custom channels to Omuni?
 
-Omuni supports integration with major e-commerce platforms and marketplaces including Shopify, WooCommerce, Amazon, Flipkart, Myntra, Meesho, Nykaa, and custom websites via API.
+Yes, Omuni supports custom channel integrations via API. Contact the Omuni team for custom channel setup.
+
+---
+
+## How to integrate Shopify with Omuni?
+
+To integrate Shopify with Omuni:
+1. Go to Omuni panel >> Settings >> Channels
+2. Click on Add Channel
+3. Select Shopify
+4. Enter your Shopify store URL
+5. Authenticate with your Shopify credentials
+6. Configure sync settings
+7. Save and enable the integration
+
+---
+
+## How to integrate Amazon with Omuni?
+
+To integrate Amazon with Omuni:
+1. Go to Omuni panel >> Settings >> Channels
+2. Click on Add Channel
+3. Select Amazon
+4. Enter your Amazon Seller Central credentials
+5. Authorize the integration
+6. Configure order sync settings
+7. Save and enable the integration
+
+---
+
+## How to integrate Flipkart with Omuni?
+
+To integrate Flipkart with Omuni:
+1. Go to Omuni panel >> Settings >> Channels
+2. Click on Add Channel
+3. Select Flipkart
+4. Enter your Flipkart Seller Hub credentials
+5. Authorize the integration
+6. Configure order sync settings
+7. Save and enable the integration
+
+---
+
+## What data is synced from channels to Omuni?
+
+Omuni syncs the following data from connected channels:
+1. Orders (new, processing, shipped, delivered, cancelled)
+2. Products/SKUs
+3. Inventory levels
+4. Customer details
+5. Returns/Exchange orders
+
+---
+
+## How frequently does Omuni sync orders from channels?
+
+Omuni syncs orders from connected channels in near real-time (typically within a few minutes of order placement). You can also trigger a manual sync from the Omuni panel.
+
+---
+
+## Can I manage orders from multiple channels in one place with Omuni?
+
+Yes. That's the primary benefit of Omuni. All orders from Shopify, Amazon, Flipkart, and other connected channels flow into a single unified order management dashboard.
+
+---
+
+## What happens if a channel goes offline or disconnects from Omuni?
+
+If a channel disconnects:
+1. Order sync stops for that channel
+2. You receive an alert notification
+3. Reconnect the channel from Settings >> Channels
+4. Omuni will sync missed orders after reconnection
+
+---
+
+## Can I filter orders by channel in Omuni?
+
+Yes. In the Omuni order management dashboard, you can filter orders by:
+* Channel (Shopify, Amazon, Flipkart, etc.)
+* Order status
+* Date range
+* Location/warehouse
+
+---
+
+## How to handle channel-specific pricing in Omuni?
+
+Omuni supports channel-specific pricing rules. You can configure different prices for different channels in the Product Catalog settings.
+
+---
+
+## Does Omuni support international channel integrations?
+
+Omuni primarily focuses on India-based channels. For international channel requirements, contact the Omuni team.
+
+---
+
+## What is the maximum number of channels I can integrate with Omuni?
+
+The number of channels depends on your Omuni plan. Check your plan limits in the Omuni settings.
+
+---
+
+## How to troubleshoot channel sync issues in Omuni?
+
+If orders are not syncing from a channel:
+1. Check channel connection status in Settings >> Channels
+2. Verify API credentials are valid and not expired
+3. Check for any error messages in the channel logs
+4. Disconnect and reconnect the channel
+5. Contact Omuni support if the issue persists
+
+---
+
+## Can I map products from different channels to the same SKU in Omuni?
+
+Yes. Omuni supports SKU mapping across channels. This allows you to manage inventory under a single master SKU even if the product has different IDs on different channels.
+
+---
+
+## Does Omuni update inventory on channels after fulfillment?
+
+Yes. When an order is fulfilled or returned, Omuni automatically updates the inventory levels on all connected channels in real-time.
+
+---
+
+## How to set up automatic order routing in Omuni?
+
+Omuni supports automatic order routing rules based on:
+* Channel
+* Product type
+* Location/pincode
+* Inventory availability
+
+Configure routing rules in Settings >> Order Routing in the Omuni panel.
+
+---
+
+## Can I set channel-specific fulfillment rules in Omuni?
+
+Yes. You can configure channel-specific fulfillment rules in Omuni, such as routing Amazon orders to a specific warehouse or assigning specific couriers for Flipkart orders.
+
+---
+
+## What is the process to add a new channel to Omuni?
+
+To add a new channel:
+1. Go to Settings >> Channels in Omuni
+2. Click Add Channel
+3. Select the channel from the available list
+4. Authenticate with the channel credentials
+5. Configure sync preferences
+6. Enable the channel
+7. Test with a few orders to verify the integration

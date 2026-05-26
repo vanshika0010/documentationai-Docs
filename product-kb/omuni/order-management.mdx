@@ -3,12 +3,129 @@ title: "Order Management"
 description: "Omuni OMS/WMS — multi-channel order management, inventory, returns, marketplace integrations"
 ---
 
-## How does Omuni handle order routing
+## Is Omuni an OMS or WMS?
 
-Omuni automatically routes orders to the most appropriate warehouse based on inventory availability, proximity to the delivery address, and configured routing rules. This minimizes shipping cost and delivery time.
+Omuni functions as both an Order Management System (OMS) and a Warehouse Management System (WMS), providing a complete operational platform for multi-channel sellers.
 
 ---
 
-## Can Omuni handle partial order fulfillment
+## How to create a manual order in Omuni?
 
-Yes. Omuni supports partial order fulfillment where items from the same order can be shipped from different warehouses or at different times, with tracking updates managed centrally.
+To create a manual order in Omuni:
+1. Go to Orders >> Create Order
+2. Fill in customer details
+3. Add products from the catalog
+4. Set the shipping address
+5. Choose the source channel
+6. Save and process the order
+
+---
+
+## How does order routing work in Omuni?
+
+Order routing in Omuni automatically assigns orders to the appropriate warehouse and courier based on:
+1. Inventory availability at each location
+2. Proximity to delivery address
+3. Channel-specific fulfillment rules
+4. Shipping cost optimization
+5. Custom routing rules configured by the seller
+
+---
+
+## Can I split an order across multiple warehouses in Omuni?
+
+Yes. Omuni supports split shipments where an order containing products from different warehouse locations can be split and shipped from multiple locations.
+
+---
+
+## How to process returns in Omuni?
+
+Return processing in Omuni:
+1. Return order received from channel
+2. Return appears in Returns section
+3. Process the return (initiate pickup or receive at warehouse)
+4. Quality check at warehouse
+5. Update inventory (restock or quarantine)
+6. Trigger refund/replacement
+
+---
+
+## How to track order status in Omuni?
+
+To track order status in Omuni:
+1. Go to Orders section
+2. Search by Order ID or AWB
+3. View complete order timeline with channel, warehouse, and shipping updates
+
+---
+
+## What order statuses are available in Omuni?
+
+Order statuses in Omuni:
+1. New/Pending: Received from channel, awaiting processing
+2. In Progress: Assigned to warehouse, being picked/packed
+3. Ready to Ship: Packed and ready for courier pickup
+4. Shipped: Courier has picked up and in transit
+5. Delivered: Successfully delivered to buyer
+6. Cancelled: Cancelled by buyer or seller
+7. Return: Return initiated
+8. RTO: Return to Origin
+
+---
+
+## Can I export order data from Omuni?
+
+Yes. Order data can be exported from Omuni in CSV/Excel format. Go to Orders >> Export to download order data for a selected date range.
+
+---
+
+## How to handle duplicate orders in Omuni?
+
+Omuni has built-in duplicate order detection. If the same order appears from multiple channels (e.g., Shopify and Amazon), Omuni flags it for review. You can merge or process them separately based on the situation.
+
+---
+
+## What is the order processing SLA in Omuni?
+
+Omuni's order processing SLA depends on your configured cut-off times and warehouse operations. Typically, orders received before the cut-off time are processed for same-day dispatch.
+
+---
+
+## Can I add custom order statuses in Omuni?
+
+Omuni supports standard order status workflows. For custom status requirements, contact the Omuni team for configuration options.
+
+---
+
+## How does Omuni handle marketplace-specific requirements (Amazon FBA, Flipkart Smart)?
+
+Omuni supports marketplace-specific fulfillment workflows including Amazon FBA and Flipkart Smart requirements. Contact the Omuni team for specific marketplace compliance configuration.
+
+---
+
+## Can I set priority rules for order processing in Omuni?
+
+Yes. You can configure priority rules in Omuni based on:
+* Channel (e.g., Amazon orders get priority)
+* Order value
+* Delivery deadline (express vs. standard)
+* Customer type
+
+---
+
+## How to cancel an order in Omuni?
+
+To cancel an order in Omuni:
+1. Find the order in the Orders section
+2. Click on the order
+3. Click Cancel
+4. Select the cancellation reason
+5. Confirm
+
+Cancellation triggers inventory update and channel notification.
+
+---
+
+## Does Omuni support B2B order management?
+
+Yes. Omuni supports B2B order management with features like bulk order processing, custom pricing, and invoice generation.
