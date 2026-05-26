@@ -3,12 +3,118 @@ title: "RTO & Fake Delivery"
 description: "Non-Delivery Reports — failed delivery handling, reattempts, escalations, buyer communication"
 ---
 
-## What is RTO (Return to Origin)
+## How many attempts will be made by the courier company to deliver my shipment?
 
-RTO (Return to Origin) happens when a shipment cannot be delivered and is sent back to the pickup address. Common reasons: buyer not available after multiple attempts, wrong address, buyer refused delivery, or lost shipment.
+The number of delivery attempts varies by courier partner. Typically:
+* Most couriers make 2-3 delivery attempts
+* The exact number depends on the NDR reason and courier policies
+* After maximum attempts, the shipment is returned (RTO)
+
+Check the specific courier's terms in the Shiprocket panel for exact attempt limits.
 
 ---
 
-## What is fake delivery and how to report it
+## What is fake delivery?
 
-Fake delivery is when a courier marks an order as 'Delivered' without actually delivering it. If this happens, raise a support ticket immediately with the AWB number, order ID, and a statement from the buyer that the order was not received. Shiprocket will investigate with the courier.
+Fake delivery is when a courier partner marks a shipment as "Delivered" without actually delivering it to the buyer. This is a fraudulent scan and can be disputed.
+
+---
+
+## How to dispute a fake delivery?
+
+To dispute a fake delivery:
+1. Go to the shipment in the Orders section
+2. Find the order marked as "Delivered"
+3. If buyer confirms non-receipt, click "Raise Dispute" or "Fake Delivery"
+4. Provide:
+   * Buyer's statement confirming non-receipt
+   * Proof that the delivery was not made (if available)
+5. Shiprocket will investigate and coordinate with the courier
+
+---
+
+## What is OTP delivery verification?
+
+OTP (One-Time Password) delivery verification requires the buyer to share a delivery OTP with the courier agent before the order is marked as delivered. This prevents fake delivery scans.
+
+To enable OTP delivery:
+* Go to Settings in your Shiprocket panel
+* Find the OTP Delivery Verification option
+* Enable it for eligible couriers
+
+---
+
+## When does a shipment get marked as RTO?
+
+A shipment gets marked as RTO in these situations:
+1. Maximum delivery attempts exhausted (2-3 attempts)
+2. Buyer refused to accept the delivery
+3. Address not found or incomplete
+4. Customer was unavailable on all attempts
+5. Seller initiated RTO from the NDR panel
+6. COD amount not ready
+
+---
+
+## Can I stop an RTO in progress?
+
+If an RTO is in progress but the shipment hasn't been returned yet:
+1. Contact Shiprocket support immediately with the AWB number
+2. The support team will try to intercept with the courier
+3. If the courier has already processed RTO, interception may not be possible
+
+Act quickly as the window for interception is limited.
+
+---
+
+## What are RTO charges on Shiprocket?
+
+RTO (Return to Origin) charges are applied when a shipment is returned. These charges:
+* Are based on weight slab and zone (same as forward shipping)
+* Are deducted from your Shiprocket wallet
+* Are detailed in your freight invoice
+
+Check the Rate Calculator in your panel for specific RTO charges.
+
+---
+
+## Can I avoid RTO charges if the return was due to courier's fault?
+
+If the RTO was due to the courier's error (fake NDR, wrong address scan, etc.):
+1. Raise a dispute with evidence
+2. Shiprocket will investigate
+3. If the courier's fault is established, you may be eligible for a waiver of RTO charges
+
+Raise a support ticket with the AWB number and evidence.
+
+---
+
+## What happens after RTO is delivered to my address?
+
+After RTO is delivered:
+1. Update the shipment as RTO Received in the Shiprocket panel
+2. Check the item condition
+3. If item is damaged due to courier, raise a claim
+4. Restock the item for future orders
+
+---
+
+## How to track my RTO shipment?
+
+To track an RTO shipment:
+1. Go to Orders section in Shiprocket panel
+2. Find the order
+3. Check the tracking section
+4. RTO tracking shows the return journey from the buyer's location back to your pickup address
+
+---
+
+## What is RTO rate and how to reduce it?
+
+RTO rate is the percentage of orders that are returned to origin. To reduce RTO:
+1. Verify address and phone number before shipping
+2. Use Engage 360 Order Confirmation flow for COD orders
+3. Use Address Verification via Engage 360
+4. Choose courier partners with better delivery performance for specific pincodes
+5. Use pre-delivery confirmation to ensure buyer availability
+6. Enable NDR recovery via Engage 360
