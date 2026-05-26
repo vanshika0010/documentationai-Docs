@@ -1,16 +1,211 @@
 ---
 title: "Return Management General"
-description: "Return and exchange flows, QC settings, refund modes, auto-assign, return policies"
+description: "Return & exchange flows, QC settings, refund modes, auto-assign, return policies"
 ---
 
-## How to create a return order in Shiprocket
+## How to edit and customize refund settings?
 
-Go to Returns >> Create Return from the left menu. Enter the original order ID or AWB number, select the return reason, choose the pickup address (buyer's address), and select a courier. Confirm to create the return order.
+* Please follow the steps below to edit and customize refund settings: 
+   * Go to Settings and click on the Returns & Exchanges Tab.
+   * Under Refund Settings, you'll see the options available for Shiprocket's refund settings.
+   * Click on the Add Refund Mode button on the right side.
+   * From the pop-up, select the Refund Type (Bank Transfer, UPI, or Store Credit/Wallet).
+   * Click on Save.
 
 ---
 
-## What return modes does Shiprocket support
+## What is Shiprocket's return management feature?
 
-* **Reverse Pickup** — courier picks up from buyer.
-* **Self-Ship Return** — buyer ships back via any courier.
-* **Exchange** — replacement sent while return is collected.
+Shiprocket's return management feature enables sellers to manage the entire return lifecycle from a single platform:
+1. Accept/reject return requests from buyers
+2. Schedule return pickups via courier
+3. Track return shipments
+4. Perform QC on received returns
+5. Process refunds or replacements
+6. Manage exchange orders
+
+---
+
+## How to create a return policy on Shiprocket?
+
+To set up return policy:
+1. Go to Settings >> Returns & Exchanges
+2. Configure return window (days from delivery)
+3. Set eligible return reasons
+4. Configure QC requirements
+5. Set refund modes and timelines
+6. Save settings
+
+---
+
+## What return reasons can I enable for buyers on Shiprocket?
+
+Common return reasons you can configure:
+1. Wrong item received
+2. Damaged item received
+3. Item not as described
+4. Size/fit issue
+5. Changed my mind
+6. Quality not as expected
+7. Missing parts/accessories
+
+---
+
+## How does Shiprocket handle reverse pickup for returns?
+
+Reverse pickup for returns:
+1. Return request is approved
+2. Shiprocket assigns a courier for reverse pickup
+3. Courier collects the item from buyer's address
+4. Item is returned to seller's warehouse
+5. QC is performed at warehouse
+6. Refund/replacement is processed
+
+---
+
+## What is the difference between return and exchange on Shiprocket?
+
+Return: Buyer sends back the item and receives a refund (or store credit).
+
+Exchange: Buyer sends back the item and receives a replacement (same or different product). Exchange orders involve both a reverse pickup (return) and a forward shipment (new item).
+
+---
+
+## Can I restrict returns to specific products or categories?
+
+Yes. Return policies can be configured at the product level or category level. You can mark specific products as non-returnable in your catalog settings.
+
+---
+
+## How to view all return orders on Shiprocket?
+
+To view all returns:
+1. Go to Returns from the left menu
+2. View all return orders with their status
+3. Filter by date, status, channel, or return reason
+4. Click on any return to see full details
+
+---
+
+## What is the auto-approval feature for returns on Shiprocket?
+
+Auto-approval automatically approves return requests that meet your configured criteria (valid reason, within return window, eligible product). This reduces manual work for high-volume sellers.
+
+---
+
+## How to download a returns report on Shiprocket?
+
+To download returns report:
+1. Go to Returns section
+2. Apply filters (date range, status, channel)
+3. Click Download/Export
+4. Available in CSV format for analysis
+
+---
+
+## What is the pickup SLA for reverse logistics on Shiprocket?
+
+Pickup SLA for returns:
+* Most couriers: 2-5 business days for pickup after request
+* Actual timing depends on buyer's pincode and courier availability
+
+---
+
+## Can I use different couriers for forward and return shipments on Shiprocket?
+
+Yes. The courier used for the original forward shipment doesn't need to be the same for the return. Shiprocket assigns the best available courier for reverse pickup based on serviceability.
+
+---
+
+## How does Shiprocket handle returns for marketplace orders?
+
+For marketplace orders (Amazon, Flipkart), returns are typically handled through the marketplace's own return process. However, Shiprocket can be used for return logistics coordination. Check your channel-specific settings.
+
+---
+
+## What happens to COD amount if a COD order is returned?
+
+For COD returns:
+1. If COD was not yet remitted: No remittance occurs
+2. If COD was already remitted: RTO reversal amount is deducted from future COD remittances
+3. The seller may need to process a refund to the buyer separately
+
+---
+
+## How to configure maximum return requests per order on Shiprocket?
+
+Return request limits can be configured in Settings >> Returns & Exchanges. Set the maximum number of return requests allowed per order.
+
+---
+
+## What is the return rate and how to calculate it?
+
+Return rate = (Number of returns / Number of orders) × 100
+
+A high return rate indicates issues with product quality, description accuracy, or delivery. Monitor return reasons to identify and fix the root cause.
+
+---
+
+## Can I offer partial returns on Shiprocket?
+
+Partial returns (returning some items from a multi-item order) are supported. Buyers can select specific items to return when initiating a return request.
+
+---
+
+## How to prevent fake/fraudulent returns on Shiprocket?
+
+To prevent fraudulent returns:
+1. Enable photo-based QC for all returns
+2. Require serial number/barcode verification
+3. Set up clear return eligibility rules
+4. Flag buyers with high return rates
+5. Use Shiprocket Secure to protect against losses
+
+---
+
+## What is the return to vendor (RTV) process on Shiprocket?
+
+Return to Vendor (RTV) involves sending returned/unsellable items back to the original supplier. This can be managed through Shiprocket's shipping platform by creating a new forward shipment to the vendor's address.
+
+---
+
+## Does Shiprocket support international returns?
+
+Shiprocket primarily handles domestic returns within India. For international returns, contact Shiprocket's international team (SRX) for guidance.
+
+---
+
+## How to configure return notification emails for buyers?
+
+Buyer notification settings for returns:
+1. Go to Settings >> Communication Settings
+2. Find return-related notification templates
+3. Configure which events trigger notifications (return approved, pickup scheduled, refund processed)
+4. Save settings
+
+---
+
+## Can I add notes or instructions for the return pickup courier?
+
+Yes. When approving a return, you can add specific instructions for the courier in the return order notes field.
+
+---
+
+## How to view return analytics on Shiprocket?
+
+Return analytics are available in:
+1. Reports section under Returns
+2. Dashboard analytics tabs
+
+Metrics include return rate, return reasons breakdown, return courier performance, and refund processing time.
+
+---
+
+## What is the SLA for processing refunds after return QC?
+
+Refund processing SLA after QC:
+* Store credit/wallet: Immediate
+* UPI/bank transfer: 3-5 business days
+* Credit card: 5-7 business days
+
+Actual timelines may vary based on payment gateway processing.
