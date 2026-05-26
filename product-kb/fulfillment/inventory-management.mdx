@@ -6,62 +6,66 @@ description: "Shiprocket Fulfillment (SRF) — warehousing, ASN, inventory, pack
 ## What happens when the product goes out of stock?
 
 When inventory goes out of stock at SRF:
-1. You will receive a notification (email/SMS) about the stockout
-2. Orders for out-of-stock products will not be fulfilled from SRF
-3. You must create a new ASN and send replenishment stock to the warehouse
-4. Affected orders will be on hold until replenishment stock arrives and is processed
+1. Shiprocket sends low stock alerts via email/SMS
+2. Orders for out-of-stock products cannot be fulfilled from SRF
+3. You need to create a new ASN and send replenishment stock to the warehouse
+4. Orders will be on hold until replenishment stock is received and processed
 
 ---
 
-## How to set low stock alerts for SRF inventory?
+## How to set up inventory alerts in SRF?
 
-Low stock alerts can be configured in the Fulfillment >> Inventory section. Set minimum stock threshold for each SKU, and Shiprocket will notify you when stock falls below the threshold.
+Low stock alerts can be configured in the Fulfillment >> Inventory section. Set minimum stock thresholds for each SKU. When stock falls below this threshold, you will receive an alert notification.
 
 ---
 
-## How to replenish SRF inventory?
+## How to view current inventory at SRF?
 
-1. Go to Fulfillment >> ASN section
-2. Create a new ASN (Advance Shipping Notice)
-3. Add products and quantities to send
-4. Print ASN document and send with the shipment
-5. Ship inventory to the designated SRF warehouse
+To view current SRF inventory:
+1. Go to Fulfillment from the left menu
+2. Click on Inventory
+3. View current stock count per SKU
+4. Filter by warehouse location if needed
+5. Download the inventory report for detailed view
+
+---
+
+## How to send replenishment stock to SRF?
+
+To send replenishment stock:
+1. Go to Fulfillment >> Inbound Shipments (ASN)
+2. Create a new ASN
+3. Add products and quantities
+4. Print the ASN document
+5. Ship inventory to the designated SRF warehouse address
 6. SRF processes receipt and generates GRN
-7. Stock is updated in your inventory panel
-
----
-
-## How to check inventory levels at SRF?
-
-To check SRF inventory:
-1. Go to Fulfillment >> Inventory from the left menu
-2. View current stock count per SKU
-3. Filter by warehouse location
-4. Download inventory report for detailed view
-
----
-
-## How to view inventory movement history at SRF?
-
-Inventory movement history is available in the Fulfillment >> Inventory section. Filter by SKU and date range to view all inbound, outbound, and adjustment transactions.
+7. Stock is updated in your panel
 
 ---
 
 ## What happens to damaged inventory at SRF?
 
 For damaged inventory:
-1. SRF team marks damaged items during GRN process
+1. Damaged items are marked during GRN process
 2. Damage report is generated and shared with seller
 3. Damaged items are held separately
-4. Seller can file insurance claim for covered damages
+4. Seller can file a claim for insured damages
 5. Damaged items can be returned to seller or disposed per agreement
 
 ---
 
-## Can I do inventory adjustments at SRF?
+## Can I do cycle counts of my inventory at SRF?
 
-Inventory adjustments at SRF are done through formal processes:
-1. Raise a request with the SRF team for inventory adjustment
-2. Physical count/audit is conducted at warehouse
-3. Discrepancies are documented and adjusted accordingly
-4. Updated inventory reflects in your panel
+Yes. SRF conducts regular cycle counts for inventory accuracy. You can also request an inventory audit by raising a request with the SRF team.
+
+---
+
+## How to handle returns and restocking at SRF?
+
+Returns handling at SRF:
+1. Create return order in Shiprocket
+2. Courier picks up return from buyer
+3. Return delivered to SRF warehouse
+4. Quality check performed at warehouse
+5. Items in good condition are restocked
+6. Damaged items held separately
