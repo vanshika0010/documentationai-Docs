@@ -3,19 +3,29 @@ title: "EDD Calculation"
 description: "Shiprocket Promise — EDD widget for Shopify, badges, billing, eligibility"
 ---
 
-## How is the EDD calculated in Shiprocket Promise
+## How does Shiprocket Promise calculate EDD?
 
-EDD is calculated using:
+Shiprocket Promise calculates EDD based on:
+1. Seller's configured order processing cutoff time
+2. Buyer's pincode (auto-detected or entered)
+3. Seller's warehouse pincode
+4. Courier partner transit times
+5. Working days and holidays
 
-* Seller's dispatch time (configurable)
-* Courier transit TAT from origin to destination pincode
-* Courier working days and holidays
-* Any custom buffer days you've configured
-
-The widget shows a date range or specific date based on your settings.
+The EDD is shown dynamically based on the buyer's location.
 
 ---
 
-## Can I customize the EDD displayed to customers
+## Can I customize the EDD calculation parameters in Promise?
 
-Yes. You can configure dispatch cutoff time, add buffer days, set non-working days, and choose whether to show a date range or a specific delivery date.
+Yes. You can customize:
+1. Processing cutoff time (e.g., orders before 2 PM processed same day)
+2. Processing days (working days vs all days)
+3. Courier preference for EDD calculation
+4. Buffer days for safety margin
+
+---
+
+## What happens to EDD if no courier is available for a pincode?
+
+If no courier is serviceable for the buyer's pincode, Shiprocket Promise can show a fallback message or estimated range. Configure fallback behavior in the app settings.
