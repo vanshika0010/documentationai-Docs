@@ -3,12 +3,103 @@ title: "Sense Overview"
 description: "Shiprocket Sense — API product for RTO risk, address quality, pincode intelligence"
 ---
 
-## What is Shiprocket Sense
+## What is Shiprocket Sense ?
 
-Shiprocket Sense is an API product that provides delivery risk intelligence and address quality scoring. It offers RTO risk scoring, address quality scores, and pincode-level delivery intelligence to help businesses reduce failed deliveries and optimize logistics operations.
+Shiprocket Sense is an advanced analytics and business intelligence tool for e-commerce sellers. It provides:
+1. RTO Risk API - Predicts the likelihood of Return to Origin for each order
+2. Address Quality API - Validates and scores delivery address quality
+3. Pincode Intelligence - Provides detailed delivery performance data per pincode
+4. Courier Recommendation - Suggests best courier for specific routes
 
 ---
 
-## Who should use Shiprocket Sense
+## What are the key features of Shiprocket Sense?
 
-Sense is primarily for developers and businesses that want to integrate delivery intelligence into their checkout, order management, or logistics systems via API. It's ideal for large-volume sellers, logistics companies, and platforms wanting to proactively reduce RTO.
+Key features of Shiprocket Sense:
+1. RTO Risk Scoring: AI-powered prediction of RTO probability per order
+2. Address Quality Score: Validates and rates address completeness/accuracy
+3. Pincode-level Analytics: Delivery success rates, NDR rates by pincode
+4. Courier Intelligence: Performance data by courier and route
+5. API Access: Integrate Sense intelligence into your own systems
+
+---
+
+## How can Shiprocket Sense help reduce RTO?
+
+Shiprocket Sense reduces RTO by:
+1. Flagging high-risk orders before shipping (use RTO Risk API)
+2. Identifying poor-quality addresses before dispatch (Address Quality API)
+3. Recommending couriers with better delivery rates for specific pincodes
+4. Providing data to set smarter COD restrictions
+
+---
+
+## Who should use Shiprocket Sense?
+
+Shiprocket Sense is ideal for:
+1. High-volume e-commerce sellers with RTO challenges
+2. Sellers looking to optimize courier selection
+3. Tech-savvy sellers who can integrate APIs
+4. Sellers wanting to reduce costs from failed deliveries
+
+---
+
+## What is the RTO Risk API in Shiprocket Sense?
+
+The RTO Risk API analyzes each order and returns a risk score (Low/Medium/High) based on:
+1. Buyer's past delivery behavior
+2. Pincode delivery success rates
+3. Address quality score
+4. Order characteristics (COD, time of day, order value)
+5. Product category risk factors
+
+Use this score to decide which orders need order confirmation, COD restrictions, or address verification.
+
+---
+
+## What is the Address Quality API in Shiprocket Sense?
+
+The Address Quality API validates delivery addresses and returns:
+1. Completeness score (are all address components present?)
+2. Accuracy score (does the address correspond to a real location?)
+3. Standardized address format
+4. Missing component flags (no landmark, no building name, etc.)
+
+Use to trigger address verification for low-quality addresses before dispatch.
+
+---
+
+## How accurate is the Shiprocket Sense RTO prediction?
+
+Shiprocket Sense RTO prediction is trained on millions of historical shipments across Shiprocket's network, providing high accuracy in identifying RTO-prone orders. Accuracy improves with more data from your specific seller account.
+
+---
+
+## Can Shiprocket Sense integrate with my order management system?
+
+Yes. Shiprocket Sense provides REST APIs that can be integrated with any OMS, WMS, or custom order management system. API documentation is available in the Sense dashboard.
+
+---
+
+## What is pincode intelligence in Shiprocket Sense?
+
+Pincode intelligence provides:
+1. Historical delivery success rate per pincode
+2. Average RTO rate per pincode
+3. Best performing courier for each pincode
+4. Delivery time benchmarks
+5. Seasonal trends and anomalies
+
+Use to make informed decisions about which orders to fulfill to specific pincodes.
+
+---
+
+## How to get started with Shiprocket Sense?
+
+To get started:
+1. Go to Sense section in your Shiprocket panel
+2. Or visit sense.shiprocket.in
+3. Sign up / activate your account
+4. Get your API credentials
+5. Use the documentation to integrate APIs
+6. Monitor insights from the Sense dashboard
