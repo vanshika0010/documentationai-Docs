@@ -3,16 +3,240 @@ title: "Sense General"
 description: "Shiprocket Sense — API product for RTO risk, address quality, pincode intelligence"
 ---
 
-## What APIs does Shiprocket Sense offer
+## What functionalities does Shiprocket Sense offer?
 
-Sense offers:
-
-* **RTO Risk API** — probability score for an order not being delivered.
-* **Address Quality API** — validation and quality score for delivery addresses.
-* **Pincode Intelligence API** — delivery performance data for specific pincodes.
+Shiprocket Sense provides several advanced APIs, including:
+1. RTO Risk – Predict and prevent COD returns before they happen
+2. Address Intelligence – Validate buyer addresses before dispatch
+3. Pincode Intelligence – Insights on pincode-level delivery performance
+4. Serviceability Check – Real-time courier serviceability per pincode
 
 ---
 
-## How accurate is the Sense RTO Risk Score
+## How does Shiprocket Sense help in reducing RTO?
 
-The RTO Risk Score is trained on millions of Shiprocket shipments. It considers factors like buyer's past delivery history, pincode performance, COD/prepaid split, and address quality to predict RTO probability.
+Shiprocket Sense reduces RTO by:
+1. Predicting which orders have high RTO probability before shipping
+2. Flagging poor-quality addresses for verification before dispatch
+3. Recommending better-performing couriers for specific pincodes
+4. Enabling data-driven COD blocking for high-risk buyer segments
+
+---
+
+## Is Shiprocket Sense available as an API?
+
+Yes. Shiprocket Sense is primarily an API-based product. All intelligence features are available as REST APIs that can be integrated into your order management system, checkout page, or any custom application.
+
+---
+
+## What is the RTO Risk API in detail?
+
+The RTO Risk API returns a risk assessment for each order:
+1. Risk Score (numerical, typically 0-100)
+2. Risk Category (Low/Medium/High)
+3. Key risk factors contributing to the score
+4. Recommended actions (confirm order, verify address, block COD)
+
+Integrate at checkout or order processing to take preventive action.
+
+---
+
+## What is Address Intelligence in Shiprocket Sense?
+
+Address Intelligence API validates and scores delivery addresses:
+1. Returns a quality score for the address
+2. Identifies missing or incorrect components
+3. Suggests standardized address format
+4. Flags incomplete addresses that are likely to cause delivery failures
+
+---
+
+## What is Pincode Intelligence in Shiprocket Sense?
+
+Pincode Intelligence provides analytics on specific pincodes:
+1. Delivery success rate
+2. RTO rate
+3. Average delivery time
+4. Best performing courier
+5. Historical delivery trends
+
+---
+
+## Can Shiprocket Sense be used without API integration?
+
+For sellers who don't want API integration, Shiprocket Sense analytics are also available through the dashboard. You can view RTO risk insights, pincode performance, and courier recommendations without writing code.
+
+---
+
+## How does Shiprocket Sense calculate RTO risk?
+
+RTO risk is calculated using an AI model trained on millions of Shiprocket shipments considering:
+1. Buyer's past delivery/return history
+2. Pincode-level historical RTO rates
+3. Address quality score
+4. Order characteristics (COD vs prepaid, order value, product category)
+5. Time of order placement
+
+---
+
+## What is the Serviceability Check API in Sense?
+
+The Serviceability Check API provides real-time information on:
+1. Which couriers service a specific pincode
+2. Available service types (standard, express, COD)
+3. Estimated delivery time for each courier
+4. Any serviceability restrictions
+
+Use at checkout to show accurate delivery options to buyers.
+
+---
+
+## How to integrate Shiprocket Sense API into my Shopify store?
+
+To integrate Sense API with Shopify:
+1. Get API credentials from the Sense dashboard
+2. Use Shopify's script/app framework to call the API at checkout
+3. Display RTO risk-based recommendations or block COD for high-risk orders
+4. Or use a custom Shopify app that integrates the Sense API
+
+Contact the Sense team for integration support.
+
+---
+
+## What is the response format for Sense APIs?
+
+Sense APIs return JSON responses with:
+1. Status code
+2. Risk score / quality score (numerical)
+3. Category classification (Low/Medium/High)
+4. Detailed factors and recommendations
+5. Processing time metadata
+
+---
+
+## Does Shiprocket Sense work in real-time?
+
+Yes. Shiprocket Sense APIs are designed for real-time use at checkout or order processing. Typical API response time is under 200ms, making it suitable for live use during customer checkout.
+
+---
+
+## What data does Sense use for predictions?
+
+Sense predictions are based on:
+1. Shiprocket's network-wide delivery data (anonymized)
+2. Your seller-specific historical order data
+3. Geographic and demographic data
+4. Carrier performance data
+
+No personally identifiable information (PII) is used for predictions.
+
+---
+
+## How to access Sense analytics dashboard?
+
+To access the Sense dashboard:
+1. Go to sense.shiprocket.in
+2. Log in with your Shiprocket credentials
+3. Navigate to the desired analytics section (RTO Risk, Pincode Intelligence, etc.)
+
+---
+
+## What is the accuracy of Sense address intelligence?
+
+Address Intelligence uses India-specific postal and geographic databases for high accuracy in:
+1. Pincode-to-area mapping
+2. Address completeness validation
+3. Standardization of common address variations
+
+---
+
+## Can I use Sense for international address validation?
+
+Shiprocket Sense is primarily optimized for Indian addresses. For international address validation, contact the Sense team for guidance on available options.
+
+---
+
+## How to use Sense API for COD risk management?
+
+To use Sense for COD risk management:
+1. Call RTO Risk API at checkout when buyer selects COD
+2. If risk score is High, block COD or show warning
+3. If risk is Medium, prompt for order confirmation
+4. If risk is Low, allow COD without restrictions
+
+This reduces fraudulent COD orders and improves prepaid conversion.
+
+---
+
+## What is the rate limit for Sense APIs?
+
+Rate limits for Sense APIs depend on your credit package and account tier. Check your current limits in the Sense dashboard under API settings.
+
+---
+
+## Does Sense support batch API processing?
+
+Yes. Sense supports batch API requests for processing multiple orders simultaneously, reducing API call overhead for high-volume sellers.
+
+---
+
+## How to monitor Sense API usage and performance?
+
+Monitor Sense API usage from the dashboard:
+1. Total API calls made
+2. Credits consumed per time period
+3. API response time analytics
+4. Error rate tracking
+5. Per-API-type usage breakdown
+
+---
+
+## What is the SLA for Sense API uptime?
+
+Shiprocket Sense is designed for high availability. For specific SLA commitments, check your Sense service agreement or contact the Sense team.
+
+---
+
+## Can Sense API integrate with my WMS or custom checkout?
+
+Yes. Sense REST APIs can integrate with any system that makes HTTP requests including:
+1. Custom checkout pages
+2. WMS (Warehouse Management Systems)
+3. OMS (Order Management Systems)
+4. Custom e-commerce backends
+
+---
+
+## How does Sense handle order data privacy?
+
+Shiprocket Sense processes order data in accordance with data privacy policies:
+1. Data is used only for generating predictions and analytics
+2. No PII is shared with third parties
+3. Data is processed and stored securely
+4. Sellers retain ownership of their data
+
+---
+
+## What is Sense's seller-specific model vs network model?
+
+Sense uses two types of models:
+1. Network Model: Trained on all Shiprocket sellers' anonymized data - available from day one
+2. Seller-Specific Model: Trained on your own historical data - accuracy improves as your data grows
+
+Both models work together to provide the best predictions.
+
+---
+
+## What new features are coming to Shiprocket Sense?
+
+Shiprocket regularly updates Sense with new features. Check the Sense dashboard or Shiprocket announcements for the latest feature releases.
+
+---
+
+## How to contact Shiprocket Sense support?
+
+For Sense support:
+1. Raise a ticket from Help & Support in Shiprocket panel (select Sense category)
+2. Contact via the Sense dashboard support option
+3. Contact your Shiprocket account manager
+4. Email the Sense team through your account manager
