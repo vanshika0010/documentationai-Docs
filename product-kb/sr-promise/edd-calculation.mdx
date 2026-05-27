@@ -3,29 +3,24 @@ title: "EDD Calculation"
 description: "Shiprocket Promise — EDD widget for Shopify, badges, billing, eligibility"
 ---
 
-## How does Shiprocket Promise calculate EDD?
+## How is EDD calculated in Promise app ?
 
-Shiprocket Promise calculates EDD based on:
-1. Seller's configured order processing cutoff time
+EDD is calculated by using the courier set on priority by the seller on their Shiprocket seller panel and the pincode of the buyer. The EDD displayed is based on the courier's transit time from the seller's warehouse pincode to the buyer's delivery pincode, adjusted for processing cutoff time and non-working days.
+
+---
+
+## What factors affect EDD calculation in Shiprocket Promise?
+
+EDD is calculated considering:
+1. Seller's order processing cutoff time
 2. Buyer's pincode (auto-detected or entered)
-3. Seller's warehouse pincode
-4. Courier partner transit times
-5. Working days and holidays
-
-The EDD is shown dynamically based on the buyer's location.
-
----
-
-## Can I customize the EDD calculation parameters in Promise?
-
-Yes. You can customize:
-1. Processing cutoff time (e.g., orders before 2 PM processed same day)
-2. Processing days (working days vs all days)
-3. Courier preference for EDD calculation
-4. Buffer days for safety margin
+3. Seller's warehouse/pickup pincode
+4. Priority courier set in Shiprocket panel
+5. Courier's transit time for that pincode pair
+6. Working days and holidays
 
 ---
 
-## What happens to EDD if no courier is available for a pincode?
+## What happens if no courier is serviceable for buyer's pincode in Promise?
 
-If no courier is serviceable for the buyer's pincode, Shiprocket Promise can show a fallback message or estimated range. Configure fallback behavior in the app settings.
+If no courier is serviceable for the buyer's entered pincode, Shiprocket Promise can show a fallback message. Configure fallback text in the app settings to handle unserviceable pincodes gracefully.
