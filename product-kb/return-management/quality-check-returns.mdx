@@ -3,128 +3,148 @@ title: "Quality Check Returns"
 description: "Return & exchange flows, QC settings, refund modes, auto-assign, return policies"
 ---
 
-## What is QC (Quality Check) in return management?
+## Which courier partners support Return Quality Check?
 
-QC (Quality Check) in return management is the process of verifying the condition of returned products when they arrive back at the seller's warehouse. Sellers can configure QC settings to determine whether a returned item is in sellable condition or needs to be flagged.
+The following partners support QC-enabled returns and exchanges (availability may depend on selected QC parameters):
+1. Ekart
+2. Xpressbees
+3. Ecom Express
+4. Shadowfax
+5. Bluedart
+6. Delhivery
 
 ---
 
-## How to enable QC for returns on Shiprocket?
+## How to add a return order?
 
-To enable QC for returns:
-1. Go to Settings >> Returns Management
-2. Find the QC Settings section
-3. Enable QC for return orders
-4. Configure QC parameters (condition check, quantity check, etc.)
+* You can create a return order by following the steps below on your Shiprocket account:
+   * Go to the 'Returns' tab in the left panel
+   * Now, click on 'Add Return Order'.
+   * You will be redirected to a new page where you will have to fill in details like:
+   * Buyer Details
+   * Warehouse Details
+   * Order Details
+   * Package Details
+   * Return Reason
+   * Delivery
+
+---
+
+## How do I Enable Quality Check (QC) for my Returns?
+
+In order to enable QC for your returns follow the steps below:
+* Go to your Settings panel
+* Click on "Returns" under Company Setup
+* Scroll down to 'Quality Check'
+* Toggle on to enable quality check for your returns orders
+
+---
+
+## What is Shiprocket Returns?
+
+Shiprocket returns is a reverse logistics solution which allows sellers to accept returns from their buyers. The orders are picked up by the courier executives and delivered to the seller's warehouse. Sellers can configure return preferences such as quality check, refund mode, etc. Returns can be initiated through the Shiprocket panel or through the Post-Ship page.
+
+---
+
+## How do I initiate a return from the Post Ship page?
+
+* To initiate a return from the Post Ship page, follow these steps:
+   * Go to the 'Post Ship' tab in the left panel
+   * Click on "Return Order" button on the tracking page.
+   * Fill in the return details like return reason and the return address.
+   * Click on 'Create Return Order'.
+
+---
+
+## How to use exchange order feature?
+
+* To use the exchange feature, follow these steps:
+   * Go to the 'Returns' tab in the left panel
+   * Now, click on 'Add Return Order'.
+   * You will be redirected to a new page.
+   * Fill in all details (Buyer, Warehouse, Order, Package Details and Return Reason)
+   * Under the Delivery section, toggle on the 'Exchange Order' option.
+   * Please provide the required information for the new exchange order
+   * Review and Confirm your exchange Order.
+
+---
+
+## What is the QC rating system on Shiprocket returns?
+
+The QC rating system allows sellers to grade returned items based on their condition. Sellers can set up different grades (e.g., Good, Fair, Poor) based on their quality standards. This helps in making informed decisions about restocking, refurbishing, or disposing of returned items.
+
+---
+
+## How to export or download returns data on Shiprocket?
+
+To export or download returns data:
+1. Go to the Returns section in your Shiprocket panel
+2. Apply filters (date range, status, channel)
+3. Click on Download/Export
+4. The returns data will be downloaded in CSV format
+
+---
+
+## What refund modes are available for returns on Shiprocket?
+
+There are 4 modes of refund powered by Shiprocket:
+1. Manual Refund - Manually process the refund outside Shiprocket
+2. Shiprocket Wallet Credit - Credit the refund to the buyer's Shiprocket wallet
+3. Bank Transfer - Transfer the refund to the buyer's bank account
+4. Store Credit - Credit the refund to the buyer's store wallet
+
+---
+
+## How to configure automatic QC pass/fail criteria?
+
+To configure QC criteria:
+1. Go to Settings >> Returns
+2. Find QC Settings
+3. Set your pass criteria (e.g., item must be unused, original packaging)
+4. Configure fail conditions (damaged, missing parts)
 5. Save settings
+Items will be automatically evaluated against these criteria during the QC process.
 
 ---
 
-## What are the QC status options for returned items?
+## Can I make image upload mandatory for QC on Shiprocket?
 
-QC status options for returned items:
-1. Good Condition: Item is sellable and can be restocked
-2. Damaged: Item is damaged and cannot be resold
-3. Wrong Item: Item returned is different from what was ordered
-4. Incomplete: Item is returned without all components/accessories
-5. Used: Item has been used by the buyer
-
----
-
-## How to configure return QC settings on Shiprocket?
-
-Return QC settings can be configured from:
-1. Settings >> Returns Management >> QC Settings
-2. Configure which checks to perform (image upload required, condition check)
-3. Set pass/fail criteria
-4. Configure actions based on QC outcome (restock, quarantine, etc.)
-
----
-
-## Can I make image upload mandatory during return QC?
-
-Yes. You can configure the QC settings to make image upload mandatory during the return receiving process. This provides visual proof of the returned item's condition.
-
----
-
-## How does automatic return QC work on Shiprocket?
-
-Automatic return QC allows setting rules that automatically determine the QC outcome based on predefined criteria. For example, if the return reason is 'wrong item', it can be automatically flagged for investigation.
+Yes. You can configure the QC settings to require image uploads during quality check. Go to Settings >> Returns >> QC Settings and enable the mandatory image upload option.
 
 ---
 
 ## What happens to items that fail QC in returns?
 
 Items that fail QC:
-1. Are marked with the appropriate QC status (Damaged, Wrong Item, etc.)
-2. Are typically quarantined separately from good stock
-3. May be eligible for courier damage claims
-4. Can be disposed, returned to vendor, or kept for scrap based on seller policy
+1. Are marked with the fail status (Damaged, Wrong Item, Used, etc.)
+2. Are quarantined separately from sellable stock
+3. Can be subject to courier damage claims if damage occurred in transit
+4. Are handled per your configured QC fail policy (dispose, return to vendor, etc.)
 
 ---
 
-## Can I dispute a return that doesn't meet QC standards?
+## How to handle customer-damaged return items?
 
-Yes. If a returned item fails QC due to courier damage:
-1. Document the damage with photos
-2. Raise a dispute in the Shiprocket panel
-3. Include QC photos and the return order details
-4. Shiprocket will coordinate with the courier for claim
-
----
-
-## What is the return window for buyers on Shiprocket?
-
-The return window is set by the seller in their return policy. Sellers can configure the return window (e.g., 7 days, 15 days, 30 days) in their Shiprocket settings.
-
----
-
-## How to set up return policy on Shiprocket?
-
-Return policy configuration:
-1. Go to Settings >> Returns Management
-2. Set the return window (days from delivery)
-3. Configure eligible return reasons
-4. Set QC requirements
-5. Configure refund/replacement rules
-6. Save settings
-
----
-
-## Does Shiprocket support photo-based QC for returns?
-
-Yes. Shiprocket's return management supports photo-based QC where the receiving team must upload photos of the returned item as part of the QC process.
-
----
-
-## How to handle returns where the buyer has misused the product?
-
-For returns where misuse is evident during QC:
-1. Mark the QC status as 'Damaged/Used'
+For items damaged by customer:
+1. During QC, mark the item as 'Customer Damaged'
 2. Document with photos
-3. Based on your return policy, you may decline the return
-4. Contact the buyer with the QC findings
-5. Raise a dispute if needed
+3. Based on your return policy, you may:
+   * Deduct repair cost from refund
+   * Reject the return
+   * Accept as damaged stock
+4. Communicate the decision to the buyer
 
 ---
 
-## What is grading in return QC?
+## Does Shiprocket provide return pickup from buyer?
 
-Grading categorizes returned items into quality tiers:
-* Grade A: Like new, sellable as new
-* Grade B: Minor cosmetic issues, sellable as refurbished
-* Grade C: Significant issues, not resalable
-
-Grading helps in determining the appropriate disposition for returned inventory.
+Yes. Shiprocket coordinates reverse pickup from the buyer's address when a return is created. The courier partner assigned handles collection from buyer and delivery to seller's warehouse.
 
 ---
 
-## Can I configure different QC rules for different product categories?
+## What is the return pickup SLA on Shiprocket?
 
-Return QC rules can be configured based on your specific business requirements. Contact Shiprocket support or check Settings >> Returns Management for category-specific QC configuration options.
-
----
-
-## How to view return QC history on Shiprocket?
-
-Return QC history is available in the Returns section of your Shiprocket panel. Filter by return order ID, status, or date range to view QC records for specific returns.
+Return pickup SLA varies by courier:
+* Metro cities: 2-3 business days
+* Tier-2/3 cities: 3-5 business days
+* Remote areas: 5-7 business days

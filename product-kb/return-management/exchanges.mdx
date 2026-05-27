@@ -3,39 +3,53 @@ title: "Exchanges"
 description: "Return & exchange flows, QC settings, refund modes, auto-assign, return policies"
 ---
 
-## How to process an exchange order on Shiprocket?
+## How do I ship an exchange order?
 
-To process an exchange:
-1. Go to Returns from the left menu
-2. Find the return request for exchange
-3. Approve the return/exchange request
-4. The reverse pickup is initiated (return of original item)
-5. Simultaneously or after receiving return, create a new forward shipment for the replacement item
-6. Process the replacement order through normal shipping workflow
+* After creating an exchange order in the Returns Panel, go to the [Orders](https://app.shiprocket.in/seller/orders/new) page.
+* The exchange (replacement) order will appear as a new order.
+* Process it like a regular forward shipment - assign courier, generate label, request pickup.
 
 ---
 
-## What is the difference between return and exchange on Shiprocket?
+## How to create an exchange order on Shiprocket?
 
-Return: Item comes back to seller + refund goes to buyer.
+To create an exchange:
+1. Go to Returns section
+2. Click 'Add Return Order'
+3. Fill in all required details
+4. Under Delivery section, toggle ON 'Exchange Order'
+5. Fill in details for the replacement item (product, size, color, etc.)
+6. Review and confirm
 
-Exchange: Item comes back to seller + new item is sent to buyer. No monetary refund, but a replacement shipment is created.
+The return pickup and replacement shipment are coordinated automatically.
 
 ---
 
-## Can I offer size/color exchanges on Shiprocket?
+## Does Shiprocket support instant exchange?
 
-Yes. Exchange orders allow buyers to request a different variant (size, color) of the same product. Configure exchange options in Settings >> Returns & Exchanges.
+Shiprocket supports exchange orders where the replacement can be shipped either:
+1. Simultaneously with return pickup (instant exchange)
+2. After receiving and QC-ing the returned item (standard exchange)
+
+Configure your preference in Settings >> Returns.
 
 ---
 
-## How does Shiprocket handle exchange shipping charges?
+## What is the difference between exchange and return on Shiprocket?
+
+Return: Item comes back → refund issued to buyer.
+
+Exchange: Item comes back → replacement item sent to buyer. No monetary refund.
+
+---
+
+## How are exchange shipping charges handled?
 
 For exchanges:
 * Return pickup: Reverse logistics charges apply
-* Forward replacement shipment: Standard shipping charges apply
+* Replacement shipment: Standard forward shipping charges apply
 
-Sellers can configure whether the buyer bears exchange shipping charges or if it's free exchange.
+You can configure whether buyer bears exchange shipping charges or if it's complimentary, in your return policy settings.
 
 ---
 
@@ -43,21 +57,16 @@ Sellers can configure whether the buyer bears exchange shipping charges or if it
 
 If the requested exchange item is out of stock:
 1. Notify the buyer
-2. Offer an alternative (different variant, refund, or store credit)
-3. Process accordingly based on buyer's preference
+2. Offer alternatives (different variant, full refund, store credit)
+3. Process accordingly based on buyer's choice
+4. Update the exchange order accordingly
 
 ---
 
 ## How to track an exchange order on Shiprocket?
 
-An exchange has two tracking components:
-1. Return shipment (reverse pickup): Track via the return order AWB
-2. Replacement shipment (forward): Track via the new order AWB
+An exchange involves two shipments:
+1. Return leg: Track via the return AWB number in the Returns section
+2. Replacement leg: Track via the new order AWB in the Orders section
 
-Both are visible in the Returns and Orders sections respectively.
-
----
-
-## Can I offer instant exchange on Shiprocket?
-
-Instant exchange (shipping replacement before receiving return) is a configuration option. Contact Shiprocket support to check if instant exchange is supported for your account and how to configure it.
+Both are visible in their respective sections of the Shiprocket panel.

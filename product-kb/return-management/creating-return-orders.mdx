@@ -3,88 +3,101 @@ title: "Creating Return Orders"
 description: "Return & exchange flows, QC settings, refund modes, auto-assign, return policies"
 ---
 
+## What are the modes of Refund I can offer to my customer for return orders?
+
+* There are 4 modes of refund powered by Shiprocket:
+   * Manual Refund - Manually process the refund outside Shiprocket
+   * Shiprocket Wallet Credit - Credit the refund to the buyer's Shiprocket wallet
+   * Bank Transfer - Transfer the refund to the buyer's bank account
+   * Store Credit - Credit the refund to the buyer's store wallet
+
+---
+
 ## How to create a return order on Shiprocket?
 
 To create a return order:
 1. Go to Returns from the left menu
-2. Click on 'Create Return'
-3. Search for the original order (by Order ID or AWB)
-4. Select the items to return
-5. Select the return reason
-6. Enter buyer's pickup address (if different from delivery address)
-7. Select return courier
-8. Confirm and create the return
-
----
-
-## Can the buyer create a return request themselves?
-
-Yes, if self-service returns are enabled:
-1. Buyer visits the Post Ship tracking page
-2. Clicks on Return Request
-3. Selects items and reason
-4. Submits the request
-5. Seller can approve/reject from the Shiprocket panel
-
-Enable this in Settings >> Post Ship Tracking >> Returns.
-
----
-
-## How to create a reverse pickup order on Shiprocket?
-
-Reverse pickup is created automatically when a return order is processed. The system assigns a courier for pickup from the buyer's address. You can also manually create a reverse pickup from the Returns section.
-
----
-
-## What is the minimum order age for creating a return on Shiprocket?
-
-Returns can typically be created once an order is delivered. The return window (e.g., 7 days, 15 days) starts from the delivery date based on your configured return policy.
-
----
-
-## How to create a return for a partially delivered order?
-
-For partial deliveries:
-1. Create a return order for the delivered items only
-2. Select only the specific items being returned
-3. Process as a normal return order
-
----
-
-## How to bulk create return orders on Shiprocket?
-
-For bulk return creation:
-1. Go to Returns >> Bulk Upload
-2. Download the return order template
-3. Fill in the required details
-4. Upload the CSV
+2. Click 'Add Return Order'
+3. Fill in:
+   * Buyer Details (name, phone, address)
+   * Warehouse Details (return destination)
+   * Order Details (original order ID)
+   * Package Details (products, quantities)
+   * Return Reason
+4. Under Delivery, configure pickup details
 5. Review and confirm
+
+---
+
+## Can the buyer create a return request from the Post Ship page?
+
+Yes. If seller has enabled returns on their Post-Ship page:
+1. Buyer visits the tracking page
+2. Clicks 'Return Order'
+3. Selects items and reason
+4. Submits
+The seller receives the request in the Returns panel to approve/reject.
+
+---
+
+## How to create an exchange order on Shiprocket?
+
+* After creating an exchange order in the Returns Panel, go to the Orders page.
+* Find the exchange order and process it like a regular forward shipment.
+* The original return item will be picked up and the replacement will be shipped simultaneously or sequentially based on your configuration.
 
 ---
 
 ## What details are required to create a return order?
 
-Required details for return order creation:
-1. Original Order ID or AWB number
-2. Items to return (product name, quantity)
+Required for return order creation:
+1. Original Order ID or AWB
+2. Products to return (name, SKU, quantity)
 3. Return reason
 4. Buyer's current address for pickup
-5. Buyer's contact number
+5. Buyer's phone number
+6. Return destination (your warehouse)
 
 ---
 
-## How to add return remarks or notes when creating a return?
+## Can I create returns in bulk on Shiprocket?
 
-When creating a return order, there is a Remarks/Notes field where you can add special instructions for the courier or internal notes about the return.
+For bulk return creation:
+1. Go to Returns >> Bulk Upload
+2. Download the return order template
+3. Fill in all return order details
+4. Upload the completed CSV
+5. Review the import summary and confirm
 
 ---
 
-## Can I create a return for an RTO order on Shiprocket?
+## How to add a note or remark when creating a return?
 
-RTO orders are already returning to the seller. If you need to create a new forward shipment after an RTO, process a new order once the item is received back.
+When creating a return order, there is a Remarks/Notes field. Use this to add:
+* Internal notes about the return
+* Special instructions for the courier
+* Reason details for QC team
 
 ---
 
-## How to specify the pickup time slot for a return?
+## How to specify return pickup address?
 
-When creating a return, some courier partners support preferred pickup time slots (morning, afternoon, evening). Select the preferred slot in the return creation form if available.
+When creating a return order:
+1. The buyer's delivery address is pre-filled as the pickup address
+2. If the buyer is at a different address, update it in the Buyer Details section
+3. The pickup address must be the current location of the item to be returned
+
+---
+
+## Can I create a return for part of an order?
+
+Yes. When creating a return order, select only the specific items (and quantities) that need to be returned. Other items from the same order remain unaffected.
+
+---
+
+## How to create a return for a delivered COD order?
+
+For returning a delivered COD order:
+1. Create the return order normally from Returns section
+2. The reverse pickup is initiated
+3. Note that COD refund needs to be processed separately (via bank transfer or store credit) since the cash was already collected at delivery
