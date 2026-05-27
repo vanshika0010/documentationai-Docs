@@ -3,17 +3,178 @@ title: "RTO Score"
 description: "Add-on services to protect shipments, reduce RTO, and improve delivery and customer experience"
 ---
 
-## What is RTO Score in Shiprocket
+## What is RTO Score?
 
-RTO Score is an AI-powered risk assessment for each shipment that predicts the probability of return-to-origin. A high RTO score indicates the order is at risk of not being delivered. Use it to decide whether to send the order prepaid-only, add COD charges, or flag for manual review.
+RTO score feature is a data analytics product, powered by Risk AI built specifically for Shiprocket users. It provides risk score for every COD order that passes through the Shiprocket system. The score helps sellers identify high-risk orders and take preventive action before shipping.
 
 ---
 
-## How to use the RTO Score to reduce returns
+## How does RTO Score work?
 
-When an order has a high RTO score, you can:
+RTO Score analyzes each order using AI and returns:
+1. A risk score (typically Low/Medium/High)
+2. Risk factors contributing to the score
+3. Recommended actions for high-risk orders
 
-* Automatically block COD for that order.
-* Send an OTP verification to the buyer.
-* Add a COD confirmation step.
-* Proactively reach out to verify the delivery address.
+The score is displayed in the orders panel for each COD order.
+
+---
+
+## Where can I see the RTO Score for my orders?
+
+RTO Score is visible:
+1. In the Orders panel against each COD order
+2. In the order details page
+3. In the NDR panel for flagged orders
+
+---
+
+## How to use RTO Score to reduce returns?
+
+Using RTO Score to reduce returns:
+1. Check score before processing COD orders
+2. High-risk: Use Engage 360 Order Confirmation flow
+3. High-risk: Trigger address verification before shipping
+4. Very high-risk: Block COD and request prepaid payment
+5. Medium-risk: Use Delivery Boost for proactive NDR management
+
+---
+
+## What factors affect the RTO Score?
+
+RTO Score considers:
+1. Buyer's historical delivery/return behavior
+2. Pincode-level RTO rates
+3. Address quality
+4. Order time and value
+5. Product category risk profile
+6. First-time buyer vs repeat buyer
+
+---
+
+## Is RTO Score available for all orders?
+
+RTO Score is primarily designed for COD orders, which have significantly higher RTO rates. It may also be applied to prepaid orders but is most actionable for COD.
+
+---
+
+## Can I automatically block COD for high RTO Score orders?
+
+Yes. Using Shiprocket's rules engine, you can automatically:
+1. Block COD for orders with High RTO Score
+2. Route high-risk orders through order confirmation flow
+3. Apply additional verification steps for medium-risk orders
+
+Configure rules in Settings >> Courier Rules.
+
+---
+
+## How accurate is the RTO Score prediction?
+
+RTO Score is trained on millions of Shiprocket shipments and is continuously improving. Accuracy varies by category and geography but provides a reliable signal for risk assessment.
+
+---
+
+## How does RTO Score integrate with Engage 360?
+
+RTO Score integrates with Engage 360 to:
+1. Automatically trigger order confirmation for high-risk orders
+2. Send address verification for medium-risk orders
+3. Initiate COD-to-prepaid conversion for high-risk buyers
+
+Set up the integration in Engage 360 >> RTO Suite settings.
+
+---
+
+## What is the Low/Medium/High classification in RTO Score?
+
+RTO Score classification:
+* Low Risk: Order very likely to be delivered (proceed normally)
+* Medium Risk: Some risk of RTO (trigger confirmation/verification)
+* High Risk: High probability of RTO (block COD or mandatory verification)
+
+---
+
+## Can I see historical RTO Score accuracy for my account?
+
+Shiprocket provides analytics on RTO Score performance for your account showing predicted vs actual delivery outcomes. Check the RTO Score section in Value Added Services for performance analytics.
+
+---
+
+## Is RTO Score available via API?
+
+Yes. RTO Score is available via the Shiprocket Sense API for sellers who want to integrate risk scoring into their own checkout or order management systems.
+
+---
+
+## How to enable RTO Score on Shiprocket?
+
+RTO Score may be automatically enabled for eligible accounts. Check Value Added Services >> RTO Score section or contact your Shiprocket account manager to enable it.
+
+---
+
+## What is the pricing for RTO Score?
+
+RTO Score pricing depends on your plan and usage. Check Value Added Services >> RTO Score or contact your account manager for current pricing.
+
+---
+
+## How does RTO Score help with COD order management?
+
+RTO Score helps COD management by:
+1. Identifying fake/fraudulent COD orders before shipping
+2. Reducing expensive failed deliveries and RTOs
+3. Enabling targeted order confirmation for risky orders
+4. Data-driven decisions on COD availability per buyer segment
+
+---
+
+## Can I dispute an RTO Score for a specific order?
+
+RTO Score is a prediction tool - it provides guidance but the final decision is the seller's. If you believe an order should be processed despite a high score, you can proceed at your discretion.
+
+---
+
+## Does RTO Score improve over time for my account?
+
+Yes. RTO Score models improve as more data from your account accumulates. The seller-specific model gets more accurate as it learns from your buyers' actual delivery outcomes.
+
+---
+
+## What is the RTO Score for first-time buyers?
+
+For first-time buyers (no history on Shiprocket), RTO Score uses:
+1. Pincode-level historical data
+2. Order characteristics
+3. Address quality
+4. Network-wide similar buyer profiles
+
+Prediction accuracy for first-time buyers improves as more network data accumulates.
+
+---
+
+## How to train my team on using RTO Score?
+
+Training your team on RTO Score:
+1. Ensure team understands Low/Medium/High classifications
+2. Define SOPs for each risk level (confirm, verify, block)
+3. Set up automated rules to reduce manual decisions
+4. Monitor performance weekly and adjust rules as needed
+
+---
+
+## Can RTO Score help identify specific buyer segments to block?
+
+Yes. Using RTO Score history, you can identify buyer phone numbers or pincodes that consistently show high-risk patterns and configure COD blocking or additional verification for those segments.
+
+---
+
+## Does RTO Score work with international orders?
+
+RTO Score is designed for domestic Indian shipments. International shipments have different risk profiles and are handled by SRX (ShiprocketX) tools.
+
+---
+
+## How to report a wrong RTO Score prediction?
+
+For systematic accuracy issues with RTO Score, contact your Shiprocket account manager or raise a ticket. Feedback helps improve the model over time.
