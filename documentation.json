@@ -98,10 +98,6 @@
             "path": "sop/pickup"
           },
           {
-            "title": "Pickups by Shiprocket",
-            "path": "sop/shiprocket-pickups"
-          },
-          {
             "title": "Plans & Billing",
             "path": "sop/plans-billing"
           },
