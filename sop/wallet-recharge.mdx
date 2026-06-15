@@ -7,7 +7,8 @@ description: "Wallet recharge queries, recharge errors, auto wallet transfer, co
 
 ### Wallet Basics
 
-- **Minimum recharge amount:** ₹500 (effective 14th July 2022; previously ₹200).
+- **Minimum recharge amount:** ₹500
+- **Maximum recharge amount (per transaction):** ₹50,00,000
 - Payment options accepted: Credit/Debit card, Net Banking, UPI, 3rd party wallets, Smart Collect.
 - Coupon value in wallet is **not transferred** to bank — only wallet amount is transferred.
 
@@ -70,49 +71,35 @@ Create an FCR ticket.
 
 ## SOP — Recharge Error / Issue
 
-### System Check
-
-1. Copy link from SPARK and paste in a new tab.
-2. Confirm when the seller recharged and the amount.
-3. Check the payment gateway (Razorpay / Paytm) for transaction details.
-
-### Scenario 1 — No payment status visible on Razorpay
-
-> I would like to request you to share the screenshot of the transaction ID on email. Once shared, please allow a maximum of two days for an update.
-
-### Scenario 2 — Seller has shared the transaction ID screenshot
-
-> I am escalating your issue. Please wait 1–2 working days.
+Ask the seller to recharge from their SR panel by going to **"SR Wallet"**. In case of an error ask for the screenshot and assign to the **"Customer Support tech desk channel"**.
 
 ---
 
 ## SOP — Wallet Balance Transfer to Bank
 
-### Pre-Checks
+### Process Path
 
-Verify before raising to Finance Desk:
-- No open shipments.
-- Account status is Active.
-- Bank / KYC details are updated.
-- COD is unblocked.
-- Wallet balance is positive.
+Sellers should navigate to: **Seller Panel → Help & Support → Create Ticket → Finance → Transfer Wallet Amount into My Bank Account.**
 
-If all checks pass → Raise to **Customer Support Finance Desk**. TAT: 1–2 working days.
+### Advisor Instructions
 
-If seller has coupon value in wallet:
-> Sir / Ma'am, if you want to transfer your wallet amount to bank account, the coupon value will not be included in the transfer — only the wallet amount will be transferred.
+Guide the seller and create an FCR ticket.
 
-### Nugget Ticket (NFCR)
+### Mandatory Checks (ICRM/ICRM Plugin)
 
-| Field | Value |
-|-------|-------|
-| Channel | Customer Support Finance Desk |
-| Agent Assign | Priya / Manisha |
-| Status | Open |
-| Subject | Wallet Balance Transfer |
-| FCR | NFCR |
-| SR Issue Category | Wallet Balance |
-| Sub Category | Account to Account Wallet Transfer |
+Before proceeding, ensure the following criteria are met:
+
+- No open shipments
+- Account status is Active
+- Bank and KYC details are updated
+- COD is unblocked
+- Wallet balance is positive
+- Reason for transfer is captured
+
+**Note:** If the seller is eligible but cannot raise the transfer request from their panel, please transfer the live call to the **"FOPS Desk Intra Transfer IH CC"** Queue.
+
+Issue category: Wallet_Balance
+Sub issue category: Account to Account Wallet Transfer
 
 ---
 

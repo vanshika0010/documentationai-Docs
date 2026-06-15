@@ -41,6 +41,9 @@ Upload selfie and complete via GSTIN OTP verification, or manually upload:
 - A ₹1 transaction is credited to verify the account.
 - Maximum **3 attempts** via Penny Drop.
 - Available on both web and mobile app.
+- Seller can update bank details via **Settings > Seller Remittance > Bank Details**.
+- KYC name and bank account beneficiary name should be the same.
+- If there is a mismatch, seller must update KYC first or provide a bank account with a matching beneficiary name.
 
 **Path:** Settings > Company > Accounting and Bank Details
 
@@ -89,11 +92,17 @@ If still unverified → assign to Compliance Query. TAT: 1–2 working days.
 - Company URL / Website
 - Product Category
 
-**Panel path:** Settings > Courier > Courier Selection > Deactivated > Click Activate
+Check KYC status first. KYC must be approved before Bluedart activation can start.
 
-If Bluedart is not activated within **6 business days** after KYC upload — assign to Compliance Queries — Ravi Jangra.
+After KYC approval, Bluedart activation takes **6–7 business days**.
 
-_Error screenshot is mandatory before assigning ticket to Compliance Queries._
+**Panel path:** Settings > Courier & Shipping > Courier Selection
+
+If KYC is approved and Bluedart is still not activated after **7 days** — assign to **Customer Support tech desk** channel.
+
+For compliance-related queries such as documents or verification — assign to **Compliance Queries** channel.
+
+> "I can see your KYC is approved. BlueDart activation takes 6-7 business days after KYC approval. Please wait for the activation to be completed automatically."
 
 ---
 
@@ -163,7 +172,11 @@ Ask seller to share a screenshot of the error on email and create a ticket in yo
 
 ## SOP — Account Disabled
 
-If seller is unable to log in or create an order as account is disabled — ask for screenshot and assign to FOPS. TAT: 1–2 working days.
+Request a screenshot from the seller that clearly shows the disabled or blocked message.
+
+Raise an NFCR ticket to **FOPS** channel and keep the case in follow-up until the screenshot is received and shared.
+
+Resolution timeline: **24–48 hours**.
 
 ### Nugget Ticket
 
@@ -171,22 +184,21 @@ If seller is unable to log in or create an order as account is disabled — ask 
 |-------|-------|
 | Channel | FOPS |
 | Agent Assign | NA |
-| Status | Open |
+| Status | Awaiting Customer Response |
 | Subject | Account Disable |
 | FCR | NFCR |
-| SR Issue Category | Issues with Shiprocket Panel |
+| SR Issue Category | Issues with ShipRocket Panel |
 | Sub Category | Account Blocked |
 
 ---
 
 ## SOP — Bank Unfreeze (Change Bank Details)
 
-If seller wants to change bank details:
+If the seller provides the reason for unfreeze and the name matches in both KYC and bank details, assign the case to **Compliance Queries** channel.
 
-1. Ask the reason from the seller.
-2. Inform seller: name on KYC and bank details must be the same.
-3. Assign to Compliance Query — Ravi Jangra. TAT: 1–2 working days.
-4. Inform seller to wait for bank details to be unfrozen; then update from panel.
+TAT: **1–2 working days**.
+
+Advise the seller to wait for unfreeze confirmation first, then update bank details from panel.
 
 ### Nugget Ticket
 
@@ -204,21 +216,25 @@ If seller wants to change bank details:
 
 ## SOP — Email ID Change
 
-1. Check if the new email ID is already registered in SR.
-2. If already registered — soft denial.
-3. If not registered — raise request to Finance Desk. TAT: 1–2 working days.
+Seller can change the email ID if the new email is not already registered with another account.
+
+**Path:** Login > Profile > Edit Details > Update Email/Phone > Validate with OTP
+
+If an error occurs during the update, create a ticket to **Customer Support tech desk**.
+
+> "You can update your email by going to Login > Profile > Edit Details > Update Email/Phone. You will need to validate the new email with an OTP. Please ensure the new email is not already registered with another Shiprocket account."
 
 ### Nugget Ticket (NFCR)
 
 | Field | Value |
 |-------|-------|
-| Channel | Customer Support Finance Desk |
-| Agent Assign | Priya / Manisha |
+| Channel | Customer Support tech desk |
+| Agent Assign | NA |
 | Status | Open |
 | Subject | Change Email ID |
 | FCR | NFCR |
-| SR Issue Category | Profile Related |
-| Sub Category | Update Company Name / Profile Details |
+| SR Issue Category | Profile_Related |
+| Sub Category | Update company name/Profile details |
 
 ---
 

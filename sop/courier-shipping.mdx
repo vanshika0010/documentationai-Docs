@@ -48,9 +48,11 @@ Pickups are **auto-scheduled** — seller does not need to generate pickup manua
 
 ### Multi-Packet Shipment (MPS)
 
+Multi-Packet shipping is designed for sending multiple packages to a single recipient at one location.
+
 - Available for **Delhivery only**.
 
-- Manual orders only — does not work for channel integration orders.
+- Manual orders only — does not support orders fetched via channel/API integrations.
 
 - Max: 20 packets (1 Master + 19 Child AWBs).
 
@@ -58,11 +60,48 @@ Pickups are **auto-scheduled** — seller does not need to generate pickup manua
 
 - Minimum chargeable weight: 10 kg.
 
-- Pickup: Next day only.
+- Pickup: Scheduled next day (no cut-off time applicable).
 
-**Activation:** Contact support (9711941080) or KAM. After activation, seller can enter package count > 1 during order creation.
+**Key Details:**
 
-**MPS Training:** Advisors must schedule training using the booking link at [Calendly](https://calendly.com/d/cs9c-7kk-m2s). After training, activation request is raised by the trainer to LOPS.
+- **1 Master AWB** → Used for tracking & billing
+
+- **Child AWBs** → Used on individual boxes (labels)
+
+- Manifest & Invoice show Master AWB + package count
+
+- Labels show Child AWB (paste on each box)
+
+**Tracking & Labels:**
+
+- Track via Master AWB
+
+- Child AWBs generated per box
+
+- Example: 3 boxes → 3 labels (1 label: Master AWB, others: Child + Master AWB)
+
+**MPS Training — New Process:**
+
+Training registration form: [Calendly](https://calendly.com/d/cs9c-7kk-m2s)
+
+Agent Action:
+
+1. Fill form → View available slots
+
+2. Share training slots/timing with seller
+
+Training link & updates sent directly to seller via email.
+
+**Activation:** After training completion → Trainer raises activation request to LOPS. MPS Approval confirmed within 2 working days after training.
+
+**Important:** While filling the form, the seller should agree on the details before completing the form, otherwise give a soft denial.
+
+**Nugget Ticket:**
+
+| Field             | Value           |
+| ----------------- | --------------- |
+| SR Issue Category | Other           |
+| Sub Category      | Training Needed |
 
 ### Split Shipment
 
@@ -104,9 +143,13 @@ Works for **manual orders only**.
 
 For queries on Shiprocket Quick — arrange callback from sales team. SPOC: Dipu Kumar Mandal. Callback TAT: 30 minutes.
 
-<Iframe uid="29cdd0e1-f13c-4151-8fc8-f2d55924457c" src="https://docs.google.com/spreadsheets/d/1SWoLoDrWIRt-reqyvBDU-S5Aa6rTS8Xk4DizYyGfO28/preview" title="Embedded content" width="560" height="700" allow-full-screen="true" frame-border="0" loading="lazy" display-mode="fixed" />
+<Iframe uid="29cdd0e1-f13c-4151-8fc8-f2d55924457c" src="https://docs.google.com/spreadsheets/d/1SWoLoDrWIRt-reqyvBDU-S5Aa6rTS8Xk4DizYyGfO28/preview" title="Embedded content" width="672" height="840" allow-full-screen="true" frame-border="0" loading="lazy" style="width: 672px; height: auto; cursor: pointer;" display-mode="fixed" />
 
 [Open Sheet in New Tab](https://docs.google.com/spreadsheets/d/1SWoLoDrWIRt-reqyvBDU-S5Aa6rTS8Xk4DizYyGfO28/edit)
+
+<Iframe uid="8607405b-d722-4cea-974d-cca79421ab1c" src="https://docs.google.com/spreadsheets/d/1PPy9GnNDk7-KpUdMZRFBwNKDEpubD98gHwzT9SvficI/preview" title="Embedded Google Sheet" height="600" allow-full-screen="true" frame-border="0" loading="lazy" display-mode="auto-resize" />
+
+[Open Sheet in New Tab](https://docs.google.com/spreadsheets/d/1PPy9GnNDk7-KpUdMZRFBwNKDEpubD98gHwzT9SvficI/edit?gid=0#gid=0)
 
 ### Same-Day Delivery (SDD) and Next-Day Delivery (NDD)
 
@@ -156,7 +199,21 @@ Available for selected sellers with minimum daily shipment volume in serviceable
 
 ### Rocket Express Services
 
-Shiprocket's own pickup fleet for SMB sellers (**Delhi only**). FE scans shipment on spot — status changes to "Picked Up" immediately. Shipments are then handed over to the assigned courier at the pickup hub.
+Under the new process, sellers will continue to create orders as usual. Pickup will be done by Rocket Express (Shiprocket's in-house fleet), where the Field Executive (FE) will scan the shipment on the spot and the status will update to "Picked Up."
+
+The shipment will then be handed over to the originally assigned courier from the hub.
+
+**Key Details:**
+
+- Available for **SMB sellers in Delhi NCR & Mumbai**.
+
+- FE verification: Sellers can verify the FE via AWB details on the FE app.
+
+- Seller signature required on the manifest as proof.
+
+**Enable/Disable:** ICRM Plugin → Company → Company ID → Overview → Quick Action → Toggle Rocket Express.
+
+**Note:** Enable/Disable case of Rocket Express is an **FCR Case**.
 
 ### Logistics Transporter IDs (for E-Way Bill)
 
@@ -241,6 +298,49 @@ If seller asks why Delhivery price is high:
 Advisors can suggest alternate couriers: Bluedart, Ekart, DTDC, Kerry Logistics, Amazon Shipping, Smart R, Loadshare.
 
 *Do not suggest plan upgrades. Do not say you are raising a complaint — say you have captured feedback.*
+
+## SOP — Prohibited & Dangerous Goods
+
+Given below is an indicative list of all dangerous or prohibited products you cannot ship via Shiprocket.
+
+### Dangerous Goods
+
+a. Oil-based paint and thinners (flammable liquids)
+b. Industrial solvents
+c. Insecticides, garden chemicals (fertilizers, poisons)
+d. Lithium batteries
+e. Magnetized materials
+f. Machinery (chain saws, outboard engines containing fuel or that have contained fuel)
+g. Fuel for camp stoves, lanterns, torches or heating elements
+h. Automobile batteries
+i. Infectious substances
+j. Any compound, liquid or gas that has toxic characteristics
+k. Bleach
+l. Flammable adhesives
+m. Arms and ammunition
+n. Dry ice (Carbon Dioxide, Solid)
+o. Any Aerosols, liquids and/or powders or any other flammable substances classified as Dangerous Goods for transport by Air
+
+### Restricted Items
+
+a. Precious stones, gems and jewelry
+b. Uncrossed (bearer) drafts / cheque, currency and coins
+c. Poison
+d. Firearms, explosives and military equipment
+e. Hazardous and radioactive material
+f. Foodstuff and liquor
+g. Any pornographic material
+h. Hazardous chemical items
+
+### Consequences
+
+In case a user ships the above-mentioned products via Shiprocket:
+
+1. The user may have to pay hefty penalties.
+
+2. No member of Shiprocket will be responsible and liable for any loss, damage, theft or misappropriation of such products.
+
+**FCR case** — Inform seller and resolve.
 
 ---
 

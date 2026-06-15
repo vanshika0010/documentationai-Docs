@@ -65,27 +65,41 @@ When QC is enabled, the courier executive checks the returned product against yo
 
 Copy link from SPARK / Click on Internal ICRM > Click on Seller Info.
 
-### Method 1 — From Delivered Orders
+### Ways to Create Return
 
-1. Go to the **Orders** tab in the left menu.
-2. Click **All Orders**.
-3. For any shipment marked as **Delivered**, click **Create Return**.
-4. A new page opens with prefilled details.
-5. Buyer's address becomes pickup address; seller's pickup address becomes destination.
-6. Change drop address or add a new one as needed.
+1. From Delivered Orders
+2. Manual Return Order
 
-### Method 2 — Manual Return Order
+### Method 1 — From Delivered Orders (Steps)
 
-1. Go to the **Returns** tab in the left panel.
-2. Click **Add Return**.
-3. Fill in:
-   - **Pickup POC Details** — buyer's address and contact.
-   - **Order Details** — return order ID (or auto-generate), creation date, channel name.
-   - **Product Details** — SKU, quantity, price (mandatory); brand, color, HSN, discount (recommended).
-   - **Return Reason** — select reason, upload pictures, add comment.
-   - **Delivery Address** — your warehouse / office.
-   - **Weight and Dimensions** — based on return product.
-   - **Payment Details** — prepaid by default.
+1. Go to **Orders > All Orders**.
+2. Select **Delivered** shipment > Click **Create Return**.
+3. Click on **Returns**.
+4. Prefilled order details will open.
+5. Buyer address → Pickup address (default).
+6. Seller address → Delivery address (default).
+7. Option to change/add drop address if required.
+
+### Method 2 — Manual Return Order (Steps)
+
+1. Go to **Returns** tab.
+2. Click on **Add Return**.
+3. Fill required details (order, customer, pickup & delivery details, product info).
+
+### Required Details
+
+- **Pickup POC:** Buyer name, contact, complete address (with landmark)
+- **Order Details:** Return ID / Generate, date, channel
+- **Product Details:** SKU, quantity, price (mandatory)
+- **Return Reason:** Select reason + upload images (if any)
+- **Delivery Address:** Warehouse/store address
+- **Weight & Dimensions:** As per product
+- **Payment Mode:** Prepaid (default)
+
+**Important:**
+- No need to print label/manifest (FE will carry)
+- After creation → Go to Returns tab → Initiate Return
+- If pickup delayed → Raise issue to FM LOPS
 
 ---
 
@@ -109,25 +123,35 @@ If return pickup is delayed — raise a ticket to FM LOPS.
 
 ## SOP — Return Shipment Delivery (In TAT)
 
-> Sir / Ma'am, I would like to inform you that return shipment delivery does take 20 working days, but we will try to deliver your shipment within 12–15 working days. I request you to please wait as per the timeline.
+> As per the standard process, the delivery timeline for return shipments is up to 20 days from the picked up date. We will make efforts to expedite the process; however, we request you to kindly allow the stipulated timeline for completion.
+
+Issue category: Reverse Shipment/Shipment Delivery Delay  
+Sub category: Reverse - Delivery TAT Required / Delivery TAT required
+
+Mark as **FCR Resolved**.
 
 ### Nugget Ticket (FCR)
 
 | Field | Value |
 |-------|-------|
 | Channel | Customer Support Call Center |
-| Agent Assign | Pratibha |
+| Agent Assign | Own Name |
 | Status | Resolved |
 | Subject | Shipment Delivery Delay Reverse |
 | FCR | Yes |
-| SR Issue Category | Shipment Delivery |
-| Sub Category | Delay in Delivery RTO / Reverse |
+| SR Issue Category | Reverse Shipment/Shipment Delivery Delay |
+| Sub Category | Reverse - Delivery TAT Required |
 
 ---
 
 ## SOP — Return Shipment Delivery (Out of TAT)
 
-> Sir / Ma'am, I apologize for the inconvenience. I am raising a complaint and request you to please wait 1–2 working days for further updates.
+The timeline for the reverse/rto delivery is 20 days from the picked date/rto initiated date. If breached then assign the case to the LOPS team. It's an NFCR case.
+
+Timeline: 1-2 working days for an update from the team.
+
+Issue category: Reverse Shipment/Shipment Delivery Delay  
+Sub Category: Delay in Shipment Delivery / Reverse - Delivery Delay
 
 ### Nugget Ticket (NFCR)
 
@@ -138,8 +162,34 @@ If return pickup is delayed — raise a ticket to FM LOPS.
 | Status | Open |
 | Subject | Shipment Delivery Delay Reverse |
 | FCR | NFCR |
-| SR Issue Category | Shipment Delivery |
-| Sub Category | Delay in Delivery RTO / Reverse |
+| SR Issue Category | Reverse Shipment/Shipment Delivery Delay |
+| Sub Category | Delay in Shipment Delivery / Reverse - Delivery Delay |
+| TAT | 1-2 working days |
+
+---
+
+## SOP — Quality Check Activation
+
+We will assign the case to the LOPS reverse channel for reverse courier Quality Check activation. Further process and activation will be handled by the LOPS team.
+
+Issue category: Others  
+Subcategory: Courier activation  
+Channel: LOPS Shipment Reverse
+
+Timeline is 2 working days for an update once we assign the case to the reverse courier team.
+
+### Nugget Ticket (NFCR)
+
+| Field | Value |
+|-------|-------|
+| Channel | LOPS Shipment Reverse |
+| Agent Assign | Auto Assign |
+| Status | Open |
+| Subject | Courier QC Activation |
+| FCR | NFCR |
+| SR Issue Category | Others |
+| Sub Category | Courier activation |
+| TAT | 2 working days |
 
 ---
 

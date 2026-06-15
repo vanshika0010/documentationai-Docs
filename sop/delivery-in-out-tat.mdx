@@ -1,15 +1,19 @@
 ---
-title: "Delivery — In TAT and Out of TAT"
-description: "How to handle delivery queries within or beyond the estimated delivery date, tracking mismatches, and untraceable shipments"
+title: Delivery — In TAT and Out of TAT
+description: >-
+  How to handle delivery queries within or beyond the estimated delivery date,
+  tracking mismatches, and untraceable shipments
 ---
-
 ## Product Info
 
 ### Key Terms
 
 - **EDD (Estimated Delivery Date):** The date by which the shipment is expected to be delivered. Visible on the panel only if pickup has been scheduled.
+
 - **Updated EDD:** A revised delivery estimate provided by the courier if the original EDD is breached.
+
 - **Suppress EDD:** A flag in ICRM — if suppressed, the EDD shown to the seller may not be accurate.
+
 - **Courier Under Stress:** A pincode marked as "Stressed" in the courier name during order creation. Deliveries to these pincodes may be impacted.
 
 ### Delivery Escalation — Seller Panel
@@ -24,26 +28,47 @@ Or via:
 
 ### Checking Order Statuses
 
-| Status | Filter Path |
-|---|---|
-| Delayed | Orders > In-Transit tab > Select Statuses > Delayed |
-| On Hold | Orders > In-Transit tab > Select Statuses > On Hold |
-| Out for Delivery | Orders > In-Transit tab > Select Statuses > Out for Delivery |
+| Status                  | Filter Path                                                         |
+| ----------------------- | ------------------------------------------------------------------- |
+| Delayed                 | Orders > In-Transit tab > Select Statuses > Delayed                 |
+| On Hold                 | Orders > In-Transit tab > Select Statuses > On Hold                 |
+| Out for Delivery        | Orders > In-Transit tab > Select Statuses > Out for Delivery        |
 | Reached Destination Hub | Orders > In-Transit tab > Select Statuses > Reached Destination Hub |
-| Undelivered | Orders > In-Transit tab > Select Statuses > Undelivered |
-| Delivered | Orders > Delivered tab |
+| Undelivered             | Orders > In-Transit tab > Select Statuses > Undelivered             |
+| Delivered               | Orders > Delivered tab                                              |
 
 ---
 
 ## SOP — Delivery In TAT and Out of TAT
 
+### Forward Journey — Status Timeline Rules
+
+| Current Status | Expected Next Status | Timeline Rule                                                                  | Case Type | NFCR Sub-Category |
+| -------------- | -------------------- | ------------------------------------------------------------------------------ | --------- | ----------------- |
+| Picked Up      | In Transit           | Must update within 1 day from pickup                                           | NFCR      | Miscellaneous     |
+| In Transit     | RAD                  | Location changes within 2 days and EDD not breached                            | FCR       | Delivery TAT reqd |
+| In Transit     | RAD                  | Stuck at same location > 2 days (2+), EDD not breached                         | NFCR      | Miscellaneous     |
+| In Transit     | RAD                  | Stuck at same location > 2 days (2+), EDD breached                             | NFCR      | Delivery delay    |
+| RAD            | OFD                  | Delivery attempt within 1 day, EDD not breached and 1 day not crossed from RAD | FCR       | Delivery TAT reqd |
+| RAD            | OFD                  | 1+ days crossed from RAD, EDD not breached                                     | NFCR      | Miscellaneous     |
+| RAD            | OFD                  | EDD breached                                                                   | NFCR      | Delay in delivery |
+
+> **Important:** If the shipment is delayed by 5+ days from EDD, refund the freight charges if the seller is angry or giving a threat.
+
+> **RTO/Reverse Delivery Timeline:** 20 days from the return pickup/RTO initiation date. If exceeded, select the relevant issue category — use "Shipment RTO" for RTO shipments and "Reverse Shipment" for reverse shipments.
+
 ### System Check
 
 1. Copy link from SPARK and paste in a new tab / Click on Internal ICRM.
+
 2. View Details > Shipment section.
+
 3. Check **Suppress EDD**.
+
 4. Check **SR Tracking**.
+
 5. Check **First EDD** and **Updated EDD**.
+
 6. Check **Courier Remarks**.
 
 ### Delivery In-TAT
@@ -56,115 +81,118 @@ If shipment is delayed within TAT — advise seller to escalate from panel:
 
 #### Nugget Ticket (FCR)
 
-| Field | Value |
-|-------|-------|
-| Channel | Customer Support Call Center |
-| Agent Assign | Own Name |
-| Status | Resolved |
-| Subject | Delivery TAT Required |
-| FCR | Yes |
-| SR Issue Category | Shipment Delivery Delay |
-| Sub Category | Delivery TAT Required |
+| Field             | Value                        |
+| ----------------- | ---------------------------- |
+| Channel           | Customer Support Call Center |
+| Agent Assign      | Own Name                     |
+| Status            | Resolved                     |
+| Subject           | Delivery TAT Required        |
+| FCR               | Yes                          |
+| SR Issue Category | Shipment Delivery Delay      |
+| Sub Category      | Delivery TAT Required        |
 
 ### Delivery Out-TAT
 
-| Scenario | Resolution |
-|---|---|
-| Updated EDD available and tracking updated | Ask seller to wait till new EDD; create FCR ticket |
-| Updated EDD available but tracking not updated | Create NFCR ticket to LOPS; TAT 1–2 working days |
-| Updated EDD not available but tracking updated | Create NFCR ticket to LOPS; TAT 1–2 working days |
+| Scenario                                       | Resolution                                         |
+| ---------------------------------------------- | -------------------------------------------------- |
+| Updated EDD available and tracking updated     | Ask seller to wait till new EDD; create FCR ticket |
+| Updated EDD available but tracking not updated | Create NFCR ticket to LOPS; TAT 1–2 working days   |
+| Updated EDD not available but tracking updated | Create NFCR ticket to LOPS; TAT 1–2 working days   |
 
 #### Nugget Ticket (FCR)
 
-| Field | Value |
-|-------|-------|
-| Channel | Customer Support Call Center |
-| Agent Assign | Own Name |
-| Status | Resolved |
-| Subject | Delay in Shipment Delivery |
-| FCR | Yes |
-| SR Issue Category | Shipment Delivery Delay |
-| Sub Category | Delay in Shipment Delivery–Forward |
+| Field             | Value                              |
+| ----------------- | ---------------------------------- |
+| Channel           | Customer Support Call Center       |
+| Agent Assign      | Own Name                           |
+| Status            | Resolved                           |
+| Subject           | Delay in Shipment Delivery         |
+| FCR               | Yes                                |
+| SR Issue Category | Shipment Delivery Delay            |
+| Sub Category      | Delay in Shipment Delivery–Forward |
 
 #### Nugget Ticket (NFCR)
 
-| Field | Value |
-|-------|-------|
-| Channel | LOPS Shipment Delay Delivery |
-| Agent Assign | Auto Assign |
-| Status | Open |
-| Subject | Delay in Shipment Delivery |
-| FCR | NFCR |
-| SR Issue Category | Shipment Delivery Delay |
-| Sub Category | Delay in Shipment Delivery–Forward |
+| Field             | Value                              |
+| ----------------- | ---------------------------------- |
+| Channel           | LOPS Shipment Delay Delivery       |
+| Agent Assign      | Auto Assign                        |
+| Status            | Open                               |
+| Subject           | Delay in Shipment Delivery         |
+| FCR               | NFCR                               |
+| SR Issue Category | Shipment Delivery Delay            |
+| Sub Category      | Delay in Shipment Delivery–Forward |
 
 ### Tracking Status Mismatch
 
 If the delivery location differs from the tracking update:
 
 1. Confirm with seller — does he want a delivery attempt or RTO?
+
 2. Assign to LOPS per seller VOC.
+
 3. TAT: 1–2 working days.
 
 #### Nugget Ticket (NFCR)
 
-| Field | Value |
-|-------|-------|
-| Channel | LOPS Shipment Delay Delivery |
-| Agent Assign | As per courier |
-| Status | Open |
-| Subject | Tracking Status Mismatch |
-| FCR | NFCR |
-| SR Issue Category | Shipment Delivery Delay |
-| Sub Category | Tracking Status Mismatch |
+| Field             | Value                        |
+| ----------------- | ---------------------------- |
+| Channel           | LOPS Shipment Delay Delivery |
+| Agent Assign      | As per courier               |
+| Status            | Open                         |
+| Subject           | Tracking Status Mismatch     |
+| FCR               | NFCR                         |
+| SR Issue Category | Shipment Delivery Delay      |
+| Sub Category      | Tracking Status Mismatch     |
 
 ### Shipment Status Untraceable
 
-| Shipment Type | TAT |
-|---|---|
-| Forward Delivery | 7 working days |
-| RTO Delivery | 1–2 working days |
+| Shipment Type    | TAT              |
+| ---------------- | ---------------- |
+| Forward Delivery | 7 working days   |
+| RTO Delivery     | 1–2 working days |
 
 #### Nugget Ticket — Forward Shipment (NFCR)
 
-| Field | Value |
-|-------|-------|
-| Channel | LOPS Shipment Delay Delivery |
-| Agent Assign | Auto Assign |
-| Status | Open |
-| Subject | Delay in Shipment Delivery |
-| FCR | NFCR |
-| SR Issue Category | Shipment Delivery Delay |
-| Sub Category | Delay in Shipment Delivery–Forward |
+| Field             | Value                              |
+| ----------------- | ---------------------------------- |
+| Channel           | LOPS Shipment Delay Delivery       |
+| Agent Assign      | Auto Assign                        |
+| Status            | Open                               |
+| Subject           | Delay in Shipment Delivery         |
+| FCR               | NFCR                               |
+| SR Issue Category | Shipment Delivery Delay            |
+| Sub Category      | Delay in Shipment Delivery–Forward |
 
 #### Nugget Ticket — RTO Shipment (NFCR)
 
-| Field | Value |
-|-------|-------|
-| Channel | Lops Shipment Delivery |
-| Agent Assign | Auto Assign |
-| Status | Open |
-| Subject | Delay in Shipment Delivery–RTO |
-| FCR | NFCR |
-| SR Issue Category | Shipment Delivery Delay |
-| Sub Category | Delay in Shipment Delivery–RTO/Reverse |
+| Field             | Value                                  |
+| ----------------- | -------------------------------------- |
+| Channel           | Lops Shipment Delivery                 |
+| Agent Assign      | Auto Assign                            |
+| Status            | Open                                   |
+| Subject           | Delay in Shipment Delivery–RTO         |
+| FCR               | NFCR                                   |
+| SR Issue Category | Shipment Delivery Delay                |
+| Sub Category      | Delay in Shipment Delivery–RTO/Reverse |
 
 ### Courier Under Stress
 
 Script to use:
+
 > As we can see, the delivery pincode is under stress for this courier and deliveries would be impacted here. The same was mentioned in the courier name while placing the order. We show stressed pincodes by mentioning "Stressed" in the courier name — you can avoid such couriers for a smoother delivery experience.
 
 #### Nugget Ticket (FCR)
 
-| Field | Value |
-|-------|-------|
-| Channel | Customer Support Call Center |
-| Agent Assign | Own Name |
-| Status | Resolved |
-| Subject | Delivery TAT Required |
-| FCR | Yes |
-| SR Issue Category | Shipment Delivery Delay |
-| Sub Category | Delivery TAT Required |
+| Field             | Value                        |
+| ----------------- | ---------------------------- |
+| Channel           | Customer Support Call Center |
+| Agent Assign      | Own Name                     |
+| Status            | Resolved                     |
+| Subject           | Delivery TAT Required        |
+| FCR               | Yes                          |
+| SR Issue Category | Shipment Delivery Delay      |
+| Sub Category      | Delivery TAT Required        |
 
 ---
 
@@ -173,18 +201,23 @@ Script to use:
 ### Track a Shipment
 
 1. Go to **Orders** from the left menu.
+
 2. Use the search bar at the top to search by AWB number.
+
 3. Check the current status under the **Status** column.
 
 Or:
 
 1. Go to **Orders > In-Transit tab**.
+
 2. Click the **Track** button next to any order.
 
 ### Check EDD for a Shipment
 
 1. Go to **Orders** from the left menu.
+
 2. Search by AWB or Order ID.
+
 3. EDD is shown under the **Status** column.
 
 > EDD is only visible if pickup has been scheduled.
@@ -192,29 +225,25 @@ Or:
 ### Raise a Delivery Delay Complaint
 
 1. Go to **Orders** from the left menu.
+
 2. Search for the AWB.
+
 3. Click the **Create Ticket** button.
+
 4. Enter your delivery delay remarks in the box.
+
 5. Click **Create Ticket** to submit.
 
 > This option is only available if the order has crossed the EDD.
 
-### Raise a Delivery Dispute (DNR / Wrong / Damaged / Empty)
-
-1. Go to **Orders** from the left menu.
-2. Search for the AWB.
-3. Click **More (...) > Create Ticket**.
-4. Select **Order not delivered** OR **Wrong/Damaged/Partial/Empty Package Delivered**.
-5. Fill in required details and upload proof images/videos.
-6. Click **Submit**.
-
-> Disputes must be raised **within 72 hours** of delivery. A dispute can be raised a maximum of two times. Resolution TAT: 10 business days.
-
 ### Raise RTO Delay Escalation
 
 1. Go to **Orders > RTO tab**.
+
 2. Find the shipment with breached RTO EDD.
+
 3. Click **Create Ticket** (appears when RTO EDD has passed).
+
 4. Enter remarks and click **Create Ticket**.
 
 > Re-escalation allowed within 48 hours of escalation closure.
@@ -224,6 +253,7 @@ Or:
 POD is available for: Delhivery, Bluedart, Shadowfax, Ekart, XpressBees, and DTDC — **forward delivery only**.
 
 1. Go to **Orders > Delivered tab**.
+
 2. Click **More (...) > Download POD**.
 
 > POD is available **24 hours after delivery**.
@@ -235,11 +265,36 @@ POD is available for: Delhivery, Bluedart, Shadowfax, Ekart, XpressBees, and DTD
 ### Track a Shipment (Mobile)
 
 1. From the bottom navigation bar, tap **Orders**.
+
 2. Go to **In Transit** tab.
+
 3. Search by AWB or tap **Track Order** next to the shipment.
 
 ### Raise a Delivery Escalation (Mobile)
 
 1. Go to **Orders > In-Transit tab**.
+
 2. Find the delayed order.
+
 3. Tap **Escalate** to raise the issue.
+
+---
+
+## SOP — Expedite Delivery Escalation
+
+### Case 1: Seller Approaches on RAD+2 Day
+
+**Example:** RAD is 20 July, seller reaches for OFD/Expedite on 22nd July.
+
+1. L1 checks LOPS remarks for delay reason on **ICRM**.
+
+2. If no reason found: raise **RED SOS NFCR** to LOPS.
+
+### Case 2: Seller Reaches for Misrouting Cases
+
+1. L1 checks revised EDD on **ICRM Plugin** and informs seller.
+
+2. If revised EDD is acceptable, advise seller to wait.
+
+3. If it is faster to ship a new order — follow the misroute SOP in the [In-Transit Damage & Misroute](/sop/in-transit-damage-misroute) page (create NFCR to LOPS for RTO + freight refund eligibility).
+

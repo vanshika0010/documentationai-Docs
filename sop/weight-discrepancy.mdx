@@ -1,19 +1,20 @@
 ---
-title: "Weight Discrepancy"
-description: "Understanding weight terminology, how discrepancies are raised, how to dispute or accept them, and auto-accept rules"
+title: Weight Discrepancy
+description: >-
+  Understanding weight terminology, how discrepancies are raised, how to dispute
+  or accept them, and auto-accept rules
 ---
-
 ## Product Info
 
 ### Weight Terminology
 
-| Term | Definition |
-|---|---|
-| Entered Weight | Weight entered by the seller while processing the order. Minimum default: 0.5 kg. |
-| Dead Weight | Physical weight of the package as measured on a scale. |
-| Volumetric Weight | Calculated as L × B × H / 5000. |
+| Term              | Definition                                                                            |
+| ----------------- | ------------------------------------------------------------------------------------- |
+| Entered Weight    | Weight entered by the seller while processing the order. Minimum default: 0.5 kg.     |
+| Dead Weight       | Physical weight of the package as measured on a scale.                                |
+| Volumetric Weight | Calculated as L × B × H / 5000.                                                       |
 | Applicable Weight | The higher of Dead Weight or Volumetric Weight — used by courier for freight charges. |
-| Chargeable Weight | The weight the courier uses to calculate the final charge. |
+| Chargeable Weight | The weight the courier uses to calculate the final charge.                            |
 
 ### What is Weight Discrepancy?
 
@@ -21,15 +22,25 @@ Weight discrepancy arises when there is a difference between the weight entered 
 
 ### Weight Discrepancy Statuses
 
-| Status | Meaning |
-|---|---|
-| New Discrepancy | Weight discrepancy generated — differs from applied weight |
-| Dispute Raised | Seller has rejected the courier's claim; Shiprocket raises a dispute |
-| Discrepancy Accepted | Seller accepted the new weight applied by courier |
-| Dispute Rejected by Courier | Courier rejected the dispute raised by the seller |
-| Dispute Accepted by Courier | Courier accepted the dispute raised by the seller |
-| Auto Accept | Seller did not take action within 7 days; weight is auto-accepted |
-| SR Credit | On-hold amount released when courier accepts weight dispute or SR reduces applied weight |
+| Status                      | Meaning                                                                                  |
+| --------------------------- | ---------------------------------------------------------------------------------------- |
+| New Discrepancy             | Weight discrepancy generated — differs from applied weight                               |
+| Dispute Raised              | Seller has rejected the courier's claim; Shiprocket raises a dispute                     |
+| Discrepancy Accepted        | Seller accepted the new weight applied by courier                                        |
+| Dispute Rejected by Courier | Courier rejected the dispute raised by the seller                                        |
+| Dispute Accepted by Courier | Courier accepted the dispute raised by the seller                                        |
+| Auto Accept                 | Seller did not take action within 7 days; weight is auto-accepted                        |
+| SR Credit                   | On-hold amount released when courier accepts weight dispute or SR reduces applied weight |
+
+|   Courier 250 Gms  | Standard (if weight is not showing with courier name) | Courier 1KG, courier 2 KG | Coureir 5 KG, Courier 10 KG, Courier 20 KG |      |       |       |
+| :----------------: | :---------------------------------------------------: | :-----------------------: | :----------------------------------------: | ---- | ----- | ----- |
+|       250 GMS      |                         500gms                        |            1 KG           |                    2 KG                    | 5 KG | 10 KG | 20 KG |
+|       500 GMS      |                          1 KG                         |           1.5 KG          |                   2.5 KG                   | 6    | 11    | 21    |
+|       750 GMS      |                         1.5 KG                        |            2 KG           |                    3 KG                    | 7    | 12    | 22    |
+|      1000 GMS      |                          2 KG                         |           2.5 KG          |                    3.5KG                   | 8    | 13    | 23    |
+|      1250 GMS      |                         2.5 KG                        |            3 KG           |                    4 KG                    | 9    | 14    | 24    |
+|        ETC.        |                          ETC.                         |            etc.           |                   4.5 KG                   | etc. | etc.  | etc.  |
+| Varience (250 GMS) |                    Varience 0.5 KG                    | Weight slab varience 1 KG |                                            |      |       |       |
 
 ### Auto-Accept Rule
 
@@ -38,9 +49,13 @@ If a seller does not dispute or accept a weight discrepancy within **7 days**, i
 ### Packaging Tips to Reduce Weight Errors
 
 - Package size should exactly fit the product.
+
 - Measure dimensions of the **package**, not the product.
+
 - Maintain consistent packaging across similar products.
+
 - Ensure packaging weight is proportional to product weight.
+
 - Photograph packages from multiple angles (length, width, height) and on a digital scale to document weight clearly.
 
 ### Couriers with Image-Based Weight Dispute
@@ -65,48 +80,160 @@ Create NFCR ticket. Transfer call to L2 if threat is involved.
 
 ### Nugget Ticket (FCR)
 
-| Field | Value |
-|-------|-------|
-| Channel | Customer Support Call Center |
-| Agent Assign | Own Name |
-| Status | Resolved |
-| Subject | Weight Discrepancy Query |
-| FCR | Yes |
-| SR Issue Category | Shipment Weight |
-| Sub Category | Weight Discrepancy Query |
+| Field             | Value                        |
+| ----------------- | ---------------------------- |
+| Channel           | Customer Support Call Center |
+| Agent Assign      | Own Name                     |
+| Status            | Resolved                     |
+| Subject           | Weight Discrepancy Query     |
+| FCR               | Yes                          |
+| SR Issue Category | Shipment Weight              |
+| Sub Category      | Weight Discrepancy Query     |
 
 ### Nugget Ticket (NFCR — Dispute)
 
-| Field | Value |
-|-------|-------|
-| Channel | LOPs Weight |
-| Agent Assign | Anoop Trivedi |
-| Status | Open |
-| Subject | Weight Dispute |
-| FCR | NFCR |
+| Field             | Value           |
+| ----------------- | --------------- |
+| Channel           | LOPs Weight     |
+| Agent Assign      | Anoop Trivedi   |
+| Status            | Open            |
+| Subject           | Weight Dispute  |
+| FCR               | NFCR            |
 | SR Issue Category | Shipment Weight |
-| Sub Category | Weight Dispute |
+| Sub Category      | Weight Dispute  |
+
+### Weight Dispute
+
+While working on the weight dispute case, below are the mandatory checks:
+
+- Scanned Image from the courier received or not
+
+- Product name and qty
+
+- Weight type
+
+- Rejection reason(If any)
+
+### Within How many days can the seller take an action on weight discrepancy?
+
+Within 7 working days, the seller can either accept the weight discrepancy or raise a weight dispute. If no action is taken, then it will be updated as auto-accepted, and the excess amount will be charged.
 
 ---
+
+## FAQs
+
+**What are the reasons for weight disputes?**
+
+- Incorrect or loose packaging, including Flyers.
+
+- Incorrect weight and dimensions updated in the system - Incorrect dead weight or dimensions updated in the panel. This could be an intentional or unintentional error. 
+
+**What are the benefits of weight freeze?**
+
+- There will be a reduction in weight discrepancy.
+
+- Shorter billing cycle. The average billing timeline is 21 days, but with weight freeze process, it can come down to 4 days
+
+- Peace of mind for sellers. More time to focus on growth and other business activities.
+
+**What are the types of weight freeze?**
+
+1. **SKU freezing&#x20;**– This is beneficial for sellers sending only single shipments. This is applicable for mapped SKUs with minimum one shipped order
+
+Path:- Panel> weight management >weight freeze>not requested >select SKU>select request weight freeze>mention product details, package details, upload images, and submit request for weight freeze.&#x20;
+
+Seller can export product sample file>fill details and upload file as well for bulk upload from the panel
+
+2. **Box level freezing-&#x20;**&#x54;his is beneficial for multiple Shipments getting shipped in one box. Quantity
+
+This is applicable for the shipment with volumetric weight > dead weight (includes the item inside the box, packaging fillers, and box weight)
+
+Path:- Panel> Setup & Manage >Packaging>select create new package and add package details, dimensions, images, and add SKU.
+
+The seller can download the sample Bulk SKU upload format, add SKU details in the format, and upload for bulk freeze.
+
+3. **SR Suggested - SKU Level freezing -&#x20;**&#x54;his is beneficial for SKUs where only a single quantity is getting shipped
+
+Based on historical data, we suggest that the seller to take action for the weight freeze under the Action Required tab under the Weight Management tab
+
+Seller has to take action from panel>weight management> weight freeze>Action Required tab.
+
+Incase of lack of any action from the Seller for SR suggested shipments, the weight freeze, etc., will be auto-accepted by the weight team.
+
+It takes 72 working hours to accept or reject the weight freeze request by the courier. And the investigation TAT will remain as 5-7 working days.
+
+**What are the top weight freeze rejection reasons**
+
+- Incorrect/missing post  packaging images
+
+- Dead weight not clear
+
+- Incorrect measurements
+
+**What are the reasons for SKU unfreeze?**
+
+- If the product name or HSN code for a  frozen SKU is modiﬁed, the freezing logic will become ineffective.
+
+**Example** – *While the SKU freezing request was approved with the product name entered as “Tablet,” however at the time of order creation, the seller mentioned the name as “ Tablet 2.0 “*
+
+- If the seller changes the packaging and starts using bigger size packaging, then based on the courier MIS report, the SKU-PID will unfreeze.
+
+- If the product price of the frozen shipment is changed by >25% of the current price, the system will auto unfreeze SKU-PID
+
+**How can the incorrect weight & dimensions by sellers be reduced?**
+
+- Focus on SKU freezing to reduce discrepancies.
+
+- Use different SKUs for different products.
+
+- Dead weight should be entered in kg, not in grams
+
+- Volumetric weight should be in cm, not in inches
+
+*Random 1X1X1 dimension & Standard 0.5kg dead weight entered by sellers.*
+
+**What will be the communication flow?                                             &#x20;**
+
+- The weight discrepancy gets uploaded on the panel every Thursday as day zero (0)
+
+- Seller gets notified about the discrepancy via panel notification, followed by the remaining day's visibility on the panel.
+
+- Seller will also receive an email and SMS on day 1, alternate day, and on remaining days 3,2 and 1 to take action against the raised discrepancies. 
+
+**What is the weight dispute escalation and re-escalation process?**
+
+- The seller can escalate the dispute from the panel within 48 hours of dispute rejection.
+
+- In case the 1st escalation gets closed against the seller, then the seller can re-escalate the dispute within 48 hours from the panel.
+
+- On re-escalation rejection, the Seller can only get the dispute escalated by contacting customer support and raising the ticket.
+
+- Seller can also write to <a href="mailto:weights@shiprocket.com" target="_blank" rel="noopener noreferrer">weights\@shiprocket.com</a> directly (this is shared on SR social media platform)
 
 ## How to Do on Seller Panel
 
 ### View Weight Discrepancies
 
 1. Go to **Billing > Weight Discrepancy** (or via the Weight panel from the left menu).
+
 2. View the discrepancy details: date, AWB, product info, applied weight vs. entered weight.
 
 ### Accept a Weight Discrepancy
 
 1. Go to **Billing > Weight Discrepancy**.
+
 2. Find the discrepancy and click **Accept**.
+
 3. The on-hold amount is charged.
 
 ### Raise a Weight Dispute
 
 1. Go to **Billing > Weight Discrepancy**.
+
 2. Find the discrepancy and click **Dispute**.
+
 3. Upload images and evidence if available (e.g., package photos with dimensions, weight scale).
+
 4. Submit the dispute.
 
 > Disputes must be raised within **7 days** to avoid auto-accept.
@@ -122,13 +249,17 @@ Go to **Setup and Manage > Packaging > Package Master** > Save packages with cor
 ### View Weight Discrepancies (Mobile)
 
 1. Tap three-dots menu at bottom.
+
 2. Tap **Finance** or **Weight Discrepancy** (depending on app version).
+
 3. View new discrepancies and take action.
 
 ### Act on a Weight Discrepancy (Mobile)
 
 1. Find the discrepancy.
+
 2. Tap **Accept** to accept or **Dispute** to raise a dispute.
+
 3. Upload supporting images if disputing.
 
 ---
@@ -142,10 +273,15 @@ Sellers can freeze the actual weight and dimensions of specific products/package
 **Path:** Weight Management > Weight Freeze
 
 **Steps:**
+
 1. Go to Weight Management > Weight Freeze from the left menu.
+
 2. Click **Request Weight Freeze** for your preferred SKU.
+
 3. Fill out the form.
+
 4. Upload at least **1 product image** and **5 final package images**. Make sure length, width, height, and weight are clearly visible.
+
 5. Submit.
 
 **Unfreeze:** Weight Management > Weight Freeze > Request Accepted section > Search for product name or ID > Click Unfreeze Weight.
@@ -163,6 +299,7 @@ Weight Management > Weight Discrepancy > Download icon (top right) — report se
 ### Minimum Weight Charge
 
 - Standard: 0.5 kg (minimum default weight for any shipment).
+
 - India Post: Accepts shipments from 50 grams.
 
 ### Dispute Resolution TAT
@@ -175,12 +312,13 @@ When a weight discrepancy is raised, the additional amount (difference in charge
 
 ### Weight Discrepancy Statuses
 
-| Status | Meaning |
-|---|---|
-| New Discrepancy | Generated — weight differs from applied weight |
-| Dispute Raised | Seller rejected courier's claim |
-| Discrepancy Accepted | Seller accepted new weight |
-| Dispute Rejected by Courier | Courier rejected seller's dispute |
-| Dispute Accepted by Courier | Courier accepted seller's dispute |
-| Auto Accept | No action taken within 7 days |
-| SR Credit | On-hold amount released after resolution in seller's favor |
+| Status                      | Meaning                                                    |
+| --------------------------- | ---------------------------------------------------------- |
+| New Discrepancy             | Generated — weight differs from applied weight             |
+| Dispute Raised              | Seller rejected courier's claim                            |
+| Discrepancy Accepted        | Seller accepted new weight                                 |
+| Dispute Rejected by Courier | Courier rejected seller's dispute                          |
+| Dispute Accepted by Courier | Courier accepted seller's dispute                          |
+| Auto Accept                 | No action taken within 7 days                              |
+| SR Credit                   | On-hold amount released after resolution in seller's favor |
+

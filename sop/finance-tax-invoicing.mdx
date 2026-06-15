@@ -98,21 +98,51 @@ Shiprocket is a service provider and not a product seller — GST structure rema
 
 ## SOP — TDS Claim
 
-1. Confirm seller is registered with SR (check ICRM).
-2. Check KYC verification status.
-3. Raise a request and send email to seller's registered email ID.
-4. Ask seller to share TDS certificates over the same email.
-5. Team will update within 1–2 days.
+### Step 1: Check GST Status
 
-### Nugget Ticket (NFCR)
+Check the GST status of the seller in ICRM/panel.
+
+### If GST is Updated:
+
+1. Ask seller for **Form 16A** (TDS certificate).
+2. Assign the case to **"FOPS"** Channel.
+3. Status: **Awaiting Customer Response**.
+4. Create NFCR ticket under ACR Status.
+5. Ask seller to share the required details within **24–48 hours**.
+
+> "Sir/Ma'am, since your GST is registered, I can help you with the TDS claim. Please share your Form 16A (TDS certificate) on this email within 24-48 hours so our team can process the claim."
+
+### If GST is NOT Updated:
+
+- Seller cannot claim TDS without GST registration.
+- Inform seller to update GST first.
+- Mark the case as **FCR Resolved** under "Customer Support Call Center" channel.
+
+> "Sir/Ma'am, TDS can only be claimed if your GST is registered with us. Please update your GST details first, and then we can process the TDS claim."
+
+**Important:** Do NOT assign the case to "Customer Support FOPS DESK Channel".
+
+### Nugget Ticket (NFCR — GST Updated)
 
 | Field | Value |
 |-------|-------|
-| Channel | Customer Support Finance Desk |
-| Agent Assign | Priya / Manisha |
-| Status | Open |
+| Channel | FOPS |
+| Agent Assign | NA |
+| Status | Awaiting Customer Response |
 | Subject | Need to Claim TDS |
 | FCR | NFCR |
+| SR Issue Category | Taxation |
+| Sub Category | Need to Claim TDS |
+
+### Nugget Ticket (FCR — GST Not Updated)
+
+| Field | Value |
+|-------|-------|
+| Channel | Customer Support Call Center |
+| Agent Assign | Own Name |
+| Status | Resolved |
+| Subject | TDS Claim - GST Not Updated |
+| FCR | Yes |
 | SR Issue Category | Taxation |
 | Sub Category | Need to Claim TDS |
 
@@ -120,17 +150,45 @@ Shiprocket is a service provider and not a product seller — GST structure rema
 
 ## SOP — Ledger Request
 
-1. Confirm the duration for which ledger is required.
-2. Confirm format — Excel or PDF.
-3. Raise request to team. TAT: 1–2 working days.
+The ledger for the previous month will be available by the **20th of every month**. You can now select your desired date range and download your ledger directly from the seller panel.
+
+To check or download your ledger, please follow these steps:
+
+1. Login to the Seller panel
+2. Go to **Finance**
+3. Select **Wallet Transaction**
+4. Select **Ledger**
+5. Choose the desired date range
+
+**Path:** Panel > Finance > Wallet Transaction > Ledger > Select date range
+
+### FCR Case — Guidance to Download
+
+If seller just needs guidance to download the ledger from panel, inform them of the path above and mark as FCR Resolved.
+
+### NFCR Case — PDF Format Required
+
+If the seller requires the ledger in PDF format, raise a case to the **"FOPS"** channel; it will be an **"NFCR"** case.
+
+### Nugget Ticket (FCR)
+
+| Field | Value |
+|-------|-------|
+| Channel | Customer Support Call Center |
+| Agent Assign | Own Name |
+| Status | Resolved |
+| Subject | Ledger Required |
+| FCR | Yes |
+| SR Issue Category | Taxation |
+| Sub Category | Ledger Required |
 
 ### Nugget Ticket (NFCR)
 
 | Field | Value |
 |-------|-------|
-| Channel | Customer Support Finance Desk |
-| Agent Assign | Priya / Manisha |
-| Status | Open |
+| Channel | FOPS |
+| Agent Assign | NA |
+| Status | Awaiting Customer Response |
 | Subject | Ledger Required |
 | FCR | NFCR |
 | SR Issue Category | Taxation |

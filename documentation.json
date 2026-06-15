@@ -14,148 +14,210 @@
   "navigation": {
     "tabs": [
       {
-        "tab": "Combined Docs",
+        "tab": "SOP Documentation",
         "icon": "book-open",
-        "pages": [
+        "groups": [
           {
-            "title": "Overview",
-            "path": "sop/intro"
+            "group": "Getting Started",
+            "pages": [
+              {
+                "title": "Overview",
+                "path": "sop/intro"
+              }
+            ]
           },
           {
-            "title": "Account & KYC",
-            "path": "sop/account-kyc"
+            "group": "Call Handling",
+            "pages": [
+              {
+                "title": "Call Scripts",
+                "path": "sop/call-scripts"
+              },
+              {
+                "title": "Escalations & Transfers",
+                "path": "sop/escalations-transfers"
+              },
+              {
+                "title": "Buyer Handling",
+                "path": "sop/buyer-handling"
+              }
+            ]
           },
           {
-            "title": "Buyer Experience",
-            "path": "sop/buyer-experience"
+            "group": "Orders & Shipping",
+            "pages": [
+              {
+                "title": "Order Creation",
+                "path": "sop/order-creation"
+              },
+              {
+                "title": "Order Cancellation",
+                "path": "sop/order-cancellation"
+              },
+              {
+                "title": "Courier & Shipping",
+                "path": "sop/courier-shipping"
+              },
+              {
+                "title": "Pickup",
+                "path": "sop/pickup"
+              },
+              {
+                "title": "Label Customization",
+                "path": "sop/label-customization"
+              }
+            ]
           },
           {
-            "title": "Buyer Handling",
-            "path": "sop/buyer-handling"
+            "group": "Delivery & NDR",
+            "pages": [
+              {
+                "title": "Delivery In/Out TAT",
+                "path": "sop/delivery-in-out-tat"
+              },
+              {
+                "title": "Delivery Dispute",
+                "path": "sop/delivery-dispute"
+              },
+              {
+                "title": "NDR & Delivery Boost",
+                "path": "sop/ndr-delivery-boost"
+              },
+              {
+                "title": "RTO & NDR",
+                "path": "sop/rto-ndr"
+              },
+              {
+                "title": "In-Transit Damage & Misroute",
+                "path": "sop/in-transit-damage-misroute"
+              }
+            ]
           },
           {
-            "title": "Call Scripts",
-            "path": "sop/call-scripts"
+            "group": "Returns & RTO",
+            "pages": [
+              {
+                "title": "Return Orders",
+                "path": "sop/return-orders"
+              }
+            ]
           },
           {
-            "title": "COD Remittance",
-            "path": "sop/cod-remittance"
+            "group": "Account & KYC",
+            "pages": [
+              {
+                "title": "Account & KYC",
+                "path": "sop/account-kyc"
+              },
+              {
+                "title": "Settings & Panel",
+                "path": "sop/settings-panel"
+              },
+              {
+                "title": "Panel Setup & Manage",
+                "path": "sop/panel-setup-manage"
+              }
+            ]
           },
           {
-            "title": "Courier & Shipping",
-            "path": "sop/courier-shipping"
+            "group": "Finance & Billing",
+            "pages": [
+              {
+                "title": "Wallet & Recharge",
+                "path": "sop/wallet-recharge"
+              },
+              {
+                "title": "COD Remittance",
+                "path": "sop/cod-remittance"
+              },
+              {
+                "title": "Finance, Tax & Invoicing",
+                "path": "sop/finance-tax-invoicing"
+              },
+              {
+                "title": "Plans & Billing",
+                "path": "sop/plans-billing"
+              },
+              {
+                "title": "Credit Line & Business Loan",
+                "path": "sop/credit-line-business-loan"
+              },
+              {
+                "title": "Financial Products",
+                "path": "sop/financial-products"
+              }
+            ]
           },
           {
-            "title": "Delivery In/Out TAT",
-            "path": "sop/delivery-in-out-tat"
+            "group": "VAS & Products",
+            "pages": [
+              {
+                "title": "Value Added Services",
+                "path": "sop/vas-services"
+              },
+              {
+                "title": "Buyer Experience",
+                "path": "sop/buyer-experience"
+              },
+              {
+                "title": "Shiprocket Checkout",
+                "path": "sop/shiprocket-checkout"
+              },
+              {
+                "title": "Shiprocket Cargo",
+                "path": "sop/shiprocket-cargo"
+              },
+              {
+                "title": "Shiprocket Sense",
+                "path": "sop/shiprocket-sense"
+              },
+              {
+                "title": "Shiprocket Pickups",
+                "path": "sop/shiprocket-pickups"
+              },
+              {
+                "title": "Shiprocket Trends & App Store",
+                "path": "sop/shiprocket-trends-appstore"
+              },
+              {
+                "title": "Omuni",
+                "path": "sop/omuni"
+              },
+              {
+                "title": "ZOP Marketplace",
+                "path": "sop/zop"
+              },
+              {
+                "title": "Warehousing & Fulfillment",
+                "path": "sop/warehousing-fulfillment"
+              }
+            ]
           },
           {
-            "title": "Escalations & Transfers",
-            "path": "sop/escalations-transfers"
+            "group": "Technical",
+            "pages": [
+              {
+                "title": "Tech & Integrations",
+                "path": "sop/tech-integrations"
+              },
+              {
+                "title": "International Shipping",
+                "path": "sop/international-shipping"
+              }
+            ]
           },
           {
-            "title": "Finance, Tax & Invoicing",
-            "path": "sop/finance-tax-invoicing"
-          },
-          {
-            "title": "Financial Products",
-            "path": "sop/financial-products"
-          },
-          {
-            "title": "In-Transit Damage & Misroute",
-            "path": "sop/in-transit-damage-misroute"
-          },
-          {
-            "title": "International Shipping",
-            "path": "sop/international-shipping"
-          },
-          {
-            "title": "Label Customization",
-            "path": "sop/label-customization"
-          },
-          {
-            "title": "Miscellaneous",
-            "path": "sop/miscellaneous"
-          },
-          {
-            "title": "NDR & Delivery Boost",
-            "path": "sop/ndr-delivery-boost"
-          },
-          {
-            "title": "Order Cancellation",
-            "path": "sop/order-cancellation"
-          },
-          {
-            "title": "Order Creation",
-            "path": "sop/order-creation"
-          },
-          {
-            "title": "Panel Setup & Manage",
-            "path": "sop/panel-setup-manage"
-          },
-          {
-            "title": "Pickup",
-            "path": "sop/pickup"
-          },
-          {
-            "title": "Plans & Billing",
-            "path": "sop/plans-billing"
-          },
-          {
-            "title": "Return Orders",
-            "path": "sop/return-orders"
-          },
-          {
-            "title": "RTO & NDR",
-            "path": "sop/rto-ndr"
-          },
-          {
-            "title": "Settings & Panel",
-            "path": "sop/settings-panel"
-          },
-          {
-            "title": "Shiprocket Cargo",
-            "path": "sop/shiprocket-cargo"
-          },
-          {
-            "title": "Shiprocket Checkout",
-            "path": "sop/shiprocket-checkout"
-          },
-          {
-            "title": "Shiprocket Sense",
-            "path": "sop/shiprocket-sense"
-          },
-          {
-            "title": "Shiprocket Trends & App Store",
-            "path": "sop/shiprocket-trends-appstore"
-          },
-          {
-            "title": "Tech & Integrations",
-            "path": "sop/tech-integrations"
-          },
-          {
-            "title": "Value Added Services",
-            "path": "sop/vas-services"
-          },
-          {
-            "title": "Wallet & Recharge",
-            "path": "sop/wallet-recharge"
-          },
-          {
-            "title": "Warehousing & Fulfillment",
-            "path": "sop/warehousing-fulfillment"
-          },
-          {
-            "title": "Weight Discrepancy",
-            "path": "sop/weight-discrepancy"
-          },
-          {
-            "title": "ZOP Marketplace",
-            "path": "sop/zop"
-          },
-          {
-            "title": "Credit Line & Business Loan",
-            "path": "sop/credit-line-business-loan"
+            "group": "Miscellaneous",
+            "pages": [
+              {
+                "title": "Weight Discrepancy",
+                "path": "sop/weight-discrepancy"
+              },
+              {
+                "title": "Miscellaneous",
+                "path": "sop/miscellaneous"
+              }
+            ]
           }
         ]
       }

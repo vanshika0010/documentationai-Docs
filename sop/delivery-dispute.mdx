@@ -1,0 +1,280 @@
+---
+title: Delivery Dispute
+description: >-
+  Complete SOP for handling delivery disputes including DNU, PRD, and DNR across
+  Forward, RTO, and Reverse journeys.
+---
+## Product Info
+
+Delivery disputes cover cases where a shipment shows delivery-related issues after the last-mile event, including non-receipt, incorrect status, and product-related damage or mismatch.
+
+### Dispute Types
+
+| Dispute Type                                    | Meaning                                                               |
+| ----------------------------------------------- | --------------------------------------------------------------------- |
+| DNR Forward                                     | Shipment marked delivered but not received by buyer                   |
+| DNR RTO                                         | RTO shipment marked delivered but not received by seller              |
+| DNR Reverse / Return                            | Return shipment marked delivered but not received by seller           |
+| PRD (Wrong / Partial / Damage / Empty) — Buyer  | Buyer received incorrect, partial, damaged, or empty shipment         |
+| PRD (Wrong / Partial / Damage / Empty) — Seller | Seller received incorrect, partial, damaged, or empty return shipment |
+| DNU                                             | Shipment physically delivered but delivery status not updated         |
+
+## SOP — POD (Proof of Delivery)
+
+POD feature is live on ICRM for: Delhivery, Bluedart, Shadowfax, Ekart, XpressBees, and DTDC — **forward delivery only**.
+
+- POD available **24 hours after delivery**.
+
+- Ask seller to wait 24 hours and create FCR ticket.
+
+- If POD not available after 24 hours — create NFCR ticket.
+
+- If seller denies POD and raises a dispute — raise NFCR as per BAU (no change in SOP).
+
+### Key Timelines
+
+| Item                      | Details                                              |
+| ------------------------- | ---------------------------------------------------- |
+| Timeline to raise dispute | 3 days, or 72 hours, from delivery date              |
+| Resolution timeline       | 5–7 working days from the date the dispute is raised |
+| Maximum dispute attempts  | 2                                                    |
+| POD availability          | 24 hours after delivery                              |
+
+### Where Sellers Can Raise Disputes
+
+- **Seller Panel:** `Orders > More > Create Ticket`
+
+- **Nugget:** via call, chat, or email
+
+<Callout kind="info" collapsed="false">
+  Share dispute proofs on WhatsApp from `https://telephonycloud.co.in/portalv2/` using this path: `KartShip Rocket > Messaging > Chat > Click (+) > Enter mobile number > Select template "Dispute" > Add text in variable > Send`.
+</Callout>
+
+## SOP — DNU (Delivered Not Updated)
+
+Use this flow when the shipment is physically delivered but the panel status is not updated.
+
+<Callout kind="info" collapsed="false">
+  Raise disputes within **3 days from the delivery date**. If the seller contacts support after 72 hours, assign the case to the **LOPS Dispute team as an exception** and guide the seller to raise future disputes within the timeline.
+</Callout>
+
+### DNU Scenarios
+
+| Scenario                                                        | Action                                                                                                                                                                                                                                                                                                                                            |
+| --------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Case 1: Seller reaches out same day                             | Ask seller to wait until end of day. POD will be updated on the panel by EOD.                                                                                                                                                                                                                                                                     |
+| Case 2: Seller reaches out next day or later, POD available     | Check whether the seller verified the POD. If checked and shipment not received, create a new ticket on the dispute group and share a 5–7 working day investigation timeline. If POD is available but the seller has not checked it, ask the seller to verify POD during the call, take confirmation, and create FCR or NFCR based on seller VOC. |
+| Case 3: Seller reaches out next day or later, POD not available | Assign to the LOPS Dispute team. Ask the seller to wait 5–7 working days for investigation.                                                                                                                                                                                                                                                       |
+
+### If Status is OFD
+
+| Scenario              | Action                                              |
+| --------------------- | --------------------------------------------------- |
+| OFD on current day    | Ask seller to wait till EOD for final status update |
+| OFD from previous day | Follow the standard DNU process above               |
+
+### Additional Handling Notes
+
+- Whenever BPR is received, paste the link in the private note.
+
+- Team investigates within 5–7 working days once the dispute is raised.
+
+- If BPR is not done because the buyer is not contactable, ask the seller to share proof from their side.
+
+## SOP — PRD (Wrong / Damage / Partial / Empty)
+
+Use this SOP for product receipt disputes where the shipment was delivered but item condition, quantity, or contents do not match expectations.
+
+### Initial Checks
+
+- Check the product name and quantity.
+
+- Check whether the item falls under the fragile or perishable category.
+
+- For fragile items, confirm the packet has the `Fragile Item - Handle with care` sticker.
+
+- For fragile items, confirm inner packaging is secure, with foam, cushioning, or bubble wrap used properly.
+
+### Buyer Confirmation Checklist (BPR)
+
+Always connect with the buyer and confirm all of the following while taking dispute BPR:
+
+- Condition of the outer packaging
+
+- Condition of the inner content
+
+- Buyer name
+
+- Courier name
+
+- Order value
+
+- Product name and quantity
+
+- Seller name
+
+### Claim Decision Rules
+
+<Callout kind="alert" collapsed="false">
+  If the outer packaging is intact but the product is damaged from inside, deny the claim. Packaging responsibility rests with the seller.
+</Callout>
+
+| Scenario                                       | Action                      |
+| ---------------------------------------------- | --------------------------- |
+| Outer packaging intact, product damaged inside | Deny the claim              |
+| Outer packaging and inner content both damaged | Investigate the claim       |
+| Quality issue                                  | Do not entertain the seller |
+
+### Forward Journey (Status: Delivered)
+
+| Field                     | Details                                                                                                                                                                |
+| ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Timeline to raise dispute | 3 days from delivered date                                                                                                                                             |
+| Resolution timeline       | 5–7 working days                                                                                                                                                       |
+| Seller can raise on       | Seller Panel or Nugget via call, chat, or email                                                                                                                        |
+| Required proof            | Product image, package image with visible AWB, VOC confirming outer packaging damaged or intact                                                                        |
+| BPR                       | Mandatory                                                                                                                                                              |
+| Advisor action            | Allowed up to Rs.2500 order value if the allow button is enabled and not greyed out. Above Rs.2500, or if refund access is greyed out, assign to the LOPS Dispute team |
+
+### RTO Journey (Status: RTO Delivered)
+
+| Field          | Details                                                                                                                                                                |
+| -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Required proof | POD with negative remarks, package image with visible AWB, unboxing video mandatory                                                                                    |
+| BPR            | Not mandatory                                                                                                                                                          |
+| Advisor action | Allowed up to Rs.2500 order value if the allow button is enabled and not greyed out. Above Rs.2500, or if refund access is greyed out, assign to the LOPS Dispute team |
+
+### Reverse Journey (Status: Return Delivered)
+
+| Field  | Details                                                                                                                               |
+| ------ | ------------------------------------------------------------------------------------------------------------------------------------- |
+| Action | Assign to LOPS for QC or Non-QC review. For Non-QC, give soft denial first. If seller does not agree, assign to the LOPS Dispute team |
+| BPR    | Not mandatory                                                                                                                         |
+
+## SOP — DNR (Delivered Not Received)
+
+Applies to Forward, RTO, and Reverse shipments where the shipment is marked delivered but the recipient confirms non-receipt.
+
+### Order Value up to Rs. 2,500
+
+| Field                    | Details                                                                                                                                |
+| ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------- |
+| BPR                      | Mandatory                                                                                                                              |
+| Action                   | After BPR, mark as DNU if the option is available                                                                                      |
+| Images or proof required | Delivered shipment images with visible AWB label, inner content of the shipment, screenshot of the transaction if paid online to rider |
+| Resolution timeline      | 5–7 working days                                                                                                                       |
+
+### Order Value above Rs. 2,500
+
+| Field                    | Details                                                                                                                                |
+| ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------- |
+| BPR                      | Mandatory                                                                                                                              |
+| Action                   | Whether BPR is received or not, assign the case to Delivery Dispute channel, LOPS                                                      |
+| Images or proof required | Delivered shipment images with visible AWB label, inner content of the shipment, screenshot of the transaction if paid online to rider |
+| Resolution timeline      | 5–7 working days                                                                                                                       |
+
+<Callout kind="info" collapsed="false">
+  Seller-side proof is mandatory for orders above Rs.2500, even if BPR is received.
+</Callout>
+
+### If Status is OFD
+
+| Scenario              | Action                                        |
+| --------------------- | --------------------------------------------- |
+| OFD on current day    | Ask seller to wait till EOD for status update |
+| OFD from previous day | Follow the DNR process based on order value   |
+
+## How to Do on Seller Panel
+
+### Raise a Delivery Dispute (DNR / Wrong / Damaged / Empty)
+
+<Steps>
+  <Step title="Open the order" icon="folder" title-type="p">
+    Go to **Orders** from the left menu and search for the AWB.
+  </Step>
+
+  <Step title="Create a ticket" icon="plus" title-type="p">
+    Click **More (...) > Create Ticket**.
+  </Step>
+
+  <Step title="Select the dispute type" icon="edit" title-type="p">
+    Select **Order not delivered** or **Wrong/Damaged/Partial/Empty Package Delivered**.
+  </Step>
+
+  <Step title="Add details and proof" icon="upload" title-type="p">
+    Fill in the required details and upload proof images or videos.
+  </Step>
+
+  <Step title="Submit the dispute" icon="check-circle" title-type="p">
+    Click **Submit** to raise the dispute.
+  </Step>
+</Steps>
+
+<Callout kind="info" collapsed="false">
+  Disputes must be raised within 72 hours of delivery. A dispute can be raised a maximum of two times.
+</Callout>
+
+### Download POD
+
+POD is available for Delhivery, Bluedart, Shadowfax, Ekart, XpressBees, and DTDC on forward delivery only.
+
+<Steps>
+  <Step title="Open delivered orders" icon="folder" title-type="p">
+    Go to **Orders > Delivered tab**.
+  </Step>
+
+  <Step title="Download the POD" icon="download" title-type="p">
+    Click **More (...) > Download POD**.
+  </Step>
+</Steps>
+
+<Callout kind="info" collapsed="false">
+  POD is available 24 hours after delivery.
+</Callout>
+
+## Mobile App — How to Do
+
+### Raise a Delivery Dispute (Mobile)
+
+<Steps>
+  <Step title="Open orders" icon="folder" title-type="p">
+    From the bottom navigation, tap **Orders**.
+  </Step>
+
+  <Step title="Find the shipment" icon="search" title-type="p">
+    Search for the AWB.
+  </Step>
+
+  <Step title="Create the ticket" icon="plus" title-type="p">
+    Tap **More options > Create Ticket**.
+  </Step>
+
+  <Step title="Choose the dispute type" icon="edit" title-type="p">
+    Select the dispute type, either DNR or Wrong/Damaged/Partial/Empty.
+  </Step>
+
+  <Step title="Upload proof and submit" icon="upload" title-type="p">
+    Upload proof images or videos, then submit the ticket.
+  </Step>
+</Steps>
+
+## Additional Notes
+
+### BPR Handling
+
+- Whenever BPR is received, paste the link in the private note of the ticket.
+
+- If BPR is not done because the buyer is not contactable, ask the seller to share proof from their side.
+
+- Proof is mandatory from the seller side even if BPR is received for orders above Rs.2500.
+
+### Important Reminders for Advisors
+
+- Always verify the order value threshold before taking action.
+
+- For orders up to Rs.2500 with an enabled allow button, advisors can process the case.
+
+- For orders above Rs.2500, or if refund access is greyed out, always assign to the LOPS Dispute team.
+
+- Communicate the 5–7 working day resolution timeline to the seller.
+

@@ -47,7 +47,7 @@ Return delivery TAT (excluding RTO Initiated date and Sundays):
 | D | Rest of India (excluding NE and J&K) |
 | E | North East and J&K |
 
-Standard RTO TAT: **15 working days** from date of RTO Initiated.
+Standard RTO TAT: **20 working days** from date of RTO Initiated.
 
 ### Escalation Rules
 
@@ -116,96 +116,110 @@ When taking BPR on call:
 
 ## SOP — RTO-NDR
 
-### Seller Action Path
+📌 **Definition:**
+If an RTO/reverse shipment is not delivered, status becomes RTO NDR / Reverse Undelivered. Seller must take action for reattempt.
 
-**Panel:** Seller Panel > Orders > Orders > RTO tab > Filter: RTO NDR > Action column > Reattempt
+**Action Window:** Within 10 days of RTO NDR, seller will receive an auto email and seller can revert on that email for delivery reattempt of RTO/reverse shipment.
 
-- Seller can change phone number and address (only for Delhivery, Ecom Express, Xpressbees).
-- Seller can select reattempt date and upload call recordings.
+If there is no action from the seller side then the shipment is marked as **disposed off**. In ICRM plugin under the "RTO" tab we can check the RTO NDR reason and seller remarks received from seller side.
 
-### Nugget Ticket — FCR
+**Details to ask from seller:**
+
+- Who will receive the order — ask for the person name and contact number
+- Complete address for the reverse/RTO shipment delivery where the delivery needs to be done
+- Seller ready to accept the shipment or not
+
+Assign the case to **"LOPS Shipment Reverse/LOPS Shipment RTO"** channel.
+
+**Note:** Once raised, ask seller to wait for 1-2 working days for an update.
+
+### Nugget Ticket (NFCR)
+
+| Field | Value |
+|-------|-------|
+| Channel | LOPS Shipment Reverse/LOPS Shipment RTO |
+| Agent Assign | Auto Assign |
+| Status | Open |
+| Subject | Reattempt Request RTO NDR |
+| FCR | NFCR |
+| SR Issue Category | Shipment NDR and RTO |
+| Sub Category | Re-attempt Requested–RTO NDR |
+| TAT | 1-2 working days |
+
+---
+
+## SOP — RTO Initiated (In TAT)
+
+> As per the standard process, the delivery timeline for the rto shipments is up to 20 days from the rto initiated date. We will make efforts to expedite the process; however, we request you to kindly allow the stipulated timeline for completion.
+
+Issue category: Shipment Delivery Delay
+Sub category: Reverse - Delivery TAT Required
+
+Mark as **FCR Resolved**.
+
+### Nugget Ticket (FCR)
 
 | Field | Value |
 |-------|-------|
 | Channel | Customer Support Call Center |
 | Agent Assign | Own Name |
 | Status | Resolved |
-| Subject | Reattempt Request RTO NDR |
+| Subject | RTO Delivery TAT Required |
 | FCR | Yes |
-| SR Issue Category | Shipment NDR and RTO |
-| Sub Category | Re-attempt Requested–RTO NDR |
-
-### Nugget Ticket — NFCR (seller unable to take reattempt action)
-
-| Field | Value |
-|-------|-------|
-| Channel | Lops Delivery |
-| Agent Assign | As per courier |
-| Status | Open |
-| Subject | Reattempt Request RTO NDR |
-| FCR | NFCR |
-| SR Issue Category | Shipment NDR and RTO |
-| Sub Category | Re-attempt Requested–RTO NDR |
-
----
-
-## SOP — RTO Initiated (In TAT)
-
-If seller wants to know why shipment got RTO — inform the NDR remarks and advise:
-
-> Shipment will be delivered to the seller within **15 working days** from date of RTO Initiated. No further delivery attempt to the buyer is possible.
-
-### Nugget Ticket
-
-| Field | Value |
-|-------|-------|
-| Channel | Customer Support Call Center |
-| Status | Resolved |
-| Subject | RTO Query |
-| FCR | Yes |
-| SR Issue Category | Shipment NDR and RTO |
-| Sub Category | Fake Attempt Done |
+| SR Issue Category | Shipment Delivery Delay |
+| Sub Category | Reverse - Delivery TAT Required |
 
 ---
 
 ## SOP — RTO Initiated (Out of TAT)
 
-If the 15 working day TAT is breached:
+The timeline for the RTO delivery is 20 days from the RTO initiated date. If breached then assign the case to the LOPS team. It's an NFCR case.
 
-1. Assign to LOPS — TAT: 1–2 working days.
-2. Initiate **Soft Loss Refund** from ICRM: View Details > Shipment section > Soft Loss > Select reason > Submit.
+Timeline: 1-2 working days for an update from the team.
 
-> **Note:** Soft loss is temporary. Amount is debited from wallet once shipment is delivered. Cannot be transferred to bank.
+**Issue category selection based on shipment type:**
+
+| Shipment Type | Issue Category | Sub Category |
+|---|---|---|
+| RTO Shipment | Shipment RTO | Delay in Shipment Delivery–RTO |
+| Reverse Shipment | Reverse Shipment | Delay in Shipment Delivery–RTO/Reverse |
 
 ### Nugget Ticket (NFCR)
 
 | Field | Value |
 |-------|-------|
 | Channel | Lops Shipment Delivery |
-| Agent Assign | As per courier |
+| Agent Assign | Auto Assign |
 | Status | Open |
 | Subject | Delay in Shipment Delivery–RTO |
 | FCR | NFCR |
 | SR Issue Category | Shipment Delivery Delay |
-| Sub Category | Delay in Shipment Delivery–RTO/Reverse |
+| Sub Category | Delay in Shipment Delivery |
+| TAT | 1-2 working days |
 
 ---
 
 ## SOP — RTO Without NDR
 
-> Sir / Ma'am, I apologize for the inconvenience caused — your shipment has been RTO without any delivery attempt. I am forwarding your complaint to our team. They will provide resolution within 1–2 working days.
+If any shipment is initiated for RTO without any delivery attempt (NDR) then assign the case to the LOPS team for the RTO reason and freight refund eligibility (if seller asks).
+
+Issue category: Shipment RTO
+Sub Category: RTO - Miscellaneous
+
+Timeline: 1-2 working days for an update from the team.
 
 ### Nugget Ticket (NFCR)
 
 | Field | Value |
 |-------|-------|
-| Channel | Lops NDR and RTO |
+| Channel | LOPS |
 | Agent Assign | Auto Assign |
 | Status | Open |
 | Subject | RTO Without NDR |
 | FCR | NFCR |
-| SR Issue Category | Shipment NDR and RTO |
-| Sub Category | RTO Without NDR |
+| SR Issue Category | Shipment RTO |
+| Sub Category | RTO - Miscellaneous |
+| TAT | 1-2 working days |
 
 ---
 
