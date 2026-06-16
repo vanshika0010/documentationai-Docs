@@ -161,8 +161,11 @@ Use the following action plan based on the specific undelivered reason shown in 
 OTP was shared by the customer with the rider for order cancellation.
 
 1. Inform the seller that the cancellation OTP was shared by the customer.
+
 2. If the seller disagrees, connect with the customer:
+
    - **Customer confirms refusal:** Inform the seller that we cannot raise a reattempt with the courier team. Mark as **FCR**.
+
    - **Customer says OTP was shared by mistake or taken forcefully** and they want the order: Create an **NFCR** ticket. Inform that we will try for a next attempt but **cannot commit** to delivery.
 
 > ⚠️ Without BPR, escalation is not allowed for this reason.
@@ -172,6 +175,7 @@ OTP was shared by the customer with the rider for order cancellation.
 Connect with the customer directly:
 
 - **Buyer wants the order:** Create an **NFCR** ticket and assign to **LOPS NDR & RTO** channel.
+
 - **Buyer denies accepting the order:** Create an **FCR** ticket.
 
 ### Wrong / Incomplete Address
@@ -179,7 +183,9 @@ Connect with the customer directly:
 Address or pincode is incorrect or incomplete. Contact the customer and confirm the address:
 
 - **Pincode change required:** Deny reattempt to the seller.
+
 - **Address confirmed correct and complete:** Assign the case to **LOPS NDR** team.
+
 - **House no./building no./plot no. is missing:** Collect the details from the customer and update before assigning.
 
 ### Customer Asked for Open Delivery
@@ -187,6 +193,7 @@ Address or pincode is incorrect or incomplete. Contact the customer and confirm 
 Open box delivery service is **not available**. Inform both seller and customer that open box delivery is not supported.
 
 - **Customer agrees to receive the shipment as-is:** Create an **NFCR** ticket.
+
 - **Customer does not agree:** Create an **FCR** ticket and inform that reattempt is not possible.
 
 ### ODA Location (Out of Delivery Area)
@@ -194,13 +201,21 @@ Open box delivery service is **not available**. Inform both seller and customer 
 Doorstep delivery is not available for this address (though pincode is serviceable).
 
 - **All couriers except Amazon:** Create an **NFCR** ticket to arrange a DC (Delivery Center) address for the buyer.
+
 - **Amazon courier:** Deny the request, inform that self-collection is not available, and create an **FCR** ticket.
+
+
+
+#### DC Address of BD and Ekart:
+
+<Iframe uid="e1ee5b37-897a-4a24-93e5-458d81caefa2" src="https://drive.google.com/file/d/1Hsxan12uKZPTmusKSXzZmF3-ek9qWogp/preview" title="Embedded content" width="672" height="378" allow-full-screen="true" frame-border="0" loading="lazy" style="width: 672px; height: auto; cursor: pointer;" display-mode="fixed" />
 
 ### Customer Asked for Future Delivery
 
 Customer requested delivery on a different date. Check with the customer whether the attempt was fake or genuine.
 
 - Delivery reattempt can be arranged **within 2 days from the escalation date** only.
+
 - Create an **NFCR** ticket **only if the buyer agrees** to receive within the 2-day window.
 
 ### Any Other Reason
@@ -208,11 +223,13 @@ Customer requested delivery on a different date. Check with the customer whether
 Refer to NDR remarks and collect BPR from the buyer:
 
 - **BPR received:** Assign the case to **LOPS**.
+
 - **Buyer denies:** Do not assign to LOPS. Create an **FCR** ticket.
 
 ### Additional Rules
 
 - **Buyer non-contactable:** Except for the "Customer Refused, OTP Verified" case, if the buyer is non-contactable, you can still raise a reattempt with the courier.
+
 - **Maximum 3 delivery attempts:** After the third failed attempt, inform the seller that maximum attempts have been exhausted and the case is being raised with the courier for another attempt. However, **we cannot commit** to a successful next attempt.
 
 ---
@@ -498,6 +515,7 @@ Verify whether the seller belongs to the **KAM** or **Non-KAM** category.
 If the seller is mapped to a KAM account:
 
 - Raise the request directly to the respective KAM for further action.
+
 - No additional activation process is required from the Experience Center until seller informs us that the KAM is non-responsive/not supporting on the same.
 
 #### Non-KAM Seller
@@ -505,15 +523,19 @@ If the seller is mapped to a KAM account:
 If the seller is not mapped to a KAM account, request the following details via email for Manual NDR Calling activation:
 
 - Monthly order volume
+
 - Company ID for which the service needs to be activated
 
 ### Step 2: Verify Delivery Boost / Buyer WhatsApp Communication Status
 
 **If Delivery Boost / Buyer WhatsApp Communication is Active:**
+
 - If a Buyer Preference Response (BPR) is received, no manual calling will be initiated.
+
 - If a BPR is not received, manual NDR calling will be performed.
 
 **If Delivery Boost / Buyer WhatsApp Communication is Not Active:**
+
 - Manual NDR calling will be performed for all undelivered shipments.
 
 ### Charges
@@ -525,7 +547,9 @@ If the seller is not mapped to a KAM account, request the following details via 
 Once the seller shares the required details and provides confirmation via email:
 
 1. Forward the activation request to **Karan Kumar Kashyap**.
+
 2. Mention the seller's Company ID and monthly order volume in the email.
+
 3. Request activation of the Manual NDR Calling service.
 
 ### Activation Timeline
@@ -537,9 +561,13 @@ Manual NDR Calling activation will be completed within **2 working days** from t
 Please ensure that the seller is informed about:
 
 - Eligibility criteria based on KAM/Non-KAM classification.
+
 - Requirement of monthly order volume and Company ID.
+
 - Service charges (₹5 + GST per triggered shipment).
+
 - Activation timeline of 2 working days.
+
 - Dependency on Delivery Boost/Buyer WhatsApp Communication and BPR status for manual calling execution.
 
 ---
@@ -551,7 +579,9 @@ Please ensure that the seller is informed about:
 To verify whether a shipment was delivered through Delivery Boost:
 
 1. Open the shipment details page.
+
 2. Check for the **"Delivery Boost"** flag displayed below the AWB Number.
+
 3. If the flag is visible, the shipment was delivered through Delivery Boost intervention.
 
 ### Additional Visibility
@@ -559,7 +589,9 @@ To verify whether a shipment was delivered through Delivery Boost:
 Sellers can also view:
 
 - AWB-wise revenue generated.
+
 - Delivery Boost charges applied.
+
 - Revenue contribution of individual shipments.
 
 ### What is Extra Revenue?
@@ -569,14 +601,19 @@ Extra revenue refers to the order value of shipments that were successfully deli
 ### How to Check Revenue Generated & RTO Cost Saved
 
 1. Go to the Delivery Boost section in your Shiprocket account.
+
 2. Navigate to the **Delivered** tab and click on **More Filters**.
+
 3. Select **Delivery Boost** and click **Apply Filters**.
 
 The seller will be able to:
 
 - View all Delivery Boost deliveries.
+
 - Check AWB-wise revenue generated.
+
 - Review RTO costs saved.
+
 - Calculate total revenue generated through Delivery Boost.
 
 ### Can Sellers Switch Back to NDR Buyer Flow?
@@ -586,16 +623,25 @@ The seller will be able to:
 ### What Happens if Delivery Boost is Not Enabled?
 
 **Unavailable Features:**
+
 - AI-backed buyer communication through WhatsApp.
+
 - Direct buyer calling from the panel.
+
 - Visibility into additional revenue earned.
+
 - Multiple buyer validation channels: WhatsApp, SMS, IVR, Manual Calls.
 
 **Available NDR Actions (without Delivery Boost):**
+
 - Request a reattempt.
+
 - Request a reattempt for fake attempts.
+
 - Request RTO.
+
 - Upload NDRs in bulk.
+
 - Download NDR reports.
 
 ### What Happens if Buyer Does Not Respond?
@@ -605,6 +651,7 @@ The shipment ultimately goes to RTO.
 ### Invoice Cycle
 
 - Delivery Boost invoices are generated **once every month**.
+
 - Invoices are generated during the **first week of every month** and include all applicable Delivery Boost charges for the previous billing cycle.
 
 ---
@@ -925,16 +972,22 @@ Go to NDR panel from the **three-dots menu** at the bottom > Unsuccessful Delive
 ### Case 1: Fake Attempt Post BPR (Call Recording Taken)
 
 1. If it has happened at the **2nd attempt**: mark **RED SOS** and inform LOPS Agent on **WhatsApp**.
+
 2. If it has happened at the **3rd attempt**: transfer/assign to **Sachin Pathak in LOPS** to prioritize and avoid RTO.
 
 ### Case 2: Seller Comes Back Post Attempt Claiming Fake Attempt
 
 1. Check LOPS remarks.
+
 2. If BPR was received **more than 3 days ago**: take new BPR.
+
 3. If BPR was received within 3 days: inform seller that delivery will happen on priority and assign the case to **Sachin Pathak from LOPS**.
 
 ### Case 3: Seller Comes Back Next Day with No Attempt
 
 1. Check LOPS remarks against the previous ticket, inform seller, and mark **FCR**.
+
 2. If remarks are unclear: L1 opts for live transfer call to L2.
+
 3. L2 assigns the case to **Sachin Pathak from LOPS**.
+

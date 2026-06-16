@@ -1,15 +1,19 @@
 ---
-title: "Tech and Integrations"
-description: "API integration, channel integrations, Shopify sync, ZOP, SR Support portal, and common tech FAQs"
+title: Tech and Integrations
+description: >-
+  API integration, channel integrations, Shopify sync, ZOP, SR Support portal,
+  and common tech FAQs
 ---
-
 ## Product Info
 
 ### API Integration
 
-- **API Docs:** https://apidocs.shiprocket.in
+- **API Docs:** [https://apidocs.shiprocket.in](https://apidocs.shiprocket.in)
+
 - **Token validity:** 10 days — must be regenerated every 10th day.
+
 - Registered email **cannot** be used as API user; use a separate email.
+
 - Bulk order uploads via API are **not supported**.
 
 **Generate API:** Settings > API > Configure > Create API User > Fill details > Generate
@@ -19,6 +23,7 @@ description: "API integration, channel integrations, Shopify sync, ZOP, SR Suppo
 Supports: Shopify, WooCommerce, Magento, Amazon (self-ship orders only), Unicommerce, and more.
 
 - Auto-status sync: every **30 minutes**.
+
 - Manual sync: click **Sync Orders** button on Orders page.
 
 **Add channel:** Seller Panel > Channels > Add New Channel > Integrate > Follow steps
@@ -27,12 +32,12 @@ Supports: Shopify, WooCommerce, Magento, Amazon (self-ship orders only), Unicomm
 
 ### Common Channel Sync Issues
 
-| Channel | Common Issue |
-|---|---|
-| Amazon | Only self-ship orders synced |
-| Shopify | Only unfulfilled/unshipped orders; check Pull Order Tag settings (if tags are set, they restrict which orders sync) |
-| WooCommerce | Legacy API must be enabled; REST API must have read/write access |
-| Others | Check connection status, account suspension, order sync settings |
+| Channel     | Common Issue                                                                                                        |
+| ----------- | ------------------------------------------------------------------------------------------------------------------- |
+| Amazon      | Only self-ship orders synced                                                                                        |
+| Shopify     | Only unfulfilled/unshipped orders; check Pull Order Tag settings (if tags are set, they restrict which orders sync) |
+| WooCommerce | Legacy API must be enabled; REST API must have read/write access                                                    |
+| Others      | Check connection status, account suspension, order sync settings                                                    |
 
 Order changes on seller's website after sync do **not** auto-update on SR panel. Manual updates possible if status is "New."
 
@@ -44,28 +49,33 @@ Seller is using registered email instead of API user credentials. Guide seller t
 
 WhatsApp-powered features: automatic order sync, status sync, catalog/inventory sync, auto-refund, abandoned cart messages.
 
-| Contact Type | Action |
-|---|---|
-| ZOP seller | Handle at CC; deny product listing requests |
-| Buyer | Route to support@zop.in or 9953253070 |
-| Shopify sync issue | Raise ticket to Tech Support with ZOP tag |
+| Contact Type       | Action                                                         |
+| ------------------ | -------------------------------------------------------------- |
+| ZOP seller         | Handle at CC; deny product listing requests                    |
+| Buyer              | Route to [support@zop.in](mailto:support@zop.in) or 9953253070 |
+| Shopify sync issue | Raise ticket to Tech Support with ZOP tag                      |
 
 ### SR Support Portal
 
 - Ticket creator name shows as "Abhinav Singh2"; source = "portal."
+
 - Tickets go to respective Group, not Agent.
+
 - Only ACR and NFCR cases appear on seller panel — FCR cases are not visible.
+
 - If seller is unsatisfied with FCR resolution, they get one option to call CC.
 
 ### Shiprocket ONDC
 
 ONDC = Open Network for Digital Commerce (Government of India initiative).
 
-**Support helpline:** 8860542050 | **Email:** supportondc@shiprocket.com
+**Support helpline:** 8860542050 | **Email:** [supportondc@shiprocket.com](mailto:supportondc@shiprocket.com)
 
 **Eligible channels for onboarding:** Shopify, WooCommerce, Unicommerce only. Personal websites — soft denial.
 
 **Remittance:** D+7 for all shipments. If TAT crossed — create NFCR ticket to ONDC Customer Support.
+
+<Iframe uid="ae2763f4-6a8e-42eb-a227-b94586f1f118" src="https://docs.google.com/spreadsheets/d/1_WkW9J36szWKjdiaUvf0-7wupIJdo5ou6d173HxxO1I/preview" title="Embedded Google Sheet" height="600" allow-full-screen="true" frame-border="0" loading="lazy" display-mode="auto-resize" />
 
 TAT: 2–3 days.
 
@@ -74,42 +84,48 @@ TAT: 2–3 days.
 ## SOP — Channel Integration Issue
 
 1. Check channel connection status in ICRM.
+
 2. Ask seller to reauthenticate from panel (Shopify/Amazon).
+
 3. For WooCommerce — verify Legacy API enabled, REST API has read/write access.
+
 4. Assign to **Customer Support Tech Desk**. TAT: 24 hours.
 
 ### Nugget Ticket (NFCR)
 
-| Field | Value |
-|-------|-------|
-| Channel | Customer Support Tech Desk |
-| Agent Assign | NA |
-| Status | Open |
-| Subject | Channel Integration Issue |
-| FCR | NFCR |
-| SR Issue Category | Integration and APIs |
-| Sub Category | Channel Integration Issue |
+| Field             | Value                      |
+| ----------------- | -------------------------- |
+| Channel           | Customer Support Tech Desk |
+| Agent Assign      | NA                         |
+| Status            | Open                       |
+| Subject           | Channel Integration Issue  |
+| FCR               | NFCR                       |
+| SR Issue Category | Integration and APIs       |
+| Sub Category      | Channel Integration Issue  |
 
 ---
 
 ## SOP — Shopify Sync Issue (Authentication Failed)
 
 1. Setup and Manage > Channels.
+
 2. Select Shopify channel.
+
 3. Click **Re-authenticate**.
+
 4. Log in to Shopify if prompted.
 
 ### Nugget Ticket (FCR — after resolution)
 
-| Field | Value |
-|-------|-------|
-| Channel | Customer Support Call Center |
-| Agent Assign | Own Name |
-| Status | Resolved |
-| Subject | Shopify Sync Issue |
-| FCR | Resolved |
-| SR Issue Category | Integration and APIs |
-| Sub Category | Channel Integration Issue |
+| Field             | Value                        |
+| ----------------- | ---------------------------- |
+| Channel           | Customer Support Call Center |
+| Agent Assign      | Own Name                     |
+| Status            | Resolved                     |
+| Subject           | Shopify Sync Issue           |
+| FCR               | Resolved                     |
+| SR Issue Category | Integration and APIs         |
+| Sub Category      | Channel Integration Issue    |
 
 ---
 
@@ -154,9 +170,13 @@ Help & Support > Create Ticket > Select Category (Technical Support) > Select Su
 ### Connect Shopify (Mobile)
 
 1. Three-dots menu at bottom > **Channel Integration**.
+
 2. Tap **+** to add a new channel.
+
 3. Enter store URL > **Connect to Shopify**.
+
 4. Log in to Shopify > tap **Install App**.
+
 5. Edit channel settings as needed.
 
 > Other channels (non-Shopify) require the web panel.

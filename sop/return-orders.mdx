@@ -1,27 +1,33 @@
 ---
-title: "Return Orders"
-description: "Creating return orders, reverse pickup cut-offs, quality check, exchange orders, refunds, and return delay handling"
+title: Return Orders
+description: >-
+  Creating return orders, reverse pickup cut-offs, quality check, exchange
+  orders, refunds, and return delay handling
 ---
-
 ## Product Info
 
 ### Return Order Basics
 
 - You can create **one return order per SKU** from a forward order.
+
 - Maximum **2 SKUs** allowed in one QC return order.
+
 - Payment mode for return orders is **prepaid by default**.
+
 - Manifest and label do not need to be downloaded from the panel — the courier FE brings the label at pickup.
+
 - For return orders, **pickup is automatically scheduled** once the AWB is assigned — no manual scheduling needed.
+
 - Up to **3 pickup attempts** are made for return orders. If QC fails, no further attempts are made.
 
 ### Reverse Pickup Cut-Off Times
 
-| Courier | Cut-off Time |
-|---|---|
-| Ecom Reverse | 6:00 AM |
-| Shadowfax Reverse | 10:00 AM |
-| Delhivery Reverse | Next day pickup |
-| Xpressbees Reverse | 11:00 AM |
+| Courier            | Cut-off Time    |
+| ------------------ | --------------- |
+| Ecom Reverse       | 6:00 AM         |
+| Shadowfax Reverse  | 10:00 AM        |
+| Delhivery Reverse  | Next day pickup |
+| Xpressbees Reverse | 11:00 AM        |
 
 ### Couriers Supporting QC Returns
 
@@ -30,6 +36,7 @@ Ekart, Xpressbees, Ecom Express, Shadowfax, Bluedart, Delhivery
 ### Return Delivery TAT
 
 - Standard TAT: **20 working days**
+
 - Targeted delivery time communicated to sellers: **12–15 working days**
 
 ### Quality Check (QC) for Returns
@@ -37,25 +44,39 @@ Ekart, Xpressbees, Ecom Express, Shadowfax, Bluedart, Delhivery
 When QC is enabled, the courier executive checks the returned product against your specified parameters before accepting the pickup. If QC fails, pickup is declined.
 
 **QC Parameters available:**
+
 - Product Name, Image, Size, Brand Name, Colour
+
 - Unique Product Identifier (Serial No. / IMEI) — for electronics
 
 ### Refund Modes Available to Sellers
 
-| Mode | Description |
-|---|---|
-| Manual Refund | Seller processes refund manually; updates UTR number in panel |
-| Back to Source | Refund to original payment method (prepaid orders only) |
-| Store Credit | Discount coupon for refund amount, shared directly with buyer |
+| Mode           | Description                                                        |
+| -------------- | ------------------------------------------------------------------ |
+| Manual Refund  | Seller processes refund manually; updates UTR number in panel      |
+| Back to Source | Refund to original payment method (prepaid orders only)            |
+| Store Credit   | Discount coupon for refund amount, shared directly with buyer      |
 | Instant Refund | UPI, Bank Transfer, or Payout Links; auto-refund feature available |
 
 ### Exchange Orders
 
 - Can only be created for **delivered orders**.
+
 - Items must be within the return/exchange window set by the seller (1–30 days).
+
 - No platform fee charged by Shiprocket for exchange processing; reverse logistics charges apply.
+
 - After exchange request: reverse pickup auto-generated for original product; forward shipment auto-created for replacement.
+
 - Currently supports **like-to-like exchange** only (same product, size, or variant unless manually adjusted).
+
+**Exchange Enabled Sellers:**
+
+<Iframe uid="ceee05b5-61a5-4cbe-8c21-4aac971f49e6" src="https://docs.google.com/spreadsheets/d/1dyAF1SmJTcE24KL3jTjcaJaYAfgMtKNj5wP03p5lLgg/preview" title="Embedded Google Sheet" height="600" allow-full-screen="true" frame-border="0" loading="lazy" display-mode="auto-resize" />
+
+**Exchange SOP:**
+
+<Iframe uid="5bc2b112-b746-4b1b-afe1-542e4dbe1619" src="https://docs.google.com/spreadsheets/d/1BgfFrzYxfXFaj7ZnDknjIN5JFHOoJRGEWynrZvJJyGY/preview" title="Embedded Google Sheet" height="600" allow-full-screen="true" frame-border="0" loading="lazy" display-mode="auto-resize" />
 
 ---
 
@@ -68,37 +89,55 @@ Copy link from SPARK / Click on Internal ICRM > Click on Seller Info.
 ### Ways to Create Return
 
 1. From Delivered Orders
+
 2. Manual Return Order
 
 ### Method 1 — From Delivered Orders (Steps)
 
 1. Go to **Orders > All Orders**.
+
 2. Select **Delivered** shipment > Click **Create Return**.
+
 3. Click on **Returns**.
+
 4. Prefilled order details will open.
+
 5. Buyer address → Pickup address (default).
+
 6. Seller address → Delivery address (default).
+
 7. Option to change/add drop address if required.
 
 ### Method 2 — Manual Return Order (Steps)
 
 1. Go to **Returns** tab.
+
 2. Click on **Add Return**.
+
 3. Fill required details (order, customer, pickup & delivery details, product info).
 
 ### Required Details
 
 - **Pickup POC:** Buyer name, contact, complete address (with landmark)
+
 - **Order Details:** Return ID / Generate, date, channel
+
 - **Product Details:** SKU, quantity, price (mandatory)
+
 - **Return Reason:** Select reason + upload images (if any)
+
 - **Delivery Address:** Warehouse/store address
+
 - **Weight & Dimensions:** As per product
+
 - **Payment Mode:** Prepaid (default)
 
 **Important:**
+
 - No need to print label/manifest (FE will carry)
+
 - After creation → Go to Returns tab → Initiate Return
+
 - If pickup delayed → Raise issue to FM LOPS
 
 ---
@@ -109,15 +148,15 @@ If return pickup is delayed — raise a ticket to FM LOPS.
 
 ### Nugget Ticket (NFCR)
 
-| Field | Value |
-|-------|-------|
-| Channel | Lops Shipment Pickup |
-| Agent Assign | As per courier |
-| Status | Open |
-| Subject | Return Pickup Required |
-| FCR | NFCR |
-| SR Issue Category | Shipment Pickup |
-| Sub Category | Pickup Requested |
+| Field             | Value                  |
+| ----------------- | ---------------------- |
+| Channel           | Lops Shipment Pickup   |
+| Agent Assign      | As per courier         |
+| Status            | Open                   |
+| Subject           | Return Pickup Required |
+| FCR               | NFCR                   |
+| SR Issue Category | Shipment Pickup        |
+| Sub Category      | Pickup Requested       |
 
 ---
 
@@ -125,22 +164,22 @@ If return pickup is delayed — raise a ticket to FM LOPS.
 
 > As per the standard process, the delivery timeline for return shipments is up to 20 days from the picked up date. We will make efforts to expedite the process; however, we request you to kindly allow the stipulated timeline for completion.
 
-Issue category: Reverse Shipment/Shipment Delivery Delay  
+Issue category: Reverse Shipment/Shipment Delivery Delay\
 Sub category: Reverse - Delivery TAT Required / Delivery TAT required
 
 Mark as **FCR Resolved**.
 
 ### Nugget Ticket (FCR)
 
-| Field | Value |
-|-------|-------|
-| Channel | Customer Support Call Center |
-| Agent Assign | Own Name |
-| Status | Resolved |
-| Subject | Shipment Delivery Delay Reverse |
-| FCR | Yes |
+| Field             | Value                                    |
+| ----------------- | ---------------------------------------- |
+| Channel           | Customer Support Call Center             |
+| Agent Assign      | Own Name                                 |
+| Status            | Resolved                                 |
+| Subject           | Shipment Delivery Delay Reverse          |
+| FCR               | Yes                                      |
 | SR Issue Category | Reverse Shipment/Shipment Delivery Delay |
-| Sub Category | Reverse - Delivery TAT Required |
+| Sub Category      | Reverse - Delivery TAT Required          |
 
 ---
 
@@ -150,21 +189,21 @@ The timeline for the reverse/rto delivery is 20 days from the picked date/rto in
 
 Timeline: 1-2 working days for an update from the team.
 
-Issue category: Reverse Shipment/Shipment Delivery Delay  
+Issue category: Reverse Shipment/Shipment Delivery Delay\
 Sub Category: Delay in Shipment Delivery / Reverse - Delivery Delay
 
 ### Nugget Ticket (NFCR)
 
-| Field | Value |
-|-------|-------|
-| Channel | LOPS Shipment Delivery Agent |
-| Agent Assign | As per courier |
-| Status | Open |
-| Subject | Shipment Delivery Delay Reverse |
-| FCR | NFCR |
-| SR Issue Category | Reverse Shipment/Shipment Delivery Delay |
-| Sub Category | Delay in Shipment Delivery / Reverse - Delivery Delay |
-| TAT | 1-2 working days |
+| Field             | Value                                                 |
+| ----------------- | ----------------------------------------------------- |
+| Channel           | LOPS Shipment Delivery Agent                          |
+| Agent Assign      | As per courier                                        |
+| Status            | Open                                                  |
+| Subject           | Shipment Delivery Delay Reverse                       |
+| FCR               | NFCR                                                  |
+| SR Issue Category | Reverse Shipment/Shipment Delivery Delay              |
+| Sub Category      | Delay in Shipment Delivery / Reverse - Delivery Delay |
+| TAT               | 1-2 working days                                      |
 
 ---
 
@@ -172,24 +211,24 @@ Sub Category: Delay in Shipment Delivery / Reverse - Delivery Delay
 
 We will assign the case to the LOPS reverse channel for reverse courier Quality Check activation. Further process and activation will be handled by the LOPS team.
 
-Issue category: Others  
-Subcategory: Courier activation  
+Issue category: Others\
+Subcategory: Courier activation\
 Channel: LOPS Shipment Reverse
 
 Timeline is 2 working days for an update once we assign the case to the reverse courier team.
 
 ### Nugget Ticket (NFCR)
 
-| Field | Value |
-|-------|-------|
-| Channel | LOPS Shipment Reverse |
-| Agent Assign | Auto Assign |
-| Status | Open |
-| Subject | Courier QC Activation |
-| FCR | NFCR |
-| SR Issue Category | Others |
-| Sub Category | Courier activation |
-| TAT | 2 working days |
+| Field             | Value                 |
+| ----------------- | --------------------- |
+| Channel           | LOPS Shipment Reverse |
+| Agent Assign      | Auto Assign           |
+| Status            | Open                  |
+| Subject           | Courier QC Activation |
+| FCR               | NFCR                  |
+| SR Issue Category | Others                |
+| Sub Category      | Courier activation    |
+| TAT               | 2 working days        |
 
 ---
 
@@ -198,25 +237,37 @@ Timeline is 2 working days for an update once we assign the case to the reverse 
 ### Create a Return Order from Delivered Orders
 
 1. Go to **Orders > Delivered tab**.
+
 2. Find the order by AWB or Order ID.
+
 3. Click **Create Return & Exchange**.
+
 4. Select **Return Order** > **Proceed**.
+
 5. Verify or update: pickup address (buyer's), destination (your address), order details, product details, package details.
+
 6. Click **Next** to finalize.
 
 ### Create a Manual Return Order
 
 1. Go to **Returns** from the left menu.
+
 2. Click **Add Return**.
+
 3. Fill all required fields (buyer details, warehouse details, order/product details, return reason, package details).
+
 4. Click **Create Return Order**.
+
 5. Assign courier by clicking **Initiate Return**.
 
 ### Cancel a Return Order
 
 1. Go to **Returns > All tab**.
+
 2. Search the Order ID or AWB.
+
 3. Click **More (...) > Cancel Order**.
+
 4. Confirm by clicking **Yes, Cancel**.
 
 > Cannot cancel when in **Out for Pickup** status.
@@ -224,7 +275,9 @@ Timeline is 2 working days for an update once we assign the case to the reverse 
 ### Reassign a Return Order's Courier
 
 1. Go to **Returns > All tab**.
+
 2. Search by Order ID.
+
 3. Click **Re-Assign** to choose a different courier.
 
 > Not available in Out for Pickup status.
@@ -238,8 +291,11 @@ Or from: **Buyer Experience > Return & Exchange Policy > QC Settings**
 ### Convert a Non-QC Order to QC Order
 
 1. Go to **Returns > New Returns tab**.
+
 2. Click **More (...) > Convert to QC Order**.
+
 3. Upload product image and optionally enable QC for all future shipments.
+
 4. Click **Submit**.
 
 ### Enable Returns on Tracking Page
@@ -251,36 +307,51 @@ Or from: **Buyer Experience > Return & Exchange Policy > QC Settings**
 **Settings > Return Settings > Refund Settings**
 
 Enable auto-refund triggers:
+
 - **At Picked Up** status
+
 - **At Delivered** status
+
 - **At Acknowledged** status
 
 ### Acknowledge a Return Received
 
 1. Go to **Returns > Return Received tab**.
+
 2. Click **Acknowledge** next to the order.
+
 3. Optionally enter QC comments.
+
 4. Click **Mark Acknowledge**.
 
 ### Initiate a Refund to Customer
 
 1. Go to **Returns > Pending for Refund tab**.
+
 2. Click **Initiate Refund** next to the order.
+
 3. Enter refund amount and select refund mode (Store Credit or Manual via Other Modes).
+
 4. Click **Refund**.
 
 ### Create an Exchange Order
 
 1. Go to **Returns > Return & Exchange** or **Orders > Delivered tab**.
+
 2. Click **Create Return & Exchange > Exchange Order > Proceed**.
+
 3. Fill buyer details, pickup and delivery addresses, exchange reason, return product details, exchange product details.
+
 4. Add package weight and dimensions for both return and exchange product.
+
 5. Finalize and create.
 
 ### Create Bulk Return Orders
 
 1. Go to **Returns > Add Returns > Bulk Return tab**.
+
 2. Download the template, fill data, upload file.
+
 3. Orders appear in the Returns section automatically.
 
 ### Enable Exchanges on Tracking Page
@@ -300,14 +371,23 @@ Enable auto-refund triggers:
 ### Create a Return Order (Mobile)
 
 1. Tap **Add Order** from the bottom menu.
+
 2. Select **Return Orders**.
+
 3. Select return address, then enter customer details for pickup.
+
 4. Add Order Details: Order ID, date, channel.
+
 5. Add Product Details: product name, quantity, unit price, SKU.
+
 6. Tap **Next**.
+
 7. Add Package Details: weight and dimensions.
+
 8. Add Return Details: select reason, upload images (optional).
+
 9. Tap **Create Return Order**.
+
 10. Assign courier and schedule pickup via **Ship Now**.
 
 ### Check Return Orders (Mobile)
@@ -316,12 +396,13 @@ Three-dots menu at bottom > **Returns** > view all return shipments, track, or i
 
 ### Check Return Order Statuses (Mobile)
 
-| Status | Path |
-|---|---|
-| Return Pickup Scheduled | Returns > Return Pickup Scheduled tab |
-| Return Pickup Error | Returns > Return Pickup Scheduled > Select Status > Return Pickup Error |
-| Return In Transit | Returns > In Transit tab > Select Status > Return In Transit |
-| Return Picked Up | Returns > In Transit > Select Status > Return Picked Up |
-| Return Out For Delivery | Returns > In Transit > Select Status > Return Out For Delivery |
-| Return Undelivered | Returns > In Transit > Select Status > Return Undelivered |
-| Return Acknowledged | Returns > Return Received > Select Status > Return Acknowledged |
+| Status                  | Path                                                                    |
+| ----------------------- | ----------------------------------------------------------------------- |
+| Return Pickup Scheduled | Returns > Return Pickup Scheduled tab                                   |
+| Return Pickup Error     | Returns > Return Pickup Scheduled > Select Status > Return Pickup Error |
+| Return In Transit       | Returns > In Transit tab > Select Status > Return In Transit            |
+| Return Picked Up        | Returns > In Transit > Select Status > Return Picked Up                 |
+| Return Out For Delivery | Returns > In Transit > Select Status > Return Out For Delivery          |
+| Return Undelivered      | Returns > In Transit > Select Status > Return Undelivered               |
+| Return Acknowledged     | Returns > Return Received > Select Status > Return Acknowledged         |
+
