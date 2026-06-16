@@ -1,25 +1,35 @@
 ---
-title: "RTO and NDR"
-description: "Procedures for NDR reattempt, RTO initiation, RTO-NDR, BPR, NDR verification, and related escalations"
+title: RTO and NDR
+description: >-
+  Procedures for NDR reattempt, RTO initiation, RTO-NDR, BPR, NDR verification,
+  and related escalations
 ---
-
 ## Product Info
 
 ### Key Terms
 
 - **NDR (Non-Delivery Report):** A report raised when a delivery executive cannot deliver a shipment.
+
 - **RTO (Return to Origin):** After 3 failed delivery attempts, the courier initiates a return to the seller's address.
+
 - **BPR (Buyer Positive Response):** Buyer confirmation taken on call to reattempt delivery.
+
 - **RTO-NDR:** When an RTO shipment cannot be delivered back to the seller.
+
 - **RTO Acknowledged:** Seller has acknowledged receipt of the RTO shipment from the panel.
+
 - **RTO EDD:** Estimated delivery date for an RTO shipment back to the seller. Visible in Orders > RTO tab.
 
 ### NDR — How It Works
 
 When a delivery attempt fails:
+
 1. NDR is raised with an "undelivered" reason.
+
 2. Seller receives options via WhatsApp / panel / IVR to reattempt or RTO.
+
 3. Courier makes up to 3 total delivery attempts.
+
 4. After 3 failed attempts — shipment is marked **RTO Initiated**.
 
 > Exception: If the NDR reason is "Customer Refused OTP Verified," the shipment is sent to RTO without waiting for 3 attempts.
@@ -27,33 +37,41 @@ When a delivery attempt fails:
 ### RTO-NDR Rules
 
 - Seller must take action within **10 days** of RTO NDR being raised.
+
 - If no action in 10 days — shipment is **disposed off**.
+
 - Only **1 reattempt** allowed. If second attempt fails — shipment is disposed off.
 
 **Email Notifications to Seller:**
+
 - When RTO NDR is raised — email within 4 hours (includes all AWBs).
+
 - Day 5 — reminder email.
+
 - Day 9 — final reminder email.
 
 ### RTO Zone Delivery TAT
 
 Return delivery TAT (excluding RTO Initiated date and Sundays):
 
-| Zone | Description |
-|---|---|
-| A | Within City |
-| B | Within State |
-| C | Metro to Metro |
-| D | Rest of India (excluding NE and J&K) |
-| E | North East and J&K |
+| Zone | Description                           |
+| ---- | ------------------------------------- |
+| A    | Within City                           |
+| B    | Within State                          |
+| C    | Metro to Metro                        |
+| D    | Rest of India (excluding NE and J\&K) |
+| E    | North East and J\&K                   |
 
 Standard RTO TAT: **20 working days** from date of RTO Initiated.
 
 ### Escalation Rules
 
 - Seller can escalate after RTO EDD has been breached.
+
 - Resolution TAT: **72 hours** from raised date.
+
 - Re-escalation allowed within **48 hours** of escalation closure.
+
 - Escalation auto-closes when status becomes: RTO NDR, RTO Delivered, Disposed, Destroyed, Lost, RTO Acknowledged, Put Away Done.
 
 ### Buyer Calling Rules
@@ -67,8 +85,11 @@ Standard RTO TAT: **20 working days** from date of RTO Initiated.
 ### System Check
 
 1. Copy link from SPARK / Click on Internal ICRM.
+
 2. View Details > NDR tab > Check NDR raised date and undelivered reason.
+
 3. Check action taken by seller / buyer.
+
 4. Check NDR communication (check Delivery Boost if enabled).
 
 ### NDR Seller Action
@@ -77,40 +98,47 @@ Standard RTO TAT: **20 working days** from date of RTO Initiated.
 
 TAT after BPR: 1–2 working days.
 
-_If BPR is pending — assign case to LOPS with the **BPR Pending** tag._
+*If BPR is pending — assign case to LOPS with the&#x20;****BPR Pending****&#x20;tag.*
 
 ### BPR (Buyer Positive Response) Checklist
 
 When taking BPR on call:
 
 1. Verify buyer's name and product details.
+
 2. Validate non-delivery (NDR) reason from buyer.
+
 3. Confirm if FE contacted or reached for delivery attempt (share attempt date and time).
+
 4. Confirm if buyer is still ready to accept the **packed shipment** — deny if future delivery more than 2 days or open-box delivery is requested.
+
 5. Confirm alternate mobile number and landmark.
+
 6. Inform buyer they will receive a call from the delivery reattempt team.
+
 7. BPR call control must stay with the advisor — limit seller interference.
 
 ### NDR CB Team Actions
 
 1. Try BPR once. If no connectivity — raise NFCR to LOPS with **BPR Pending** tag.
+
 2. If both seller and buyer are unreachable — raise NFCR for delivery reattempt and inform seller via email about non-connectivity.
 
 ### No Buyer Calls After 8:30 PM Script
 
-> I understand your concern Sir / Ma'am. However, as per TRAI guidelines and our policy, buyer calls cannot be arranged after 8:30 PM to ensure privacy. But don't worry — I've escalated your concern to the courier team. Let's wait for their response by _(mention TAT)_.
+> I understand your concern Sir / Ma'am. However, as per TRAI guidelines and our policy, buyer calls cannot be arranged after 8:30 PM to ensure privacy. But don't worry — I've escalated your concern to the courier team. Let's wait for their response by *(mention TAT)*.
 
 ### Nugget Ticket — NFCR (BPR Available)
 
-| Field | Value |
-|-------|-------|
-| Channel | Lops NDR and RTO |
-| Agent Assign | Auto Assign |
-| Status | Open |
-| Subject | Reattempt Request RTO NDR |
-| FCR | NFCR |
-| SR Issue Category | Shipment NDR and RTO |
-| Sub Category | Re-attempt Requested–RTO NDR |
+| Field             | Value                        |
+| ----------------- | ---------------------------- |
+| Channel           | Lops NDR and RTO             |
+| Agent Assign      | Auto Assign                  |
+| Status            | Open                         |
+| Subject           | Reattempt Request RTO NDR    |
+| FCR               | NFCR                         |
+| SR Issue Category | Shipment NDR and RTO         |
+| Sub Category      | Re-attempt Requested–RTO NDR |
 
 ---
 
@@ -126,7 +154,9 @@ If there is no action from the seller side then the shipment is marked as **disp
 **Details to ask from seller:**
 
 - Who will receive the order — ask for the person name and contact number
+
 - Complete address for the reverse/RTO shipment delivery where the delivery needs to be done
+
 - Seller ready to accept the shipment or not
 
 Assign the case to **"LOPS Shipment Reverse/LOPS Shipment RTO"** channel.
@@ -135,16 +165,16 @@ Assign the case to **"LOPS Shipment Reverse/LOPS Shipment RTO"** channel.
 
 ### Nugget Ticket (NFCR)
 
-| Field | Value |
-|-------|-------|
-| Channel | LOPS Shipment Reverse/LOPS Shipment RTO |
-| Agent Assign | Auto Assign |
-| Status | Open |
-| Subject | Reattempt Request RTO NDR |
-| FCR | NFCR |
-| SR Issue Category | Shipment NDR and RTO |
-| Sub Category | Re-attempt Requested–RTO NDR |
-| TAT | 1-2 working days |
+| Field             | Value                                   |
+| ----------------- | --------------------------------------- |
+| Channel           | LOPS Shipment Reverse/LOPS Shipment RTO |
+| Agent Assign      | Auto Assign                             |
+| Status            | Open                                    |
+| Subject           | Reattempt Request RTO NDR               |
+| FCR               | NFCR                                    |
+| SR Issue Category | Shipment NDR and RTO                    |
+| Sub Category      | Re-attempt Requested–RTO NDR            |
+| TAT               | 1-2 working days                        |
 
 ---
 
@@ -159,15 +189,27 @@ Mark as **FCR Resolved**.
 
 ### Nugget Ticket (FCR)
 
-| Field | Value |
-|-------|-------|
-| Channel | Customer Support Call Center |
-| Agent Assign | Own Name |
-| Status | Resolved |
-| Subject | RTO Delivery TAT Required |
-| FCR | Yes |
-| SR Issue Category | Shipment Delivery Delay |
-| Sub Category | Reverse - Delivery TAT Required |
+| Field             | Value                           |
+| ----------------- | ------------------------------- |
+| Channel           | Customer Support Call Center    |
+| Agent Assign      | Own Name                        |
+| Status            | Resolved                        |
+| Subject           | RTO Delivery TAT Required       |
+| FCR               | Yes                             |
+| SR Issue Category | Shipment Delivery Delay         |
+| Sub Category      | Reverse - Delivery TAT Required |
+
+## Return Shipment Delivery Out-TAT
+
+The timeline for the Reverse/RTO delivery is 20 days from the picked date/RTO-initiated date. If breached, then assign the case to the LOPS team. It's an **NFCR case**.
+
+Timeline: 1-2 working days for an update from the team.
+
+Issue category:  Reverse Shipment/Shipment Delivery Delay
+
+| Shipment Type    | Issue Category   | Sub Category                                          |
+| ---------------- | ---------------- | ----------------------------------------------------- |
+| Reverse Shipment | Reverse Shipment | Delay in Shipment Delivery / Reverse - Delivery Delay |
 
 ---
 
@@ -179,23 +221,22 @@ Timeline: 1-2 working days for an update from the team.
 
 **Issue category selection based on shipment type:**
 
-| Shipment Type | Issue Category | Sub Category |
-|---|---|---|
-| RTO Shipment | Shipment RTO | Delay in Shipment Delivery–RTO |
-| Reverse Shipment | Reverse Shipment | Delay in Shipment Delivery–RTO/Reverse |
+| Shipment Type | Issue Category | Sub Category                   |
+| ------------- | -------------- | ------------------------------ |
+| RTO Shipment  | Shipment RTO   | Delay in Shipment Delivery–RTO |
 
 ### Nugget Ticket (NFCR)
 
-| Field | Value |
-|-------|-------|
-| Channel | Lops Shipment Delivery |
-| Agent Assign | Auto Assign |
-| Status | Open |
-| Subject | Delay in Shipment Delivery–RTO |
-| FCR | NFCR |
-| SR Issue Category | Shipment Delivery Delay |
-| Sub Category | Delay in Shipment Delivery |
-| TAT | 1-2 working days |
+| Field             | Value                          |
+| ----------------- | ------------------------------ |
+| Channel           | Lops Shipment Delivery         |
+| Agent Assign      | Auto Assign                    |
+| Status            | Open                           |
+| Subject           | Delay in Shipment Delivery–RTO |
+| FCR               | NFCR                           |
+| SR Issue Category | Shipment Delivery Delay        |
+| Sub Category      | Delay in Shipment Delivery     |
+| TAT               | 1-2 working days               |
 
 ---
 
@@ -210,38 +251,40 @@ Timeline: 1-2 working days for an update from the team.
 
 ### Nugget Ticket (NFCR)
 
-| Field | Value |
-|-------|-------|
-| Channel | LOPS |
-| Agent Assign | Auto Assign |
-| Status | Open |
-| Subject | RTO Without NDR |
-| FCR | NFCR |
-| SR Issue Category | Shipment RTO |
-| Sub Category | RTO - Miscellaneous |
-| TAT | 1-2 working days |
+| Field             | Value               |
+| ----------------- | ------------------- |
+| Channel           | LOPS                |
+| Agent Assign      | Auto Assign         |
+| Status            | Open                |
+| Subject           | RTO Without NDR     |
+| FCR               | NFCR                |
+| SR Issue Category | Shipment RTO        |
+| Sub Category      | RTO - Miscellaneous |
+| TAT               | 1-2 working days    |
 
 ---
 
 ## SOP — NDR Verification for RTO Shipment
 
 1. Check shipment status in ICRM.
+
 2. Check if NDR was sent and action taken by seller.
+
 3. Inform seller: forwarding to team; verifying attempt from buyer. TAT: 1–2 days.
 
-_Do not raise a ticket if the issue is pending more than 10 days._
+*Do not raise a ticket if the issue is pending more than 10 days.*
 
 ### Nugget Ticket (NFCR)
 
-| Field | Value |
-|-------|-------|
-| Channel | NDR Verification |
-| Agent Assign | Lakshita / Shilpa |
-| Status | Open |
-| Subject | Delivery Attempt Verification |
-| FCR | NFCR |
-| SR Issue Category | Lops NDR and RTO |
-| Sub Category | Fake Attempts Done |
+| Field             | Value                         |
+| ----------------- | ----------------------------- |
+| Channel           | NDR Verification              |
+| Agent Assign      | Lakshita / Shilpa             |
+| Status            | Open                          |
+| Subject           | Delivery Attempt Verification |
+| FCR               | NFCR                          |
+| SR Issue Category | Lops NDR and RTO              |
+| Sub Category      | Fake Attempts Done            |
 
 ---
 
@@ -250,36 +293,51 @@ _Do not raise a ticket if the issue is pending more than 10 days._
 ### Process NDR (Reattempt or RTO)
 
 1. Go to **Orders > NDR tab** (or Shipments > Process NDR).
+
 2. Search by AWB.
+
 3. Click **Act on Shipment**.
+
 4. Select **Reattempt** (with updated address/number if needed) or **Mark RTO**.
 
 ### Mark an Order as RTO
 
 1. Go to **Orders > NDR** from the left menu.
+
 2. Click **View Details** next to the AWB.
+
 3. Click **Mark RTO**.
 
 ### Take Action on RTO-NDR
 
 1. Go to **Orders > RTO tab**.
+
 2. Filter: **RTO NDR**.
+
 3. Click **Reattempt** in the Action column.
+
 4. Update phone number and/or address if needed (Delhivery, Ecom Express, Xpressbees only).
+
 5. Select reattempt date.
 
 ### Raise RTO Delay Escalation
 
 1. Go to **Orders > RTO tab**.
+
 2. Find the shipment with breached RTO EDD.
+
 3. Click **Create Ticket** button (visible only when EDD has passed).
+
 4. Enter remarks and submit.
 
 ### Change Customer Phone Number (Post-Pickup)
 
 1. Wait until the order reaches **NDR status**.
+
 2. Go to **Orders > NDR panel**.
+
 3. Click **More (...) > Act on Shipment > Update Details**.
+
 4. Update the phone number.
 
 ---
@@ -289,20 +347,30 @@ _Do not raise a ticket if the issue is pending more than 10 days._
 ### Process NDR on Mobile
 
 1. Go to the three-dots menu at the bottom > **NDR section**.
+
 2. Find the undelivered shipment.
+
 3. Tap **Act on Shipment**.
+
 4. Choose **Reattempt** or **Mark RTO**.
+
 5. For reattempt: update alternate number, landmark, or preferred date.
 
 ### Check NDR Orders (Mobile)
 
 1. Three-dots menu at bottom > **NDR**.
+
 2. View all undelivered orders and their NDR reasons.
+
 3. Tap **Track Order** for real-time status.
 
 ### Check RTO Orders (Mobile)
 
 1. From bottom navigation, tap **Orders**.
+
 2. Swipe to **RTO** tab.
+
 3. View all RTO-status orders.
+
 4. Tap **Acknowledge** once you have received the returned shipment.
+

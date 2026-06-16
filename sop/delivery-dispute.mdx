@@ -52,26 +52,36 @@ POD feature is live on ICRM for: Delhivery, Bluedart, Shadowfax, Ekart, XpressBe
 
 ## SOP — DNU (Delivered Not Updated)
 
-Use this flow when the shipment is physically delivered but the panel status is not updated.
+Use this flow when the shipment is physically delivered, but the panel status is not updated.
+
+### Order Value up to Rs. 2,500
+
+| Field                    | Details                                                                                                                                |
+| ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------- |
+| BPR                      | Mandatory                                                                                                                              |
+| Action                   | After BPR, mark as DNU if the option is available                                                                                      |
+| Images or proof required | Delivered shipment images with visible AWB label, inner content of the shipment, screenshot of the transaction if paid online to rider |
+| Resolution timeline      | 5–7 working days                                                                                                                       |
+
+### Order Value above Rs. 2,500
+
+| Field                    | Details                                                                                                                                |
+| ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------- |
+| BPR                      | Mandatory                                                                                                                              |
+| Action                   | Whether BPR is received or not, assign the case to Delivery Dispute channel, LOPS                                                      |
+| Images or proof required | Delivered shipment images with visible AWB label, inner content of the shipment, screenshot of the transaction if paid online to rider |
+| Resolution timeline      | 5–7 working days                                                                                                                       |
 
 <Callout kind="info" collapsed="false">
-  Raise disputes within **3 days from the delivery date**. If the seller contacts support after 72 hours, assign the case to the **LOPS Dispute team as an exception** and guide the seller to raise future disputes within the timeline.
+  Seller-side proof is mandatory for orders above Rs.2500, even if BPR is received.
 </Callout>
-
-### DNU Scenarios
-
-| Scenario                                                        | Action                                                                                                                                                                                                                                                                                                                                            |
-| --------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Case 1: Seller reaches out same day                             | Ask seller to wait until end of day. POD will be updated on the panel by EOD.                                                                                                                                                                                                                                                                     |
-| Case 2: Seller reaches out next day or later, POD available     | Check whether the seller verified the POD. If checked and shipment not received, create a new ticket on the dispute group and share a 5–7 working day investigation timeline. If POD is available but the seller has not checked it, ask the seller to verify POD during the call, take confirmation, and create FCR or NFCR based on seller VOC. |
-| Case 3: Seller reaches out next day or later, POD not available | Assign to the LOPS Dispute team. Ask the seller to wait 5–7 working days for investigation.                                                                                                                                                                                                                                                       |
 
 ### If Status is OFD
 
-| Scenario              | Action                                              |
-| --------------------- | --------------------------------------------------- |
-| OFD on current day    | Ask seller to wait till EOD for final status update |
-| OFD from previous day | Follow the standard DNU process above               |
+| Scenario              | Action                                        |
+| --------------------- | --------------------------------------------- |
+| OFD on current day    | Ask seller to wait till EOD for status update |
+| OFD from previous day | Follow the DNR process based on order value   |
 
 ### Additional Handling Notes
 
@@ -80,6 +90,22 @@ Use this flow when the shipment is physically delivered but the panel status is 
 - Team investigates within 5–7 working days once the dispute is raised.
 
 - If BPR is not done because the buyer is not contactable, ask the seller to share proof from their side.
+
+## SOP — DNR (Delivered Not Received)
+
+Applies to Forward, RTO, and Reverse shipments where the shipment is marked delivered but the buyer has not received it.
+
+<Callout kind="info" collapsed="false">
+  Raise disputes within **3 days from the delivery date**. If the seller contacts support after 72 hours, assign the case to the **LOPS Dispute team as an exception** and guide the seller to raise future disputes within the timeline.
+</Callout>
+
+### DNR Scenarios
+
+| Scenario                                                        | Action                                                                                                                                                                                                                                                                                                                                            |
+| --------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Case 1: Seller reaches out same day                             | Ask seller to wait until end of day. POD will be updated on the panel by EOD.                                                                                                                                                                                                                                                                     |
+| Case 2: Seller reaches out next day or later, POD available     | Check whether the seller verified the POD. If checked and shipment not received, create a new ticket on the dispute group and share a 5–7 working day investigation timeline. If POD is available but the seller has not checked it, ask the seller to verify POD during the call, take confirmation, and create FCR or NFCR based on seller VOC. |
+| Case 3: Seller reaches out next day or later, POD not available | Assign to the LOPS Dispute team. Ask the seller to wait 5–7 working days for investigation.                                                                                                                                                                                                                                                       |
 
 ## SOP — PRD (Wrong / Damage / Partial / Empty)
 
@@ -150,39 +176,6 @@ Always connect with the buyer and confirm all of the following while taking disp
 | ------ | ------------------------------------------------------------------------------------------------------------------------------------- |
 | Action | Assign to LOPS for QC or Non-QC review. For Non-QC, give soft denial first. If seller does not agree, assign to the LOPS Dispute team |
 | BPR    | Not mandatory                                                                                                                         |
-
-## SOP — DNR (Delivered Not Received)
-
-Applies to Forward, RTO, and Reverse shipments where the shipment is marked delivered but the recipient confirms non-receipt.
-
-### Order Value up to Rs. 2,500
-
-| Field                    | Details                                                                                                                                |
-| ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------- |
-| BPR                      | Mandatory                                                                                                                              |
-| Action                   | After BPR, mark as DNU if the option is available                                                                                      |
-| Images or proof required | Delivered shipment images with visible AWB label, inner content of the shipment, screenshot of the transaction if paid online to rider |
-| Resolution timeline      | 5–7 working days                                                                                                                       |
-
-### Order Value above Rs. 2,500
-
-| Field                    | Details                                                                                                                                |
-| ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------- |
-| BPR                      | Mandatory                                                                                                                              |
-| Action                   | Whether BPR is received or not, assign the case to Delivery Dispute channel, LOPS                                                      |
-| Images or proof required | Delivered shipment images with visible AWB label, inner content of the shipment, screenshot of the transaction if paid online to rider |
-| Resolution timeline      | 5–7 working days                                                                                                                       |
-
-<Callout kind="info" collapsed="false">
-  Seller-side proof is mandatory for orders above Rs.2500, even if BPR is received.
-</Callout>
-
-### If Status is OFD
-
-| Scenario              | Action                                        |
-| --------------------- | --------------------------------------------- |
-| OFD on current day    | Ask seller to wait till EOD for status update |
-| OFD from previous day | Follow the DNR process based on order value   |
 
 ## How to Do on Seller Panel
 
