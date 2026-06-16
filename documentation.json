@@ -44,6 +44,10 @@
               {
                 "title": "Buyer Handling",
                 "path": "sop/buyer-handling"
+              },
+              {
+                "title": "Sales Inquiry Qualification",
+                "path": "sales-inquiry-qualification"
               }
             ]
           },
