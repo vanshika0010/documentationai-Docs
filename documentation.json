@@ -38,7 +38,7 @@
                 "path": "sop/escalations-transfers"
               },
               {
-                "title": "Buyer Handling",
+                "title": "Buyer Call Handling",
                 "path": "sop/buyer-handling"
               },
               {
@@ -147,7 +147,7 @@
               },
               {
                 "title": "Financial Products",
-                "path": "sop/financial-products"
+                "path": "Removed Content/financial-products"
               }
             ]
           },

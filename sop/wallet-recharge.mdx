@@ -1,56 +1,54 @@
 ---
-title: "Wallet and Recharge"
-description: "Wallet recharge queries, recharge errors, auto wallet transfer, convenience fee, and balance transfer to bank"
+title: Wallet and Recharge
+description: >-
+  Wallet recharge queries, recharge errors, auto wallet transfer, convenience
+  fee, and balance transfer to bank
 ---
-
 ## Product Info
 
 ### Wallet Basics
 
 - **Minimum recharge amount:** ₹500
+
 - **Maximum recharge amount (per transaction):** ₹50,00,000
+
 - Payment options accepted: Credit/Debit card, Net Banking, UPI, 3rd party wallets, Smart Collect.
+
 - Coupon value in wallet is **not transferred** to bank — only wallet amount is transferred.
 
 ### Convenience Fee on Credit Card Payments (Razorpay)
 
 - Applicable **only** on Razorpay credit card transactions.
+
 - **Not applicable** on UPI, Net Banking, Debit Cards, Wallets, or Smart Collect.
+
 - Fee: **2% + GST**.
+
 - Shown at Razorpay checkout after selecting payment method.
+
 - Reflected in Seller Panel > Passbook.
+
 - Monthly VAS invoice generated for the fee.
 
 **Key dates:**
+
 - Fee charging started: 7th July 2025.
+
 - Passbook entries automated: 14th August 2025.
+
 - RuPay credit card via UPI check live: 28th August 2025.
 
 **Example:** If a seller recharges ₹1,00,000 via credit card, wallet is credited ₹97,640. A VAS entry of ₹2,360 is raised in real-time.
 
 ### Razorpay Transaction Status Actions
 
-| Status | Meaning / Action |
-|---|---|
-| Authorised | Recharge has been done |
-| Captured (over 1 hr) | Raise ticket to Tech Support to manually update payment |
-| Captured (under 1 hr) | Ask seller to wait for cron cycle to complete |
-| Failed | Inform seller: refund in 5–7 business days to source account |
-| Created / Pending | Ask seller to wait 1 hour |
-
-### Auto Wallet Transfer
-
-Sellers can initiate wallet refund requests directly from the panel. The system auto-performs preliminary checks and calculates eligible refund amount. A support ticket is generated only if validation fails.
-
-**Path:** Seller Panel > Help and Support > Create Ticket > Finance > Transfer Wallet Amount into My Bank Account
-
-### Pre-Checks Before Wallet Balance Transfer
-
-- No open shipments.
-- Account status: Active.
-- Bank / KYC details updated.
-- COD unblocked.
-- Wallet balance is positive (all linked accounts).
+| Status                | Meaning / Action                                             |
+| --------------------- | ------------------------------------------------------------ |
+| Authorised            | Recharge has been done                                       |
+| Captured (over 1 hr)  | Raise ticket to Tech Support to manually update payment      |
+| Captured (under 1 hr) | Ask seller to wait for cron cycle to complete                |
+| Failed                | Inform seller: refund in 5–7 business days to source account |
+| Created / Pending     | Ask seller to wait 1 hour                                    |
 
 ---
 
@@ -65,6 +63,7 @@ Create an FCR ticket.
 ### Scenario 2 — Seller is unable to recharge
 
 1. Request a screenshot within 48 hours of ticket creation.
+
 2. Assign to **Customer Support Tech Desk**. TAT: 24 hours.
 
 ---
@@ -90,15 +89,20 @@ Guide the seller and create an FCR ticket.
 Before proceeding, ensure the following criteria are met:
 
 - No open shipments
+
 - Account status is Active
+
 - Bank and KYC details are updated
+
 - COD is unblocked
+
 - Wallet balance is positive
+
 - Reason for transfer is captured
 
 **Note:** If the seller is eligible but cannot raise the transfer request from their panel, please transfer the live call to the **"FOPS Desk Intra Transfer IH CC"** Queue.
 
-Issue category: Wallet_Balance
+Issue category: Wallet\_Balance
 Sub issue category: Account to Account Wallet Transfer
 
 ---
@@ -116,8 +120,11 @@ Sub issue category: Account to Account Wallet Transfer
 ### Recharge Wallet
 
 1. Go to **Seller Panel > Recharge Wallet** from the left menu.
+
 2. Enter recharge amount (minimum ₹500).
+
 3. Select payment method.
+
 4. Complete payment.
 
 > For credit card payments via Razorpay, a convenience fee of 2% + GST applies.
@@ -125,7 +132,9 @@ Sub issue category: Account to Account Wallet Transfer
 ### Initiate Wallet Transfer to Bank
 
 1. Go to **Help and Support > Create Ticket > Finance > Transfer Wallet Amount into My Bank Account**.
+
 2. The system auto-checks eligibility and calculates the eligible transfer amount.
+
 3. A ticket is auto-created if validation fails.
 
 ---
@@ -135,8 +144,11 @@ Sub issue category: Account to Account Wallet Transfer
 ### Recharge Wallet (Mobile)
 
 1. Go to the **Finance / Billing section** from the three-dots menu.
+
 2. Tap **Recharge Wallet**.
+
 3. Enter amount (minimum ₹500) and select payment method.
+
 4. Complete payment.
 
 ### Check Wallet Balance (Mobile)

@@ -1,9 +1,10 @@
 ---
-title: "Escalations and Transfers"
-description: "L1 to L2 transfer protocol, KAM callback, refund SOP, OSLA handling, FCR/NFCR tagging guide, and ticket notes format"
+title: Escalations and Transfers
+description: >-
+  L1 to L2 transfer protocol, KAM callback, refund SOP, OSLA handling, FCR/NFCR
+  tagging guide, and ticket notes format
 ---
-
-## SOP — L1 to L2 Transfer Protocol
+## L1 to L2 Transfer Protocol
 
 **Important Note:**
 
@@ -14,70 +15,85 @@ If the seller requests the next level at the L2 stage, the TL/SME must call back
 ### Case 1: L1 Process (L2 Available)
 
 1. Gather details: AWB, Ticket ID, Last resolution.
+
 2. Create ticket if not available.
+
 3. Inform seller → take hold permission & share hold time.
+
 4. Mark **RED SOS**.
+
 5. Brief L2 (AWB, Ticket No., VOC, hold time).
+
 6. Transfer call to L2.
 
 ### Case 2: L2 Not Available
 
-_Except Social/Management/Consumer cases._
+*Except Social/Management/Consumer cases.*
 
 1. Apologize for delay & inform seniors are busy.
+
 2. Offer callback within **30 minutes**.
+
 3. Mention the ticket notes and share the ticket ID with the respective TL's.
+
 4. Mark **RED SOS**.
+
 5. Close the call.
 
 ### L2 Opening Script (Internal)
 
-> "Good Morning/Afternoon/Evening. Your call has been transferred to the supervisor desk. My name is [Name]. How may I assist you?"
+> "Good Morning/Afternoon/Evening. Your call has been transferred to the supervisor desk. My name is \[Name]. How may I assist you?"
 
 ### L1 to L2 Handover Script (Internal)
 
-> "Good Morning/Afternoon/Evening, this is [Name]. I have Mr./Ms. [Seller Name] on the line facing [issue]. AWB: [AWB] | Ticket ID: [ID] | Last update: [Date]. Seller is aware of the resolution but wants to speak with a senior."
+> "Good Morning/Afternoon/Evening, this is \[Name]. I have Mr./Ms. \[Seller Name] on the line facing \[issue]. AWB: \[AWB] | Ticket ID: \[ID] | Last update: \[Date]. Seller is aware of the resolution but wants to speak with a senior."
 
 ### L2 to Seller (After Transfer)
 
 > "Thank you for your patience. Your call has been transferred to the supervisor desk. Apologies for the wait."
 
-> "I understand your concern regarding [issue]. Let me assist you further."
+> "I understand your concern regarding \[issue]. Let me assist you further."
 
 ---
 
-## SOP — KAM Callback
+## KAM Callback
 
 If seller is requesting a callback from KAM or action is required from KAM:
 
-| Field | Value |
-|---|---|
-| Properties Tag | Action by KAM |
-| Ticket Status | Awaiting Customer Response |
-| Group / Agent | Respective KAM Group and Name |
+| Field          | Value                         |
+| -------------- | ----------------------------- |
+| Properties Tag | Action by KAM                 |
+| Ticket Status  | Awaiting Customer Response    |
+| Group / Agent  | Respective KAM Group and Name |
 
 - Click **Reply to All** on the ticket.
+
 - Remove seller's email ID from the reply.
+
 - Add KAM's email ID.
+
 - Include callback request details, Company ID, and registered number in notes.
 
 **Callback TAT:** 24 working hours.
 
 ---
 
-## SOP — Refund
+## Refund Process
 
 ### When to Give Refunds
 
 - Seller is very upset, frustrated, or distressed in voice or communication.
+
 - Seller asks for a refund immediately.
+
 - Seller has contacted customer support **3 or more times** for the same issue.
+
 - Cases involving ORM / Legal / Management threats.
 
 ### Refund Matrix
 
-| Type | L1 Authority | L2 Authority |
-|---|---|---|
+| Type           | L1 Authority  | L2 Authority    |
+| -------------- | ------------- | --------------- |
 | Freight Refund | Up to Rs. 500 | Up to Rs. 1,000 |
 
 > L2 freight refund does not apply to heavy or large shipments over 10 kg.
@@ -85,13 +101,17 @@ If seller is requesting a callback from KAM or action is required from KAM:
 ### Cases Where Freight Refund Can Be Initiated on Seller Call
 
 - EDD + 5 days and shipment has not been attempted.
+
 - Without attempt RTO, whether LOPS reason is available or not.
+
 - Shipment has BPR, less than 3 attempts, or zero attempts.
 
 ### Soft Loss — In Case of Dispute
 
 - Full amount refunded at L2 if SLA is breached.
+
 - Forward SLA: 7 days.
+
 - RTO SLA: 15 days.
 
 **Script if seller asks why a refund is being processed now:**
@@ -100,31 +120,20 @@ If seller is requesting a callback from KAM or action is required from KAM:
 
 ---
 
-## SOP — OSLA Cases
-
-If a seller approaches **outside of SLA (Out of SLA)**, tag the case as **OSLA** on FD (excluding international and buyer desk cases).
-
-**Do NOT deny at any instance.**
-
-**Sample OSLA scenarios:**
-- TAT of 72 hours is breached for ACR response and seller approaches CC.
-- Manifest was requested but seller approached after 72 hours of manifest request.
-- TAT to raise weight or delivery dispute is breached.
-
 ---
 
 ## FCR / NFCR Tagging Guide
 
 ### General Queries (Order Creation, Rate Calculator, Cancellation Path)
 
-| Field | Value |
-|-------|-------|
-| Channel | Customer Support Call Center |
-| Agent Assign | Own Name |
-| Status | Resolved |
-| FCR | Yes |
-| SR Issue Category | Other |
-| Sub Category | General Query |
+| Field             | Value                        |
+| ----------------- | ---------------------------- |
+| Channel           | Customer Support Call Center |
+| Agent Assign      | Own Name                     |
+| Status            | Resolved                     |
+| FCR               | Yes                          |
+| SR Issue Category | Other                        |
+| Sub Category      | General Query                |
 
 > Use this disposition only where DSAT chances are zero.
 
@@ -132,51 +141,41 @@ If a seller approaches **outside of SLA (Out of SLA)**, tag the case as **OSLA**
 
 **When documents need to be shared with any team:**
 
-| Field | Value |
-|-------|-------|
-| Channel | Relevant Department |
-| Agent Assign | Auto Assign |
-| Status | Open |
-| FCR | NFCR |
+| Field        | Value               |
+| ------------ | ------------------- |
+| Channel      | Relevant Department |
+| Agent Assign | Auto Assign         |
+| Status       | Open                |
+| FCR          | NFCR                |
 
 **When documents need to be checked:**
 
-| Field | Value |
-|-------|-------|
-| Channel | Relevant Department |
-| Agent Assign | Auto Assign |
-| Status | Awaiting Customer Response |
-| FCR | NFCR |
+| Field        | Value                      |
+| ------------ | -------------------------- |
+| Channel      | Relevant Department        |
+| Agent Assign | Auto Assign                |
+| Status       | Awaiting Customer Response |
+| FCR          | NFCR                       |
 
 ### FCR Cases (NDR Reattempt, RTO Status, Weight Discrepancy)
 
-| Field | Value |
-|-------|-------|
-| Channel | Customer Support Call Center |
-| Agent Assign | Own Name |
-| Status | Resolved |
-| FCR | Yes |
+| Field        | Value                        |
+| ------------ | ---------------------------- |
+| Channel      | Customer Support Call Center |
+| Agent Assign | Own Name                     |
+| Status       | Resolved                     |
+| FCR          | Yes                          |
 
 ### NFCR Cases (Account Blocked, Delivery Delay, Tracking Update)
 
-| Field | Value |
-|-------|-------|
-| Channel | Relevant Department |
-| Agent Assign | Auto Assign |
-| Status | Open |
-| FCR | NFCR |
+| Field        | Value               |
+| ------------ | ------------------- |
+| Channel      | Relevant Department |
+| Agent Assign | Auto Assign         |
+| Status       | Open                |
+| FCR          | NFCR                |
 
 ---
-
-## Ticket Notes Format
-
-All tickets must be created or assigned in Nugget using this format:
-
-```
-1. Seller VOC: [What the seller communicated]
-2. Advisor's Response: [What action was taken]
-3. Number of times seller called CC: [Count]
-```
 
 ---
 
@@ -187,15 +186,20 @@ All tickets must be created or assigned in Nugget using this format:
 **Context:** Committed SLA has been breached, or ticket was closed without resolution and SOP requires the seller to raise a new ticket for the same issue.
 
 1. L1 transfers live call to L2 — **do not stretch the call**.
+
 2. L1 apologizes to the seller before transfer.
+
 3. L2 assigns the case as **RED SOS** to LOPS with **4 working hours TAT**.
+
 4. **RED SOS** to be tracked by SR team.
+
 5. In case of threat, tag case as **BAU ED**.
 
 ### Case 2: Seller Reaches Post 6PM with Callback Committed in 4–5 Hours
 
 1. L1 tries live transfer to L2.
-2. If L2 not connected, inform the seller that callback will happen before **12 noon next day** by L2/Experience Center team.
-3. Ensure callback is completed before 12 noon by the Experience Center team.
 
+2. If L2 not connected, inform the seller that callback will happen before **12 noon next day** by L2/Experience Center team.
+
+3. Ensure callback is completed before 12 noon by the Experience Center team.
 
