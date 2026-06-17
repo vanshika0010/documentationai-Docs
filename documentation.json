@@ -38,10 +38,6 @@
                 "path": "sop/escalations-transfers"
               },
               {
-                "title": "All Forms and Trackers",
-                "path": "all-forms-and-trackers"
-              },
-              {
                 "title": "Buyer Handling",
                 "path": "sop/buyer-handling"
               },
@@ -156,55 +152,15 @@
             ]
           },
           {
-            "group": "VAS & Products",
+            "group": "VAS",
             "pages": [
-              {
-                "title": "Shiprocket Engage",
-                "path": "sr-engage"
-              },
               {
                 "title": "Value Added Services",
                 "path": "sop/vas-services"
               },
               {
-                "title": "Buyer Experience",
-                "path": "sop/buyer-experience"
-              },
-              {
-                "title": "Shiprocket Checkout",
-                "path": "sop/shiprocket-checkout"
-              },
-              {
-                "title": "Shiprocket Cargo",
-                "path": "sop/shiprocket-cargo"
-              },
-              {
-                "title": "Shiprocket Sense",
-                "path": "sop/shiprocket-sense"
-              },
-              {
-                "title": "Shiprocket Pickups",
-                "path": "sop/shiprocket-pickups"
-              },
-              {
-                "title": "Shiprocket Trends & App Store",
+                "title": "Shiprocket App Store",
                 "path": "sop/shiprocket-trends-appstore"
-              },
-              {
-                "title": "Omuni",
-                "path": "sop/omuni"
-              },
-              {
-                "title": "ZOP Marketplace",
-                "path": "sop/zop"
-              },
-              {
-                "title": "International Shipping",
-                "path": "sop/international-shipping"
-              },
-              {
-                "title": "Warehousing & Fulfillment",
-                "path": "sop/warehousing-fulfillment"
               }
             ]
           },
@@ -218,11 +174,39 @@
             ]
           },
           {
-            "group": "Miscellaneous",
+            "group": "All Products",
             "pages": [
               {
-                "title": "Miscellaneous",
-                "path": "sop/miscellaneous"
+                "title": "Shiprocket Engage",
+                "path": "sr-engage"
+              },
+              {
+                "title": "Shiprocket Cargo",
+                "path": "sop/shiprocket-cargo"
+              },
+              {
+                "title": "Shiprocket Checkout",
+                "path": "sop/shiprocket-checkout"
+              },
+              {
+                "title": "Shiprocket Trends",
+                "path": "shiprocket-trends"
+              },
+              {
+                "title": "Warehousing & Fulfillment",
+                "path": "sop/warehousing-fulfillment"
+              },
+              {
+                "title": "International Shipping",
+                "path": "sop/international-shipping"
+              },
+              {
+                "title": "ZOP Marketplace",
+                "path": "sop/zop"
+              },
+              {
+                "title": "Shiprocket Sense",
+                "path": "sop/shiprocket-sense"
               }
             ]
           }
