@@ -1,8 +1,7 @@
 ---
-title: "Pickup"
-description: "Same-day pickup cut-offs, ICRM actions, and pickup-related status handling"
+title: Pickup
+description: 'Same-day pickup cut-offs, ICRM actions, and pickup-related status handling'
 ---
-
 ## Same-Day Pickup Cut-Off
 
 - **Standard:** Orders manifested before **11:00 AM** are scheduled for same-day pickup.
@@ -20,7 +19,7 @@ description: "Same-day pickup cut-offs, ICRM actions, and pickup-related status 
 
 **Click Pickup Miscellaneous for these statuses:**
 
-- Pickup Queued
+- Pickup Queued,
 - Pickup Error
 - Pickup Booked
 - AWB Assigned
@@ -40,11 +39,11 @@ description: "Same-day pickup cut-offs, ICRM actions, and pickup-related status 
 
 For urgent or irate sellers, suggest instant pickup with Shadowfax.
 
-| Order Created         | Pickup Slot   |
-| --------------------- | ------------- |
-| 4:00 PM – 9:00 AM     | 9 AM – 12 PM  |
-| 9:00 AM – 12:00 PM    | 12 PM – 3 PM  |
-| 12:00 PM – 4:00 PM    | 3 PM – 6 PM   |
+| Order Created      | Pickup Slot  |
+| ------------------ | ------------ |
+| 4:00 PM – 9:00 AM  | 9 AM – 12 PM |
+| 9:00 AM – 12:00 PM | 12 PM – 3 PM |
+| 12:00 PM – 4:00 PM | 3 PM – 6 PM  |
 
 _Tag all cases where instant pickup is pitched with the "Instant Pickup" tag (FCR tagging)._
 
@@ -64,6 +63,7 @@ If the FE has picked up the shipment but the status has not updated on the panel
 4. Send ACR mail from Nugget using template: _"Pickup connection issue"_.
 
 **Nugget Tagging:**
+
 - SR Issue Category: Shipment Pickup
 - Sub Category: Pickup Miscellaneous
 - FCR: NFCR
@@ -72,10 +72,10 @@ If the FE has picked up the shipment but the status has not updated on the panel
 
 ## Pickup Freight Refund Policy
 
-| Delay     | Refund Type               | ICRM Path                                               |
-| --------- | ------------------------- | ------------------------------------------------------- |
-| 3 days    | 20% partial freight refund| Shipment Detail > Decision Tree > Partial Freight Refund|
-| 5 days    | 100% full freight refund  | Shipment Detail > Decision Tree > Full Freight Refund   |
+| Delay  | Refund Type                | ICRM Path                                                |
+| ------ | -------------------------- | -------------------------------------------------------- |
+| 3 days | 20% partial freight refund | Shipment Detail > Decision Tree > Partial Freight Refund |
+| 5 days | 100% full freight refund   | Shipment Detail > Decision Tree > Full Freight Refund    |
 
 Inform seller of the pickup TAT after initiating refund: if assigned before 11 AM, wait till day end; if after 11 AM, wait till next day end.
 
@@ -101,13 +101,14 @@ When shipment pickup fails, seller receives 3 options via WhatsApp / IVR / SMS /
 
 ## New Process — Domestic Pickup / Order Cancellation Calls
 
-| Time Window          | Action                                                           |
-| -------------------- | ---------------------------------------------------------------- |
-| 10:00 AM – 6:45 PM   | Transfer to queue: **Domestic Pickup – Transfer IH CC**          |
-| 8:00 AM – 10:00 AM   | Handle on skill: **pick, Hindi Pickup** (no transfer)            |
-| 7:00 PM – 10:00 PM   | Handle on skill: **pick, Hindi Pickup** (no transfer)            |
+| Time Window        | Action                                                  |
+| ------------------ | ------------------------------------------------------- |
+| 10:00 AM – 6:45 PM | Transfer to queue: **Domestic Pickup – Transfer IH CC** |
+| 8:00 AM – 10:00 AM | Handle on skill: **pick, Hindi Pickup** (no transfer)   |
+| 7:00 PM – 10:00 PM | Handle on skill: **pick, Hindi Pickup** (no transfer)   |
 
 **Transfer script:**
+
 > I'm transferring your call to our concerned team for further assistance related to Pickup / order cancellation. Please stay on the call.
 
 _Do NOT assign the skill "Domestic Pickup – Transfer IH CC" to any BPOC / COG advisor._
