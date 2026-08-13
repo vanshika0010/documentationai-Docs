@@ -209,6 +209,15 @@
                 "path": "sop/shiprocket-sense"
               }
             ]
+          },
+          {
+            "group": "Recent Updates",
+            "pages": [
+              {
+                "title": "Amazon Courier Activation",
+                "path": "amazon-courier-activation"
+              }
+            ]
           }
         ]
       }
