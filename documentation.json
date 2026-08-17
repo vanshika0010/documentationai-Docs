@@ -214,6 +214,10 @@
             "group": "Recent Updates",
             "pages": [
               {
+                "title": "Cash on demand",
+                "path": "cash-on-demand"
+              },
+              {
                 "title": "Amazon Courier Activation",
                 "path": "amazon-courier-activation"
               }
