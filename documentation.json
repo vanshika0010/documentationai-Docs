@@ -214,6 +214,10 @@
             "group": "Recent Updates",
             "pages": [
               {
+                "title": "Buyer Protect",
+                "path": "buyer-protect"
+              },
+              {
                 "title": "Cash on demand",
                 "path": "cash-on-demand"
               },
