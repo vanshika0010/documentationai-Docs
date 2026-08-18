@@ -214,6 +214,10 @@
             "group": "Recent Updates",
             "pages": [
               {
+                "title": "Forced Cancellation",
+                "path": "forced-cancellation"
+              },
+              {
                 "title": "Buyer Protect",
                 "path": "buyer-protect"
               },
