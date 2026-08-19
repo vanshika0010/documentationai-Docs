@@ -38,10 +38,6 @@
                 "path": "sop/escalations-transfers"
               },
               {
-                "title": "Team-wise Escalation Matrix",
-                "path": "sop/team-wise-escalation-matrix"
-              },
-              {
                 "title": "Buyer Call Handling",
                 "path": "sop/buyer-handling"
               },
@@ -232,6 +228,15 @@
               {
                 "title": "Amazon Courier Activation",
                 "path": "amazon-courier-activation"
+              }
+            ]
+          },
+          {
+            "group": "POC per Product",
+            "pages": [
+              {
+                "title": "POC Contacts",
+                "path": "sop/team-wise-poc"
               }
             ]
           }
