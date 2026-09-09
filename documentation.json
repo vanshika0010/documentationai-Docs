@@ -214,6 +214,10 @@
             "group": "Recent Updates",
             "pages": [
               {
+                "title": "Minimum Wallet Recharge",
+                "path": "minimum-wallet-recharge"
+              },
+              {
                 "title": "Forced Cancellation",
                 "path": "forced-cancellation"
               },
