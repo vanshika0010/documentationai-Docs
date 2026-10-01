@@ -214,6 +214,10 @@
             "group": "Recent Updates",
             "pages": [
               {
+                "title": "Email/Phone Number Update Process",
+                "path": "email/phone-number-update-process"
+              },
+              {
                 "title": "Minimum Wallet Recharge",
                 "path": "minimum-wallet-recharge"
               },
