@@ -214,6 +214,10 @@
             "group": "Recent Updates",
             "pages": [
               {
+                "title": "COD Handling Fee",
+                "path": "cod-handling-fee"
+              },
+              {
                 "title": "Red SOS - New Guildelines",
                 "path": "red-sos---new-guildelines"
               },
