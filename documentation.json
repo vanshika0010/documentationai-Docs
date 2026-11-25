@@ -256,6 +256,10 @@
               {
                 "title": "Paid SAM",
                 "path": "paid-sam"
+              },
+              {
+                "title": "Shipment Cancellation for Incorrect Pickup/In-Transit Status",
+                "path": "shipment-cancellation-for-incorrect-pickup/in-transit-status"
               }
             ]
           },
